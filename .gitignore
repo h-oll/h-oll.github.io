@@ -1,2 +1,9 @@
 *~
 shell.nix
+howto.org
+*.py[cod]
+__pycache__
+cache
+output
+.doit.db
+.env/
