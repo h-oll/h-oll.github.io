@@ -25,7 +25,7 @@ SITE_URL = "https://h-oll.github.io/"
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://h-oll.github.io/"
 BLOG_EMAIL = "harold.ollivier@mines.org"
-BLOG_DESCRIPTION = "Head of QuantumTech@INRIA"  # (translatable)
+BLOG_DESCRIPTION = "Quantum information science researcher -- Head of QuantumTech@INRIA"  # (translatable)
 
 # Nikola is multilingual!
 #
@@ -141,9 +141,9 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/index.html", "Home"),
-        ("/archive.html", "Archive"),
-        ("/categories/", "Tags"),
-        ("/rss.xml", "RSS feed"),
+        # ("/archive.html", "Archive"),
+        # ("/categories/", "Tags"),
+        # ("/rss.xml", "RSS feed"),
     ),
 }
 
@@ -234,19 +234,30 @@ THEME_CONFIG = {
 #         ("pages/*.md", {"en": "pages", "de": "seiten"}, "page.tmpl"),
 #     )
 
-POSTS = (
-    ("posts/*.rst", "posts", "post.tmpl"),
-    ("posts/*.md", "posts", "post.tmpl"),
-    ("posts/*.txt", "posts", "post.tmpl"),
-    ("posts/*.html", "posts", "post.tmpl"),
-    ("posts/*.org", "posts", "post.tmpl"),
-)
+# POSTS = (
+#     ("posts/*.rst", "posts", "post.tmpl"),
+#     ("posts/*.md", "posts", "post.tmpl"),
+#     ("posts/*.txt", "posts", "post.tmpl"),
+#     ("posts/*.html", "posts", "post.tmpl"),
+#     ("posts/*.org", "posts", "post.tmpl"),
+# )
+
+POSTS = ()
+
+# PAGES = (
+#     ("pages/*.rst", "pages", "page.tmpl"),
+#     ("pages/*.md", "pages", "page.tmpl"),
+#     ("pages/*.txt", "pages", "page.tmpl"),
+#     ("pages/*.html", "pages", "page.tmpl"),
+#     ("pages/*.org", "pages", "page.tmpl"),
+# )
+
 PAGES = (
-    ("pages/*.rst", "pages", "page.tmpl"),
-    ("pages/*.md", "pages", "page.tmpl"),
-    ("pages/*.txt", "pages", "page.tmpl"),
-    ("pages/*.html", "pages", "page.tmpl"),
-    ("pages/*.org", "pages", "page.tmpl"),
+    ("pages/*.rst", "", "page.tmpl"),
+    ("pages/*.md", "", "page.tmpl"),
+    ("pages/*.txt", "", "page.tmpl"),
+    ("pages/*.html", "", "page.tmpl"),
+    ("pages/*.org", "", "page.tmpl"),
 )
 
 INDEX_PATH = "blog"
@@ -1057,7 +1068,7 @@ STRIP_INDEXES = True
 # This can be disabled on a per-page/post basis by adding
 #    .. pretty_url: False
 # to the metadata.
-PRETTY_URLS = True
+# PRETTY_URLS = True
 
 # If True, publish future dated posts right away instead of scheduling them.
 # Defaults to False.
@@ -1167,10 +1178,10 @@ MARKDOWN_EXTENSIONS = ['markdown.extensions.fenced_code', 'markdown.extensions.c
 # """
 
 # Show link to source for the posts?
-# SHOW_SOURCELINK = True
+SHOW_SOURCELINK = False
 # Copy the source files for your pages?
 # Setting it to False implies SHOW_SOURCELINK = False
-# COPY_SOURCES = True
+COPY_SOURCES = False
 
 # Modify the number of Post per Index Page
 # Defaults to 10
@@ -1406,18 +1417,14 @@ WARN_ABOUT_TAG_METADATA = False
 GLOBAL_CONTEXT = {'blog_sidebar': """\
 <div class="sidebar-module sidebar-module-inset">
   <h4>About</h4>
-  <p>This is the Bootstrap Blog theme by @mdo, adapted for Nikola by @Kwpolska.
-  And this sidebar is completely customizable — you can put anything you want
-  here!</p>
+  <p>I joined INRIA april 2021 after 2 years at LIP6 CNRS. I started working in the field of QI in 2000 at Los Alamos National Lab with W.H. Zurek. I paused research in 2007 switching to corporate finance. 2017, I founded an AI-based startup for reconstructing hidden professional network in the corporate finance space.</p>
 </div>
 <div class="sidebar-module">
   <h4>Links</h4>
   <ol class="list-unstyled">
-    <li><a href="http://getbootstrap.com/examples/blog/">Bootstrap Blog Theme</a></li>
-    <li><a href="https://getnikola.com/">Nikola</a></li>
-    <li><a href="https://twitter.com/mdo">@mdo</a></li>
-    <li><a href="https://twitter.com/Kwpolska">@Kwpolska</a></li>
-    <li><a href="https://twitter.com/GetNikola">@GetNikola</a></li>
+    <li><a href="https://www.twitter.com/h_oll">@h_oll</a></li>
+    <li><a href="https://www.twitter.com/qoherences">@qoherences</a></li>
+    <li><a href="https://www.linkedin.com/harold.ollivier">Linkedin</a></li>
   </ol>
 </div>
 """}

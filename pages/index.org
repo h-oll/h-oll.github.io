@@ -1,0 +1,36 @@
+#+BEGIN_COMMENT
+.. title: Main activities
+.. slug: index
+.. date: 2021-08-16 10:53:53 UTC+02:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+
+#+END_COMMENT
+
+
+* Research
+My current research activity are centered around protocols for secure multi-party quantum computers.
+
+The goal is to be able to delegate quantum computations to third-party providers while maintaining security -- ie. privacy of the data and algorithm used, as well as integrity of the computation itself. Several approaches have been designed over the years for tackling this question. The one the team is working on is based on trapification of measurement based quantum computation. It is lightweight in the overhead at the client side -- only single qubit operations are required -- while most of the burden is taken care of by the server. To enable this approach it is nonetheless needed to have quantum communication between the client and the server.
+
+Our latest protocol[fn:1] has enabled a drastic lowering of the requirements at the server's side. Using classical amplification for the trap's detection sensitivity, we removed the burden of having a specific fault-tolerant encoding for this crucial part of the protocols. This allows to constant level of noise per run and removes all space overhead to the protocol -- converting it instead into a polynomial time overhead.
+
+One of our future goals is to continue reduce the overhead of these protocols to allow proof of concepts implementations as well as extending their reach to other kinds of problems -- possibly beyond BQP.
+
+Other research interests include:
+- quantum algorithms for near term devices
+- quantum error correction
+- decoherence 
+
+* QuantumTech@INRIA
+
+INRIA has launched its QuantumTech Program in 2021 to materialize its quantum expertise started more than 20 years ago on decoherence and quantum error correction. One of the main objective for this program is to accompany the deployment of the National Strategy for Quantum Technologies through the participation of INRIA teams to several research and development projects. The program provides coordination for the research teams at the national as well as international level. 
+
+Several teams are naturally part of QuantumTech@INRIA as they are dedicated to quantum information such as [[https://www.inria.fr/en/cosmiq][COSMIQ]], [[https://www.inria.fr/en/mocqua][MOCQUA]], [[https://www.inria.fr/en/qinfo][QInfo]] (being-created), [[https://www.inria.fr/en/quacs][QUACS]], [[https://www.inria.fr/en/quantic][QUANTIC]]. Expertise is also being built-up in collaboration with several classical INRIA teams that can benefit from quantum algorithms.
+
+* Footnotes
+[fn:1]
+Securing Quantum Computations in the NISQ Era Elham Kashefi, Dominik Leichtle, Luka Music, Harold Ollivier http://www.arxiv.org/abs/2011.10005
