@@ -18,19 +18,7 @@
 Machine learning for quantum error correction
 
 
-
-Summary
-
-
-
-
-
-
-
-
-
-
-">
+Quantum error corre">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2021-09-25T11:24:58+02:00">
 </head>
@@ -81,13 +69,13 @@ Summary
 Internship opportunities listed below are open. Do not hesitate to send an email for further discussion and possible fine tuning.
 </p>
 
-<div id="outline-container-org7dca5e2" class="outline-2">
-<h2 id="org7dca5e2">Machine learning for quantum error correction</h2>
-<div class="outline-text-2" id="text-org7dca5e2">
-</div>
-<div id="outline-container-org0626f07" class="outline-3">
-<h3 id="org0626f07">Summary</h3>
-<div class="outline-text-3" id="text-org0626f07">
+<div id="outline-container-org684e704" class="outline-2">
+<h2 id="org684e704">Machine learning for quantum error correction</h2>
+<div class="outline-text-2" id="text-org684e704">
+<p>
+Quantum error correction is necessary to run large scale quantum computations and are an active research area with quantum information processing. The intern will work on new approaches for improving the performance (accuracy and speed) of quantum error correction algorithms.
+</p>
+
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <colgroup>
 <col class="org-left">
@@ -108,87 +96,36 @@ Internship opportunities listed below are open. Do not hesitate to send an email
 <tr>
 <td class="org-left">Head of Team</td>
 <td class="org-left"> </td>
-<td class="org-left">Jean-Pierre Tillich (prenom.nom@inria.fr)</td>
+<td class="org-left">Jean-Pierre Tillich</td>
 </tr>
 <tr>
 <td class="org-left">Advisor</td>
 <td class="org-left"> </td>
-<td class="org-left">Harold Ollivier (prenom.nom@inria.fr)</td>
+<td class="org-left">Harold Ollivier</td>
 </tr>
 <tr>
 <td class="org-left">Requirements</td>
 <td class="org-left"> </td>
 <td class="org-left">Basic notions on quantum error correction, develop and test ML code</td>
 </tr>
+<tr>
+<td class="org-left">Starting</td>
+<td class="org-left"> </td>
+<td class="org-left">Spring 2022</td>
+</tr>
+<tr>
+<td class="org-left">Duration</td>
+<td class="org-left"> </td>
+<td class="org-left">4-6 months</td>
+</tr>
 </tbody>
 </table>
-</div>
-</div>
-
-
-<div id="outline-container-org474e934" class="outline-3">
-<h3 id="org474e934">Context</h3>
-<div class="outline-text-3" id="text-org474e934">
 <p>
-Quantum error correcting strategies are a necessary ingredient for quantum computers as even the most elementary operations – i.e. storing qubits in memory – are error prone.
-Most currently employed strategies have focused on surface codes as they allow 2D physical implementations and have fast error correction algorithms. Yet, they are quite inefficient as they are far from offering the best minimum-distance vs rate trade-off. Better alternatives exist but they lack fast and efficient error correction algorithms. This is partly due to the structure of quantum error correcting codes and more specifically to their degeneracy.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org4a15ca9" class="outline-3">
-<h3 id="org4a15ca9">Objective</h3>
-<div class="outline-text-3" id="text-org4a15ca9">
-<p>
-The objective of this project is to investigate machine learning approaches to efficiently determine the most likely error given an error syndrome.
+<b>Contact:</b> harold.ollivier [at] inria.fr
 </p>
 
 <p>
-The approach will be based on a specific class of quantum error correcting codes called stabilizer codes. They have many similarities with classical codes and many techniques available for classical codes can be imported quite simply to quantum codes. Nonetheless, one stricking difference is that to undo the effect of an error it is not necessary to undo the error itself. Many related operations allow perfect recovery. This is what is called degeneracy of quantum codes. Presented this way, this seems to be positive as it is sufficient to find one of these many operations and not necessarily the exact one that was applied. The reality is more bleak as finding the right set of possible corrections involves summing exponentially many probabilities, thus yeilding inefficient algorithms.
-</p>
-
-<p>
-The idea behind the project is to construct an ML algorithm that, given two sets of equivalent corrections, would be able to quickly compare their respective probabilities of occurences which would then allow to quickly decide which effective correction to apply.
-</p>
-
-<p>
-There are several steps to progress toward this goal:
-</p>
-<ul class="org-ul">
-<li>Understand regimes where degeneracy affects the performance of quantum error correction algorithms</li>
-<li>Review litterature regarding previous ML approaches to tackle this problem</li>
-<li>Find a code and error model to serve as a benchmark for numerical studies</li>
-<li>Determine ML algorithm candidates that could be used</li>
-<li>Conduct numerical experiments and quantify the performance gain/loss with respect to standard approximate approaches and/or exact solutions</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-org0d11f79" class="outline-3">
-<h3 id="org0d11f79">References</h3>
-<div class="outline-text-3" id="text-org0d11f79">
-<ul class="org-ul">
-<li>Quantum stabilizer codes:
-<ul class="org-ul">
-<li>Stabilizer Codes and Quantum Error Correction, Gottesman D, arXiv:quant-ph/9705052</li>
-<li>Quantum codes on a lattice with boundary, Bravyi S B and Kitaev A Y, arXiv:quant-ph/9811052</li>
-</ul>
-</li>
-<li>Error correction algorithms for quantum codes in link with the degeneracy problem
-<ul class="org-ul">
-<li>Trellises for stabilizer codes: definition and uses, Ollivier H and Tillich J-P, arXiv:quant-ph/0512041</li>
-<li>Quantum serial turbo-codes, Poulin D and Tillich J-P, Ollivier H, arXiv:0712.2888</li>
-<li>Degenerate Viterbi decoding, Pelchat E and Poulin D, arXiv:1204.2439</li>
-</ul>
-</li>
-<li>ML for quantum error correction
-<ul class="org-ul">
-<li>Exploiting Degeneracy in Belief Propagation Decoding of Quantum Codes, Kuo K-Y, Lai C-Y, arXiv:2104.13659</li>
-<li>Neural Belief-Propagation Decoders for Quantum Error-Correcting Codes, Liu Y-H and Poulin D, arXiv:1811.07835</li>
-</ul>
-</li>
-</ul>
-</div>
+<img src="internships.2022.ML-QEC" alt="Full description"></p>
 </div>
 </div>
     </div>
