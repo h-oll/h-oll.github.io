@@ -1438,7 +1438,7 @@ GLOBAL_CONTEXT_FILLER = []
 #################
 BODY_END = """
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150665042-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RGE92PZF3Q"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
