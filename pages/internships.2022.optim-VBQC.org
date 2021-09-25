@@ -41,7 +41,7 @@ Two target protocols will be looked at:
 The possible techniques include those developed in arXiv:2109.04042, and a direct optimization of some computation patterns found in arXiv:2102.12949. A change in the security model is also a possible option gaining practicality but losing statistical security for hardware security.
 
 The various steps to progress toward this goal:
-- Have a rough understanding of both target protocols
+- Gain a good understanding of both target protocols
 - Extract sub-optimal routines
 - Review the techniques yielding noise robustness and detection sensitivity amplification
 - Understand how the switch to the quantum enclave model could help achieve the similar goals
