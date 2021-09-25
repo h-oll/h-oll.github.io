@@ -13,13 +13,13 @@
 Internship opportunities listed below are open. Do not hesitate to send an email for further discussion and possible fine tuning.
 
 * Machine learning for quantum error correction
-|--------------+---------------------------------------------------------------------|
-| Topic        | Machine learning and quantum computing                              |
-| Location     | INRIA Paris (Cosmiq Team)                                           |
-| Head of Team | Jean-Pierre Tillich (prenom.nom@inria.fr)                           |
-| Advisor      | Harold Ollivier (prenom.nom@inria.fr)                               |
-| Requirements | Basic notions on quantum error correction, develop and test ML code |
-|--------------+---------------------------------------------------------------------|
+|--------------+---+---------------------------------------------------------------------|
+| Topic        |   | Machine learning and quantum computing                              |
+| Location     |   | INRIA Paris (Cosmiq Team)                                           |
+| Head of Team |   | Jean-Pierre Tillich (prenom.nom@inria.fr)                           |
+| Advisor      |   | Harold Ollivier (prenom.nom@inria.fr)                               |
+| Requirements |   | Basic notions on quantum error correction, develop and test ML code |
+|--------------+---+---------------------------------------------------------------------|
 
 
 ** Context
