@@ -13,6 +13,8 @@
 Internship opportunities listed below are open. Do not hesitate to send an email for further discussion and possible fine tuning.
 
 * Machine learning for quantum error correction
+
+** Summary
 |--------------+---+---------------------------------------------------------------------|
 | Topic        | : | Machine learning and quantum computing                              |
 | Location     | : | INRIA Paris (Cosmiq Team)                                           |
