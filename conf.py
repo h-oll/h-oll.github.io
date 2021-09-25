@@ -1277,7 +1277,7 @@ COPY_SOURCES = False
 # Google Analytics or whatever else you use. Added to the bottom of <body>
 # in the default template (base.tmpl).
 # (translatable)
-# BODY_END = ""
+BODY_END = ""
 
 # The possibility to extract metadata from the filename by using a
 # regular expression.
@@ -1434,3 +1434,16 @@ GLOBAL_CONTEXT = {'blog_sidebar': """\
 # GLOBAL_CONTEXT as parameter when the template is about to be
 # rendered
 GLOBAL_CONTEXT_FILLER = []
+
+#################
+BODY_END = """
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150665042-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RGE92PZF3Q');
+</script>
+"""
