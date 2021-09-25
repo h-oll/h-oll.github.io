@@ -28,4 +28,4 @@ Quantum error correction is necessary to run large scale quantum computations an
 
 *Contact:* harold.ollivier [at] inria.fr
 
-[[../internships.2022.ML-QEC][Full description]]
+[[https://h-oll.github.io/internships.2022.ML-QEC][Full description]]
