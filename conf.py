@@ -24,7 +24,7 @@ SITE_URL = "https://h-oll.github.io/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://h-oll.github.io/"
-BLOG_EMAIL = "harold.ollivier@mines.org"
+BLOG_EMAIL = "harold.ollivier@inria.fr"
 BLOG_DESCRIPTION = "Quantum information science researcher -- Head of QuantumTech@INRIA"  # (translatable)
 
 # Nikola is multilingual!
