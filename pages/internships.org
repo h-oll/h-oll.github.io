@@ -14,42 +14,18 @@ Internship opportunities listed below are open. Do not hesitate to send an email
 
 * Machine learning for quantum error correction
 
-** Summary
+Quantum error correction is necessary to run large scale quantum computations and are an active research area with quantum information processing. The intern will work on new approaches for improving the performance (accuracy and speed) of quantum error correction algorithms.
+
 |--------------+---+---------------------------------------------------------------------|
 | Topic        |   | Machine learning and quantum computing                              |
 | Location     |   | INRIA Paris (Cosmiq Team)                                           |
-| Head of Team |   | Jean-Pierre Tillich (prenom.nom@inria.fr)                           |
-| Advisor      |   | Harold Ollivier (prenom.nom@inria.fr)                               |
+| Head of Team |   | Jean-Pierre Tillich                                                 |
+| Advisor      |   | Harold Ollivier                                                     |
 | Requirements |   | Basic notions on quantum error correction, develop and test ML code |
+| Starting     |   | Spring 2022                                                         |
+| Duration     |   | 4-6 months                                                          |
 |--------------+---+---------------------------------------------------------------------|
 
+*Contact:* harold.ollivier [at] inria.fr
 
-** Context
-Quantum error correcting strategies are a necessary ingredient for quantum computers as even the most elementary operations -- i.e. storing qubits in memory -- are error prone.
-Most currently employed strategies have focused on surface codes as they allow 2D physical implementations and have fast error correction algorithms. Yet, they are quite inefficient as they are far from offering the best minimum-distance vs rate trade-off. Better alternatives exist but they lack fast and efficient error correction algorithms. This is partly due to the structure of quantum error correcting codes and more specifically to their degeneracy.
-
-** Objective
-The objective of this project is to investigate machine learning approaches to efficiently determine the most likely error given an error syndrome.
-
-The approach will be based on a specific class of quantum error correcting codes called stabilizer codes. They have many similarities with classical codes and many techniques available for classical codes can be imported quite simply to quantum codes. Nonetheless, one stricking difference is that to undo the effect of an error it is not necessary to undo the error itself. Many related operations allow perfect recovery. This is what is called degeneracy of quantum codes. Presented this way, this seems to be positive as it is sufficient to find one of these many operations and not necessarily the exact one that was applied. The reality is more bleak as finding the right set of possible corrections involves summing exponentially many probabilities, thus yeilding inefficient algorithms.
-
-The idea behind the project is to construct an ML algorithm that, given two sets of equivalent corrections, would be able to quickly compare their respective probabilities of occurences which would then allow to quickly decide which effective correction to apply.
-
-There are several steps to progress toward this goal:
-- Understand regimes where degeneracy affects the performance of quantum error correction algorithms
-- Review litterature regarding previous ML approaches to tackle this problem 
-- Find a code and error model to serve as a benchmark for numerical studies
-- Determine ML algorithm candidates that could be used
-- Conduct numerical experiments and quantify the performance gain/loss with respect to standard approximate approaches and/or exact solutions
-
-** References
-- Quantum stabilizer codes:
-  - Stabilizer Codes and Quantum Error Correction, Gottesman D, arXiv:quant-ph/9705052
-  - Quantum codes on a lattice with boundary, Bravyi S B and Kitaev A Y, arXiv:quant-ph/9811052
-- Error correction algorithms for quantum codes in link with the degeneracy problem
-  - Trellises for stabilizer codes: definition and uses, Ollivier H and Tillich J-P, arXiv:quant-ph/0512041
-  - Quantum serial turbo-codes, Poulin D and Tillich J-P, Ollivier H, arXiv:0712.2888
-  - Degenerate Viterbi decoding, Pelchat E and Poulin D, arXiv:1204.2439
-- ML for quantum error correction
-  - Exploiting Degeneracy in Belief Propagation Decoding of Quantum Codes, Kuo K-Y, Lai C-Y, arXiv:2104.13659
-  - Neural Belief-Propagation Decoders for Quantum Error-Correcting Codes, Liu Y-H and Poulin D, arXiv:1811.07835
+[[../internships.2022.ML-QEC][Full description]]
