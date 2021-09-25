@@ -13,17 +13,16 @@
 * Summary
 Quantum error correction is necessary to run large scale quantum computations and are an active research area with quantum information processing. The intern will work on new approaches for improving the performance (accuracy and speed) of quantum error correction algorithms.
 
-|--------------+---+---------------------------------------------------------------------|
-| Topic        |   | Machine learning and quantum computing                              |
-| Location     |   | INRIA Paris (Cosmiq Team)                                           |
-| Head of Team |   | Jean-Pierre Tillich                                                 |
-| Advisor      |   | Harold Ollivier                                                     |
-| Requirements |   | Basic notions on quantum error correction, develop and test ML code |
-| Starting     |   | Spring 2022                                                         |
-| Duration     |   | 4-6 months                                                          |
-|--------------+---+---------------------------------------------------------------------|
-
-*Contact:* harold.ollivier [at] inria.fr
+|----------------+---+---------------------------------------------------------------------|
+| *Topic*        |   | Machine learning and quantum computing                              |
+| *Location*     |   | INRIA Paris (Cosmiq Team)                                           |
+| *Head of Team* |   | Jean-Pierre Tillich                                                 |
+| *Advisor*      |   | Harold Ollivier                                                     |
+| *Requirements* |   | Basic notions on quantum error correction, develop and test ML code |
+| *Starting*     |   | Spring 2022                                                         |
+| *Duration*     |   | 4-6 months                                                          |
+| *Contact*      |   | harold.ollivier [at] inria.fr                                       |
+|----------------+---+---------------------------------------------------------------------|
 
 * Context
 Quantum error correcting strategies are a necessary ingredient for quantum computers as even the most elementary operations -- i.e. storing qubits in memory -- are error prone.

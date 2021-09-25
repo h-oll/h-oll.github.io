@@ -1,0 +1,61 @@
+#+BEGIN_COMMENT
+.. title: Protocol optimizations for secure delegated/multi-party quantum computation
+.. slug: internships.2022.optim-VBQC
+.. date: 2021-09-25 13:01:09 UTC+02:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+
+#+END_COMMENT
+
+* Summary
+Various protocols have been described in the previous years for achieving secure (verifiable and blind) quantum computation, but most remain theoretical tools due to their high overheads. The intern will work on optimizing some of them with the aim of implementing them on real machines.
+
+|----------------+---+--------------------------------------------------|
+| *Topic*        |   | Multi-Party Computing, Cryptography              |
+| *Location*     |   | INRIA Paris (Cosmiq Team)                        |
+| *Head of Team* |   | Jean-Pierre Tillich                              |
+| *Advisor*      |   | Harold Ollivier                                  |
+| *Requirements* |   | Basic notions of quantum computing, cryptography |
+| *Starting*     |   | Spring 2022                                      |
+| *Duration*     |   | 4-6 months                                       |
+| *Contact*      |   | harold.ollivier [at] inria.fr                    |
+|----------------+---+--------------------------------------------------|
+
+* Context
+Remotely accessible quantum computing platforms free clients from the burden of maintaining complex physical devices in house. Yet, when delegating computations, they want their data and algorithms to remain private, and that these computations are executed as specified. Several methods have been devised to achieve this (see refs. below)
+
+Yet, until only one protocol has the potential of being applicable in practice. This is because, it's overhead has been reduced to repetitions only and it exhibits noise robustness so that it does not continuously abort the computations like previous protocols that tend to mistake genuine errors for a malicious behavior.
+
+Following this first example, other protocols need to be optimized for real world quantum computers.
+
+* Objective
+The objective of this project is to propose optimized protocols that are able to withstand noise and have low resource overheads, potentially leading to implementation proposals for real quantum hardware.
+
+Two target protocols will be looked at:
+- A delegated nulti-party protocol that uses the measurement based model of computation for ensuring privacy
+- A circuit based protocol for client - server delegation
+
+The possible techniques include those developed in arXiv:2109.04042, and a direct optimization of some computation patterns found in arXiv:2102.12949. A change in the security model is also a possible option gaining practicality but losing statistical security for hardware security.
+
+The various steps to progress toward this goal:
+- Have a rough understanding of both target protocols
+- Extract sub-optimal routines
+- Review the techniques yielding noise robustness and detection sensitivity amplification
+- Understand how the switch to the quantum enclave model could help achieve the similar goals
+- Apply the various techniques to sub-optimal routines
+
+* References
+- Protocols for verified computation
+  - Universal blind quantum computation, Broadbent A and Fitzsimons J and Kashefi E, arXiv:0807.4154
+  - Unconditionally verifiable blind computation, Fitzsimons J F and Kashefi E, arXiv:1203.5217
+  - Verification of quantum computation: An overview of existing approaches, Gheorghiu A and Kapourniotis T and Kashefi E, arXiv:1709.06984
+- Robust verification protocols
+  - Verifying BQP Computations on Noisy Devices with Minimal Overhead, Leichtle D and Music L and Kashefi E and Ollivier, arXiv:2109.04042
+- Hardware security for quantum computing
+  - QEnclave -- A practical solution for secure quantum cloud computing, Ma Y and Kashefi E and Arapinis M and Chakraborty K and Kaplan M, arXiv:2109.02952
+- Possible target protocols for optimisation
+  - Delegating Multi-Party Quantum Computations vs. Dishonest Majority in Two Quantum Rounds, Kapourniotis T and Kashefi E and Music L and Ollivier H, arXiv:2102.12949
+  - How to Verify a Quantum Computation, Broadbent A, arXiv:1509.09180

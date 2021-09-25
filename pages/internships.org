@@ -16,16 +16,33 @@ Internship opportunities listed below are open. Do not hesitate to send an email
 
 Quantum error correction is necessary to run large scale quantum computations and are an active research area with quantum information processing. The intern will work on new approaches for improving the performance (accuracy and speed) of quantum error correction algorithms.
 
-|--------------+---+---------------------------------------------------------------------|
-| Topic        |   | Machine learning and quantum computing                              |
-| Location     |   | INRIA Paris (Cosmiq Team)                                           |
-| Head of Team |   | Jean-Pierre Tillich                                                 |
-| Advisor      |   | Harold Ollivier                                                     |
-| Requirements |   | Basic notions on quantum error correction, develop and test ML code |
-| Starting     |   | Spring 2022                                                         |
-| Duration     |   | 4-6 months                                                          |
-|--------------+---+---------------------------------------------------------------------|
-
-*Contact:* harold.ollivier [at] inria.fr
+|----------------+---+---------------------------------------------------------------------|
+| *Topic*        |   | Machine learning and quantum computing                              |
+| *Location*     |   | INRIA Paris (Cosmiq Team)                                           |
+| *Head of Team* |   | Jean-Pierre Tillich                                                 |
+| *Advisor*      |   | Harold Ollivier                                                     |
+| *Requirements* |   | Basic notions on quantum error correction, develop and test ML code |
+| *Starting*     |   | Spring 2022                                                         |
+| *Duration*     |   | 4-6 months                                                          |
+| *Contact*      |   | harold.ollivier [at] inria.fr                                       |
+|----------------+---+---------------------------------------------------------------------|
 
 [[https://h-oll.github.io/internships.2022.ML-QEC][Full description]]
+
+* Protocol optimizations for secure delegated/multi-party quantum computation
+
+Various protocols have been described in the previous years for achieving secure (verifiable and blind) quantum computation, but most remain theoretical tools due to their high overheads. The intern will work on optimizing some of them with the aim of implementing them on real machines.
+
+|----------------+---+--------------------------------------------------|
+| *Topic*        |   | Multi-Party Computing, Cryptography              |
+| *Location*     |   | INRIA Paris (Cosmiq Team)                        |
+| *Head of Team* |   | Jean-Pierre Tillich                              |
+| *Advisor*      |   | Harold Ollivier                                  |
+| *Requirements* |   | Basic notions of quantum computing, cryptography |
+| *Starting*     |   | Spring 2022                                      |
+| *Duration*     |   | 4-6 months                                       |
+| *Contact*      |   | harold.ollivier [at] inria.fr                    |
+|----------------+---+--------------------------------------------------|
+
+
+[[https://h-oll.github.io/internships.2022.optim-VBQC][Full description]]
