@@ -1,0 +1,31 @@
+#+BEGIN_COMMENT
+.. title: Open positions
+.. slug: hiring
+.. date: 2021-09-25 11:24:58 UTC+02:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+
+#+END_COMMENT
+
+We are recruiting two postdoc's to join the team and help develop
+protocols and algorithms that can run on current or near future
+machines. One position is focusing on cryptographic protocols for
+secure multi-party quantum computation. The other position is about
+design quantum machine algorithms that can benefit from specific
+hardwares to run longer circuits, or have better accuracies.
+
+The successful candidates will be part of a great ecosystem with lots
+of interactions with other Paris QI labs and start-ups.
+
+To apply, follow the links below:
+- SMPC: https://recrutement.inria.fr/public/classic/fr/offres/2022-04572
+- QML: https://recrutement.inria.fr/public/classic/fr/offres/2022-04573
+
+
+* Past positions
+
+- [[https://h-oll.github.io/internships.2022.ML-QEC][Machine learning for quantum error correction]] 
+- [[https://h-oll.github.io/internships.2022.optim-VBQC][Protocol optimizations for secure delegated/multi-party quantum computation]] 

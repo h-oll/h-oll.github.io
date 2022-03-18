@@ -141,7 +141,7 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/index.html", "Home"),
-        ("/internships", "Interships"),
+        ("/hiring", "Hiring"),
         # ("/archive.html", "Archive"),
         # ("/categories/", "Tags"),
         # ("/rss.xml", "RSS feed"),
@@ -1424,7 +1424,6 @@ GLOBAL_CONTEXT = {'blog_sidebar': """\
   <h4>Links</h4>
   <ol class="list-unstyled">
     <li><a href="https://www.twitter.com/h_oll">@h_oll</a></li>
-    <li><a href="https://www.twitter.com/qoherences">@qoherences</a></li>
     <li><a href="https://www.linkedin.com/harold.ollivier">Linkedin</a></li>
   </ol>
 </div>
