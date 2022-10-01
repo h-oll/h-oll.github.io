@@ -10,9 +10,7 @@
 
 #+END_COMMENT
 
-* Hiring
-
-** Open positions
+* Open positions
 I am recruiting 3 years postdocs, PhD students and software engineers
 on the following topics:
 
@@ -31,7 +29,7 @@ Precise projects will be tailored to your expertise and the current
 advancement of our roadmap for building theoretical tools enabling
 practical quantum applications.
 
-** Past positions
+* Past positions
 
 - Postdoc position: quantum machine learning for specific quantum architectures
 - [[https://h-oll.github.io/internships.2022.ML-QEC][Machine learning for quantum error correction]] 
