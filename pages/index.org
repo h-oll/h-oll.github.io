@@ -9,17 +9,21 @@
 .. type: text
 
 #+END_COMMENT
-# +TITLE: Research Program
-# +OPTIONS: toc:nil 
 
-* Research
-The group's focus is to build theoretical tools and methods for designing more
-practical quantum computing applications. We focus on 3 areas:
+
+* Activities
+
+** Research
+
+My research focus is on building tools and methods for designing
+more robust applications for quantum coputers.
+
+I'm active through 3 broad areas
 - Verification of delegated quantum computing and secure multiparty quantum computing
 - Noise estimation and error mitigation
 - Hardware optimized quantum algorithms
 
-* QuantumTech@INRIA
+** QuantumTech@INRIA
 In parallel, Harold heads the QuantumTech Program launched by INRIA in 2021 to
 materialize its quantum expertise cumulated over more than 20 years of
 research and across 5 teams:

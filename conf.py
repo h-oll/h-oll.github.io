@@ -17,7 +17,7 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "Harold Ollivier"  # (translatable)
-BLOG_TITLE = "Ollivier Group"  # (translatable)
+BLOG_TITLE = "Harold Ollivier"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "https://h-oll.github.io/"
@@ -151,7 +151,8 @@ NAVIGATION_LINKS = {
 # }
 
 #       for gruberwine theme
-        ('/index.html', 'Home', 'fa fa-home'),
+#        ('/index.html', 'Home', 'fa fa-home'),
+        ('/projects', 'Projects', 'fa fa-industry'),
         ('/hiring', 'Open Positions', 'fa fa-folder-open'),
         #('/categories/index.html', 'Tags', 'fa fa-tags'),
         #('/rss.xml', 'RSS', 'fa fa-rss'),
@@ -171,7 +172,7 @@ NAVIGATION_ALT_LINKS = {
 }
 
 # Name of the theme to use.
-THEME = "gruberwine" #"bootblog"
+THEME = "gruberwine"
 
 # A theme color. In default themes, it might be displayed by some browsers as
 # the browser UI color (eg. Chrome on Android). Other themes might also use it

@@ -7,7 +7,6 @@
 .. link: 
 .. description: 
 .. type: text
-
 #+END_COMMENT
 
 * Open positions
@@ -34,3 +33,4 @@ practical quantum applications.
 - Postdoc position: quantum machine learning for specific quantum architectures
 - [[https://h-oll.github.io/internships.2022.ML-QEC][Machine learning for quantum error correction]] 
 - [[https://h-oll.github.io/internships.2022.optim-VBQC][Protocol optimizations for secure delegated/multi-party quantum computation]] 
+jifoer
