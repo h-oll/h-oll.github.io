@@ -237,7 +237,7 @@ address
 .navlinks a:hover
 {
 	color: white;
-	background-color: /*#d62309*/ #192029;
+	background-color: #d62309 /*#192029*/;
 }
 
 /* Brighten the hamburger icon on mouseover. */
