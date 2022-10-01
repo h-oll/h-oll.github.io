@@ -35,6 +35,29 @@ I head the QuantumTech Program launched by INRIA in 2021 to materialize its quan
 
 Several teams are naturally part of QuantumTech@INRIA as they are dedicated to quantum information such as [[https://www.inria.fr/en/cosmiq][COSMIQ]], [[https://www.inria.fr/en/mocqua][MOCQUA]], [[https://www.inria.fr/en/qinfo][QInfo]], [[https://www.inria.fr/en/quacs][QUACS]], [[https://www.inria.fr/en/quantic][QUANTIC]]. Expertise is also being built-up in collaboration with several classical INRIA teams that can benefit from quantum algorithms.
 
+* Papers
+
+<html>
+<head>
+<title>Dr. Nate's Page of accomplishments</title>
+<script type="text/javascript">
+<!--
+var arxiv_authorid = "yourauthorid";
+//--></script>
+<style type="text/css">
+div.arxivfeed {margin-bottom: 5px; width:700px;}
+</style>
+<script type="text/javascript" src="https://arxiv.org/js/myarticles.js">
+</script>
+</head>
+<body>
+<h1>Nate Rules!</h1>
+<p>Stuff goes here</p>
+<div id="arxivfeed"></div>
+</body>
+</html>
+
+
 * Footnotes
 
 [fn:1]
