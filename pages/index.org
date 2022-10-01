@@ -12,7 +12,8 @@
 # +TITLE: Research Program
 # +OPTIONS: toc:nil 
 
-* Research
+* Activities
+** Research
 My research activity focuses on the interplay between application design and quantum computing architectures.
 
 One application that we have been extensively developing is the delegation of quantum computations to third-party providers while maintaining security -- ie. privacy of the data and algorithm used, as well as integrity of the computation itself. Several approaches have been designed over the years for tackling this question. The one the team is working on is based on trapification of measurement based quantum computation. It is lightweight in the overhead at the client side -- only single qubit operations are required -- while most of the burden is taken care of by the server. To enable this approach it is nonetheless needed to have quantum communication between the client and the server.
@@ -29,37 +30,36 @@ Other topics that we are currently investigating with a similar approach -- inte
 
 I've been also contributing to the understanding of the emergence of classical objective properties out of quantum theory in various settings, such as many-body physics[fn:3]
 
-* QuantumTech@INRIA
+** QuantumTech@INRIA
 
 I head the QuantumTech Program launched by INRIA in 2021 to materialize its quantum expertise started more than 20 years ago on decoherence and quantum error correction. One of the objectives for this program is to accompany the deployment of the National Strategy for Quantum Technologies through the participation of INRIA teams to several research and development projects. The program provides coordination for the research teams at the national as well as international level. 
 
 Several teams are naturally part of QuantumTech@INRIA as they are dedicated to quantum information such as [[https://www.inria.fr/en/cosmiq][COSMIQ]], [[https://www.inria.fr/en/mocqua][MOCQUA]], [[https://www.inria.fr/en/qinfo][QInfo]], [[https://www.inria.fr/en/quacs][QUACS]], [[https://www.inria.fr/en/quantic][QUANTIC]]. Expertise is also being built-up in collaboration with several classical INRIA teams that can benefit from quantum algorithms.
 
-* Papers
 
-<html>
-<head>
-<title>Dr. Nate's Page of accomplishments</title>
-<script type="text/javascript">
-<!--
-var arxiv_authorid = "yourauthorid";
-//--></script>
-<style type="text/css">
-div.arxivfeed {margin-bottom: 5px; width:700px;}
-</style>
-<script type="text/javascript" src="https://arxiv.org/js/myarticles.js">
-</script>
-</head>
-<body>
-<h1>Nate Rules!</h1>
-<p>Stuff goes here</p>
-<div id="arxivfeed"></div>
-</body>
-</html>
+# * Papers
+# <html>
+# <head>
+# <title>Dr. Nate's Page of accomplishments</title>
+# <script type="text/javascript">
+# <!--
+# var arxiv_authorid = "yourauthorid";
+# //--></script>
+# <style type="text/css">
+# div.arxivfeed {margin-bottom: 5px; width:700px;}
+# </style>
+# <script type="text/javascript" src="https://arxiv.org/js/myarticles.js">
+# </script>
+# </head>
+# <body>
+# <h1>Nate Rules!</h1>
+# <p>Stuff goes here</p>
+# <div id="arxivfeed"></div>
+# </body>
+# </html>
 
 
 * Footnotes
-
 [fn:1]
 "Securing Quantum Computations in the NISQ Era", Elham Kashefi, Dominik Leichtle, Luka Music, Harold Ollivier, PRX Quantum 2, 040302 (2021) https://journals.aps.org/prxquantum/abstract/10.1103/PRXQuantum.2.040302
 [fn:2]

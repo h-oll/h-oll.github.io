@@ -10,22 +10,29 @@
 
 #+END_COMMENT
 
-We are recruiting two postdoc's to join the team and help develop
-protocols and algorithms that can run on current or near future
-machines. One position is focusing on cryptographic protocols for
-secure multi-party quantum computation. The other position is about
-design quantum machine algorithms that can benefit from specific
-hardwares to run longer circuits, or have better accuracies.
+* Hiring
 
-The successful candidates will be part of a great ecosystem with lots
-of interactions with other Paris QI labs and start-ups.
+** Open positions
+I am recruiting 3 years postdocs, PhD students and software engineers
+on the following topics:
 
-To apply, follow the links below:
-- SMPC: https://recrutement.inria.fr/public/classic/fr/offres/2022-04572
-- QML: https://recrutement.inria.fr/public/classic/fr/offres/2022-04573
+- Verification of Quantum Computation and Secure Multiparty Quantum Computation
+- Noise Estimation and Noise Mitigation
+- Quantum Algorithms
 
+As part of a new INRIA Team located in Paris, you will collaborating
+with other quantum information researchers and start-ups:
+- Elham Kashefi's [[https://www.ediparquantum.com/][EDI-PAR Quantum]] and more widely the [[https://qi.lip6.fr][QI Team at LIP6]]
+- [[https://www.di.ens.fr/][Departement d'informatique de l'ENS]]
+- [[https://veriqloud.com][Veriqloud]]
+- [[https://alice-bob.com][Alice et Bob]]
 
-* Past positions
+Precise projects will be tailored to your expertise and the current
+advancement of our roadmap for building theoretical tools enabling
+practical quantum applications.
 
+** Past positions
+
+- Postdoc position: quantum machine learning for specific quantum architectures
 - [[https://h-oll.github.io/internships.2022.ML-QEC][Machine learning for quantum error correction]] 
 - [[https://h-oll.github.io/internships.2022.optim-VBQC][Protocol optimizations for secure delegated/multi-party quantum computation]] 
