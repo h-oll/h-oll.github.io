@@ -28,6 +28,8 @@ Precise projects will be tailored to your expertise and the current
 advancement of our roadmap for building theoretical tools enabling
 practical quantum applications.
 
+To explore the possibility of joining the group, [[mailto:harold.ollivier@inria.fr][email me]].
+
 * Past positions
 
 - Postdoc position: quantum machine learning for specific quantum architectures
