@@ -159,6 +159,7 @@ NAVIGATION_LINKS = {
         ('/about', 'About me', 'fa fa-user'),
         ('https://twitter.com/h_oll', 'Twitter', 'fab fa-twitter'),
         ('https://github.com/h-oll', 'Github', 'fab fa-github'),
+        ('mailto://harold.ollivier@inria.fr', 'Email', 'fa fa-envelope'),
     )
 }
 
