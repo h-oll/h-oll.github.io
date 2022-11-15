@@ -1,0 +1,56 @@
+#+BEGIN_COMMENT
+.. title: Optimisation de calculs quantiques délégués
+.. slug: mpri_2023
+.. date: 2022-11-15 00:00:00 UTC+02:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+
+#+END_COMMENT
+
+* Optimisation de calculs quantiques délégués
+
+Nous proposons un stage de M2 au sein de l'action exploratoire QAT
+(Equipe Cascade - Département d'Informatique de l'ENS / INRIA / CNRS)
+portant sur l'optimisation de protocoles pour le calcul quantique
+sécurisé.
+
+A l'heure actuelle, deux familles de protocoles sont proposées dans la
+littérature pour remplir cette fonctionalité. La première [FK17]
+requiert un canal de communication quantique et offre un sécurité
+statistique, tandis que la seconde [M18] s'appuie sur des primitives
+cryptographiques post-quantiques pour ne demander qu'un canal de
+communication classique au prix d'une sécurité calculatoire.
+
+Dans un cas comme dans l'autre, les overheads nécessaires pour mettre
+en oeuvre ces solutions sont difficilement compatibles avec les
+capacités des machines actuelles -- y compris en
+laboratoire. Néanmoins le travail d'optimisation entrepris au sein de
+QAT a permis de proposer un protocole [LMKO21] qui sera implémenté
+dans les prochaines années sur une plateforme expérimentale.
+
+Le stage aura pour objet de poursuivre ce travail d'optimisation pour
+élargir la classe de calculs qui peuvent être vérifiés avec des
+overheads raisonnables. A l'heure actuelle cette classe est limitée à
+BQP (bounded error quantum polynomial-time) avec une sécurité
+exponentielle. Nous proposons que le stage se focalise sur les
+optimisations des protocoles permettant de vérifier des calculs dans
+sampBQP (sampling bounded error quantum polynomial time). Deux
+approches sont possibles: réduire les overheads des protocoles
+existants ou proposer un nouveau protocole utilisant les techniques de
+[LMKO21].
+
+Le stagiaire aura l'occasion de travailler avec les membres de QAT,
+ainsi que plus largement ceux de CASCADE et du LIP6. Le stage sera
+financé au travers d'un projet ANR (SecNISQ) ou d'un projet européen
+(Quantum Internet Alliance).
+
+Les compétences nécessaires sont une bonne maîtrise des techniques de
+preuves de securité pour la cryptographie avec un intérêt pour la
+sécurité composable et l'informatique quantique.
+
+* Références
+- FK17: https://arxiv.org/abs/1203.5217
+- LMKO21: https://arxiv.org/abs/2109.04042
