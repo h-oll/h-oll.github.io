@@ -1,0 +1,14 @@
+---
+layout: page
+title: Teaching
+permalink: /teaching/
+---
+<h1>Teaching notes and news</h1>
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
