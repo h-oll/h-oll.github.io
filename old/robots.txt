@@ -1,4 +1,0 @@
-Sitemap: https://h-oll.github.io/sitemapindex.xml
-
-User-Agent: *
-Host: h-oll.github.io
