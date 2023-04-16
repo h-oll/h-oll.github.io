@@ -11,7 +11,7 @@ source "https://rubygems.org"
 
 # THEME
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minima", "~> 2.5"
+# gem "minima", "~> 2.5"
 # gem 'jekyll-theme-chirpy', '~> 5.6'
 
 # GITHUB PAGES
