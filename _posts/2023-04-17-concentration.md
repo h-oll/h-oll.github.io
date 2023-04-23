@@ -190,8 +190,10 @@ tag:    Qatalyze
 </style>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
+        displayAlign: "left",
+        displayIndent: "5em",
+
+        extensions: ["[Contrib]/physics/physics.js"],
 
         "HTML-CSS": { scale: 100,
                         linebreaks: { automatic: "false" },
@@ -210,224 +212,271 @@ tag:    Qatalyze
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 
+<div id="content" class="content">
+<p>
+\[
+\newcommand{\one}{\mathbb{1}}
+\newcommand{\Id}{\mathbb{I}}
+\newcommand\supp{\mathrm{supp}}
+\newcommand\tr{\mathrm{tr}}
+\]
+</p>
+<div id="outline-container-org64ca697" class="outline-2">
+<h2 id="org64ca697"><span class="section-number-2">1.</span> Definitions</h2>
+<div class="outline-text-2" id="text-1">
+<div class="definition" id="orga22c3d9">
+<p>
+The Lipschitz constant for \(H\) a self-adjoint operator is defined by:
+</p>
+\begin{equation}
+\|H\|_L = 2 \max_{v\in V} \min_{H_{\setminus v}} \|H - H_{\setminus v}\otimes \Id_v\|_{\infty}
+\end{equation}
 
-<h1 id="sec:orgd1ce55b">Definitions</h1>
-<div class="definition">
-<p><strong>Definition 1</strong>. <em>The Lipschitz constant for <span
-class="math inline"><em>H</em></span> a self-adjoint operator is defined
-by: <span
-class="math display">∥<em>H</em>∥<sub><em>L</em></sub> = 2max<sub><em>v</em> ∈ <em>V</em></sub>min<sub><em>H</em><sub>\<em>v</em></sub></sub>∥<em>H</em> − <em>H</em><sub>\<em>v</em></sub> ⊗ 𝕀<sub><em>v</em></sub>∥<sub>∞</sub></span></em></p>
 </div>
-<div class="definition">
-<p><strong>Definition 2</strong>. <em>The sandwiched Renyi divergence of
-order <span class="math inline"><em>α</em> ∈ (1,+∞)</span> is defined
-for two quantum states <span
-class="math inline"><em>ρ</em>, <em>σ</em></span> with <span
-class="math inline">supp <em>ρ</em> ⊂ supp <em>σ</em></span> as <span
-class="math display">$$D_{\alpha} (\rho \| \sigma) = \frac{1}{\alpha-1}
-\log \mathrm{tr} \left[\left(\sigma^{\frac{1-\alpha}{2\alpha}} \rho
-\sigma^{\frac{1-\alpha}{2\alpha}}\right
-)^\alpha\right]$$</span></em></p>
+
+<div class="definition" id="orgb459aff">
+<p>
+The sandwiched Renyi divergence of order \(\alpha \in (1,+\infty)\) is defined for two quantum states \(\rho, \sigma\) with \(\supp \rho \subset \supp \sigma\) as
+</p>
+\begin{equation}
+D_{\alpha} (\rho \| \sigma) = \frac{1}{\alpha-1} \log \tr \left[\left(\sigma^{\frac{1-\alpha}{2\alpha}} \rho \sigma^{\frac{1-\alpha}{2\alpha}}\right )^\alpha\right]
+\end{equation}
+
 </div>
-<div class="definition">
-<p><strong>Definition 3</strong>. <em>A state <span
-class="math inline"><em>σ</em></span> on <span
-class="math inline"><em>V</em></span> qudits satisfies a Gaussian
-concentration inequality of parameter <span
-class="math inline"><em>c</em></span> if there is a constant <span
-class="math inline"><em>K</em></span> such that for any <span
-class="math inline"><em>a</em></span> and any observable <span
-class="math inline"><em>O</em></span>: <span
-class="math display">$$\Pr_{\sigma} (|O - \langle O\rangle_\sigma
-\mathbb{I}| &gt; a |V|) \leq K \exp \left( - \frac{c a^2 |V|}{\|
-\sigma^{-1/2} O \sigma^{1/2}\|_L^2}\right)$$</span></em></p>
+
+<div class="definition" id="org52ce695">
+<p>
+A state \(\sigma\) on \(V\) qudits satisfies a Gaussian concentration inequality of parameter \(c\) if there is a constant \(K\) such that for any \(a\) and any observable \(O\):
+</p>
+\begin{equation}
+\Pr_{\sigma} (|O - \langle O\rangle_\sigma \Id| > a |V|) \leq K \exp \left( - \frac{c a^2 |V|}{\| \sigma^{-1/2} O \sigma^{1/2}\|_L^2}\right)
+\end{equation}
+
 </div>
-<p>Above <span class="math inline">$|A| = \sqrt {A^\dagger A}$</span>,
-and <span
-class="math inline">Pr<sub><em>σ</em></sub>(|<em>O</em>−⟨<em>O</em>⟩<sub><em>σ</em></sub>𝕀&gt;<em>a</em>|<em>V</em>|)</span>
-means that for <span class="math inline"><em>E</em></span> the positive
-part of <span
-class="math inline">|<em>O</em>−⟨<em>O</em>⟩<sub><em>σ</em></sub>𝕀| − <em>a</em>|<em>V</em>|𝕀</span>,
-we have <span class="math inline">$\mathrm{tr}(E\sigma)$</span> bounded by the
-right hand side of the equation. Note that in the cases where <span
-class="math inline"><em>σ</em></span> and <span
-class="math inline"><em>O</em></span> commute <span
-class="math inline">∥<em>σ</em><sup>−1/2</sup><em>O</em><em>σ</em><sup>1/2</sup>∥<sub><em>L</em></sub><sup>2</sup></span>
-reduces to <span
-class="math inline">∥<em>O</em>∥<sub><em>L</em></sub><sup>2</sup></span>.</p>
-<h1 id="sec:org596a9b8">Transferring inequalities</h1>
-<div class="theorem">
-<p><strong>Theorem 1</strong>. <em>Let <span
-class="math inline"><em>ρ</em>, <em>σ</em></span> be two quantum states
-on <span class="math inline">ℋ<sub><em>V</em></sub></span>. Then for any
-POVM element <span class="math inline">0 ≤ <em>E</em> ≤ 𝕀</span> and
-<span class="math inline"><em>α</em> &gt; 1</span>, <span
-class="math display">$$\mathrm{tr}[E\rho] \leq \exp\left( \frac{\alpha
--1}{\alpha} (D_\alpha(\rho\|\sigma) +
-\log(\mathrm{tr}[E\sigma]))\right)$$</span></em></p>
+<p>
+Above \(|A| = \sqrt {A^\dagger A}\), and \(\Pr_\sigma(|O-\langle
+O\rangle_\sigma \Id > a|V|)\) means that for \(E\) the positive part of
+\(|O-\langle O\rangle_{\sigma}\Id|-a|V|\Id\), we have \(\tr(E\sigma)\)
+bounded by the right hand side of the equation. Note that in the cases
+where \(\sigma\) and \(O\) commute \(\| \sigma^{-1/2} O \sigma^{1/2}\|_L^2\)
+reduces to \(\| O\|_L^2\).
+</p>
 </div>
-<div class="proof">
-<p><em>Proof.</em> Using the circularity of the trace we have: <span
-class="math display">$$\begin{aligned}
-\mathrm{tr}[E\rho]
-&amp; = \mathrm{tr}[\sigma^{-\frac{1-\alpha}{2\alpha}} E
-\sigma^{-\frac{1-\alpha}{2\alpha}} \times
-\sigma^{\frac{1-\alpha}{2\alpha}}
-\rho  \sigma^{\frac{1-\alpha}{2\alpha}}] \\
-&amp; \leq \left\{\mathrm{tr} \left[ \left( \sigma^{-\frac{1-\alpha}{2\alpha}} E
-\sigma^{-\frac{1-\alpha}{2\alpha}}\right)^\beta \right
-]\right\}^{\frac{1}{\beta}} \times \left\{\mathrm{tr} \left[ \left(
-\sigma^{\frac{1-\alpha}{2\alpha}} \rho \sigma^{\frac{1-\alpha}{2\alpha}}
-\right)^\alpha \right ]\right\}^{\frac{1}{\alpha}}\end{aligned}$$</span>
-where the last line is obtained by applying Hölder inequality, which
-holds for <span class="math inline">$\frac{1}{\alpha} + \frac{1}{\beta}
-= 1$</span>.</p>
-<p>Using the Araki-Lieb-Thirring inequality followed by <span
-class="math inline"><em>E</em> ≤ 𝕀</span> we obtain: <span
-class="math display">$$\begin{aligned}
-\mathrm{tr} \left( \sigma^{-\frac{1-\alpha}{2\alpha}} E
-\sigma^{-\frac{1-\alpha}{2\alpha}}\right)^\beta
-&amp; \leq \mathrm{tr} \left( \sigma^{-\frac{(1-\alpha)\beta}{2\alpha}} E^\beta
-\sigma^{-\frac{(1-\alpha)\beta}{2\alpha}}\right) \\
-&amp; \leq \mathrm{tr} \left( \sigma^{-\frac{(1-\alpha)\beta}{2\alpha}} E
-\sigma^{-\frac{(1-\alpha)\beta}{2\alpha}}\right).\end{aligned}$$</span>
-As <span class="math inline">$\beta = \frac{\alpha}{\alpha -1}$</span>
-we have <span class="math display">$$\mathrm{tr} \left(
-\sigma^{-\frac{(1-\alpha)\beta}{2\alpha}} E
-\sigma^{-\frac{(1-\alpha)\beta}{2\alpha}}\right)=\mathrm{tr}(E\sigma).$$</span></p>
-<p>Additionally, note that <span class="math display">$$\left \{ \mathrm{tr}
-\left[ \left( \sigma^{\frac{1-\alpha}{2\alpha}}
-\rho  \sigma^{\frac{1-\alpha}{2\alpha}} \right)^\alpha \right
-]\right\}^{\frac{1}{\alpha}} = \exp (\frac{\alpha -1}{\alpha}
-D_\alpha(\rho\|\sigma)).$$</span></p>
-<p>Combining the two gives: <span class="math display">$$\begin{aligned}
-\mathrm{tr}[E\rho]
-&amp; \leq (tr[E\sigma]) \times \exp\left( \frac{\alpha -1}{\alpha}
-(D_\alpha(\rho\|\sigma))\right) \\
-&amp; \leq \exp\left( \frac{\alpha -1}{\alpha}
-(D_\alpha(\rho\|\sigma))  \log
-(\mathrm{tr}[E\sigma])\right).\end{aligned}$$</span> ◻</p>
 </div>
-<p>Remark that the theorem bounds the probability of observing <span
-class="math inline"><em>E</em></span> on <span
-class="math inline"><em>ρ</em></span> based on the product of the
-probability of observing <span class="math inline"><em>E</em></span> on
-<span class="math inline"><em>σ</em></span> times a quantity that
-depends on <span
-class="math inline"><em>D</em><sub><em>α</em></sub>(<em>ρ</em>∥<em>σ</em>)</span>,
+
+<div id="outline-container-org4d28410" class="outline-2">
+<h2 id="org4d28410"><span class="section-number-2">2.</span> Transferring inequalities</h2>
+<div class="outline-text-2" id="text-2">
+<div class="theorem" id="orgdfbbbbb">
+<p>
+Let \(\rho, \sigma\) be two quantum states on \(\mathcal H_V\). Then for any POVM element \(0 \leq E \leq \Id\) and \(\alpha >1\),
+</p>
+\begin{equation}
+\tr[E\rho] \leq \exp\left( \frac{\alpha -1}{\alpha} (D_\alpha(\rho\|\sigma) + \log(\tr[E\sigma]))\right)
+\end{equation}
+
+</div>
+
+<div class="proof" id="orge17a8ab">
+<p>
+Using the circularity of the trace we have:
+</p>
+\begin{align}
+\tr[E\rho]
+& = \tr[\sigma^{-\frac{1-\alpha}{2\alpha}} E \sigma^{-\frac{1-\alpha}{2\alpha}} \times \sigma^{\frac{1-\alpha}{2\alpha}} \rho  \sigma^{\frac{1-\alpha}{2\alpha}}] \\
+& \leq \left\{\tr \left[ \left( \sigma^{-\frac{1-\alpha}{2\alpha}} E \sigma^{-\frac{1-\alpha}{2\alpha}}\right)^\beta \right ]\right\}^{\frac{1}{\beta}} \times \left\{\tr \left[ \left( \sigma^{\frac{1-\alpha}{2\alpha}} \rho \sigma^{\frac{1-\alpha}{2\alpha}} \right)^\alpha \right ]\right\}^{\frac{1}{\alpha}}
+\end{align}
+<p>
+where the last line is obtained by applying H\"older inequality, which holds for \(\frac{1}{\alpha} + \frac{1}{\beta} = 1\).
+</p>
+
+<p>
+Using the Araki-Lieb-Thirring inequality followed by \(E \leq \Id\) we obtain:
+</p>
+\begin{align}
+\tr \left( \sigma^{-\frac{1-\alpha}{2\alpha}} E \sigma^{-\frac{1-\alpha}{2\alpha}}\right)^\beta
+& \leq \tr \left( \sigma^{-\frac{(1-\alpha)\beta}{2\alpha}} E^\beta \sigma^{-\frac{(1-\alpha)\beta}{2\alpha}}\right) \\
+& \leq \tr \left( \sigma^{-\frac{(1-\alpha)\beta}{2\alpha}} E \sigma^{-\frac{(1-\alpha)\beta}{2\alpha}}\right).
+\end{align}
+<p>
+As \(\beta = \frac{\alpha}{\alpha -1}\) we have
+</p>
+\begin{equation}
+\tr \left( \sigma^{-\frac{(1-\alpha)\beta}{2\alpha}} E \sigma^{-\frac{(1-\alpha)\beta}{2\alpha}}\right)=\tr(E\sigma).
+\end{equation}
+
+<p>
+Additionally, note that
+</p>
+\begin{equation}
+\left \{ \tr \left[ \left( \sigma^{\frac{1-\alpha}{2\alpha}} \rho  \sigma^{\frac{1-\alpha}{2\alpha}} \right)^\alpha \right ]\right\}^{\frac{1}{\alpha}} = \exp (\frac{\alpha -1}{\alpha} D_\alpha(\rho\|\sigma)).
+\end{equation}
+
+<p>
+Combining the two gives:
+</p>
+\begin{align}
+\tr[E\rho]
+& \leq (tr[E\sigma]) \times \exp\left( \frac{\alpha -1}{\alpha} (D_\alpha(\rho\|\sigma))\right) \\
+& \leq \exp\left( \frac{\alpha -1}{\alpha} (D_\alpha(\rho\|\sigma))  \log (\tr[E\sigma])\right).
+\end{align}
+
+</div>
+
+<p>
+Remark that the theorem bounds the probability of observing \(E\) on
+\(\rho\) based on the product of the probability of observing \(E\) on
+\(\sigma\) times a quantity that depends on \(D_\alpha(\rho\|\sigma)\),
 which can be seen as a measure of the distance between the two states
-<span class="math inline"><em>ρ</em></span> and <span
-class="math inline"><em>σ</em></span>. This will become interesting
-whenever <span
-class="math inline"><em>D</em><sub><em>α</em></sub>(<em>ρ</em>∥<em>σ</em>)</span>
-becomes small.</p>
-<div class="corollary">
-<p><strong>Corollary 1</strong>. <em>If <span
-class="math inline"><em>σ</em></span> satisfies a Gaussian concentration
-inequality <span class="math display">$$\Pr_{\sigma} (|O - \langle
-O\rangle_\sigma \mathbb{I}| &gt; a |V|) \leq K \exp \left( - \frac{c a^2
-|V|}{\| \sigma^{-1/2} O \sigma^{1/2}\|_L^2}\right)$$</span> for some
-constant <span class="math inline"><em>c</em>, <em>K</em> &gt; 0</span>,
-then for any <span class="math inline"><em>α</em> &gt; 1</span>: <span
-class="math display">$$\Pr_{\rho} (|O - \langle O\rangle_\sigma
-\mathbb{I}| &gt; a |V|) \leq \exp  \left(\frac{\alpha
--1}{\alpha}\left(D_\alpha(\rho\|\sigma) - \frac{c a^2 |V|}{\|
-\sigma^{-1/2} O \sigma^{1/2}\|_L^2} +
-\log(K)\right)\right)$$</span></em></p>
-</div>
-<div class="corollary">
-<p><strong>Corollary 2</strong>. <em>For an input state <span
-class="math inline"><em>ρ</em></span>, a noisy circuit evolution <span
-class="math inline">𝒩(<em>ρ</em>)</span> and a state <span
-class="math inline"><em>σ</em></span> satisfying a Gaussian
-concentration inequality, whenever there is a value of <span
-class="math inline"><em>α</em></span> and <span
-class="math inline"><em>a</em></span> such that <span
-class="math display">$$\frac{D_{\alpha}(\mathcal N(\rho) \|
-\sigma)}{|V|} &lt; \frac{c a^2}{\| \sigma^{-1/2} O \sigma^{1/2}\|_L^2} -
-\frac{\log(K)}{|V|},$$</span> then the probability of observing an
-outcome of <span class="math inline"><em>O</em></span> outside the
-interval <span
-class="math inline">⟨<em>O</em>⟩<sub><em>σ</em></sub> ± <em>a</em>|<em>V</em>|</span>
-decreases exponentially with <span
-class="math inline">|<em>V</em>|</span>.</em></p>
-</div>
-<h1 id="sec:org0aee337">Bounding <span
-class="math inline"><em>D</em><sub><em>α</em></sub>(𝒩(<em>ρ</em>)∥<em>σ</em>)</span></h1>
-<p>Such bounds can be obtained for noisy circuits where each layer <span
-class="math inline"><em>i</em></span> is followed by a noisy channel
-<span class="math inline">𝒩</span> with a fixed point <span
-class="math inline"><em>σ</em></span> satisfying a strong data
-processing inequality: <span
-class="math display"><em>D</em><sub><em>α</em></sub>(𝒩(<em>ρ</em>)∥<em>σ</em>) ≤ (1−<em>q</em>)<em>D</em><sub><em>α</em></sub>(<em>ρ</em>∥<em>σ</em>), ∀<em>ρ</em>.</span></p>
-<p>In such cases we obtain</p>
-<div class="lemma">
-<p><strong>Lemma 1</strong>. <em>Let <span class="math inline">𝒩</span>
-be a quantum channel with a unique fixed point <span
-class="math inline"><em>σ</em></span> and satisfying a strong data
-processing inequality for some <span
-class="math inline"><em>α</em> &gt; 1</span>, then for any other
-channels <span
-class="math inline">{<em>Φ</em><sub><em>i</em></sub>}<sub><em>i</em> ≤ <em>l</em></sub></span>
-we have: <span
-class="math display"><em>D</em><sub><em>α</em></sub>(𝒫(<em>ρ</em>)∥<em>σ</em>) ≤ (1−<em>q</em>)<sup><em>l</em></sup><em>D</em><sub><em>α</em></sub>(<em>ρ</em>∥<em>σ</em>) + ∑<sub><em>i</em> ≤ <em>l</em></sub>(1−<em>q</em>)<sup><em>l</em> − <em>i</em></sup><em>D</em><sub>∞</sub>(<em>Φ</em><sub><em>i</em></sub>(<em>σ</em>)∥<em>σ</em>)</span>
-where <span class="math inline">$D_\infty(\rho \| \sigma) = \log \|
-\sigma^{-\frac{1}{2}} \rho \sigma^{-\frac{1}{2}}\|_\infty$</span>, and
-<span
-class="math inline">𝒫 = ∏<sub><em>i</em> ≤ <em>l</em></sub><em>Φ</em><sub><em>i</em></sub> ∘ 𝒩</span>.</em></p>
-</div>
-<div class="proof">
-<p><em>Proof.</em> We proceed by induction on <span
-class="math inline"><em>l</em></span>. For <span
-class="math inline"><em>l</em> = 1</span>, we use the data processed
-triangle inequality: <span
-class="math display"><em>D</em><sub><em>α</em></sub>(<em>Φ</em><sub>1</sub>∘𝒩(<em>ρ</em>)∥<em>σ</em>) ≤ <em>D</em><sub><em>α</em></sub>(𝒩(<em>ρ</em>)∥<em>σ</em>) + <em>D</em><sub>∞</sub>(<em>Φ</em><sub>1</sub>(<em>σ</em>)∥<em>σ</em>) ≤ (1−<em>q</em>)<em>D</em><sub><em>α</em></sub>(<em>ρ</em>∥<em>σ</em>) + <em>D</em><sub>∞</sub>(<em>Φ</em><sub>1</sub>(<em>σ</em>)∥<em>σ</em>).</span>
-The induction is performed in the same way, assuming the property holds
-for some <span class="math inline"><em>l</em></span> and then applying
-the data processed triangle inequality. ◻</p>
-</div>
-<p>Note that for unital channels <span
-class="math inline">𝒩(<em>σ</em>) = <em>σ</em></span> as the fixed point
-of the channel is <span class="math inline">𝕀</span>. This implies that
-<span
-class="math inline"><em>D</em><sub><em>α</em></sub>(𝒫(<em>ρ</em>)∥<em>σ</em>)</span>
-will always converge to 0.</p>
-<h1 id="sec:orgca3f03b">Additional notes</h1>
-<h1 id="sec:orge460e1a">Renyi entropies</h1>
-<p>In the above definition of Renyi divergence, note that when <span
-class="math inline"><em>α</em> → 1</span> we recover the usual relative
-entropy: <span class="math display">$$D_1 (\rho \| \sigma) =  \mathrm{tr}(\rho
-(\log \rho - \log \sigma))$$</span></p>
-<p>This is not a surprise as these sandwiched Renyi divergences have
-been introduced as a generalization of the usual relative entropy. Renyi
-entropies <span class="math inline">$\frac{1}{1-\alpha} \log \frac{\mathrm{tr}
-\rho^\alpha}{\mathrm{tr} \rho}$</span> are also generalizations of von Neumann
-entropy in that they preserve important properties:</p>
-<ul>
-<li><p>Continuity</p></li>
-<li><p>Unitary invariance</p></li>
-<li><p>Normalization</p></li>
-<li><p>Additivity.</p></li>
-</ul>
-<h1 id="sec:org8f1b03e">Relative entropy and Pinsker inequality</h1>
-<p>The Pinsker inequality relates the relative entropy to the trace
-distance. As such it allows to bound the trace distance using
-information theoretic arguments: <span
-class="math display">$$D_1(\rho\|\sigma) \geq \frac{1}{2\log 2} \| \rho
--\sigma \|_{\mathrm{tr}}^2$$</span></p>
-<h1 id="sec:org7ce5b4c">Hölder inequality</h1>
-<p>For <span class="math inline"><em>A</em></span>, <span
-class="math inline"><em>B</em></span> operators on <span
-class="math inline">ℋ</span> <span class="math display">$$\|AB\|_1 \leq
-\|A\|_p \|B\|_q, \quad \frac{1}{p} + \frac{1}{q} = 1$$</span> which
-translates for matrices into <span class="math display">$$\mathrm{tr}(|AB|) \leq
-[\mathrm{tr}(|A|^{p})]^{1/p} \times [\mathrm{tr}(|B|^{q})]^{1/q}, \quad \frac{1}{p} +
-\frac{1}{q} = 1.$$</span></p>
-<h1 id="sec:org80b23ab">Araki-Lieb-Thirring inequality</h1>
-<p>For <span class="math inline"><em>A</em>, <em>B</em> ≥ 0</span>,
-<span class="math inline"><em>q</em> ≥ 0</span> and <span
-class="math inline">0 ≤ <em>r</em> ≤ 1</span> then <span
-class="math display">$$\mathrm{tr}[(A^rB^rA^r)^q] \leq\mathrm{tr}[(ABA)^{rq}].$$</span>
-When <span class="math inline"><em>r</em> ≥ 1</span> the inequality is
-reversed.</p>
+\(\rho\) and \(\sigma\). This will become interesting whenever
+\(D_\alpha(\rho\|\sigma)\) becomes small.
+</p>
 
+<div class="corollary" id="org619a69a">
+<p>
+If \(\sigma\) satisfies a Gaussian concentration inequality 
+</p>
+\begin{equation}
+\Pr_{\sigma} (|O - \langle O\rangle_\sigma \Id| > a |V|) \leq K \exp \left( - \frac{c a^2 |V|}{\| \sigma^{-1/2} O \sigma^{1/2}\|_L^2}\right)
+\end{equation}
+<p>
+for some constant \(c, K > 0\), then for any \(\alpha > 1\): 
+</p>
+\begin{equation}
+\Pr_{\rho} (|O - \langle O\rangle_\sigma \Id| > a |V|) \leq \exp  \left(\frac{\alpha -1}{\alpha}\left(D_\alpha(\rho\|\sigma) - \frac{c a^2 |V|}{\| \sigma^{-1/2} O \sigma^{1/2}\|_L^2} + \log(K)\right)\right)
+\end{equation}
+
+</div>
+
+<div class="corollary" id="org2b08747">
+<p>
+For an input state \(\rho\), a noisy circuit evolution \(\mathcal{N}(\rho)\) and a state \(\sigma\) satisfying a Gaussian concentration inequality, whenever there is a value of \(\alpha\) and \(a\) such that
+</p>
+\begin{equation}
+\frac{D_{\alpha}(\mathcal N(\rho) \| \sigma)}{|V|} < \frac{c a^2}{\| \sigma^{-1/2} O \sigma^{1/2}\|_L^2} - \frac{\log(K)}{|V|},
+\end{equation}
+<p>
+then the probability of observing an outcome of \(O\) outside the interval \(\langle O \rangle_{\sigma} \pm a|V|\) decreases exponentially with \(|V|\).
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgadde0ea" class="outline-2">
+<h2 id="orgadde0ea"><span class="section-number-2">3.</span> Bounding \(D_{\alpha}(\mathcal N(\rho) \| \sigma)\)</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Such bounds can be obtained for noisy circuits where each layer \(i\) is followed by a noisy channel \(\mathcal N\) with a fixed point \(\sigma\) satisfying a strong data processing inequality:
+</p>
+\begin{equation}
+D_\alpha(\mathcal N(\rho) \| \sigma)\leq (1-q) D_\alpha (\rho \|\sigma), \ \forall \rho.
+\end{equation}
+
+<p>
+In such cases we obtain
+</p>
+<div class="lemma" id="org53a91e9">
+<p>
+Let \(\mathcal N\) be a quantum channel with a unique fixed point \(\sigma\) and satisfying a strong data processing inequality for some \(\alpha > 1\), then for any other channels \(\{\Phi_i\}_{i\leq l}\) we have:
+</p>
+\begin{equation}
+D_\alpha\left( \mathcal P (\rho) \| \sigma \right) \leq (1-q)^l D_\alpha(\rho\|\sigma) + \sum_{i\leq l} (1-q)^{l-i} D_\infty (\Phi_i(\sigma) \| \sigma)
+\end{equation}
+<p>
+where \(D_\infty(\rho \| \sigma) = \log \| \sigma^{-\frac{1}{2}} \rho \sigma^{-\frac{1}{2}}\|_\infty\), and \(\mathcal P = \prod_{i \leq l} \Phi_i \circ \mathcal N\).
+</p>
+
+</div>
+
+<div class="proof" id="org631cc21">
+<p>
+We proceed by induction on \(l\). For \(l=1\), we use the data processed triangle inequality:
+</p>
+\begin{equation}
+D_\alpha(\Phi_1 \circ \mathcal N  (\rho) \|\sigma) \leq D_\alpha(\mathcal N (\rho) \| \sigma) + D_\infty (\Phi_1 (\sigma) \| \sigma) \leq (1-q) D_\alpha(\rho \| \sigma) + D_\infty (\Phi_1 (\sigma) \| \sigma).
+\end{equation}
+<p>
+The induction is performed in the same way, assuming the property holds for some \(l\) and then applying the data processed triangle inequality.
+</p>
+
+</div>
+<p>
+Note that for unital channels \(\mathcal N(\sigma) = \sigma\) as the
+fixed point of the channel is \(\Id\). This implies that \(D_\alpha\left(
+\mathcal P (\rho) \| \sigma \right)\) will always converge to 0.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org164c669" class="outline-2">
+<h2 id="org164c669"><span class="section-number-2">4.</span> Additional notes</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org3dc477e" class="outline-3">
+<h3 id="org3dc477e"><span class="section-number-3">4.1.</span> Renyi entropies</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+In the above definition of Renyi divergence, note that when \(\alpha \rightarrow 1\) we recover the usual relative entropy: 
+</p>
+\begin{equation}
+D_1 (\rho \| \sigma) =  \tr(\rho (\log \rho - \log \sigma)) 
+\end{equation}
+
+<p>
+This is not a surprise as these sandwiched Renyi divergences have been introduced as a generalization of the usual relative entropy. Renyi entropies \(\frac{1}{1-\alpha} \log \frac{\tr \rho^\alpha}{\tr \rho}\) are also generalizations of von Neumann entropy in that they preserve important properties:
+</p>
+<ul class="org-ul">
+<li>Continuity</li>
+<li>Unitary invariance</li>
+<li>Normalization</li>
+<li>Additivity.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgede9680" class="outline-3">
+<h3 id="orgede9680"><span class="section-number-3">4.2.</span> Relative entropy and Pinsker inequality</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+The Pinsker inequality relates the relative entropy to the trace distance. As such it allows to bound the trace distance using information theoretic arguments:
+</p>
+\begin{equation}
+D_1(\rho\|\sigma) \geq \frac{1}{2\log 2} \| \rho -\sigma \|_{\tr}^2
+\end{equation}
+</div>
+</div>
+<div id="outline-container-org74ee0e8" class="outline-3">
+<h3 id="org74ee0e8"><span class="section-number-3">4.3.</span> Hölder inequality</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+For \(A\), \(B\) operators on \(\mathcal H\)
+</p>
+\begin{equation}
+\|AB\|_1 \leq \|A\|_p \|B\|_q, \quad \frac{1}{p} + \frac{1}{q} = 1
+\end{equation}
+<p>
+which translates for matrices into
+</p>
+\begin{equation}
+\tr(|AB|) \leq [\tr(|A|^{p})]^{1/p} \times [\tr(|B|^{q})]^{1/q}, \quad \frac{1}{p} + \frac{1}{q} = 1.
+\end{equation}
+</div>
+</div>
+<div id="outline-container-orgbe988d7" class="outline-3">
+<h3 id="orgbe988d7"><span class="section-number-3">4.4.</span> Araki-Lieb-Thirring inequality</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+For \(A,B \geq 0\), \(q\geq 0\) and \(0\leq r \leq 1\) then
+</p>
+\begin{equation}
+\tr[(A^rB^rA^r)^q] \leq\tr[(ABA)^{rq}].
+\end{equation}
+<p>
+When \(r \geq 1\) the inequality is reversed.
+</p>
+</div>
+</div>
+</div>
+
+</div>
