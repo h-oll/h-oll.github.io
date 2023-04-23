@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://h-oll.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://h-oll.github.io/" rel="alternate" type="text/html" /><updated>2023-04-23T15:02:03+02:00</updated><id>https://h-oll.github.io/feed.xml</id><title type="html">Harold Ollivier</title><subtitle>Quantum Algorithms, Architectures, Applications and their Theory Team | QuantumTech@INRIA</subtitle><entry><title type="html">Limitations of variational quantum algorithms: a quantum optimal transport approach</title><link href="https://h-oll.github.io/2023/04/17/concentration.html" rel="alternate" type="text/html" title="Limitations of variational quantum algorithms: a quantum optimal transport approach" /><published>2023-04-17T00:00:00+02:00</published><updated>2023-04-17T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/04/17/concentration</id><content type="html" xml:base="https://h-oll.github.io/2023/04/17/concentration.html">&lt;style&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://h-oll.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://h-oll.github.io/" rel="alternate" type="text/html" /><updated>2023-04-23T19:07:25+02:00</updated><id>https://h-oll.github.io/feed.xml</id><title type="html">Harold Ollivier</title><subtitle>Quantum Algorithms, Architectures, Applications and their Theory Team | QuantumTech@INRIA</subtitle><entry><title type="html">Limitations of variational quantum algorithms: a quantum optimal transport approach</title><link href="https://h-oll.github.io/2023/04/17/concentration.html" rel="alternate" type="text/html" title="Limitations of variational quantum algorithms: a quantum optimal transport approach" /><published>2023-04-17T00:00:00+02:00</published><updated>2023-04-17T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/04/17/concentration</id><content type="html" xml:base="https://h-oll.github.io/2023/04/17/concentration.html">&lt;style&gt;
   #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
@@ -206,167 +206,164 @@
 
 &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML&quot;&gt;&lt;/script&gt;
 
-&lt;h1 id=&quot;sec:orgb97357a&quot;&gt;Definitions&lt;/h1&gt;
+&lt;h1 id=&quot;sec:orgd1ce55b&quot;&gt;Definitions&lt;/h1&gt;
 &lt;div class=&quot;definition&quot;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 1&lt;/strong&gt;. &lt;em&gt;The Lipschitz constant for &lt;span class=&quot;math inline&quot;&gt;\(H\)&lt;/span&gt; a self-adjoint operator is defined by:
-&lt;span class=&quot;math display&quot;&gt;\[\|H\|_L = 2 \max_{v\in V}
-\min_{H_{\setminus v}} \|H - H_{\setminus v}\otimes
-\mathbb{I}_v\|_{\infty}\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition 1&lt;/strong&gt;. &lt;em&gt;The Lipschitz constant for &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt; a self-adjoint operator is defined
+by: &lt;span class=&quot;math display&quot;&gt;∥&lt;em&gt;H&lt;/em&gt;∥&lt;sub&gt;&lt;em&gt;L&lt;/em&gt;&lt;/sub&gt; = 2max&lt;sub&gt;&lt;em&gt;v&lt;/em&gt; ∈ &lt;em&gt;V&lt;/em&gt;&lt;/sub&gt;min&lt;sub&gt;&lt;em&gt;H&lt;/em&gt;&lt;sub&gt;\&lt;em&gt;v&lt;/em&gt;&lt;/sub&gt;&lt;/sub&gt;∥&lt;em&gt;H&lt;/em&gt; − &lt;em&gt;H&lt;/em&gt;&lt;sub&gt;\&lt;em&gt;v&lt;/em&gt;&lt;/sub&gt; ⊗ 𝕀&lt;sub&gt;&lt;em&gt;v&lt;/em&gt;&lt;/sub&gt;∥&lt;sub&gt;∞&lt;/sub&gt;&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;definition&quot;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 2&lt;/strong&gt;. &lt;em&gt;The sandwiched Renyi divergence of
-order &lt;span class=&quot;math inline&quot;&gt;\(\alpha \in (1,+\infty)\)&lt;/span&gt; is
-defined for two quantum states &lt;span class=&quot;math inline&quot;&gt;\(\rho,
-\sigma\)&lt;/span&gt; with &lt;span class=&quot;math inline&quot;&gt;\(\mathop{\mathrm{supp}}\rho \subset
-\mathop{\mathrm{supp}}\sigma\)&lt;/span&gt; as &lt;span class=&quot;math display&quot;&gt;\[D_{\alpha} (\rho \| \sigma) = \frac{1}{\alpha-1}
-\log \mathop{\mathrm{tr}}\left[\left(\sigma^{\frac{1-\alpha}{2\alpha}}
-\rho \sigma^{\frac{1-\alpha}{2\alpha}}\right
-)^\alpha\right]\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+order &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;α&lt;/em&gt; ∈ (1,+∞)&lt;/span&gt; is defined
+for two quantum states &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;ρ&lt;/em&gt;, &lt;em&gt;σ&lt;/em&gt;&lt;/span&gt; with &lt;span class=&quot;math inline&quot;&gt;supp &lt;em&gt;ρ&lt;/em&gt; ⊂ supp &lt;em&gt;σ&lt;/em&gt;&lt;/span&gt; as &lt;span class=&quot;math display&quot;&gt;$$D_{\alpha} (\rho \| \sigma) = \frac{1}{\alpha-1}
+\log \mathrm{tr} \left[\left(\sigma^{\frac{1-\alpha}{2\alpha}} \rho
+\sigma^{\frac{1-\alpha}{2\alpha}}\right
+)^\alpha\right]$$&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;definition&quot;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 3&lt;/strong&gt;. &lt;em&gt;A state &lt;span class=&quot;math inline&quot;&gt;\(\sigma\)&lt;/span&gt; on &lt;span class=&quot;math inline&quot;&gt;\(V\)&lt;/span&gt; qudits satisfies a Gaussian
-concentration inequality of parameter &lt;span class=&quot;math inline&quot;&gt;\(c\)&lt;/span&gt; if there is a constant &lt;span class=&quot;math inline&quot;&gt;\(K\)&lt;/span&gt; such that for any &lt;span class=&quot;math inline&quot;&gt;\(a\)&lt;/span&gt; and any observable &lt;span class=&quot;math inline&quot;&gt;\(O\)&lt;/span&gt;: &lt;span class=&quot;math display&quot;&gt;\[\Pr_{\sigma} (|O - \langle O\rangle_\sigma
+&lt;p&gt;&lt;strong&gt;Definition 3&lt;/strong&gt;. &lt;em&gt;A state &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;σ&lt;/em&gt;&lt;/span&gt; on &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;V&lt;/em&gt;&lt;/span&gt; qudits satisfies a Gaussian
+concentration inequality of parameter &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;c&lt;/em&gt;&lt;/span&gt; if there is a constant &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;K&lt;/em&gt;&lt;/span&gt; such that for any &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;a&lt;/em&gt;&lt;/span&gt; and any observable &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;O&lt;/em&gt;&lt;/span&gt;: &lt;span class=&quot;math display&quot;&gt;$$\Pr_{\sigma} (|O - \langle O\rangle_\sigma
 \mathbb{I}| &amp;gt; a |V|) \leq K \exp \left( - \frac{c a^2 |V|}{\|
-\sigma^{-1/2} O \sigma^{1/2}\|_L^2}\right)\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+\sigma^{-1/2} O \sigma^{1/2}\|_L^2}\right)$$&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;Above &lt;span class=&quot;math inline&quot;&gt;\(|A| = \sqrt {A^\dagger A}\)&lt;/span&gt;.
-Note that in the cases where &lt;span class=&quot;math inline&quot;&gt;\(\sigma\)&lt;/span&gt;
-and &lt;span class=&quot;math inline&quot;&gt;\(O\)&lt;/span&gt; commute &lt;span class=&quot;math inline&quot;&gt;\(\| \sigma^{-1/2} O \sigma^{1/2}\|_L^2\)&lt;/span&gt;
-reduces to &lt;span class=&quot;math inline&quot;&gt;\(\| O\|_L^2\)&lt;/span&gt;.&lt;/p&gt;
-&lt;h1 id=&quot;sec:orgcdccd7e&quot;&gt;Transferring inequalities&lt;/h1&gt;
+&lt;p&gt;Above &lt;span class=&quot;math inline&quot;&gt;$|A| = \sqrt {A^\dagger A}$&lt;/span&gt;,
+and &lt;span class=&quot;math inline&quot;&gt;Pr&lt;sub&gt;&lt;em&gt;σ&lt;/em&gt;&lt;/sub&gt;(|&lt;em&gt;O&lt;/em&gt;−⟨&lt;em&gt;O&lt;/em&gt;⟩&lt;sub&gt;&lt;em&gt;σ&lt;/em&gt;&lt;/sub&gt;𝕀&amp;gt;&lt;em&gt;a&lt;/em&gt;|&lt;em&gt;V&lt;/em&gt;|)&lt;/span&gt;
+means that for &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;E&lt;/em&gt;&lt;/span&gt; the positive
+part of &lt;span class=&quot;math inline&quot;&gt;|&lt;em&gt;O&lt;/em&gt;−⟨&lt;em&gt;O&lt;/em&gt;⟩&lt;sub&gt;&lt;em&gt;σ&lt;/em&gt;&lt;/sub&gt;𝕀| − &lt;em&gt;a&lt;/em&gt;|&lt;em&gt;V&lt;/em&gt;|𝕀&lt;/span&gt;,
+we have &lt;span class=&quot;math inline&quot;&gt;$\mathrm{tr}(E\sigma)$&lt;/span&gt; bounded by the
+right hand side of the equation. Note that in the cases where &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;σ&lt;/em&gt;&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;O&lt;/em&gt;&lt;/span&gt; commute &lt;span class=&quot;math inline&quot;&gt;∥&lt;em&gt;σ&lt;/em&gt;&lt;sup&gt;−1/2&lt;/sup&gt;&lt;em&gt;O&lt;/em&gt;&lt;em&gt;σ&lt;/em&gt;&lt;sup&gt;1/2&lt;/sup&gt;∥&lt;sub&gt;&lt;em&gt;L&lt;/em&gt;&lt;/sub&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/span&gt;
+reduces to &lt;span class=&quot;math inline&quot;&gt;∥&lt;em&gt;O&lt;/em&gt;∥&lt;sub&gt;&lt;em&gt;L&lt;/em&gt;&lt;/sub&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;h1 id=&quot;sec:org596a9b8&quot;&gt;Transferring inequalities&lt;/h1&gt;
 &lt;div class=&quot;theorem&quot;&gt;
-&lt;p&gt;&lt;strong&gt;Theorem 1&lt;/strong&gt;. &lt;em&gt;Let &lt;span class=&quot;math inline&quot;&gt;\(\rho,
-\sigma\)&lt;/span&gt; be two quantum states on &lt;span class=&quot;math inline&quot;&gt;\(\mathcal H_V\)&lt;/span&gt;. Then for any POVM element
-&lt;span class=&quot;math inline&quot;&gt;\(0 \leq E \leq \mathbb{I}\)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;\(\alpha &amp;gt;1\)&lt;/span&gt;, &lt;span class=&quot;math display&quot;&gt;\[\mathop{\mathrm{tr}}[E\rho] \leq \exp\left(
-\frac{\alpha -1}{\alpha} (D_\alpha(\rho\|\sigma) +
-\log(\mathop{\mathrm{tr}}[E\sigma]))\right)\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Theorem 1&lt;/strong&gt;. &lt;em&gt;Let &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;ρ&lt;/em&gt;, &lt;em&gt;σ&lt;/em&gt;&lt;/span&gt; be two quantum states
+on &lt;span class=&quot;math inline&quot;&gt;ℋ&lt;sub&gt;&lt;em&gt;V&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt;. Then for any
+POVM element &lt;span class=&quot;math inline&quot;&gt;0 ≤ &lt;em&gt;E&lt;/em&gt; ≤ 𝕀&lt;/span&gt; and
+&lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;α&lt;/em&gt; &amp;gt; 1&lt;/span&gt;, &lt;span class=&quot;math display&quot;&gt;$$\mathrm{tr}[E\rho] \leq \exp\left( \frac{\alpha
+-1}{\alpha} (D_\alpha(\rho\|\sigma) +
+\log(\mathrm{tr}[E\sigma]))\right)$$&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;proof&quot;&gt;
-&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; Using the circularity of the trace we have: &lt;span class=&quot;math display&quot;&gt;\[\begin{aligned}
-\mathop{\mathrm{tr}}[E\rho]
-&amp;amp; = \mathop{\mathrm{tr}}[\sigma^{-\frac{1-\alpha}{2\alpha}} E
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; Using the circularity of the trace we have: &lt;span class=&quot;math display&quot;&gt;$$\begin{aligned}
+\mathrm{tr}[E\rho]
+&amp;amp; = \mathrm{tr}[\sigma^{-\frac{1-\alpha}{2\alpha}} E
 \sigma^{-\frac{1-\alpha}{2\alpha}} \times
 \sigma^{\frac{1-\alpha}{2\alpha}}
 \rho  \sigma^{\frac{1-\alpha}{2\alpha}}] \\
-&amp;amp; \leq \mathop{\mathrm{tr}}\left[ \left(
-\sigma^{-\frac{1-\alpha}{2\alpha}} E
+&amp;amp; \leq \left\{\mathrm{tr} \left[ \left( \sigma^{-\frac{1-\alpha}{2\alpha}} E
 \sigma^{-\frac{1-\alpha}{2\alpha}}\right)^\beta \right
-]^{\frac{1}{\beta}} \times \mathop{\mathrm{tr}}\left[ \left(
-\sigma^{\frac{1-\alpha}{2\alpha}}
-\rho  \sigma^{\frac{1-\alpha}{2\alpha}} \right)^\alpha \right
-]^{\frac{1}{\alpha}}\end{aligned}\]&lt;/span&gt; where the last line is
-obtained by applying Hölder inequality, which holds for &lt;span class=&quot;math inline&quot;&gt;\(\frac{1}{\alpha} + \frac{1}{\beta} =
-1\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Using the Araki-Lieb-Thirring inequality followed by &lt;span class=&quot;math inline&quot;&gt;\(E \leq \mathbb{I}\)&lt;/span&gt; we obtain: &lt;span class=&quot;math display&quot;&gt;\[\begin{aligned}
-\mathop{\mathrm{tr}}\left( \sigma^{-\frac{1-\alpha}{2\alpha}} E
+]\right\}^{\frac{1}{\beta}} \times \left\{\mathrm{tr} \left[ \left(
+\sigma^{\frac{1-\alpha}{2\alpha}} \rho \sigma^{\frac{1-\alpha}{2\alpha}}
+\right)^\alpha \right ]\right\}^{\frac{1}{\alpha}}\end{aligned}$$&lt;/span&gt;
+where the last line is obtained by applying Hölder inequality, which
+holds for &lt;span class=&quot;math inline&quot;&gt;$\frac{1}{\alpha} + \frac{1}{\beta}
+= 1$&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Using the Araki-Lieb-Thirring inequality followed by &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;E&lt;/em&gt; ≤ 𝕀&lt;/span&gt; we obtain: &lt;span class=&quot;math display&quot;&gt;$$\begin{aligned}
+\mathrm{tr} \left( \sigma^{-\frac{1-\alpha}{2\alpha}} E
 \sigma^{-\frac{1-\alpha}{2\alpha}}\right)^\beta
-&amp;amp; \leq \mathop{\mathrm{tr}}\left(
-\sigma^{-\frac{(1-\alpha)\beta}{2\alpha}} E^\beta
+&amp;amp; \leq \mathrm{tr} \left( \sigma^{-\frac{(1-\alpha)\beta}{2\alpha}} E^\beta
 \sigma^{-\frac{(1-\alpha)\beta}{2\alpha}}\right) \\
-&amp;amp; \leq \mathop{\mathrm{tr}}\left(
+&amp;amp; \leq \mathrm{tr} \left( \sigma^{-\frac{(1-\alpha)\beta}{2\alpha}} E
+\sigma^{-\frac{(1-\alpha)\beta}{2\alpha}}\right).\end{aligned}$$&lt;/span&gt;
+As &lt;span class=&quot;math inline&quot;&gt;$\beta = \frac{\alpha}{\alpha -1}$&lt;/span&gt;
+we have &lt;span class=&quot;math display&quot;&gt;$$\mathrm{tr} \left(
 \sigma^{-\frac{(1-\alpha)\beta}{2\alpha}} E
-\sigma^{-\frac{(1-\alpha)\beta}{2\alpha}}\right).\end{aligned}\]&lt;/span&gt;
-As &lt;span class=&quot;math inline&quot;&gt;\(\beta = \frac{\alpha}{\alpha -1}\)&lt;/span&gt;
-we have &lt;span class=&quot;math display&quot;&gt;\[\mathop{\mathrm{tr}}\left(
-\sigma^{-\frac{(1-\alpha)\beta}{2\alpha}} E
-\sigma^{-\frac{(1-\alpha)\beta}{2\alpha}}\right)=\mathop{\mathrm{tr}}(E\sigma).\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Additionally, note that &lt;span class=&quot;math display&quot;&gt;\[\mathop{\mathrm{tr}}\left[ \left(
-\sigma^{\frac{1-\alpha}{2\alpha}}
+\sigma^{-\frac{(1-\alpha)\beta}{2\alpha}}\right)=\mathrm{tr}(E\sigma).$$&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Additionally, note that &lt;span class=&quot;math display&quot;&gt;$$\left \{ \mathrm{tr}
+\left[ \left( \sigma^{\frac{1-\alpha}{2\alpha}}
 \rho  \sigma^{\frac{1-\alpha}{2\alpha}} \right)^\alpha \right
-]^{\frac{1}{\alpha}} = \exp (\frac{\alpha -1}{\alpha}
-D_\alpha(\rho\|\sigma)).\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Combining the two gives: &lt;span class=&quot;math display&quot;&gt;\[\begin{aligned}
-\mathop{\mathrm{tr}}[E\rho]
+]\right\}^{\frac{1}{\alpha}} = \exp (\frac{\alpha -1}{\alpha}
+D_\alpha(\rho\|\sigma)).$$&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Combining the two gives: &lt;span class=&quot;math display&quot;&gt;$$\begin{aligned}
+\mathrm{tr}[E\rho]
 &amp;amp; \leq (tr[E\sigma]) \times \exp\left( \frac{\alpha -1}{\alpha}
 (D_\alpha(\rho\|\sigma))\right) \\
 &amp;amp; \leq \exp\left( \frac{\alpha -1}{\alpha}
 (D_\alpha(\rho\|\sigma))  \log
-(\mathop{\mathrm{tr}}[E\sigma])\right).\end{aligned}\]&lt;/span&gt; ◻&lt;/p&gt;
+(\mathrm{tr}[E\sigma])\right).\end{aligned}$$&lt;/span&gt; ◻&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;Remark that the theorem bounds the probability of observing &lt;span class=&quot;math inline&quot;&gt;\(E\)&lt;/span&gt; on &lt;span class=&quot;math inline&quot;&gt;\(\rho\)&lt;/span&gt; based on the product of the
-probability of observing &lt;span class=&quot;math inline&quot;&gt;\(E\)&lt;/span&gt; on &lt;span class=&quot;math inline&quot;&gt;\(\sigma\)&lt;/span&gt; times a quantity that depends on
-&lt;span class=&quot;math inline&quot;&gt;\(D_\alpha(\rho\|\sigma)\)&lt;/span&gt;, which can
-be seen as a measure of the distance between the two states &lt;span class=&quot;math inline&quot;&gt;\(\rho\)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;\(\sigma\)&lt;/span&gt;. This will become interesting
-whenever &lt;span class=&quot;math inline&quot;&gt;\(D_\alpha(\rho\|\sigma)\)&lt;/span&gt;
+&lt;p&gt;Remark that the theorem bounds the probability of observing &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;E&lt;/em&gt;&lt;/span&gt; on &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;ρ&lt;/em&gt;&lt;/span&gt; based on the product of the
+probability of observing &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;E&lt;/em&gt;&lt;/span&gt; on
+&lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;σ&lt;/em&gt;&lt;/span&gt; times a quantity that
+depends on &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;D&lt;/em&gt;&lt;sub&gt;&lt;em&gt;α&lt;/em&gt;&lt;/sub&gt;(&lt;em&gt;ρ&lt;/em&gt;∥&lt;em&gt;σ&lt;/em&gt;)&lt;/span&gt;,
+which can be seen as a measure of the distance between the two states
+&lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;ρ&lt;/em&gt;&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;σ&lt;/em&gt;&lt;/span&gt;. This will become interesting
+whenever &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;D&lt;/em&gt;&lt;sub&gt;&lt;em&gt;α&lt;/em&gt;&lt;/sub&gt;(&lt;em&gt;ρ&lt;/em&gt;∥&lt;em&gt;σ&lt;/em&gt;)&lt;/span&gt;
 becomes small.&lt;/p&gt;
 &lt;div class=&quot;corollary&quot;&gt;
-&lt;p&gt;&lt;strong&gt;Corollary 1&lt;/strong&gt;. &lt;em&gt;If &lt;span class=&quot;math inline&quot;&gt;\(\sigma\)&lt;/span&gt; satisfies a Gaussian concentration
-inequality &lt;span class=&quot;math display&quot;&gt;\[\Pr_{\sigma} (|O - \langle
+&lt;p&gt;&lt;strong&gt;Corollary 1&lt;/strong&gt;. &lt;em&gt;If &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;σ&lt;/em&gt;&lt;/span&gt; satisfies a Gaussian concentration
+inequality &lt;span class=&quot;math display&quot;&gt;$$\Pr_{\sigma} (|O - \langle
 O\rangle_\sigma \mathbb{I}| &amp;gt; a |V|) \leq K \exp \left( - \frac{c a^2
-|V|}{\| \sigma^{-1/2} O \sigma^{1/2}\|_L^2}\right)\]&lt;/span&gt; for some
-constant &lt;span class=&quot;math inline&quot;&gt;\(c, K &amp;gt; 0\)&lt;/span&gt;, then for any
-&lt;span class=&quot;math inline&quot;&gt;\(\alpha &amp;gt; 1\)&lt;/span&gt;: &lt;span class=&quot;math display&quot;&gt;\[\Pr_{\rho} (|O - \langle O\rangle_\sigma
+|V|}{\| \sigma^{-1/2} O \sigma^{1/2}\|_L^2}\right)$$&lt;/span&gt; for some
+constant &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;c&lt;/em&gt;, &lt;em&gt;K&lt;/em&gt; &amp;gt; 0&lt;/span&gt;,
+then for any &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;α&lt;/em&gt; &amp;gt; 1&lt;/span&gt;: &lt;span class=&quot;math display&quot;&gt;$$\Pr_{\rho} (|O - \langle O\rangle_\sigma
 \mathbb{I}| &amp;gt; a |V|) \leq \exp  \left(\frac{\alpha
 -1}{\alpha}\left(D_\alpha(\rho\|\sigma) - \frac{c a^2 |V|}{\|
 \sigma^{-1/2} O \sigma^{1/2}\|_L^2} +
-\log(K)\right)\right)\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+\log(K)\right)\right)$$&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;corollary&quot;&gt;
-&lt;p&gt;&lt;strong&gt;Corollary 2&lt;/strong&gt;. &lt;em&gt;For an input state &lt;span class=&quot;math inline&quot;&gt;\(\rho\)&lt;/span&gt;, a noisy circuit evolution &lt;span class=&quot;math inline&quot;&gt;\(\mathcal{N}(\rho)\)&lt;/span&gt; and a state &lt;span class=&quot;math inline&quot;&gt;\(\sigma\)&lt;/span&gt; satisfying a Gaussian
-concentration inequality, whenever there is a value of &lt;span class=&quot;math inline&quot;&gt;\(\alpha\)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;\(a\)&lt;/span&gt; such that &lt;span class=&quot;math display&quot;&gt;\[\frac{D_{\alpha}(\mathcal N(\rho) \|
+&lt;p&gt;&lt;strong&gt;Corollary 2&lt;/strong&gt;. &lt;em&gt;For an input state &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;ρ&lt;/em&gt;&lt;/span&gt;, a noisy circuit evolution &lt;span class=&quot;math inline&quot;&gt;𝒩(&lt;em&gt;ρ&lt;/em&gt;)&lt;/span&gt; and a state &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;σ&lt;/em&gt;&lt;/span&gt; satisfying a Gaussian
+concentration inequality, whenever there is a value of &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;α&lt;/em&gt;&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;a&lt;/em&gt;&lt;/span&gt; such that &lt;span class=&quot;math display&quot;&gt;$$\frac{D_{\alpha}(\mathcal N(\rho) \|
 \sigma)}{|V|} &amp;lt; \frac{c a^2}{\| \sigma^{-1/2} O \sigma^{1/2}\|_L^2} -
-\frac{\log(K)}{|V|},\]&lt;/span&gt; then the probability of observing an
-outcome of &lt;span class=&quot;math inline&quot;&gt;\(O\)&lt;/span&gt; outside the interval
-&lt;span class=&quot;math inline&quot;&gt;\(\langle O \rangle_{\sigma} \pm a|V|\)&lt;/span&gt;
-decreases exponentially with &lt;span class=&quot;math inline&quot;&gt;\(|V|\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+\frac{\log(K)}{|V|},$$&lt;/span&gt; then the probability of observing an
+outcome of &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;O&lt;/em&gt;&lt;/span&gt; outside the
+interval &lt;span class=&quot;math inline&quot;&gt;⟨&lt;em&gt;O&lt;/em&gt;⟩&lt;sub&gt;&lt;em&gt;σ&lt;/em&gt;&lt;/sub&gt; ± &lt;em&gt;a&lt;/em&gt;|&lt;em&gt;V&lt;/em&gt;|&lt;/span&gt;
+decreases exponentially with &lt;span class=&quot;math inline&quot;&gt;|&lt;em&gt;V&lt;/em&gt;|&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;h1 id=&quot;sec:org9a50fc6&quot;&gt;Bounding &lt;span class=&quot;math inline&quot;&gt;\(D_{\alpha}(\mathcal N(\rho) \|
-\sigma)\)&lt;/span&gt;&lt;/h1&gt;
-&lt;p&gt;Such bounds can be obtained for noisy circuits where each layer &lt;span class=&quot;math inline&quot;&gt;\(i\)&lt;/span&gt; is followed by a noisy channel &lt;span class=&quot;math inline&quot;&gt;\(\mathcal N\)&lt;/span&gt; with a fixed point &lt;span class=&quot;math inline&quot;&gt;\(\sigma\)&lt;/span&gt; satisfying a strong data
-processing inequality: &lt;span class=&quot;math display&quot;&gt;\[D_\alpha(\mathcal
-N(\rho) \| \sigma)\leq (1-q) D_\alpha (\rho \|\sigma), \ \forall
-\rho.\]&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&quot;sec:org0aee337&quot;&gt;Bounding &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;D&lt;/em&gt;&lt;sub&gt;&lt;em&gt;α&lt;/em&gt;&lt;/sub&gt;(𝒩(&lt;em&gt;ρ&lt;/em&gt;)∥&lt;em&gt;σ&lt;/em&gt;)&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;Such bounds can be obtained for noisy circuits where each layer &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;i&lt;/em&gt;&lt;/span&gt; is followed by a noisy channel
+&lt;span class=&quot;math inline&quot;&gt;𝒩&lt;/span&gt; with a fixed point &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;σ&lt;/em&gt;&lt;/span&gt; satisfying a strong data
+processing inequality: &lt;span class=&quot;math display&quot;&gt;&lt;em&gt;D&lt;/em&gt;&lt;sub&gt;&lt;em&gt;α&lt;/em&gt;&lt;/sub&gt;(𝒩(&lt;em&gt;ρ&lt;/em&gt;)∥&lt;em&gt;σ&lt;/em&gt;) ≤ (1−&lt;em&gt;q&lt;/em&gt;)&lt;em&gt;D&lt;/em&gt;&lt;sub&gt;&lt;em&gt;α&lt;/em&gt;&lt;/sub&gt;(&lt;em&gt;ρ&lt;/em&gt;∥&lt;em&gt;σ&lt;/em&gt;), ∀&lt;em&gt;ρ&lt;/em&gt;.&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;In such cases we obtain&lt;/p&gt;
 &lt;div class=&quot;lemma&quot;&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 1&lt;/strong&gt;. &lt;em&gt;Let &lt;span class=&quot;math inline&quot;&gt;\(\mathcal N\)&lt;/span&gt; be a quantum channel with a
-unique fixed point &lt;span class=&quot;math inline&quot;&gt;\(\sigma\)&lt;/span&gt; and
-satisfying a strong data processing inequality for some &lt;span class=&quot;math inline&quot;&gt;\(\alpha &amp;gt; 1\)&lt;/span&gt;, then for any other
-channels &lt;span class=&quot;math inline&quot;&gt;\(\{\Phi_i\}_{i\leq l}\)&lt;/span&gt; we
-have: &lt;span class=&quot;math display&quot;&gt;\[D_\alpha\left( \mathcal P (\rho) \|
-\sigma \right) \leq (1-q)^l D_\alpha(\rho\|\sigma) + \sum_{i\leq l}
-(1-q)^{l-i} D_\infty (\Phi_i(\sigma) \| \sigma)\]&lt;/span&gt; where &lt;span class=&quot;math inline&quot;&gt;\(D_\infty(\rho \| \sigma) = \log \|
-\sigma^{-\frac{1}{2}} \rho \sigma^{-\frac{1}{2}}\|_\infty\)&lt;/span&gt;, and
-&lt;span class=&quot;math inline&quot;&gt;\(\mathcal P = \prod_{i \leq l} \Phi_i \circ
-\mathcal N\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lemma 1&lt;/strong&gt;. &lt;em&gt;Let &lt;span class=&quot;math inline&quot;&gt;𝒩&lt;/span&gt;
+be a quantum channel with a unique fixed point &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;σ&lt;/em&gt;&lt;/span&gt; and satisfying a strong data
+processing inequality for some &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;α&lt;/em&gt; &amp;gt; 1&lt;/span&gt;, then for any other
+channels &lt;span class=&quot;math inline&quot;&gt;{&lt;em&gt;Φ&lt;/em&gt;&lt;sub&gt;&lt;em&gt;i&lt;/em&gt;&lt;/sub&gt;}&lt;sub&gt;&lt;em&gt;i&lt;/em&gt; ≤ &lt;em&gt;l&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt;
+we have: &lt;span class=&quot;math display&quot;&gt;&lt;em&gt;D&lt;/em&gt;&lt;sub&gt;&lt;em&gt;α&lt;/em&gt;&lt;/sub&gt;(𝒫(&lt;em&gt;ρ&lt;/em&gt;)∥&lt;em&gt;σ&lt;/em&gt;) ≤ (1−&lt;em&gt;q&lt;/em&gt;)&lt;sup&gt;&lt;em&gt;l&lt;/em&gt;&lt;/sup&gt;&lt;em&gt;D&lt;/em&gt;&lt;sub&gt;&lt;em&gt;α&lt;/em&gt;&lt;/sub&gt;(&lt;em&gt;ρ&lt;/em&gt;∥&lt;em&gt;σ&lt;/em&gt;) + ∑&lt;sub&gt;&lt;em&gt;i&lt;/em&gt; ≤ &lt;em&gt;l&lt;/em&gt;&lt;/sub&gt;(1−&lt;em&gt;q&lt;/em&gt;)&lt;sup&gt;&lt;em&gt;l&lt;/em&gt; − &lt;em&gt;i&lt;/em&gt;&lt;/sup&gt;&lt;em&gt;D&lt;/em&gt;&lt;sub&gt;∞&lt;/sub&gt;(&lt;em&gt;Φ&lt;/em&gt;&lt;sub&gt;&lt;em&gt;i&lt;/em&gt;&lt;/sub&gt;(&lt;em&gt;σ&lt;/em&gt;)∥&lt;em&gt;σ&lt;/em&gt;)&lt;/span&gt;
+where &lt;span class=&quot;math inline&quot;&gt;$D_\infty(\rho \| \sigma) = \log \|
+\sigma^{-\frac{1}{2}} \rho \sigma^{-\frac{1}{2}}\|_\infty$&lt;/span&gt;, and
+&lt;span class=&quot;math inline&quot;&gt;𝒫 = ∏&lt;sub&gt;&lt;em&gt;i&lt;/em&gt; ≤ &lt;em&gt;l&lt;/em&gt;&lt;/sub&gt;&lt;em&gt;Φ&lt;/em&gt;&lt;sub&gt;&lt;em&gt;i&lt;/em&gt;&lt;/sub&gt; ∘ 𝒩&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;proof&quot;&gt;
-&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; We proceed by induction on &lt;span class=&quot;math inline&quot;&gt;\(l\)&lt;/span&gt;. For &lt;span class=&quot;math inline&quot;&gt;\(l=1\)&lt;/span&gt;, we use the data processed triangle
-inequality: &lt;span class=&quot;math display&quot;&gt;\[D_\alpha(\Phi_1 \circ \mathcal
-N  (\rho) \|\sigma) \leq D_\alpha(\mathcal N (\rho) \| \sigma) +
-D_\infty (\Phi_1 (\sigma) \| \sigma) \leq (1-q) D_\alpha(\rho \| \sigma)
-+ D_\infty (\Phi_1 (\sigma) \| \sigma).\]&lt;/span&gt; The induction is
-performed in the same way, assuming the property holds for some &lt;span class=&quot;math inline&quot;&gt;\(l\)&lt;/span&gt; and then applying the data processed
-triangle inequality. ◻&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; We proceed by induction on &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;l&lt;/em&gt;&lt;/span&gt;. For &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;l&lt;/em&gt; = 1&lt;/span&gt;, we use the data processed
+triangle inequality: &lt;span class=&quot;math display&quot;&gt;&lt;em&gt;D&lt;/em&gt;&lt;sub&gt;&lt;em&gt;α&lt;/em&gt;&lt;/sub&gt;(&lt;em&gt;Φ&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;∘𝒩(&lt;em&gt;ρ&lt;/em&gt;)∥&lt;em&gt;σ&lt;/em&gt;) ≤ &lt;em&gt;D&lt;/em&gt;&lt;sub&gt;&lt;em&gt;α&lt;/em&gt;&lt;/sub&gt;(𝒩(&lt;em&gt;ρ&lt;/em&gt;)∥&lt;em&gt;σ&lt;/em&gt;) + &lt;em&gt;D&lt;/em&gt;&lt;sub&gt;∞&lt;/sub&gt;(&lt;em&gt;Φ&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;σ&lt;/em&gt;)∥&lt;em&gt;σ&lt;/em&gt;) ≤ (1−&lt;em&gt;q&lt;/em&gt;)&lt;em&gt;D&lt;/em&gt;&lt;sub&gt;&lt;em&gt;α&lt;/em&gt;&lt;/sub&gt;(&lt;em&gt;ρ&lt;/em&gt;∥&lt;em&gt;σ&lt;/em&gt;) + &lt;em&gt;D&lt;/em&gt;&lt;sub&gt;∞&lt;/sub&gt;(&lt;em&gt;Φ&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;σ&lt;/em&gt;)∥&lt;em&gt;σ&lt;/em&gt;).&lt;/span&gt;
+The induction is performed in the same way, assuming the property holds
+for some &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;l&lt;/em&gt;&lt;/span&gt; and then applying
+the data processed triangle inequality. ◻&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;Note that for unital channels &lt;span class=&quot;math inline&quot;&gt;\(\mathcal
-N(\sigma) = \sigma\)&lt;/span&gt; as the fixed point of the channel is &lt;span class=&quot;math inline&quot;&gt;\(\mathbb{I}\)&lt;/span&gt;. This implies that &lt;span class=&quot;math inline&quot;&gt;\(D_\alpha\left(
-\mathcal P (\rho) \| \sigma \right)\)&lt;/span&gt; will always converge to
-0.&lt;/p&gt;
-&lt;h1 id=&quot;sec:org3d74ce6&quot;&gt;Additional notes&lt;/h1&gt;
-&lt;h1 id=&quot;sec:orgf48bec2&quot;&gt;Renyi entropies&lt;/h1&gt;
-&lt;p&gt;In the above definition of Renyi divergence, note that when &lt;span class=&quot;math inline&quot;&gt;\(\alpha \rightarrow 1\)&lt;/span&gt; we recover the usual
-relative entropy: &lt;span class=&quot;math display&quot;&gt;\[D_1 (\rho \| \sigma)
-=  \mathop{\mathrm{tr}}(\rho (\log \rho - \log \sigma))\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Note that for unital channels &lt;span class=&quot;math inline&quot;&gt;𝒩(&lt;em&gt;σ&lt;/em&gt;) = &lt;em&gt;σ&lt;/em&gt;&lt;/span&gt; as the fixed point
+of the channel is &lt;span class=&quot;math inline&quot;&gt;𝕀&lt;/span&gt;. This implies that
+&lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;D&lt;/em&gt;&lt;sub&gt;&lt;em&gt;α&lt;/em&gt;&lt;/sub&gt;(𝒫(&lt;em&gt;ρ&lt;/em&gt;)∥&lt;em&gt;σ&lt;/em&gt;)&lt;/span&gt;
+will always converge to 0.&lt;/p&gt;
+&lt;h1 id=&quot;sec:orgca3f03b&quot;&gt;Additional notes&lt;/h1&gt;
+&lt;h1 id=&quot;sec:orge460e1a&quot;&gt;Renyi entropies&lt;/h1&gt;
+&lt;p&gt;In the above definition of Renyi divergence, note that when &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;α&lt;/em&gt; → 1&lt;/span&gt; we recover the usual relative
+entropy: &lt;span class=&quot;math display&quot;&gt;$$D_1 (\rho \| \sigma) =  \mathrm{tr}(\rho
+(\log \rho - \log \sigma))$$&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;This is not a surprise as these sandwiched Renyi divergences have
 been introduced as a generalization of the usual relative entropy. Renyi
-entropies &lt;span class=&quot;math inline&quot;&gt;\(\frac{1}{1-\alpha} \log
-\frac{\mathop{\mathrm{tr}}\rho^\alpha}{\mathop{\mathrm{tr}}\rho}\)&lt;/span&gt;
-are also generalizations of von Neumann entropy in that they preserve
-important properties:&lt;/p&gt;
+entropies &lt;span class=&quot;math inline&quot;&gt;$\frac{1}{1-\alpha} \log \frac{\mathrm{tr}
+\rho^\alpha}{\mathrm{tr} \rho}$&lt;/span&gt; are also generalizations of von Neumann
+entropy in that they preserve important properties:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;continuity&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;unitary invariance&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Continuity&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Unitary invariance&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Normalization&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Additivity.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&quot;sec:orgeedcd18&quot;&gt;Relative entropy and Pinsker inequality&lt;/h1&gt;
+&lt;h1 id=&quot;sec:org8f1b03e&quot;&gt;Relative entropy and Pinsker inequality&lt;/h1&gt;
 &lt;p&gt;The Pinsker inequality relates the relative entropy to the trace
 distance. As such it allows to bound the trace distance using
-information theoretic arguments: &lt;span class=&quot;math display&quot;&gt;\[D_1(\rho\|\sigma) \geq \frac{1}{2\log 2} \| \rho
--\sigma \|_{\mathop{\mathrm{tr}}}^2\]&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&quot;sec:orgc8d8ce5&quot;&gt;Hölder inequality&lt;/h1&gt;
-&lt;p&gt;For &lt;span class=&quot;math inline&quot;&gt;\(A\)&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;\(B\)&lt;/span&gt; operators on &lt;span class=&quot;math inline&quot;&gt;\(\mathcal H\)&lt;/span&gt; &lt;span class=&quot;math display&quot;&gt;\[\|AB\|_1 \leq \|A\_p \|B\_q, \quad \frac{1}{p} +
-\frac{1}{q} = 1\]&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&quot;sec:org7ac1d3f&quot;&gt;Araki-Lieb-Thirring inequality&lt;/h1&gt;
-&lt;p&gt;For &lt;span class=&quot;math inline&quot;&gt;\(A,B \geq 0\)&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;\(q\geq 0\)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;\(0\leq r \leq 1\)&lt;/span&gt; then &lt;span class=&quot;math display&quot;&gt;\[\mathop{\mathrm{tr}}(A^rB^rA^r)^q
-\leq\mathop{\mathrm{tr}}(ABA)^{rq}.\]&lt;/span&gt; When &lt;span class=&quot;math inline&quot;&gt;\(r \geq 1\)&lt;/span&gt; the inequality is reversed.&lt;/p&gt;</content><author><name></name></author><category term="Qatalyze" /><summary type="html"></summary></entry></feed>
+information theoretic arguments: &lt;span class=&quot;math display&quot;&gt;$$D_1(\rho\|\sigma) \geq \frac{1}{2\log 2} \| \rho
+-\sigma \|_{\mathrm{tr}}^2$$&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&quot;sec:org7ce5b4c&quot;&gt;Hölder inequality&lt;/h1&gt;
+&lt;p&gt;For &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;A&lt;/em&gt;&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;B&lt;/em&gt;&lt;/span&gt; operators on &lt;span class=&quot;math inline&quot;&gt;ℋ&lt;/span&gt; &lt;span class=&quot;math display&quot;&gt;$$\|AB\|_1 \leq
+\|A\|_p \|B\|_q, \quad \frac{1}{p} + \frac{1}{q} = 1$$&lt;/span&gt; which
+translates for matrices into &lt;span class=&quot;math display&quot;&gt;$$\mathrm{tr}(|AB|) \leq
+[\mathrm{tr}(|A|^{p})]^{1/p} \times [\mathrm{tr}(|B|^{q})]^{1/q}, \quad \frac{1}{p} +
+\frac{1}{q} = 1.$$&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&quot;sec:org80b23ab&quot;&gt;Araki-Lieb-Thirring inequality&lt;/h1&gt;
+&lt;p&gt;For &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;A&lt;/em&gt;, &lt;em&gt;B&lt;/em&gt; ≥ 0&lt;/span&gt;,
+&lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;q&lt;/em&gt; ≥ 0&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;0 ≤ &lt;em&gt;r&lt;/em&gt; ≤ 1&lt;/span&gt; then &lt;span class=&quot;math display&quot;&gt;$$\mathrm{tr}[(A^rB^rA^r)^q] \leq\mathrm{tr}[(ABA)^{rq}].$$&lt;/span&gt;
+When &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;r&lt;/em&gt; ≥ 1&lt;/span&gt; the inequality is
+reversed.&lt;/p&gt;</content><author><name></name></author><category term="Qatalyze" /><summary type="html"></summary></entry></feed>

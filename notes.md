@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Teaching
-permalink: /teaching/
+title: Notes
+permalink: /notes/
 ---
 
 {%- if site.posts.size > 0 -%}
