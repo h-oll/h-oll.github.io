@@ -4,39 +4,42 @@
 
 layout: home
 ---
+<h1>Open positions for PhD, postdocs and innovation manager in quantum information</h1>
 
-<h1>Open positions for postdocs in quantum information</h1>
+Inria [QAT](https://qat.inria.fr) Team at Ecole normale supérieure is
+recruiting several PhD and Postdocs as well as an InnovationManager.
 
-Openings for quantum information postdocs in the Inria team [QAT](https://qat.inria.fr) in
-Paris
+Younger students wanting to join the quantum community should consider
+applications for the M2 Quantum Engineering (Ecole normale
+supérieure).
 
-We are looking for creative and talented physicists, mathematicians,
-computer scientists with expertise on quantum information theory.
-
-Areas of interest of potential applicants should be compatible with
-the QAT team research, which covers broad areas in quantum information
-theory from quantum verification, quantum algorithms and error
-mitigation to quantum error-correction, continuous-variable quantum
-computing and quantum foundations.
-
-Successful applicants are expected to:
-- develop their own research in relation with other members of the
-  team;
-- interact with a strong network of researchers at the French and
-  European level by taking part in large research [collaborations](https://qat.inria.fr/projects) --
-  ;
-- take part in the development of the research expertise of PhD
-  students.
-
-Applicants should send a CV and a research statement (expected ~2
-pages, free format) to qat-hiring@inria.fr before May 1st. Candidates
-are encouraged to provide letters of recommendation. Later
-applications will be considered depending on available funding.
-
-Where: Ecole normale supérieure in the beautiful quartier Latin, in
-Paris.
-
-Duration: Flexible, 2 or 3 years. Among other benefits, the postdoc
-position comes with a generous travel and visitor allowance.
-
-#quantumcomputing #hiring #postdocs
+- **PhD**: we welcome motivated students, even if they know little
+  about quantum information but can bring expertise such as classical
+  cryptography, error correction, algebra, complex analysis,
+  complexity theory, combinatorics and machine learning. Please send
+  an email + CV + letter of recommendation at
+  [qat-hiring@inria.fr](mailto://qat-hiring@inria.fr)
+- **Postdocs**: those are 2-3 years positions + travel/collaboration
+  budget. You will be involved in several projects conducted by the
+  team, develop your own line of research and have the opportunity to
+  be involved in mentoring students and interns. Send CV + research
+  statement and recommendation letters to
+  [qat-hiring@inria.fr](mailto://qat-hiring@inria.fr) (Deadline may
+  1st).
+- **InnovationManager**: I look for a an innovation manager to help me
+  with expanding the QuantumTech@INRIA program. You will work with all
+  8 quantum teams at INRIA, be in contact with industries, start-ups,
+  incubators, will be making sure that administrative requirements are
+  met but do not stand in the path of reasearch and innovation,
+  andwill be involved in all the events that we plan to enhance
+  visibility and recruitement capability in Quantum Information at
+  INRIA. Apply [here](https://lnkd.in/eM9TFey8)
+- **MasterStudents**: there are several great masters in Paris. MPRI,
+  ICFP, and Quantum Engineering where the whole team will be teaching
+  this fall. Registrations are open here till may 1st on this
+  [page](https://lnkd.in/e2EHZt4c).
+- You don't fit in these categories, but you have strong mathematics /
+  physics / computer science background that you think can be fit for
+  some of the [projects](https://qat.inria.fr/projects) the team is
+  involved in: send us a research statement + CV at
+  [qat-hiring@inria.fr](mailto:qat-hiring@inria.fr).
