@@ -1,9 +1,3 @@
----
-layout: post
-title:  "Limitations of variational quantum algorithms: a quantum optimal transport approach"
-tag:    Qatalyze
----
-
 <style>
   #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
@@ -188,6 +182,7 @@ tag:    Qatalyze
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         displayAlign: "left",
@@ -210,14 +205,15 @@ tag:    Qatalyze
              }
 });
 </script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 
-\[
+<p>[
 \newcommand{\one}{\mathbb{1}}
 \newcommand{\Id}{\mathbb{I}}
 \newcommand\supp{\mathrm{supp}}
 \newcommand\tr{\mathrm{tr}}
-\]
+]</p>
 
 <div id="outline-container-org9dfaf54" class="outline-2">
 <h2 id="org9dfaf54"><span class="section-number-2">1.</span> Definitions</h2>
@@ -247,13 +243,13 @@ D_{\alpha} (\rho \| \sigma) = \frac{1}{\alpha-1} \log \tr \left[\left(\sigma^{\f
 A state \(\sigma\) on \(V\) qudits satisfies a Gaussian concentration inequality of parameter \(c\) if there is a constant \(K\) such that for any \(a\) and any observable \(O\):
 </p>
 \begin{equation}
-\Pr_{\sigma} (|O - \langle O\rangle_\sigma \Id| > a |V|) \leq K \exp \left( - \frac{c a^2 |V|}{\| \sigma^{-1/2} O \sigma^{1/2}\|_L^2}\right)
+\Pr_{\sigma} (|O - \langle O\rangle_\sigma \Id| &gt; a |V|) \leq K \exp \left( - \frac{c a^2 |V|}{\| \sigma^{-1/2} O \sigma^{1/2}\|_L^2}\right)
 \end{equation}
 
 </div>
 <p>
 Above \(|A| = \sqrt {A^\dagger A}\), and \(\Pr_\sigma(|O-\langle
-O\rangle_\sigma \Id > a|V|)\) means that for \(E\) the positive part of
+O\rangle_\sigma \Id &gt; a|V|)\) means that for \(E\) the positive part of
 \(|O-\langle O\rangle_{\sigma}\Id|-a|V|\Id\), we have \(\tr(E\sigma)\)
 bounded by the right hand side of the equation. Note that in the cases
 where \(\sigma\) and \(O\) commute \(\| \sigma^{-1/2} O \sigma^{1/2}\|_L^2\)
@@ -267,7 +263,7 @@ reduces to \(\| O\|_L^2\).
 <div class="outline-text-2" id="text-2">
 <div class="theorem" id="orgf38b0ba">
 <p>
-Let \(\rho, \sigma\) be two quantum states on \(\mathcal H_V\). Then for any POVM element \(0 \leq E \leq \Id\) and \(\alpha >1\),
+Let \(\rho, \sigma\) be two quantum states on \(\mathcal H_V\). Then for any POVM element \(0 \leq E \leq \Id\) and \(\alpha &gt;1\),
 </p>
 \begin{equation}
 \tr[E\rho] \leq \exp\left( \frac{\alpha -1}{\alpha} (D_\alpha(\rho\|\sigma) + \log(\tr[E\sigma]))\right)
@@ -281,8 +277,8 @@ Using the circularity of the trace we have:
 </p>
 \begin{align}
 \tr[E\rho]
-& = \tr[\sigma^{-\frac{1-\alpha}{2\alpha}} E \sigma^{-\frac{1-\alpha}{2\alpha}} \times \sigma^{\frac{1-\alpha}{2\alpha}} \rho  \sigma^{\frac{1-\alpha}{2\alpha}}] \\
-& \leq \left\{\tr \left[ \left( \sigma^{-\frac{1-\alpha}{2\alpha}} E \sigma^{-\frac{1-\alpha}{2\alpha}}\right)^\beta \right ]\right\}^{\frac{1}{\beta}} \times \left\{\tr \left[ \left( \sigma^{\frac{1-\alpha}{2\alpha}} \rho \sigma^{\frac{1-\alpha}{2\alpha}} \right)^\alpha \right ]\right\}^{\frac{1}{\alpha}}
+&amp; = \tr[\sigma^{-\frac{1-\alpha}{2\alpha}} E \sigma^{-\frac{1-\alpha}{2\alpha}} \times \sigma^{\frac{1-\alpha}{2\alpha}} \rho  \sigma^{\frac{1-\alpha}{2\alpha}}] \\
+&amp; \leq \left\{\tr \left[ \left( \sigma^{-\frac{1-\alpha}{2\alpha}} E \sigma^{-\frac{1-\alpha}{2\alpha}}\right)^\beta \right ]\right\}^{\frac{1}{\beta}} \times \left\{\tr \left[ \left( \sigma^{\frac{1-\alpha}{2\alpha}} \rho \sigma^{\frac{1-\alpha}{2\alpha}} \right)^\alpha \right ]\right\}^{\frac{1}{\alpha}}
 \end{align}
 <p>
 where the last line is obtained by applying H\"older inequality, which holds for \(\frac{1}{\alpha} + \frac{1}{\beta} = 1\).
@@ -293,8 +289,8 @@ Using the Araki-Lieb-Thirring inequality followed by \(E \leq \Id\) we obtain:
 </p>
 \begin{align}
 \tr \left( \sigma^{-\frac{1-\alpha}{2\alpha}} E \sigma^{-\frac{1-\alpha}{2\alpha}}\right)^\beta
-& \leq \tr \left( \sigma^{-\frac{(1-\alpha)\beta}{2\alpha}} E^\beta \sigma^{-\frac{(1-\alpha)\beta}{2\alpha}}\right) \\
-& \leq \tr \left( \sigma^{-\frac{(1-\alpha)\beta}{2\alpha}} E \sigma^{-\frac{(1-\alpha)\beta}{2\alpha}}\right).
+&amp; \leq \tr \left( \sigma^{-\frac{(1-\alpha)\beta}{2\alpha}} E^\beta \sigma^{-\frac{(1-\alpha)\beta}{2\alpha}}\right) \\
+&amp; \leq \tr \left( \sigma^{-\frac{(1-\alpha)\beta}{2\alpha}} E \sigma^{-\frac{(1-\alpha)\beta}{2\alpha}}\right).
 \end{align}
 <p>
 As \(\beta = \frac{\alpha}{\alpha -1}\) we have
@@ -315,8 +311,8 @@ Combining the two gives:
 </p>
 \begin{align}
 \tr[E\rho]
-& \leq (tr[E\sigma]) \times \exp\left( \frac{\alpha -1}{\alpha} (D_\alpha(\rho\|\sigma))\right) \\
-& \leq \exp\left( \frac{\alpha -1}{\alpha} (D_\alpha(\rho\|\sigma))  \log (\tr[E\sigma])\right).
+&amp; \leq (tr[E\sigma]) \times \exp\left( \frac{\alpha -1}{\alpha} (D_\alpha(\rho\|\sigma))\right) \\
+&amp; \leq \exp\left( \frac{\alpha -1}{\alpha} (D_\alpha(\rho\|\sigma))  \log (\tr[E\sigma])\right).
 \end{align}
 
 </div>
@@ -335,13 +331,13 @@ which can be seen as a measure of the distance between the two states
 If \(\sigma\) satisfies a Gaussian concentration inequality 
 </p>
 \begin{equation}
-\Pr_{\sigma} (|O - \langle O\rangle_\sigma \Id| > a |V|) \leq K \exp \left( - \frac{c a^2 |V|}{\| \sigma^{-1/2} O \sigma^{1/2}\|_L^2}\right)
+\Pr_{\sigma} (|O - \langle O\rangle_\sigma \Id| &gt; a |V|) \leq K \exp \left( - \frac{c a^2 |V|}{\| \sigma^{-1/2} O \sigma^{1/2}\|_L^2}\right)
 \end{equation}
 <p>
-for some constant \(c, K > 0\), then for any \(\alpha > 1\): 
+for some constant \(c, K &gt; 0\), then for any \(\alpha &gt; 1\): 
 </p>
 \begin{equation}
-\Pr_{\rho} (|O - \langle O\rangle_\sigma \Id| > a |V|) \leq \exp  \left(\frac{\alpha -1}{\alpha}\left(D_\alpha(\rho\|\sigma) - \frac{c a^2 |V|}{\| \sigma^{-1/2} O \sigma^{1/2}\|_L^2} + \log(K)\right)\right)
+\Pr_{\rho} (|O - \langle O\rangle_\sigma \Id| &gt; a |V|) \leq \exp  \left(\frac{\alpha -1}{\alpha}\left(D_\alpha(\rho\|\sigma) - \frac{c a^2 |V|}{\| \sigma^{-1/2} O \sigma^{1/2}\|_L^2} + \log(K)\right)\right)
 \end{equation}
 
 </div>
@@ -351,7 +347,7 @@ for some constant \(c, K > 0\), then for any \(\alpha > 1\):
 For an input state \(\rho\), a noisy circuit evolution \(\mathcal{N}(\rho)\) and a state \(\sigma\) satisfying a Gaussian concentration inequality, whenever there is a value of \(\alpha\) and \(a\) such that
 </p>
 \begin{equation}
-\frac{D_{\alpha}(\mathcal N(\rho) \| \sigma)}{|V|} < \frac{c a^2}{\| \sigma^{-1/2} O \sigma^{1/2}\|_L^2} - \frac{\log(K)}{|V|},
+\frac{D_{\alpha}(\mathcal N(\rho) \| \sigma)}{|V|} &lt; \frac{c a^2}{\| \sigma^{-1/2} O \sigma^{1/2}\|_L^2} - \frac{\log(K)}{|V|},
 \end{equation}
 <p>
 then the probability of observing an outcome of \(O\) outside the interval \(\langle O \rangle_{\sigma} \pm a|V|\) decreases exponentially with \(|V|\).
@@ -376,7 +372,7 @@ In such cases we obtain
 </p>
 <div class="lemma" id="org79a654d">
 <p>
-Let \(\mathcal N\) be a quantum channel with a unique fixed point \(\sigma\) and satisfying a strong data processing inequality for some \(\alpha > 1\), then for any other channels \(\{\Phi_i\}_{i\leq l}\) we have:
+Let \(\mathcal N\) be a quantum channel with a unique fixed point \(\sigma\) and satisfying a strong data processing inequality for some \(\alpha &gt; 1\), then for any other channels \(\{\Phi_i\}_{i\leq l}\) we have:
 </p>
 \begin{equation}
 D_\alpha\left( \mathcal P (\rho) \| \sigma \right) \leq (1-q)^l D_\alpha(\rho\|\sigma) + \sum_{i\leq l} (1-q)^{l-i} D_\infty (\Phi_i(\sigma) \| \sigma)
@@ -476,4 +472,4 @@ When \(r \geq 1\) the inequality is reversed.
 </div>
 </div>
 </div>
-</div>
+<p>&lt;/div&gt;</p>
