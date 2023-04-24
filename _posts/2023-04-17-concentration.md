@@ -212,17 +212,20 @@ tag:    Qatalyze
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 
+<div id="content" class="content">
+<p>
 \[
 \newcommand{\one}{\mathbb{1}}
 \newcommand{\Id}{\mathbb{I}}
 \newcommand\supp{\mathrm{supp}}
 \newcommand\tr{\mathrm{tr}}
 \]
+</p>
 
-<div id="outline-container-org9dfaf54" class="outline-2">
-<h2 id="org9dfaf54"><span class="section-number-2">1.</span> Definitions</h2>
+<div id="outline-container-orge810043" class="outline-2">
+<h2 id="orge810043"><span class="section-number-2">1.</span> Definitions</h2>
 <div class="outline-text-2" id="text-1">
-<div class="definition" id="org340acb9">
+<div class="definition" id="org1f2f8ba">
 <p>
 The Lipschitz constant for \(H\) a self-adjoint operator is defined by:
 </p>
@@ -232,7 +235,7 @@ The Lipschitz constant for \(H\) a self-adjoint operator is defined by:
 
 </div>
 
-<div class="definition" id="org6a9f7b6">
+<div class="definition" id="orgd654d67">
 <p>
 The sandwiched Renyi divergence of order \(\alpha \in (1,+\infty)\) is defined for two quantum states \(\rho, \sigma\) with \(\supp \rho \subset \supp \sigma\) as
 </p>
@@ -242,7 +245,7 @@ D_{\alpha} (\rho \| \sigma) = \frac{1}{\alpha-1} \log \tr \left[\left(\sigma^{\f
 
 </div>
 
-<div class="definition" id="orgae5eb9a">
+<div class="definition" id="org3661770">
 <p>
 A state \(\sigma\) on \(V\) qudits satisfies a Gaussian concentration inequality of parameter \(c\) if there is a constant \(K\) such that for any \(a\) and any observable \(O\):
 </p>
@@ -262,10 +265,10 @@ reduces to \(\| O\|_L^2\).
 </div>
 </div>
 
-<div id="outline-container-org678d260" class="outline-2">
-<h2 id="org678d260"><span class="section-number-2">2.</span> Transferring inequalities</h2>
+<div id="outline-container-org283c48c" class="outline-2">
+<h2 id="org283c48c"><span class="section-number-2">2.</span> Transferring inequalities</h2>
 <div class="outline-text-2" id="text-2">
-<div class="theorem" id="orgf38b0ba">
+<div class="theorem" id="orgbdcac30">
 <p>
 Let \(\rho, \sigma\) be two quantum states on \(\mathcal H_V\). Then for any POVM element \(0 \leq E \leq \Id\) and \(\alpha >1\),
 </p>
@@ -275,7 +278,7 @@ Let \(\rho, \sigma\) be two quantum states on \(\mathcal H_V\). Then for any POV
 
 </div>
 
-<div class="proof" id="org3af3908">
+<div class="proof" id="org7e0e1fd">
 <p>
 Using the circularity of the trace we have:
 </p>
@@ -330,7 +333,7 @@ which can be seen as a measure of the distance between the two states
 \(D_\alpha(\rho\|\sigma)\) becomes small.
 </p>
 
-<div class="corollary" id="orgbf7fbed">
+<div class="corollary" id="org4695ae0">
 <p>
 If \(\sigma\) satisfies a Gaussian concentration inequality 
 </p>
@@ -346,7 +349,7 @@ for some constant \(c, K > 0\), then for any \(\alpha > 1\):
 
 </div>
 
-<div class="corollary" id="org34b4e2f">
+<div class="corollary" id="org57fda40">
 <p>
 For an input state \(\rho\), a noisy circuit evolution \(\mathcal{N}(\rho)\) and a state \(\sigma\) satisfying a Gaussian concentration inequality, whenever there is a value of \(\alpha\) and \(a\) such that
 </p>
@@ -361,8 +364,8 @@ then the probability of observing an outcome of \(O\) outside the interval \(\la
 </div>
 </div>
 
-<div id="outline-container-org7198403" class="outline-2">
-<h2 id="org7198403"><span class="section-number-2">3.</span> Bounding \(D_{\alpha}(\mathcal N(\rho) \| \sigma)\)</h2>
+<div id="outline-container-orgcb0f66f" class="outline-2">
+<h2 id="orgcb0f66f"><span class="section-number-2">3.</span> Bounding \(D_{\alpha}(\mathcal N(\rho) \| \sigma)\)</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Such bounds can be obtained for noisy circuits where each layer \(i\) is followed by a noisy channel \(\mathcal N\) with a fixed point \(\sigma\) satisfying a strong data processing inequality:
@@ -374,7 +377,7 @@ D_\alpha(\mathcal N(\rho) \| \sigma)\leq (1-q) D_\alpha (\rho \|\sigma), \ \fora
 <p>
 In such cases we obtain
 </p>
-<div class="lemma" id="org79a654d">
+<div class="lemma" id="org7432983">
 <p>
 Let \(\mathcal N\) be a quantum channel with a unique fixed point \(\sigma\) and satisfying a strong data processing inequality for some \(\alpha > 1\), then for any other channels \(\{\Phi_i\}_{i\leq l}\) we have:
 </p>
@@ -387,7 +390,7 @@ where \(D_\infty(\rho \| \sigma) = \log \| \sigma^{-\frac{1}{2}} \rho \sigma^{-\
 
 </div>
 
-<div class="proof" id="org4bb4b9d">
+<div class="proof" id="org4062ecd">
 <p>
 We proceed by induction on \(l\). For \(l=1\), we use the data processed triangle inequality:
 </p>
@@ -407,12 +410,12 @@ fixed point of the channel is \(\Id\). This implies that \(D_\alpha\left(
 </div>
 </div>
 
-<div id="outline-container-org7838c6c" class="outline-2">
-<h2 id="org7838c6c"><span class="section-number-2">4.</span> Additional notes</h2>
+<div id="outline-container-org637fc60" class="outline-2">
+<h2 id="org637fc60"><span class="section-number-2">4.</span> Additional notes</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org65895eb" class="outline-3">
-<h3 id="org65895eb"><span class="section-number-3">4.1.</span> Renyi entropies</h3>
+<div id="outline-container-org9373a48" class="outline-3">
+<h3 id="org9373a48"><span class="section-number-3">4.1.</span> Renyi entropies</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 In the above definition of Renyi divergence, note that when \(\alpha \rightarrow 1\) we recover the usual relative entropy: 
@@ -433,8 +436,8 @@ This is not a surprise as these sandwiched Renyi divergences have been introduce
 </div>
 </div>
 
-<div id="outline-container-org34ff981" class="outline-3">
-<h3 id="org34ff981"><span class="section-number-3">4.2.</span> Relative entropy and Pinsker inequality</h3>
+<div id="outline-container-org1f276fc" class="outline-3">
+<h3 id="org1f276fc"><span class="section-number-3">4.2.</span> Relative entropy and Pinsker inequality</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 The Pinsker inequality relates the relative entropy to the trace distance. As such it allows to bound the trace distance using information theoretic arguments:
@@ -444,8 +447,8 @@ D_1(\rho\|\sigma) \geq \frac{1}{2\log 2} \| \rho -\sigma \|_{\tr}^2
 \end{equation}
 </div>
 </div>
-<div id="outline-container-org4f3cfe4" class="outline-3">
-<h3 id="org4f3cfe4"><span class="section-number-3">4.3.</span> Hölder inequality</h3>
+<div id="outline-container-orgc5c639a" class="outline-3">
+<h3 id="orgc5c639a"><span class="section-number-3">4.3.</span> Hölder inequality</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 For \(A\), \(B\) operators on \(\mathcal H\)
@@ -461,8 +464,8 @@ which translates for matrices into
 \end{equation}
 </div>
 </div>
-<div id="outline-container-org5ef0f59" class="outline-3">
-<h3 id="org5ef0f59"><span class="section-number-3">4.4.</span> Araki-Lieb-Thirring inequality</h3>
+<div id="outline-container-orgc11c70e" class="outline-3">
+<h3 id="orgc11c70e"><span class="section-number-3">4.4.</span> Araki-Lieb-Thirring inequality</h3>
 <div class="outline-text-3" id="text-4-4">
 <p>
 For \(A,B \geq 0\), \(q\geq 0\) and \(0\leq r \leq 1\) then

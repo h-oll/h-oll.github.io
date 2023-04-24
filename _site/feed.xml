@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://h-oll.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://h-oll.github.io/" rel="alternate" type="text/html" /><updated>2023-04-23T23:28:50+02:00</updated><id>https://h-oll.github.io/feed.xml</id><title type="html">Harold Ollivier</title><subtitle>Quantum Algorithms, Architectures, Applications and their Theory Team | QuantumTech@INRIA</subtitle><entry><title type="html">Limitations of variational quantum algorithms: a quantum optimal transport approach</title><link href="https://h-oll.github.io/2023/04/17/concentration.html" rel="alternate" type="text/html" title="Limitations of variational quantum algorithms: a quantum optimal transport approach" /><published>2023-04-17T00:00:00+02:00</published><updated>2023-04-17T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/04/17/concentration</id><content type="html" xml:base="https://h-oll.github.io/2023/04/17/concentration.html">&lt;style&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://h-oll.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://h-oll.github.io/" rel="alternate" type="text/html" /><updated>2023-04-24T07:22:28+02:00</updated><id>https://h-oll.github.io/feed.xml</id><title type="html">Harold Ollivier</title><subtitle>Quantum Algorithms, Architectures, Applications and their Theory Team | QuantumTech@INRIA</subtitle><entry><title type="html">Limitations of variational quantum algorithms: a quantum optimal transport approach</title><link href="https://h-oll.github.io/2023/04/17/concentration.html" rel="alternate" type="text/html" title="Limitations of variational quantum algorithms: a quantum optimal transport approach" /><published>2023-04-17T00:00:00+02:00</published><updated>2023-04-17T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/04/17/concentration</id><content type="html" xml:base="https://h-oll.github.io/2023/04/17/concentration.html">&lt;style&gt;
   #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
@@ -217,10 +217,11 @@
 \newcommand\tr{\mathrm{tr}}
 \]
 &lt;/p&gt;
-&lt;div id=&quot;outline-container-org64ca697&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org64ca697&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;1.&lt;/span&gt; Definitions&lt;/h2&gt;
+
+&lt;div id=&quot;outline-container-orge810043&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orge810043&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;1.&lt;/span&gt; Definitions&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
-&lt;div class=&quot;definition&quot; id=&quot;orga22c3d9&quot;&gt;
+&lt;div class=&quot;definition&quot; id=&quot;org1f2f8ba&quot;&gt;
 &lt;p&gt;
 The Lipschitz constant for \(H\) a self-adjoint operator is defined by:
 &lt;/p&gt;
@@ -230,7 +231,7 @@ The Lipschitz constant for \(H\) a self-adjoint operator is defined by:
 
 &lt;/div&gt;
 
-&lt;div class=&quot;definition&quot; id=&quot;orgb459aff&quot;&gt;
+&lt;div class=&quot;definition&quot; id=&quot;orgd654d67&quot;&gt;
 &lt;p&gt;
 The sandwiched Renyi divergence of order \(\alpha \in (1,+\infty)\) is defined for two quantum states \(\rho, \sigma\) with \(\supp \rho \subset \supp \sigma\) as
 &lt;/p&gt;
@@ -240,7 +241,7 @@ D_{\alpha} (\rho \| \sigma) = \frac{1}{\alpha-1} \log \tr \left[\left(\sigma^{\f
 
 &lt;/div&gt;
 
-&lt;div class=&quot;definition&quot; id=&quot;org52ce695&quot;&gt;
+&lt;div class=&quot;definition&quot; id=&quot;org3661770&quot;&gt;
 &lt;p&gt;
 A state \(\sigma\) on \(V\) qudits satisfies a Gaussian concentration inequality of parameter \(c\) if there is a constant \(K\) such that for any \(a\) and any observable \(O\):
 &lt;/p&gt;
@@ -260,10 +261,10 @@ reduces to \(\| O\|_L^2\).
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org4d28410&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org4d28410&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;2.&lt;/span&gt; Transferring inequalities&lt;/h2&gt;
+&lt;div id=&quot;outline-container-org283c48c&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org283c48c&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;2.&lt;/span&gt; Transferring inequalities&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-2&quot;&gt;
-&lt;div class=&quot;theorem&quot; id=&quot;orgdfbbbbb&quot;&gt;
+&lt;div class=&quot;theorem&quot; id=&quot;orgbdcac30&quot;&gt;
 &lt;p&gt;
 Let \(\rho, \sigma\) be two quantum states on \(\mathcal H_V\). Then for any POVM element \(0 \leq E \leq \Id\) and \(\alpha &amp;gt;1\),
 &lt;/p&gt;
@@ -273,7 +274,7 @@ Let \(\rho, \sigma\) be two quantum states on \(\mathcal H_V\). Then for any POV
 
 &lt;/div&gt;
 
-&lt;div class=&quot;proof&quot; id=&quot;orge17a8ab&quot;&gt;
+&lt;div class=&quot;proof&quot; id=&quot;org7e0e1fd&quot;&gt;
 &lt;p&gt;
 Using the circularity of the trace we have:
 &lt;/p&gt;
@@ -328,7 +329,7 @@ which can be seen as a measure of the distance between the two states
 \(D_\alpha(\rho\|\sigma)\) becomes small.
 &lt;/p&gt;
 
-&lt;div class=&quot;corollary&quot; id=&quot;org619a69a&quot;&gt;
+&lt;div class=&quot;corollary&quot; id=&quot;org4695ae0&quot;&gt;
 &lt;p&gt;
 If \(\sigma\) satisfies a Gaussian concentration inequality 
 &lt;/p&gt;
@@ -344,7 +345,7 @@ for some constant \(c, K &amp;gt; 0\), then for any \(\alpha &amp;gt; 1\):
 
 &lt;/div&gt;
 
-&lt;div class=&quot;corollary&quot; id=&quot;org2b08747&quot;&gt;
+&lt;div class=&quot;corollary&quot; id=&quot;org57fda40&quot;&gt;
 &lt;p&gt;
 For an input state \(\rho\), a noisy circuit evolution \(\mathcal{N}(\rho)\) and a state \(\sigma\) satisfying a Gaussian concentration inequality, whenever there is a value of \(\alpha\) and \(a\) such that
 &lt;/p&gt;
@@ -359,8 +360,8 @@ then the probability of observing an outcome of \(O\) outside the interval \(\la
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgadde0ea&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgadde0ea&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;3.&lt;/span&gt; Bounding \(D_{\alpha}(\mathcal N(\rho) \| \sigma)\)&lt;/h2&gt;
+&lt;div id=&quot;outline-container-orgcb0f66f&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgcb0f66f&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;3.&lt;/span&gt; Bounding \(D_{\alpha}(\mathcal N(\rho) \| \sigma)\)&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-3&quot;&gt;
 &lt;p&gt;
 Such bounds can be obtained for noisy circuits where each layer \(i\) is followed by a noisy channel \(\mathcal N\) with a fixed point \(\sigma\) satisfying a strong data processing inequality:
@@ -372,7 +373,7 @@ D_\alpha(\mathcal N(\rho) \| \sigma)\leq (1-q) D_\alpha (\rho \|\sigma), \ \fora
 &lt;p&gt;
 In such cases we obtain
 &lt;/p&gt;
-&lt;div class=&quot;lemma&quot; id=&quot;org53a91e9&quot;&gt;
+&lt;div class=&quot;lemma&quot; id=&quot;org7432983&quot;&gt;
 &lt;p&gt;
 Let \(\mathcal N\) be a quantum channel with a unique fixed point \(\sigma\) and satisfying a strong data processing inequality for some \(\alpha &amp;gt; 1\), then for any other channels \(\{\Phi_i\}_{i\leq l}\) we have:
 &lt;/p&gt;
@@ -385,7 +386,7 @@ where \(D_\infty(\rho \| \sigma) = \log \| \sigma^{-\frac{1}{2}} \rho \sigma^{-\
 
 &lt;/div&gt;
 
-&lt;div class=&quot;proof&quot; id=&quot;org631cc21&quot;&gt;
+&lt;div class=&quot;proof&quot; id=&quot;org4062ecd&quot;&gt;
 &lt;p&gt;
 We proceed by induction on \(l\). For \(l=1\), we use the data processed triangle inequality:
 &lt;/p&gt;
@@ -405,12 +406,12 @@ fixed point of the channel is \(\Id\). This implies that \(D_\alpha\left(
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org164c669&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org164c669&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;4.&lt;/span&gt; Additional notes&lt;/h2&gt;
+&lt;div id=&quot;outline-container-org637fc60&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org637fc60&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;4.&lt;/span&gt; Additional notes&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-4&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org3dc477e&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org3dc477e&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;4.1.&lt;/span&gt; Renyi entropies&lt;/h3&gt;
+&lt;div id=&quot;outline-container-org9373a48&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org9373a48&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;4.1.&lt;/span&gt; Renyi entropies&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-4-1&quot;&gt;
 &lt;p&gt;
 In the above definition of Renyi divergence, note that when \(\alpha \rightarrow 1\) we recover the usual relative entropy: 
@@ -431,8 +432,8 @@ This is not a surprise as these sandwiched Renyi divergences have been introduce
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgede9680&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgede9680&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;4.2.&lt;/span&gt; Relative entropy and Pinsker inequality&lt;/h3&gt;
+&lt;div id=&quot;outline-container-org1f276fc&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org1f276fc&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;4.2.&lt;/span&gt; Relative entropy and Pinsker inequality&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-4-2&quot;&gt;
 &lt;p&gt;
 The Pinsker inequality relates the relative entropy to the trace distance. As such it allows to bound the trace distance using information theoretic arguments:
@@ -442,8 +443,8 @@ D_1(\rho\|\sigma) \geq \frac{1}{2\log 2} \| \rho -\sigma \|_{\tr}^2
 \end{equation}
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org74ee0e8&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org74ee0e8&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;4.3.&lt;/span&gt; Hölder inequality&lt;/h3&gt;
+&lt;div id=&quot;outline-container-orgc5c639a&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgc5c639a&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;4.3.&lt;/span&gt; Hölder inequality&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-4-3&quot;&gt;
 &lt;p&gt;
 For \(A\), \(B\) operators on \(\mathcal H\)
@@ -459,8 +460,8 @@ which translates for matrices into
 \end{equation}
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgbe988d7&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgbe988d7&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;4.4.&lt;/span&gt; Araki-Lieb-Thirring inequality&lt;/h3&gt;
+&lt;div id=&quot;outline-container-orgc11c70e&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgc11c70e&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;4.4.&lt;/span&gt; Araki-Lieb-Thirring inequality&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-4-4&quot;&gt;
 &lt;p&gt;
 For \(A,B \geq 0\), \(q\geq 0\) and \(0\leq r \leq 1\) then
@@ -474,5 +475,4 @@ When \(r \geq 1\) the inequality is reversed.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;/div&gt;</content><author><name></name></author><category term="Qatalyze" /><summary type="html"></summary></entry></feed>
