@@ -213,6 +213,9 @@ tag:    Qatalyze
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 
 <div id="content" class="content">
+
+Highlights from <a href="https://arxiv.org/abs/2204.03455">arXiv:2204.03455</a>.
+
 <p>
 \[
 \newcommand{\one}{\mathbb{1}}

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Notes
-permalink: /notes/
+title: Resources
+permalink: /resources/
 ---
 
 {%- if site.posts.size > 0 -%}
