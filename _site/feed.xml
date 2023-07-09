@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://h-oll.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://h-oll.github.io/" rel="alternate" type="text/html" /><updated>2023-04-28T15:17:12+02:00</updated><id>https://h-oll.github.io/feed.xml</id><title type="html">Harold Ollivier</title><subtitle>Quantum Algorithms, Architectures, Applications and their Theory Team | QuantumTech@INRIA</subtitle><entry><title type="html">Limitations of variational quantum algorithms: a quantum optimal transport approach</title><link href="https://h-oll.github.io/2023/04/17/concentration.html" rel="alternate" type="text/html" title="Limitations of variational quantum algorithms: a quantum optimal transport approach" /><published>2023-04-17T00:00:00+02:00</published><updated>2023-04-17T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/04/17/concentration</id><content type="html" xml:base="https://h-oll.github.io/2023/04/17/concentration.html">&lt;style&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://h-oll.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://h-oll.github.io/" rel="alternate" type="text/html" /><updated>2023-07-09T10:57:44+02:00</updated><id>https://h-oll.github.io/feed.xml</id><title type="html">Harold Ollivier</title><subtitle>Quantum Algorithms, Architectures, Applications and their Theory Team | QuantumTech@INRIA</subtitle><entry><title type="html">Introductory lecture on verification of quantum computations</title><link href="https://h-oll.github.io/2023/07/04/verification.html" rel="alternate" type="text/html" title="Introductory lecture on verification of quantum computations" /><published>2023-07-04T00:00:00+02:00</published><updated>2023-07-04T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/07/04/verification</id><content type="html" xml:base="https://h-oll.github.io/2023/07/04/verification.html">&lt;p&gt;This &lt;a href=&quot;/assets/20230704.ucl.pdf&quot;&gt;lecture&lt;/a&gt; was given at UCL Advanced Summer School on Quantum Technologies July 4-5, 2023.&lt;/p&gt;
+
+&lt;p&gt;It introduces the basis ingredients of verified computations. It is framed using measurement based quantum computing as a convenient model to obtain blindness and design verification schemes. Comments and questions welcome. The last slides include a list of references.&lt;/p&gt;</content><author><name></name></author><category term="Talk" /><summary type="html">This lecture was given at UCL Advanced Summer School on Quantum Technologies July 4-5, 2023.</summary></entry><entry><title type="html">Highlights from “Limitations of variational quantum algorithms: a quantum optimal transport approach”</title><link href="https://h-oll.github.io/2023/04/17/concentration.html" rel="alternate" type="text/html" title="Highlights from “Limitations of variational quantum algorithms: a quantum optimal transport approach”" /><published>2023-04-17T00:00:00+02:00</published><updated>2023-04-17T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/04/17/concentration</id><content type="html" xml:base="https://h-oll.github.io/2023/04/17/concentration.html">&lt;style&gt;
   #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
@@ -43,98 +45,98 @@
   }
   pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  pre.src-asymptote:before { content: &apos;Asymptote&apos;; }
+  pre.src-awk:before { content: &apos;Awk&apos;; }
+  pre.src-authinfo::before { content: &apos;Authinfo&apos;; }
+  pre.src-C:before { content: &apos;C&apos;; }
+  /* pre.src-C++ doesn&apos;t work in CSS */
+  pre.src-clojure:before { content: &apos;Clojure&apos;; }
+  pre.src-css:before { content: &apos;CSS&apos;; }
+  pre.src-D:before { content: &apos;D&apos;; }
+  pre.src-ditaa:before { content: &apos;ditaa&apos;; }
+  pre.src-dot:before { content: &apos;Graphviz&apos;; }
+  pre.src-calc:before { content: &apos;Emacs Calc&apos;; }
+  pre.src-emacs-lisp:before { content: &apos;Emacs Lisp&apos;; }
+  pre.src-fortran:before { content: &apos;Fortran&apos;; }
+  pre.src-gnuplot:before { content: &apos;gnuplot&apos;; }
+  pre.src-haskell:before { content: &apos;Haskell&apos;; }
+  pre.src-hledger:before { content: &apos;hledger&apos;; }
+  pre.src-java:before { content: &apos;Java&apos;; }
+  pre.src-js:before { content: &apos;Javascript&apos;; }
+  pre.src-latex:before { content: &apos;LaTeX&apos;; }
+  pre.src-ledger:before { content: &apos;Ledger&apos;; }
+  pre.src-lisp:before { content: &apos;Lisp&apos;; }
+  pre.src-lilypond:before { content: &apos;Lilypond&apos;; }
+  pre.src-lua:before { content: &apos;Lua&apos;; }
+  pre.src-matlab:before { content: &apos;MATLAB&apos;; }
+  pre.src-mscgen:before { content: &apos;Mscgen&apos;; }
+  pre.src-ocaml:before { content: &apos;Objective Caml&apos;; }
+  pre.src-octave:before { content: &apos;Octave&apos;; }
+  pre.src-org:before { content: &apos;Org mode&apos;; }
+  pre.src-oz:before { content: &apos;OZ&apos;; }
+  pre.src-plantuml:before { content: &apos;Plantuml&apos;; }
+  pre.src-processing:before { content: &apos;Processing.js&apos;; }
+  pre.src-python:before { content: &apos;Python&apos;; }
+  pre.src-R:before { content: &apos;R&apos;; }
+  pre.src-ruby:before { content: &apos;Ruby&apos;; }
+  pre.src-sass:before { content: &apos;Sass&apos;; }
+  pre.src-scheme:before { content: &apos;Scheme&apos;; }
+  pre.src-screen:before { content: &apos;Gnu Screen&apos;; }
+  pre.src-sed:before { content: &apos;Sed&apos;; }
+  pre.src-sh:before { content: &apos;shell&apos;; }
+  pre.src-sql:before { content: &apos;SQL&apos;; }
+  pre.src-sqlite:before { content: &apos;SQLite&apos;; }
+  /* additional languages in org.el&apos;s org-babel-load-languages alist */
+  pre.src-forth:before { content: &apos;Forth&apos;; }
+  pre.src-io:before { content: &apos;IO&apos;; }
+  pre.src-J:before { content: &apos;J&apos;; }
+  pre.src-makefile:before { content: &apos;Makefile&apos;; }
+  pre.src-maxima:before { content: &apos;Maxima&apos;; }
+  pre.src-perl:before { content: &apos;Perl&apos;; }
+  pre.src-picolisp:before { content: &apos;Pico Lisp&apos;; }
+  pre.src-scala:before { content: &apos;Scala&apos;; }
+  pre.src-shell:before { content: &apos;Shell Script&apos;; }
+  pre.src-ebnf2ps:before { content: &apos;ebfn2ps&apos;; }
   /* additional language identifiers per &quot;defun org-babel-execute&quot;
        in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
+  pre.src-cpp:before  { content: &apos;C++&apos;; }
+  pre.src-abc:before  { content: &apos;ABC&apos;; }
+  pre.src-coq:before  { content: &apos;Coq&apos;; }
+  pre.src-groovy:before  { content: &apos;Groovy&apos;; }
   /* additional language identifiers from org-babel-shell-names in
      ob-shell.el: ob-shell is the only babel language using a lambda to put
      the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
+  pre.src-bash:before  { content: &apos;bash&apos;; }
+  pre.src-csh:before  { content: &apos;csh&apos;; }
+  pre.src-ash:before  { content: &apos;ash&apos;; }
+  pre.src-dash:before  { content: &apos;dash&apos;; }
+  pre.src-ksh:before  { content: &apos;ksh&apos;; }
+  pre.src-mksh:before  { content: &apos;mksh&apos;; }
+  pre.src-posh:before  { content: &apos;posh&apos;; }
   /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
+  pre.src-ada:before { content: &apos;Ada&apos;; }
+  pre.src-asm:before { content: &apos;Assembler&apos;; }
+  pre.src-caml:before { content: &apos;Caml&apos;; }
+  pre.src-delphi:before { content: &apos;Delphi&apos;; }
+  pre.src-html:before { content: &apos;HTML&apos;; }
+  pre.src-idl:before { content: &apos;IDL&apos;; }
+  pre.src-mercury:before { content: &apos;Mercury&apos;; }
+  pre.src-metapost:before { content: &apos;MetaPost&apos;; }
+  pre.src-modula-2:before { content: &apos;Modula-2&apos;; }
+  pre.src-pascal:before { content: &apos;Pascal&apos;; }
+  pre.src-ps:before { content: &apos;PostScript&apos;; }
+  pre.src-prolog:before { content: &apos;Prolog&apos;; }
+  pre.src-simula:before { content: &apos;Simula&apos;; }
+  pre.src-tcl:before { content: &apos;tcl&apos;; }
+  pre.src-tex:before { content: &apos;TeX&apos;; }
+  pre.src-plain-tex:before { content: &apos;Plain TeX&apos;; }
+  pre.src-verilog:before { content: &apos;Verilog&apos;; }
+  pre.src-vhdl:before { content: &apos;VHDL&apos;; }
+  pre.src-xml:before { content: &apos;XML&apos;; }
+  pre.src-nxml:before { content: &apos;XML&apos;; }
   /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf &quot; &quot;)) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
+     (add-to-list &apos;org-latex-listings-langs &apos;(conf &quot; &quot;)) in .emacs */
+  pre.src-conf:before { content: &apos;Configuration File&apos;; }
 
   table { border-collapse:collapse; }
   caption.t-above { caption-side: top; }

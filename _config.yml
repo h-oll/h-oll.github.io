@@ -17,6 +17,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+###
+# nix-shell -p bundler
+# bundle exec jekyll serve or build
+
 
 title: Harold Ollivier
 email: harold.ollivier@inria.fr

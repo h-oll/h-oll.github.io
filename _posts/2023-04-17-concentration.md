@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Limitations of variational quantum algorithms: a quantum optimal transport approach"
+title:  "Highlights from \"Limitations of variational quantum algorithms: a quantum optimal transport approach\""
 tag:    Qatalyze
 ---
 
