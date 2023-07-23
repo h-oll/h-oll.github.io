@@ -50,7 +50,7 @@ function arxiv_search({all, author, title, abstrct, journal_ref}) {
 	baseUrl += "all:" + all;
     }
 
-    baseUrl += "&max_results=1000&sortBy=lastUpdatedDate&sortOrder=descending";
+    baseUrl += "&max_results=1000&sortBy=submittedDate&sortOrder=descending";
     
     var deferred = $.Deferred();
     $.ajax({

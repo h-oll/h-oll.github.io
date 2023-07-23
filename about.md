@@ -17,3 +17,6 @@ finally launching a successful M&A boutique that soon reached more
 than 25 professionals and 5 offices across France. At the end of 2017,
 I founded an AI-based startup for reconstructing hidden professional
 network in the corporate finance space.
+
+I currently head the [QAT team](https://qat.inria.fr) and the
+[QuantumTech@INRIA program](https://qantumtech.inria.fr).
