@@ -19,4 +19,4 @@ I founded an AI-based startup for reconstructing hidden professional
 network in the corporate finance space.
 
 I currently head the [QAT team](https://qat.inria.fr) and the
-[QuantumTech@INRIA program](https://quantumtech.inria.fr).
+[QuantumTech@INRIA program](https://quantumtech.inria.fr/presentation).
