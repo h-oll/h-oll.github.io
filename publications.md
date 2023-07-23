@@ -3,63 +3,9 @@ title: Repos
 layout: page
 ---
 
-This page shows all public GitHub repos which are owned by me.
-
-<div id="repos">
-    <!-- <div class="container"> -->
-    <!--     <\!-- Filter controls -\-> -->
-    <!--     <div class="field"> -->
-    <!--         <p class="control has-icons-left"> -->
-    <!--             <input class="search input" type="text" placeholder="Search repo names"> -->
-    <!--             <span class="icon is-left"> -->
-    <!--                 <i class="fas fa-search" aria-hidden="true"></i> -->
-    <!--             </span> -->
-    <!--         </p> -->
-    <!--     </div> -->
-    <!-- </div> -->
-
-    <!-- <br> -->
-    <!-- <br> -->
-
-    <!-- <div class="container"> -->
-    <!--     <div id="repo-cards" class="columns is-multiline list"> -->
-    <!--         {% for repo_data in site.data.all_repos %} -->
-    <!--             {% assign repo = repo_data[1] %} -->
-    <!--             <div class="column is-3-widescreen is-4-desktop is-6-tablet is-8-mobile"> -->
-    <!--                 {% include repo-card.html %} -->
-    <!--             </div> -->
-    <!--         {% endfor %} -->
-    <!--     </div> -->
-    <!-- </div> -->
-
-    <form>
-      Title
-      <br />
-      <input type='text' name='doc_title'>
-      <br />
-      <input type="button" value="Search" onclick="search(document.getElementsByName('doc_title')[0].value)">
-    </form>
-    <div class='results'>
-    </div>
-
-
-
-</div>
-
+<head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="./arxiv.js"></script>
-<script> 
-function search(title) {
-$.when(arxiv_search({author: title})).then( function(data) { 
-$('.results').empty();
-for (var i = 0; i < data.length; ++i) {
-$('.results').append("Title: " + data[i].title + "<br />Author: " + data[i].authors[0] + "<br />URL: <a href='" + data[i].link + "'>" + data[i].link + "</a><br /><br />");
-}
-});
-}
-</script>
-
-
+<!-- <script src="./arxiv.js"></script> -->
 <script>
 /**
  * Searches arXiv for papers/documents that match the supplied parameters
@@ -141,4 +87,61 @@ function arxiv_search({all, author, title, abstrct, journal_ref}) {
     return deferred.promise();
 }
 
+function search(title) {
+$.when(arxiv_search({author: title})).then( function(data) { 
+$('.results').empty();
+for (var i = 0; i < data.length; ++i) {
+$('.results').append("Title: " + data[i].title + "<br />Author: " + data[i].authors[0] + "<br />URL: <a href='" + data[i].link + "'>" + data[i].link + "</a><br /><br />");
+}
+});
+}
+
+
 </script>
+
+
+</head>
+
+This page shows all public GitHub repos which are owned by me.
+
+<div id="repos">
+    <!-- <div class="container"> -->
+    <!--     <\!-- Filter controls -\-> -->
+    <!--     <div class="field"> -->
+    <!--         <p class="control has-icons-left"> -->
+    <!--             <input class="search input" type="text" placeholder="Search repo names"> -->
+    <!--             <span class="icon is-left"> -->
+    <!--                 <i class="fas fa-search" aria-hidden="true"></i> -->
+    <!--             </span> -->
+    <!--         </p> -->
+    <!--     </div> -->
+    <!-- </div> -->
+
+    <!-- <br> -->
+    <!-- <br> -->
+
+    <!-- <div class="container"> -->
+    <!--     <div id="repo-cards" class="columns is-multiline list"> -->
+    <!--         {% for repo_data in site.data.all_repos %} -->
+    <!--             {% assign repo = repo_data[1] %} -->
+    <!--             <div class="column is-3-widescreen is-4-desktop is-6-tablet is-8-mobile"> -->
+    <!--                 {% include repo-card.html %} -->
+    <!--             </div> -->
+    <!--         {% endfor %} -->
+    <!--     </div> -->
+    <!-- </div> -->
+
+    <form>
+      Title
+      <br />
+      <input type='text' name='doc_title'>
+      <br />
+      <input type="button" value="Search" onclick="search(document.getElementsByName('doc_title')[0].value)">
+    </form>
+    <div class='results'>
+    </div>
+
+
+
+</div>
+
