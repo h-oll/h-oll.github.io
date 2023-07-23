@@ -3,9 +3,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Repos | Harold Ollivier</title>
+<title>Publications | Harold Ollivier</title>
 <meta name="generator" content="Jekyll v3.9.3" />
-<meta property="og:title" content="Repos" />
+<meta property="og:title" content="Publications" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Quantum Algorithms, Architectures, Applications and their Theory Team QuantumTech@INRIA" />
 <meta property="og:description" content="Quantum Algorithms, Architectures, Applications and their Theory Team QuantumTech@INRIA" />
@@ -14,9 +14,9 @@
 <meta property="og:site_name" content="Harold Ollivier" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Repos" />
+<meta property="twitter:title" content="Publications" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Quantum Algorithms, Architectures, Applications and their Theory Team QuantumTech@INRIA","headline":"Repos","url":"https://h-oll.github.io/publications.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Quantum Algorithms, Architectures, Applications and their Theory Team QuantumTech@INRIA","headline":"Publications","url":"https://h-oll.github.io/publications.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://h-oll.github.io/feed.xml" title="Harold Ollivier" /></head>
 <body><header class="site-header" role="banner">
@@ -31,7 +31,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/projects/">Projects</a><a class="page-link" href="/publications.html">Repos</a><a class="page-link" href="/quantumtech/">QuantumTech@INRIA</a><a class="page-link" href="/research/">Research</a><a class="page-link" href="/resources/">Resources</a></div>
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/projects/">Projects</a><a class="page-link" href="/publications.html">Publications</a><a class="page-link" href="/quantumtech/">QuantumTech@INRIA</a><a class="page-link" href="/research/">Research</a><a class="page-link" href="/resources/">Resources</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -39,13 +39,12 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Repos</h1>
+    <h1 class="post-title">Publications</h1>
   </header>
 
   <div class="post-content">
     <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<!-- <script src="./arxiv.js"></script> -->
 <script>
 /**
  * Searches arXiv for papers/documents that match the supplied parameters
@@ -91,7 +90,7 @@ function arxiv_search({all, author, title, abstrct, journal_ref}) {
 	baseUrl += "all:" + all;
     }
 
-    baseUrl += "&max_results=1000";
+    baseUrl += "&max_results=1000&sortBy=lastUpdatedDate&sortOrder=descending";
     
     var deferred = $.Deferred();
     $.ajax({
@@ -109,7 +108,9 @@ function arxiv_search({all, author, title, abstrct, journal_ref}) {
 		$(this).find('author').each(function (index) {
 		    authors.push($(this).text());
 		});
-		
+
+        console.log(authors);
+
 		entry.push({'title': title,
 			    'link': id,
 			    'summary': summary,

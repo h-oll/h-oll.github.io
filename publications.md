@@ -1,11 +1,10 @@
 ---
-title: Repos
+title: Publications
 layout: page
 ---
 
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<!-- <script src="./arxiv.js"></script> -->
 <script>
 /**
  * Searches arXiv for papers/documents that match the supplied parameters
@@ -51,7 +50,7 @@ function arxiv_search({all, author, title, abstrct, journal_ref}) {
 	baseUrl += "all:" + all;
     }
 
-    baseUrl += "&max_results=1000";
+    baseUrl += "&max_results=1000&sortBy=lastUpdatedDate&sortOrder=descending";
     
     var deferred = $.Deferred();
     $.ajax({
@@ -69,7 +68,9 @@ function arxiv_search({all, author, title, abstrct, journal_ref}) {
 		$(this).find('author').each(function (index) {
 		    authors.push($(this).text());
 		});
-		
+
+        console.log(authors);
+
 		entry.push({'title': title,
 			    'link': id,
 			    'summary': summary,
