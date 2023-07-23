@@ -17,7 +17,7 @@ layout: page
  * @returns {Promise}
  */
 function arxiv_search({all, author, title, abstrct, journal_ref}) {
-    var baseUrl = "http://export.arxiv.org/api/query?search_query=";
+    var baseUrl = "https://export.arxiv.org/api/query?search_query=";
     var first = true;
     
     if (author) {
