@@ -66,7 +66,7 @@ function arxiv_search({all, author, title, abstrct, journal_ref}) {
 		var summary = $(this).find('summary').text();
 		var authors = [];
 		$(this).find('author').each(function (index) {
-		    authors.push($(this).text());
+		    authors.push($(this).name.text());
 		});
 
         console.log("toto");
