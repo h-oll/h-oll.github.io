@@ -97,9 +97,13 @@ $('.results').append("Title: " + data[i].title + "<br />Authors: " + data[i].aut
 
 
 </script>
+
+
 </head>
 
-<div id="publications">
+List obtained from arXiv.
+
+<div id="repos">
     <!-- <div class="container"> -->
     <!--     <\!-- Filter controls -\-> -->
     <!--     <div class="field"> -->
