@@ -98,53 +98,11 @@ $('.publications').append("Title: " + data[i].title + "<br />Authors: " + data[i
 
 </script>
 
-<script>search('"Harold Ollivier"')</script>
-
 </head>
 
 List obtained from arXiv.
 
-<div id="publications">
-    <!-- <div class="container"> -->
-    <!--     <\!-- Filter controls -\-> -->
-    <!--     <div class="field"> -->
-    <!--         <p class="control has-icons-left"> -->
-    <!--             <input class="search input" type="text" placeholder="Search repo names"> -->
-    <!--             <span class="icon is-left"> -->
-    <!--                 <i class="fas fa-search" aria-hidden="true"></i> -->
-    <!--             </span> -->
-    <!--         </p> -->
-    <!--     </div> -->
-    <!-- </div> -->
+<script>search('"Harold Ollivier"')</script>
 
-    <!-- <br> -->
-    <!-- <br> -->
-
-    <!-- <div class="container"> -->
-    <!--     <div id="repo-cards" class="columns is-multiline list"> -->
-    <!--         {% for repo_data in site.data.all_repos %} -->
-    <!--             {% assign repo = repo_data[1] %} -->
-    <!--             <div class="column is-3-widescreen is-4-desktop is-6-tablet is-8-mobile"> -->
-    <!--                 {% include repo-card.html %} -->
-    <!--             </div> -->
-    <!--         {% endfor %} -->
-    <!--     </div> -->
-    <!-- </div> -->
-
-
-
-
-
-
-    <!-- <form> -->
-    <!--   Title -->
-    <!--   <br /> -->
-    <!--   <input type='text' name='doc_title'> -->
-    <!--   <br /> -->
-    <!--   <input type="button" value="Search" onclick="search(document.getElementsByName('doc_title')[0].value)"> -->
-    <!-- </form> -->
-    <!-- <div class='results'> -->
-    <!-- </div> -->
-
-</div>
+<div id="publications"></div>
 
