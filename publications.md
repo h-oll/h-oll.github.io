@@ -94,7 +94,7 @@ function search(title) {
 $.when(arxiv_search({author: title})).then( function(data) { 
 $('.results').empty();
 for (var i = 0; i < data.length; ++i) {
-$('.results').append("Title: " + data[i].title + "<br />Author: " + data[i].authors[0] + "<br />Date: " + data[i].date + "<br />URL: <a href='" + data[i].link + "'>" + data[i].link + "</a><br /><br />");
+$('.results').append("Title: " + data[i].title + "<br />Authors: " + data[i].authors.join(', ') + "<br />Date: " + data[i].date + "<br />URL: <a href='" + data[i].link + "'>" + data[i].link + "</a><br /><br />");
 }
 });
 }
