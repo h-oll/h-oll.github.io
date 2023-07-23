@@ -105,4 +105,3 @@ List obtained from arXiv.
 <script>search('"Harold Ollivier"')</script>
 
 <div class="publications"></div>
-
