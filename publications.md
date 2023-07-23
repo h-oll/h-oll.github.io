@@ -97,13 +97,9 @@ $('.results').append("Title: " + data[i].title + "<br />Authors: " + data[i].aut
 
 
 </script>
-
-
 </head>
 
-This page shows all public GitHub repos which are owned by me.
-
-<div id="repos">
+<div id="publications">
     <!-- <div class="container"> -->
     <!--     <\!-- Filter controls -\-> -->
     <!--     <div class="field"> -->
@@ -132,15 +128,15 @@ This page shows all public GitHub repos which are owned by me.
 
 <script>search("Harold Ollivier")</script>
 
-    <form>
-      Title
-      <br />
-      <input type='text' name='doc_title'>
-      <br />
-      <input type="button" value="Search" onclick="search(document.getElementsByName('doc_title')[0].value)">
-    </form>
-    <div class='results'>
-    </div>
+    <!-- <form> -->
+    <!--   Title -->
+    <!--   <br /> -->
+    <!--   <input type='text' name='doc_title'> -->
+    <!--   <br /> -->
+    <!--   <input type="button" value="Search" onclick="search(document.getElementsByName('doc_title')[0].value)"> -->
+    <!-- </form> -->
+    <!-- <div class='results'> -->
+    <!-- </div> -->
 
 
 
