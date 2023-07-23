@@ -90,7 +90,7 @@ function search(title) {
 $.when(arxiv_search({author: title})).then( function(data) { 
 $('.results').empty();
 for (var i = 0; i < data.length; ++i) {
-$('.results').append("Title: " + data[i].title + "<br />Authors: " + data[i].authors.join(', ') + "<br />Date: " + (new Date(data[i].date)).getFullYear() + "<br />URL: <a href='" + data[i].link + "'>" + data[i].link + "</a><br /><br />");
+$('.publications').append("Title: " + data[i].title + "<br />Authors: " + data[i].authors.join(', ') + "<br />Date: " + (new Date(data[i].date)).getFullYear() + "<br />URL: <a href='" + data[i].link + "'>" + data[i].link + "</a><br /><br />");
 }
 });
 }
@@ -98,12 +98,13 @@ $('.results').append("Title: " + data[i].title + "<br />Authors: " + data[i].aut
 
 </script>
 
+<script>search('"Harold Ollivier"')</script>
 
 </head>
 
 List obtained from arXiv.
 
-<div id="repos">
+<div id="publications">
     <!-- <div class="container"> -->
     <!--     <\!-- Filter controls -\-> -->
     <!--     <div class="field"> -->
@@ -130,7 +131,10 @@ List obtained from arXiv.
     <!--     </div> -->
     <!-- </div> -->
 
-<script>search('"Harold Ollivier"')</script>
+
+
+
+
 
     <!-- <form> -->
     <!--   Title -->
@@ -141,8 +145,6 @@ List obtained from arXiv.
     <!-- </form> -->
     <!-- <div class='results'> -->
     <!-- </div> -->
-
-
 
 </div>
 
