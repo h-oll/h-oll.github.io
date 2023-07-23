@@ -69,8 +69,10 @@ function arxiv_search({all, author, title, abstrct, journal_ref}) {
 		    authors.push($(this).text());
 		});
 
+        console.log("toto");
         console.log(authors);
 
+ 
 		entry.push({'title': title,
 			    'link': id,
 			    'summary': summary,
