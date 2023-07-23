@@ -69,10 +69,6 @@ function arxiv_search({all, author, title, abstrct, journal_ref}) {
 		    authors.push($(this).text());
 		});
 
-        console.log("toto");
-        console.log(authors);
-
- 
 		entry.push({'title': title,
 			    'link': id,
 			    'summary': summary,
@@ -94,7 +90,7 @@ function search(title) {
 $.when(arxiv_search({author: title})).then( function(data) { 
 $('.results').empty();
 for (var i = 0; i < data.length; ++i) {
-$('.results').append("Title: " + data[i].title + "<br />Authors: " + data[i].authors.join(', ') + "<br />Date: " + (new Date(data[i].date).getFullYear() + "<br />URL: <a href='" + data[i].link + "'>" + data[i].link + "</a><br /><br />");
+$('.results').append("Title: " + data[i].title + "<br />Authors: " + data[i].authors.join(', ') + "<br />Date: " + (new Date(data[i].date)).getFullYear() + "<br />URL: <a href='" + data[i].link + "'>" + data[i].link + "</a><br /><br />");
 }
 });
 }
