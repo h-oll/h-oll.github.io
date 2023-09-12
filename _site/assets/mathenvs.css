@@ -1,0 +1,80 @@
+.theorem {
+display: block;
+font-style: italic;
+}
+.theorem:before {
+content: "Theorem. ";
+font-weight: bold;
+font-style: normal;
+}
+.theorem[text]:before {
+content: "Theorem (" attr(text) ") ";
+}
+.theorem p {
+    margin-top: 0rem;
+}
+
+
+.definition {
+display: block;
+font-style: italic;
+}
+.definition:before {
+content: "Definition. ";
+font-weight: bold;
+font-style: normal;
+}
+.definition[text]:before {
+content: "Definition (" attr(text) ") ";
+}
+.definition p {
+    margin-top: 0rem;
+}
+
+.property {
+display: block;
+font-style: italic;
+}
+.property:before {
+content: "Property. ";
+font-weight: bold;
+font-style: normal;
+}
+.property[text]:before {
+content: "Property (" attr(text) ") ";
+}
+.property p {
+    margin-top: 0rem;
+}
+
+.proof {
+display: block;
+font-style: italic;
+}
+.proof:before {
+content: "Proof. ";
+font-weight: bold;
+font-style: normal;
+}
+.proof[text]:before {
+content: "Proof (" attr(text) ") ";
+}
+.proof p {
+    margin-top: 0rem;
+}
+
+.remark {
+display: block;
+font-style: italic;
+}
+.remark:before {
+content: "Remark. ";
+font-weight: bold;
+font-style: normal;
+}
+.remark[text]:before {
+content: "Remark (" attr(text) ") ";
+}
+.remark p {
+    margin-top: 0rem;
+}
