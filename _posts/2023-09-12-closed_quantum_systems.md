@@ -1,16 +1,9 @@
 ---
 layout: post
-title:  Closed Quantum Systems
-tag:    QEng
+title:  "Closed Quantum Systems"
+tag:    Lecture
 ---
 
-<head>
-<!-- 2023-09-12 Tue 06:28 -->
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Closed quantum systems</title>
-<meta name="author" content="Harold Ollivier" />
-<meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
@@ -194,35 +187,34 @@ tag:    QEng
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
-</style>
-<link rel="stylesheet" href="/assets/tufte.css" type="text/css" />
-<link rel="stylesheet" href="/assets/ox-tufte.css" type="text/css" />
-<link rel="stylesheet" href="/assets/mathenvs.css" type="text/css" />
-<script>
-        MathJax = {
-          tex: {
-              packages: {'[+]': ['mathtools', 'physics', 'newcommand']},
-              tags: 'ams',
-              macros: {
-                one: '{\\mathbb 1}',
-                rk: '{\\mbox{rk}}'
-              }
-          },
-            loader: {load: ['[tex]/mathtools', '[tex]/physics', '[tex]/newcommand']},
-          svg: {
-            fontCache: 'global'
-          }
-        };
-      </script>
-      <script type='text/javascript' id='MathJax-script' async
+  </style>
+  <link rel="stylesheet" href="/assets/tufte.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/ox-tufte.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/mathenvs.css" type="text/css" />
+  <script>
+MathJax = {
+tex: {
+packages: {'[+]': ['mathtools', 'physics', 'newcommand']},
+tags: 'ams',
+macros: {
+one: '{\\mathbb 1}',
+rk: '{\\mbox{rk}}'
+}
+},
+loader: {load: ['[tex]/mathtools', '[tex]/physics', '[tex]/newcommand']},
+svg: {
+fontCache: 'global'
+}
+};
+    </script>
+    <script type='text/javascript' id='MathJax-script' async
         src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js'>
-      </script>
-</head>
-<body>
+    </script>
+    
 <article id="content" class="content">
 <header>
 <h1 class="title">Closed quantum systems</h1>
-</header><p>
+    </header><p>
 Quantum information processing is using quantum mechanics as a way to encode, process and retrieve information using quantum systems. The amount of quantum theory we need to describe these tasks from a computer science perspective is remarkably shallow. It only amounts to the axioms of closed systems quantum mechanics, and in many cases to 2-dimensional systems <label id='fnr.1' for='fnr-in.1.9621108' class='margin-toggle sidenote-number'><sup class='numeral'>1</sup></label><input type='checkbox' id='fnr-in.1.9621108' class='margin-toggle'><span class='sidenote'><sup class='numeral'>1</sup>For digging into higher (discrete finite or infinite) dimensional systems, refer to courses by U. Chabaud and F. Arzani.</span>.
 </p>
 
@@ -853,10 +845,4 @@ For pure states, an entangled state corresponds to a state with <i>Schmidt numbe
 <div class="footdef"><sup><a id="fn.23" class="footnum" href="#fnr.23" role="doc-backlink">23</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">This same trick will be used to derive the Choi-Jamiolkowski isomorphism representation of Completely Positive Trace Preserving maps.</p></div></div>
 
  --></article>
-<footer id="postamble" class="status">
-<p class="author">Author: Harold Ollivier</p>
-<p class="date">Created: 2023-09-12 Tue 06:28</p>
-<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
-</footer>
-</body>
-</html>
+
