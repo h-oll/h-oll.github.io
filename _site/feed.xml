@@ -1,220 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://h-oll.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://h-oll.github.io/" rel="alternate" type="text/html" /><updated>2023-09-12T06:54:29+02:00</updated><id>https://h-oll.github.io/feed.xml</id><title type="html">Harold Ollivier</title><subtitle>Quantum Algorithms, Architectures, Applications and their Theory Team | QuantumTech@INRIA</subtitle><entry><title type="html">Closed Quantum Systems</title><link href="https://h-oll.github.io/2023/09/12/closed_quantum_systems.html" rel="alternate" type="text/html" title="Closed Quantum Systems" /><published>2023-09-12T00:00:00+02:00</published><updated>2023-09-12T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/09/12/closed_quantum_systems</id><content type="html" xml:base="https://h-oll.github.io/2023/09/12/closed_quantum_systems.html">&lt;style&gt;
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: &apos;Asymptote&apos;; }
-  pre.src-awk:before { content: &apos;Awk&apos;; }
-  pre.src-authinfo::before { content: &apos;Authinfo&apos;; }
-  pre.src-C:before { content: &apos;C&apos;; }
-  /* pre.src-C++ doesn&apos;t work in CSS */
-  pre.src-clojure:before { content: &apos;Clojure&apos;; }
-  pre.src-css:before { content: &apos;CSS&apos;; }
-  pre.src-D:before { content: &apos;D&apos;; }
-  pre.src-ditaa:before { content: &apos;ditaa&apos;; }
-  pre.src-dot:before { content: &apos;Graphviz&apos;; }
-  pre.src-calc:before { content: &apos;Emacs Calc&apos;; }
-  pre.src-emacs-lisp:before { content: &apos;Emacs Lisp&apos;; }
-  pre.src-fortran:before { content: &apos;Fortran&apos;; }
-  pre.src-gnuplot:before { content: &apos;gnuplot&apos;; }
-  pre.src-haskell:before { content: &apos;Haskell&apos;; }
-  pre.src-hledger:before { content: &apos;hledger&apos;; }
-  pre.src-java:before { content: &apos;Java&apos;; }
-  pre.src-js:before { content: &apos;Javascript&apos;; }
-  pre.src-latex:before { content: &apos;LaTeX&apos;; }
-  pre.src-ledger:before { content: &apos;Ledger&apos;; }
-  pre.src-lisp:before { content: &apos;Lisp&apos;; }
-  pre.src-lilypond:before { content: &apos;Lilypond&apos;; }
-  pre.src-lua:before { content: &apos;Lua&apos;; }
-  pre.src-matlab:before { content: &apos;MATLAB&apos;; }
-  pre.src-mscgen:before { content: &apos;Mscgen&apos;; }
-  pre.src-ocaml:before { content: &apos;Objective Caml&apos;; }
-  pre.src-octave:before { content: &apos;Octave&apos;; }
-  pre.src-org:before { content: &apos;Org mode&apos;; }
-  pre.src-oz:before { content: &apos;OZ&apos;; }
-  pre.src-plantuml:before { content: &apos;Plantuml&apos;; }
-  pre.src-processing:before { content: &apos;Processing.js&apos;; }
-  pre.src-python:before { content: &apos;Python&apos;; }
-  pre.src-R:before { content: &apos;R&apos;; }
-  pre.src-ruby:before { content: &apos;Ruby&apos;; }
-  pre.src-sass:before { content: &apos;Sass&apos;; }
-  pre.src-scheme:before { content: &apos;Scheme&apos;; }
-  pre.src-screen:before { content: &apos;Gnu Screen&apos;; }
-  pre.src-sed:before { content: &apos;Sed&apos;; }
-  pre.src-sh:before { content: &apos;shell&apos;; }
-  pre.src-sql:before { content: &apos;SQL&apos;; }
-  pre.src-sqlite:before { content: &apos;SQLite&apos;; }
-  /* additional languages in org.el&apos;s org-babel-load-languages alist */
-  pre.src-forth:before { content: &apos;Forth&apos;; }
-  pre.src-io:before { content: &apos;IO&apos;; }
-  pre.src-J:before { content: &apos;J&apos;; }
-  pre.src-makefile:before { content: &apos;Makefile&apos;; }
-  pre.src-maxima:before { content: &apos;Maxima&apos;; }
-  pre.src-perl:before { content: &apos;Perl&apos;; }
-  pre.src-picolisp:before { content: &apos;Pico Lisp&apos;; }
-  pre.src-scala:before { content: &apos;Scala&apos;; }
-  pre.src-shell:before { content: &apos;Shell Script&apos;; }
-  pre.src-ebnf2ps:before { content: &apos;ebfn2ps&apos;; }
-  /* additional language identifiers per &quot;defun org-babel-execute&quot;
-       in ob-*.el */
-  pre.src-cpp:before  { content: &apos;C++&apos;; }
-  pre.src-abc:before  { content: &apos;ABC&apos;; }
-  pre.src-coq:before  { content: &apos;Coq&apos;; }
-  pre.src-groovy:before  { content: &apos;Groovy&apos;; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: &apos;bash&apos;; }
-  pre.src-csh:before  { content: &apos;csh&apos;; }
-  pre.src-ash:before  { content: &apos;ash&apos;; }
-  pre.src-dash:before  { content: &apos;dash&apos;; }
-  pre.src-ksh:before  { content: &apos;ksh&apos;; }
-  pre.src-mksh:before  { content: &apos;mksh&apos;; }
-  pre.src-posh:before  { content: &apos;posh&apos;; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: &apos;Ada&apos;; }
-  pre.src-asm:before { content: &apos;Assembler&apos;; }
-  pre.src-caml:before { content: &apos;Caml&apos;; }
-  pre.src-delphi:before { content: &apos;Delphi&apos;; }
-  pre.src-html:before { content: &apos;HTML&apos;; }
-  pre.src-idl:before { content: &apos;IDL&apos;; }
-  pre.src-mercury:before { content: &apos;Mercury&apos;; }
-  pre.src-metapost:before { content: &apos;MetaPost&apos;; }
-  pre.src-modula-2:before { content: &apos;Modula-2&apos;; }
-  pre.src-pascal:before { content: &apos;Pascal&apos;; }
-  pre.src-ps:before { content: &apos;PostScript&apos;; }
-  pre.src-prolog:before { content: &apos;Prolog&apos;; }
-  pre.src-simula:before { content: &apos;Simula&apos;; }
-  pre.src-tcl:before { content: &apos;tcl&apos;; }
-  pre.src-tex:before { content: &apos;TeX&apos;; }
-  pre.src-plain-tex:before { content: &apos;Plain TeX&apos;; }
-  pre.src-verilog:before { content: &apos;Verilog&apos;; }
-  pre.src-vhdl:before { content: &apos;VHDL&apos;; }
-  pre.src-xml:before { content: &apos;XML&apos;; }
-  pre.src-nxml:before { content: &apos;XML&apos;; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list &apos;org-latex-listings-langs &apos;(conf &quot; &quot;)) in .emacs */
-  pre.src-conf:before { content: &apos;Configuration File&apos;; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
-&lt;/style&gt;
-
-&lt;link rel=&quot;stylesheet&quot; href=&quot;./_rsc/tufte.css&quot; type=&quot;text/css&quot; /&gt;
-
-&lt;link rel=&quot;stylesheet&quot; href=&quot;./_rsc/ox-tufte.css&quot; type=&quot;text/css&quot; /&gt;
-
-&lt;link rel=&quot;stylesheet&quot; href=&quot;./_rsc/mathenvs.css&quot; type=&quot;text/css&quot; /&gt;
-
-&lt;script&gt;
-        MathJax = {
-          tex: {
-              packages: {&apos;[+]&apos;: [&apos;mathtools&apos;, &apos;physics&apos;, &apos;newcommand&apos;]},
-              tags: &apos;ams&apos;,
-              macros: {
-                one: &apos;{\\mathbb 1}&apos;,
-                rk: &apos;{\\mbox{rk}}&apos;
-              }
-          },
-            loader: {load: [&apos;[tex]/mathtools&apos;, &apos;[tex]/physics&apos;, &apos;[tex]/newcommand&apos;]},
-          svg: {
-            fontCache: &apos;global&apos;
-          }
-        };
-      &lt;/script&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &amp;lt;script type=&apos;text/javascript&apos; id=&apos;MathJax-script&apos; async
-    src=&apos;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js&apos;&amp;gt;
-  &amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&amp;lt;/head&amp;gt;&lt;/p&gt;
-
-&lt;article id=&quot;content&quot; class=&quot;content&quot;&gt;
-
-Quantum information processing is using quantum mechanics as a way to encode, process and retrieve information using quantum systems. The amount of quantum theory we need to describe these tasks from a computer science perspective is remarkably shallow. It only amounts to the axioms of closed systems quantum mechanics, and in many cases to 2-dimensional systems &lt;label id=&quot;fnr.1&quot; for=&quot;fnr-in.1.5275726&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;1&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.1.5275726&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;1&lt;/sup&gt;For digging into higher (discrete finite or infinite) dimensional systems, refer to courses by U. Chabaud and F. Arzani.&lt;/span&gt;.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://h-oll.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://h-oll.github.io/" rel="alternate" type="text/html" /><updated>2023-09-12T20:00:59+02:00</updated><id>https://h-oll.github.io/feed.xml</id><title type="html">Harold Ollivier</title><subtitle>Quantum Algorithms, Architectures, Applications and their Theory Team | QuantumTech@INRIA</subtitle><entry><title type="html">Closed Quantum Systems</title><link href="https://h-oll.github.io/2023/09/12/closed_quantum_systems.html" rel="alternate" type="text/html" title="Closed Quantum Systems" /><published>2023-09-12T00:00:00+02:00</published><updated>2023-09-12T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/09/12/closed_quantum_systems</id><content type="html" xml:base="https://h-oll.github.io/2023/09/12/closed_quantum_systems.html">&lt;article id=&quot;content&quot; class=&quot;content&quot;&gt;
+Quantum information processing is using quantum mechanics as a way to encode, process and retrieve information using quantum systems. The amount of quantum theory we need to describe these tasks from a computer science perspective is remarkably shallow. It only amounts to the axioms of closed systems quantum mechanics, and in many cases to 2-dimensional systems &lt;label id=&quot;fnr.1&quot; for=&quot;fnr-in.1.4685317&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;1&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.1.4685317&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;1&lt;/sup&gt;For digging into higher (discrete finite or infinite) dimensional systems, refer to lectures by U. Chabaud and F. Arzani.&lt;/span&gt;.
 &amp;lt;/p&amp;gt;
 
 &lt;p&gt;
@@ -225,8 +10,8 @@ The aim of this lecture is to:
 &lt;li&gt;recall some basic facts about linear algebra that are necessary to develop fluency and intuition.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;section id=&quot;outline-container-orgc43e7dd&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgc43e7dd&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;1.&lt;/span&gt; References&lt;/h2&gt;
+&lt;section id=&quot;outline-container-org223160c&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org223160c&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;1.&lt;/span&gt; References&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;Preskill&apos;s notes &lt;a href=&quot;http://www.theory.caltech.edu/~preskill/ph219/chap2_15.pdf&quot;&gt;Chapter 2 &amp;#x2013; Foundations I: States and Ensembles, 52 pages (July 2015)&lt;/a&gt; and &lt;a href=&quot;http://www.theory.caltech.edu/~preskill/ph219/chap3_15.pdf&quot;&gt;Chapter 3 &amp;#x2013; Foundations II: Measurement and Evolution, 66 pages (July 2015)&lt;/a&gt;&lt;/li&gt;
@@ -236,15 +21,15 @@ The aim of this lecture is to:
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/section&gt;
-&lt;section id=&quot;outline-container-orgade2903&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgade2903&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;2.&lt;/span&gt; Axioms&lt;/h2&gt;
+&lt;section id=&quot;outline-container-org6b80d9e&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org6b80d9e&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;2.&lt;/span&gt; Axioms&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-2&quot;&gt;
 &lt;p&gt;
-From an operational point of view, a physical theory is a set of mathematical statements that can be combined to predict results of experiments. The crucial ingredient in this definition is the term &quot;physical&quot;, as it makes the difference between a mathematical theory and a physical one. The connexion with experiments enforces how it can be disproven. It is unfortunately the only reality check &amp;#x2014; or debugging tool &amp;#x2014; available with what Nature is, and what the theory should describe&lt;label id=&quot;fnr.2&quot; for=&quot;fnr-in.2.3549663&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;2&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.2.3549663&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;2&lt;/sup&gt;It will be important to remember this as a guideline towards getting to complex tasks using quantum mechanics, and as a strong limitation for how quantum programs can be checked.&lt;/span&gt;. In contrast, most mathematical statements have the advantage of being provable from simpler ones. This is a much more desirable situation as we can check the correctness of a statement instead of holding it true until Nature shows that it does not apply for some experiment. 
+From an operational point of view, a physical theory is a set of mathematical statements that can be combined to predict results of experiments. The crucial ingredient in this definition is the term &quot;physical&quot;, as it makes the difference between a mathematical theory and a physical one. The connexion with experiments enforces how it can be disproven. It is unfortunately the only reality check &amp;#x2014; or debugging tool &amp;#x2014; available with what Nature is, and what the theory should describe&lt;label id=&quot;fnr.2&quot; for=&quot;fnr-in.2.2185609&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;2&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.2.2185609&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;2&lt;/sup&gt;It will be important to remember this as a guideline towards getting to complex tasks using quantum mechanics, and as a strong limitation for how quantum programs can be checked.&lt;/span&gt;. In contrast, most mathematical statements have the advantage of being provable from simpler ones. This is a much more desirable situation as we can check the correctness of a statement instead of holding it true until Nature shows that it does not apply for some experiment. 
 &lt;/p&gt;
 
 &lt;p&gt;
-The role of axioms of quantum mechanics is precisely to provide a set of mathematical rules that can be combined &lt;i&gt;ad infinitum&lt;/i&gt;&lt;label id=&quot;fnr.3&quot; for=&quot;fnr-in.3.6331932&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;3&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.3.6331932&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;3&lt;/sup&gt;The important point is the claim that the axioms can be combined with one another and still give something meaningful physically. It is an extremely strong statement.&lt;/span&gt; to design new experiments for which the predictions will correspond to physical reality &amp;#x2014; unless one of the axioms is wrong. In a sense, it is trying to reduce as much as possible the gap between mathematical and physical theories by allowing to prove instead of just disprove &lt;label id=&quot;fnr.4&quot; for=&quot;fnr-in.4.3644474&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;4&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.4.3644474&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;4&lt;/sup&gt;Note that this is only partially true, as doing so assumes that axioms are correct. Yet, there is an advantage of doing so as axioms are meant to be easier to check. Reversing this argument, you can see quantum information processing as a way to test these axioms and their composability with one another in an incomparably complex way.&lt;/span&gt;.
+The role of axioms of quantum mechanics is precisely to provide a set of mathematical rules that can be combined &lt;i&gt;ad infinitum&lt;/i&gt;&lt;label id=&quot;fnr.3&quot; for=&quot;fnr-in.3.4646706&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;3&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.3.4646706&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;3&lt;/sup&gt;The important point is the claim that the axioms can be combined with one another and still give something meaningful physically. It is an extremely strong statement.&lt;/span&gt; to design new experiments for which the predictions will correspond to physical reality &amp;#x2014; unless one of the axioms is wrong. In a sense, it is trying to reduce as much as possible the gap between mathematical and physical theories by allowing to prove instead of just disprove &lt;label id=&quot;fnr.4&quot; for=&quot;fnr-in.4.7647783&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;4&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.4.7647783&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;4&lt;/sup&gt;Note that this is only partially true, as doing so assumes that axioms are correct. Yet, there is an advantage of doing so as axioms are meant to be easier to check. Reversing this argument, you can see quantum information processing as a way to test these axioms and their composability with one another in an incomparably complex way.&lt;/span&gt;.
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -256,19 +41,19 @@ Axioms span 3 physical concepts:
 &lt;li&gt;Evolutions&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;
-The order chosen here is non-standard&lt;label id=&quot;fnr.5&quot; for=&quot;fnr-in.5.4744057&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;5&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.5.4744057&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;5&lt;/sup&gt;Usually, states are introduced first, followed by evolutions and measurement&lt;/span&gt; but intended to emphasize the power and limitations that this axiom introduces for quantum information processing&lt;label id=&quot;fnr.6&quot; for=&quot;fnr-in.6.7649711&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;6&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.6.7649711&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;6&lt;/sup&gt;Trying to reduce the number of or simplify axioms is an important task that interests researchers on foundations of quantum mechanics. The reason is that fewer and simpler axioms should be easier to disprove, and provide a better intuition into what can be achieved with quantum mechanics. Examples include: measurement update rule can be derived from measurement + Manzanes paper on replacing the measurement axiom with composability.&lt;/span&gt;&lt;sup&gt;, &lt;/sup&gt;&lt;label id=&quot;fnr.7&quot; for=&quot;fnr-in.7.4544406&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;7&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.7.4544406&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;7&lt;/sup&gt;Alternate theories need to contain classical probability theory.&lt;/span&gt;&lt;sup&gt;, &lt;/sup&gt;&lt;label id=&quot;fnr.8&quot; for=&quot;fnr-in.8.3839669&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;8&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.8.3839669&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;8&lt;/sup&gt;When we imagine disproving a theory we need to pay attention to implicit assumptions. For instance, you could imagine trying to disprove the axioms, by testing them and accumulating statistics. But as such you already use the fact that this is meaningful (i.e. the axioms do not vary in time so that statistics can be accumulated and tell you something about the future). You also imply that axioms can be combined. Mathematically they do, but do they also physically? In a sense there is a 4th axiom that says the other 3 can be combined. One approach to trying to get rid of these implicit asumptions is to use cryptography, considering that only mathematics and locality are trusted, and that Nature is malicious.&lt;/span&gt;.
+The order chosen here is non-standard&lt;label id=&quot;fnr.5&quot; for=&quot;fnr-in.5.6095030&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;5&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.5.6095030&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;5&lt;/sup&gt;Usually, states are introduced first, followed by evolutions and measurement&lt;/span&gt; but intended to emphasize the power and limitations that this axiom introduces for quantum information processing&lt;label id=&quot;fnr.6&quot; for=&quot;fnr-in.6.558217&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;6&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.6.558217&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;6&lt;/sup&gt;Trying to reduce the number of or simplify axioms is an important task that interests researchers on foundations of quantum mechanics. The reason is that fewer and simpler axioms should be easier to disprove, and provide a better intuition into what can be achieved with quantum mechanics. Examples include: measurement update rule can be derived from measurement + Manzanes paper on replacing the measurement axiom with composability.&lt;/span&gt;&lt;sup&gt;, &lt;/sup&gt;&lt;label id=&quot;fnr.7&quot; for=&quot;fnr-in.7.6902627&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;7&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.7.6902627&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;7&lt;/sup&gt;Alternate theories need to contain classical probability theory.&lt;/span&gt;&lt;sup&gt;, &lt;/sup&gt;&lt;label id=&quot;fnr.8&quot; for=&quot;fnr-in.8.6338781&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;8&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.8.6338781&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;8&lt;/sup&gt;When we imagine disproving a theory we need to pay attention to implicit assumptions. For instance, you could imagine trying to disprove the axioms, by testing them and accumulating statistics. But as such you already use the fact that this is meaningful (i.e. the axioms do not vary in time so that statistics can be accumulated and tell you something about the future). You also imply that axioms can be combined. Mathematically they do, but do they also physically? In a sense there is a 4th axiom that says the other 3 can be combined. One approach to trying to get rid of these implicit asumptions is to use cryptography, considering that only mathematics and locality are trusted, and that Nature is malicious.&lt;/span&gt;.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/section&gt;
 
-&lt;section id=&quot;outline-container-orgcf13e2a&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgcf13e2a&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;3.&lt;/span&gt; Linear algebra detour&lt;/h2&gt;
+&lt;section id=&quot;outline-container-org67c2399&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org67c2399&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;3.&lt;/span&gt; Linear algebra detour&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-3&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgb1f645e&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgb1f645e&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;3.1.&lt;/span&gt; Hilbert spaces and Operators&lt;/h3&gt;
+&lt;div id=&quot;outline-container-orgdb47119&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgdb47119&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;3.1.&lt;/span&gt; Hilbert spaces and Operators&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-1&quot;&gt;
-&lt;div text=&quot;Inner product space&quot; class=&quot;definition&quot; id=&quot;org9cd02d6&quot;&gt;
+&lt;div text=&quot;Inner product space&quot; class=&quot;definition&quot; id=&quot;orgc7288ba&quot;&gt;
 &lt;p&gt;
 \(V\) is a &lt;i&gt;inner product space&lt;/i&gt; over \(\mathbb C\), if it is a vector space over \(\mathbb C\) equipped with an inner product \(\langle \psi, \varphi \rangle\).
 &lt;/p&gt;
@@ -284,7 +69,7 @@ The order chosen here is non-standard&lt;label id=&quot;fnr.5&quot; for=&quot;fn
 
 &lt;/div&gt;
 
-&lt;div text=&quot;Hilbert space&quot; class=&quot;definition&quot; id=&quot;org5c9080c&quot;&gt;
+&lt;div text=&quot;Hilbert space&quot; class=&quot;definition&quot; id=&quot;org86cf7a1&quot;&gt;
 &lt;p&gt;
 \(V\) is a &lt;i&gt;complex Hilbert space&lt;/i&gt;, if:
 &lt;/p&gt;
@@ -295,9 +80,9 @@ The order chosen here is non-standard&lt;label id=&quot;fnr.5&quot; for=&quot;fn
 
 &lt;/div&gt;
 
-&lt;div text=&quot;Linear operators&quot; class=&quot;definition&quot; id=&quot;org1047f59&quot;&gt;
+&lt;div text=&quot;Linear operators&quot; class=&quot;definition&quot; id=&quot;orgcdf35e6&quot;&gt;
 &lt;p&gt;
-We will use the following definitions regarding linear operators on Hilbert spaces \(\mathcal H\) and \(\mathcal H&apos;\):
+With \(\mathcal H\) and \(\mathcal H&apos;\) being Hilbert spaces,
 &lt;/p&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;Linear operators from \(\mathcal H\) to \(\mathcal H&apos;\) are &lt;i&gt;homomorphisms&lt;/i&gt; \(Hom(\mathcal H, \mathcal H&apos;)\);&lt;/li&gt;
@@ -306,27 +91,27 @@ We will use the following definitions regarding linear operators on Hilbert spac
 &lt;li&gt;For \(O \in End(\mathcal H)\), \(O\) is &lt;i&gt;normal&lt;/i&gt; if \(OO^\dagger = O^\dagger O\);&lt;/li&gt;
 &lt;li&gt;For \(O \in End(\mathcal H)\), \(O\) is &lt;i&gt;unitary&lt;/i&gt; if \(OO^\dagger = O^\dagger O = \one\);&lt;/li&gt;
 &lt;li&gt;For \(O \in End(\mathcal H)\), \(O\) is &lt;i&gt;Hermitian&lt;/i&gt; if \(O = O^\dagger\);&lt;/li&gt;
-&lt;li&gt;For \(O \in End(\mathcal H)\), \(O\) is positive if \(\forall \psi, \ \langle \psi , O \psi\rangle \geq 0\),&lt;label id=&quot;fnr.9&quot; for=&quot;fnr-in.9.5338529&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;9&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.9.5338529&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;9&lt;/sup&gt;Positive operators are Hermitian. It&apos;s usually denoted \(O \geq 0\), and for \(O\) and \(O&apos;\), \(O \geq O&apos; \Leftrightarrow O-O&apos; \geq 0\).&lt;/span&gt; and &lt;i&gt;positive semi-definite&lt;/i&gt; when \(\langle \psi , O \psi\rangle &amp;gt; 0, \ \psi \neq 0\);&lt;/li&gt;
-&lt;li&gt;For \(O \in End(\mathcal H)\), \(O\) is a projector&lt;label id=&quot;fnr.10&quot; for=&quot;fnr-in.10.2285319&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;10&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.10.2285319&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;10&lt;/sup&gt;Projectors are positive operators.&lt;/span&gt; if \(O^2 = O\).&lt;/li&gt;
+&lt;li&gt;For \(O \in End(\mathcal H)\), \(O\) is positive if \(\forall \psi, \ \langle \psi , O \psi\rangle \geq 0\),&lt;label id=&quot;fnr.9&quot; for=&quot;fnr-in.9.6063940&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;9&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.9.6063940&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;9&lt;/sup&gt;Positive operators are Hermitian. It&apos;s usually denoted \(O \geq 0\), and for \(O\) and \(O&apos;\), \(O \geq O&apos; \Leftrightarrow O-O&apos; \geq 0\).&lt;/span&gt; and &lt;i&gt;positive semi-definite&lt;/i&gt; when \(\langle \psi , O \psi\rangle &amp;gt; 0, \ \psi \neq 0\);&lt;/li&gt;
+&lt;li&gt;For \(O \in End(\mathcal H)\), \(O\) is a projector&lt;label id=&quot;fnr.10&quot; for=&quot;fnr-in.10.3764816&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;10&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.10.3764816&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;10&lt;/sup&gt;Projectors are positive operators.&lt;/span&gt; if \(O^2 = O\).&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;/div&gt;
 
-&lt;div text=&quot;Bases&quot; class=&quot;definition&quot; id=&quot;orgd9918d2&quot;&gt;
+&lt;div text=&quot;Bases&quot; class=&quot;definition&quot; id=&quot;orgdabc7c4&quot;&gt;
 &lt;p&gt;
 A basis \(\{\psi_i\}_i\) of \(\mathcal H\) is &lt;i&gt;orthonormal&lt;/i&gt; if \(\langle \psi_i, \psi_j \rangle = \delta_{i,j}\).
 &lt;/p&gt;
 
 &lt;/div&gt;
 
-&lt;div text=&quot;Matrix representation&quot; class=&quot;remark&quot; id=&quot;org906be2b&quot;&gt;
+&lt;div text=&quot;Matrix representation&quot; class=&quot;remark&quot; id=&quot;org2814ad4&quot;&gt;
 &lt;p&gt;
-Given an orthonormal basis \(\{\psi_i\}_i\), the matrix representation of \(O \in End(\mathcal H)\) is \(O_{i,j} = \langle \psi_i, O \psi_j\rangle\). \(O\) is &lt;i&gt;diagonal wrt \(\{\psi_i\}_i\)&lt;/i&gt; if the matrix \(O_{i,j}\) is diagonal&lt;label id=&quot;fnr.11&quot; for=&quot;fnr-in.11.6460504&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;11&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.11.6460504&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;11&lt;/sup&gt;Always keep in mind that \(O_{i,j}\) is &lt;i&gt;not&lt;/i&gt; \(O\), e.g. \(O_{i,j}\) depends on the chosen basis!&lt;/span&gt;. 
+Given an orthonormal basis \(\{\psi_i\}_i\), the matrix representation of \(O \in End(\mathcal H)\) is \(O_{i,j} = \langle \psi_i, O \psi_j\rangle\). \(O\) is &lt;i&gt;diagonal wrt \(\{\psi_i\}_i\)&lt;/i&gt; if the matrix \(O_{i,j}\) is diagonal&lt;label id=&quot;fnr.11&quot; for=&quot;fnr-in.11.1493979&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;11&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.11.1493979&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;11&lt;/sup&gt;Always keep in mind that \(O_{i,j}\) is &lt;i&gt;not&lt;/i&gt; \(O\), e.g. \(O_{i,j}\) depends on the chosen basis!&lt;/span&gt;. 
 &lt;/p&gt;
 
 &lt;/div&gt;
 
-&lt;div text=&quot;Trace&quot; class=&quot;definition&quot; id=&quot;orgc6297ed&quot;&gt;
+&lt;div text=&quot;Trace&quot; class=&quot;definition&quot; id=&quot;orgdb60279&quot;&gt;
 &lt;p&gt;
 The trace of \(A \in End(\mathcal H)\) is a linear functional on endomorphisms such that \(f(xy) = f(yx)\) and such that \(f(\one) = n\) for \(\mathcal H\) an \(n\)-dimensional Hilbert space.
 &lt;/p&gt;
@@ -336,7 +121,7 @@ The trace of \(A \in End(\mathcal H)\) is a linear functional on endomorphisms s
 Note that \(\tr\) is invariant under conjugation by a unitary. Note also that \(\tr (A\otimes B) = \tr(A)\tr(B)\).
 &lt;/p&gt;
 
-&lt;div text=&quot;Froebenius inner product&quot; class=&quot;definition&quot; id=&quot;org1b3ad26&quot;&gt;
+&lt;div text=&quot;Froebenius inner product&quot; class=&quot;definition&quot; id=&quot;org35912a3&quot;&gt;
 &lt;p&gt;
 Given \(A\) and \(B\) complex \(n\times m\) complex matrices form a vector space \(V\). The &lt;i&gt;Froebenius inner product&lt;/i&gt; of \(A\) and \(B\) in \(V\) is defined by:
 &lt;/p&gt;
@@ -352,14 +137,14 @@ Note that it corresponds to the regular inner product if we write the matrices a
 &lt;p&gt;
 It naturally defines a norm over matrices, the Froebenius norm:
 &lt;/p&gt;
-&lt;div text=&quot;Froebenius norm&quot; class=&quot;definition&quot; id=&quot;org223d0d4&quot;&gt;
+&lt;div text=&quot;Froebenius norm&quot; class=&quot;definition&quot; id=&quot;orge96b93a&quot;&gt;
 \begin{equation}
  \|A\|_F = \sqrt{\langle A, A \rangle_F}.
 \end{equation}
 
 &lt;/div&gt;
 &lt;p&gt;
-\(\| A \|_F\) is also denoted \(\| A \|_2\) as it is the 2-norm of the spectral decomposition&lt;label id=&quot;fnr.12&quot; for=&quot;fnr-in.12.2928493&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;12&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.12.2928493&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;12&lt;/sup&gt;See below&lt;/span&gt; of \(A\) when the operator is normal.
+\(\| A \|_F\) is also denoted \(\| A \|_2\) as it is the 2-norm of the spectral decomposition&lt;label id=&quot;fnr.12&quot; for=&quot;fnr-in.12.5175853&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;12&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.12.5175853&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;12&lt;/sup&gt;See below&lt;/span&gt; of \(A\) when the operator is normal.
 &lt;/p&gt;
 
 
@@ -368,7 +153,7 @@ Note that these definitions can be extended to the infinite-dimensional case and
 &lt;/p&gt;
 
 &lt;p&gt;
-Hermitian matrices form a subspace of all possible matrices. With the Hilbert-Schmidt inner product, the Hermitian matrices form a real Hilbert space. A convenient basis of such space for the \(2^n\) dimensional case are tensor products of the Pauli matrices&lt;label id=&quot;fnr.13&quot; for=&quot;fnr-in.13.7299674&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;13&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.13.7299674&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;13&lt;/sup&gt;Generalization to arbitrary dimensions are in section 4.1.7 of [Ren]&lt;/span&gt;:
+Hermitian matrices form a subspace of all possible matrices. With the Hilbert-Schmidt inner product, the Hermitian matrices form a real Hilbert space. A convenient basis of such space for the \(2^n\) dimensional case are tensor products of the Pauli matrices&lt;label id=&quot;fnr.13&quot; for=&quot;fnr-in.13.8355323&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;13&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.13.8355323&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;13&lt;/sup&gt;Generalization to arbitrary dimensions are in section 4.1.7 of [Ren]&lt;/span&gt;:
 &lt;/p&gt;
 \begin{align}
 I &amp;amp; =  \begin{bmatrix} 1 &amp;amp;  0 \\ 0 &amp;amp; 1 \end{bmatrix} \\
@@ -380,7 +165,7 @@ Z &amp;amp; =  \begin{bmatrix} 1 &amp;amp;  0 \\ 0 &amp;amp; -1 \end{bmatrix}
 Note that these are not normalized. For the Hilbert-Schmidt norm, they need to be multiplied by \(\frac{1}{\sqrt 2}\). Additionally, all of them have vanishing trace, except the identity. 
 &lt;/p&gt;
 
-&lt;div text=&quot;Trace norm&quot; class=&quot;definition&quot; id=&quot;orge13dc7f&quot;&gt;
+&lt;div text=&quot;Trace norm&quot; class=&quot;definition&quot; id=&quot;orgcb74e59&quot;&gt;
 &lt;p&gt;
 The &lt;i&gt;trace norm&lt;/i&gt; of an operator \(A\) is
 &lt;/p&gt;
@@ -393,10 +178,10 @@ where  \(|A| = \sqrt{A^\dagger A}\).
 
 &lt;/div&gt;
 &lt;p&gt;
-For \(A\) normal, \(\|A\|_1\) is the trace norm of the spectral decomposition&lt;label id=&quot;fnr.14&quot; for=&quot;fnr-in.14.6564835&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;14&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.14.6564835&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;14&lt;/sup&gt;See below&lt;/span&gt; of \(A\).
+For \(A\) normal, \(\|A\|_1\) is the trace norm of the spectral decomposition&lt;label id=&quot;fnr.14&quot; for=&quot;fnr-in.14.2733231&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;14&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.14.2733231&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;14&lt;/sup&gt;See below&lt;/span&gt; of \(A\).
 &lt;/p&gt;
 
-&lt;div class=&quot;property&quot; id=&quot;orgf02ce34&quot;&gt;
+&lt;div class=&quot;property&quot; id=&quot;orgbe5d1aa&quot;&gt;
 &lt;p&gt;
 The trace norm satisfies:
 &lt;/p&gt;
@@ -411,10 +196,10 @@ where \(U\) are unitaries.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org7b96c70&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org7b96c70&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;3.2.&lt;/span&gt; Braket notation&lt;/h3&gt;
+&lt;div id=&quot;outline-container-org4383c72&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org4383c72&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;3.2.&lt;/span&gt; Braket notation&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-2&quot;&gt;
-&lt;div text=&quot;Braket notation&quot; class=&quot;definition&quot; id=&quot;org374236c&quot;&gt;
+&lt;div text=&quot;Braket notation&quot; class=&quot;definition&quot; id=&quot;orgbb6ad30&quot;&gt;
 &lt;p&gt;
 A vector \(\vec \psi \in \mathcal H\) can be seen as an homomorphism \(\ket \psi \in Hom(\mathbb C, \mathcal H)\):
 &lt;/p&gt;
@@ -422,7 +207,7 @@ A vector \(\vec \psi \in \mathcal H\) can be seen as an homomorphism \(\ket \psi
 \alpha \in \mathbb C \xrightarrow{\ket \psi} \alpha \vec \psi \in \mathcal H
 \end{equation}
 &lt;p&gt;
-The adjoint \(\ket \psi^\dagger\) is denoted \(\bra \psi\) and is defined as&lt;label id=&quot;fnr.15&quot; for=&quot;fnr-in.15.3751309&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;15&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.15.3751309&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;15&lt;/sup&gt;\(\ket\psi: \mathbb C \rightarrow \mathcal H\), \(\ket\psi^\dagger: \mathcal H \rightarrow \mathbb C\), \(\langle \vec\psi \alpha, \vec \varphi\rangle = \alpha^* \langle \vec \psi, \vec \varphi \rangle  = \alpha^*.\braket{\psi}{\varphi}\). Simplifying by \(\alpha^*\) gives the result.&lt;/span&gt;:
+The adjoint \(\ket \psi^\dagger\) is denoted \(\bra \psi\) and is defined as&lt;label id=&quot;fnr.15&quot; for=&quot;fnr-in.15.7896120&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;15&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.15.7896120&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;15&lt;/sup&gt;\(\ket\psi: \mathbb C \rightarrow \mathcal H\), \(\ket\psi^\dagger: \mathcal H \rightarrow \mathbb C\), \(\langle \vec\psi \alpha, \vec \varphi\rangle = \alpha^* \langle \vec \psi, \vec \varphi \rangle  = \alpha^*.\braket{\psi}{\varphi}\). Simplifying by \(\alpha^*\) gives the result.&lt;/span&gt;:
 \[\bra \psi: \ \vec \varphi \rightarrow  \langle \vec \psi, \vec \varphi\rangle.\]
 &lt;/p&gt;
 
@@ -431,12 +216,12 @@ The adjoint \(\ket \psi^\dagger\) is denoted \(\bra \psi\) and is defined as&lt;
 &lt;/div&gt;
 &lt;/section&gt;
 
-&lt;section id=&quot;outline-container-org500cdb9&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org500cdb9&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;4.&lt;/span&gt; States of quantum systems&lt;/h2&gt;
+&lt;section id=&quot;outline-container-org3880d8c&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org3880d8c&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;4.&lt;/span&gt; States of quantum systems&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-4&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org9e501e1&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org9e501e1&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;4.1.&lt;/span&gt; Pure states&lt;/h3&gt;
+&lt;div id=&quot;outline-container-org6895ff9&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org6895ff9&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;4.1.&lt;/span&gt; Pure states&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-4-1&quot;&gt;
 &lt;p&gt;
 The state of a system is its complete description. Concretely, if you can write the state of a system on a piece of paper, you can predict, through mathematical calculations, the result of any physical experiments that you could perform on the system. Here, the notion of complete description means that there is no uncertainty or no ignorance in the system that could be reduced. In such case, the state \(\ket \psi\) of a system is a ray in a Hilbert space \(\mathcal H\). That is:
@@ -451,11 +236,11 @@ Note that usually we simply identify the equivalence class \(\overline{\ket \psi
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org90f7729&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org90f7729&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;4.2.&lt;/span&gt; Mixed states&lt;/h3&gt;
+&lt;div id=&quot;outline-container-org42ffd88&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org42ffd88&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;4.2.&lt;/span&gt; Mixed states&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-4-2&quot;&gt;
 &lt;p&gt;
-Although the presentation above is standard in many textbooks, in practice, it is often replaced by a subtly different one. The state of a system is then defined as the mathematical representation of what knowledge an observer has about it. In this definition, states become relative to each observer&lt;label id=&quot;fnr.16&quot; for=&quot;fnr-in.16.2594218&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;16&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.16.2594218&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;16&lt;/sup&gt;One might question here what kind of status the observer has from within quantum mechanics. Very rapidly, this should lead to questionning how systems are defined. You might end up being forced to consider the whole universe as the only physical system that makes sense. But then, what do you do with special relativity? What do you mean by the state of the universe when it is not accessible to you? These foundational questions will not be addressed here. Quantum mechanics will be taken from a purely operational view. Yet, it does not mean that Quantum Information Processing cannot be used to address them. One of the most celebrated example is the result \(MIP^* = RE\) from complexity theory that has implications into the structure of Hilbert spaces for infinite-dimensional composite systems.&lt;/span&gt;&lt;sup&gt;, &lt;/sup&gt;&lt;label id=&quot;fnr.17&quot; for=&quot;fnr-in.17.1821092&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;17&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.17.1821092&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;17&lt;/sup&gt;The additional reason for preferring a definition where states are explicitely observer-dependent is that it emphasizes the nature of states: they are the consequence of the observer&apos;s relation to a system, rather than representing a pre-existing property of the system itself without reference to an observer. This epistemic vs ontic view of quantum mechanics has been a heated debate since the early days of quantum mechanics. See for instance &lt;a href=&quot;https://doi.org/10.1016/j.shpsb.2006.10.007&quot;&gt;https://doi.org/10.1016/j.shpsb.2006.10.007&lt;/a&gt;.&lt;/span&gt;. Yet, they retain their operational property of allowing the observer to predict the results of any experiment it could perfom. The interest of such definition is that it naturally incorporates the lack of knowledge an observer might have about the system. Its predictions will be worse than for a well-informed one. This interpretation of quantum states will be convenient to represent the views two parties with different knowledge about the same system. In such case, a state \(\rho\) is best represented by a density matrix acting on a Hilbert space \(\mathcal H\) &amp;#x2014; the same as the one used before. That is:
+Although the presentation above is standard in many textbooks, in practice, it is often replaced by a subtly different one. The state of a system is then defined as the mathematical representation of what knowledge an observer has about it. In this definition, states become relative to each observer&lt;label id=&quot;fnr.16&quot; for=&quot;fnr-in.16.9454099&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;16&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.16.9454099&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;16&lt;/sup&gt;One might question here what kind of status the observer has from within quantum mechanics. Very rapidly, this should lead to questionning how systems are defined. You might end up being forced to consider the whole universe as the only physical system that makes sense. But then, what do you do with special relativity? What do you mean by the state of the universe when it is not accessible to you? These foundational questions will not be addressed here. Quantum mechanics will be taken from a purely operational view. Yet, it does not mean that Quantum Information Processing cannot be used to address them. One of the most celebrated example is the result \(MIP^* = RE\) from complexity theory that has implications into the structure of Hilbert spaces for infinite-dimensional composite systems.&lt;/span&gt;&lt;sup&gt;, &lt;/sup&gt;&lt;label id=&quot;fnr.17&quot; for=&quot;fnr-in.17.2442226&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;17&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.17.2442226&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;17&lt;/sup&gt;The additional reason for preferring a definition where states are explicitely observer-dependent is that it emphasizes the nature of states: they are the consequence of the observer&apos;s relation to a system, rather than representing a pre-existing property of the system itself without reference to an observer. This epistemic vs ontic view of quantum mechanics has been a heated debate since the early days of quantum mechanics. See for instance &lt;a href=&quot;https://doi.org/10.1016/j.shpsb.2006.10.007&quot;&gt;https://doi.org/10.1016/j.shpsb.2006.10.007&lt;/a&gt;.&lt;/span&gt;. Yet, they retain their operational property of allowing the observer to predict the results of any experiment it could perfom. The interest of such definition is that it naturally incorporates the lack of knowledge an observer might have about the system. Its predictions will be worse than for a well-informed one. This interpretation of quantum states will be convenient to represent the views two parties with different knowledge about the same system. In such case, a state \(\rho\) is best represented by a density matrix acting on a Hilbert space \(\mathcal H\) &amp;#x2014; the same as the one used before. That is:
 &lt;/p&gt;
 \begin{align}
 \rho &amp;amp; = \rho^\dagger \\
@@ -470,7 +255,7 @@ The obvious question is how does this different representation of states connect
 &lt;p&gt;
 An important class of mixed states is:
 &lt;/p&gt;
-&lt;div text=&quot;Classical states&quot; class=&quot;definition&quot; id=&quot;org834b39b&quot;&gt;
+&lt;div text=&quot;Classical states&quot; class=&quot;definition&quot; id=&quot;org1538ce3&quot;&gt;
 &lt;p&gt;
 For a chosen orthonormal basis \(\{\ket i\}\), &lt;i&gt;classical states&lt;/i&gt; are defined as linear combinations of the corresponding projectors \(\{\ketbra i\}\):
 \[\sum_i p_i \ketbra i, \]
@@ -479,13 +264,13 @@ where \(p_i\) is a probability distribution.
 
 &lt;/div&gt;
 &lt;p&gt;
-The reason why these states are called classical will be justified by what can be predicted about them.&lt;label id=&quot;fnr.18&quot; for=&quot;fnr-in.18.1018285&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;18&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.18.1018285&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;18&lt;/sup&gt;Spoiler: they are perfectly distinguishable as it would be expected for classical random variables. As a consequence, it is easy to embed a discrete classical probability distribution within a quantum state.&lt;/span&gt;
+The reason why these states are called classical will be justified by what can be predicted about them.&lt;label id=&quot;fnr.18&quot; for=&quot;fnr-in.18.1005898&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;18&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.18.1005898&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;18&lt;/sup&gt;Spoiler: they are perfectly distinguishable as it would be expected for classical random variables. As a consequence, it is easy to embed a discrete classical probability distribution within a quantum state.&lt;/span&gt;
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgf79654b&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgf79654b&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;4.3.&lt;/span&gt; Composite systems&lt;/h3&gt;
+&lt;div id=&quot;outline-container-org0cbef3c&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org0cbef3c&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;4.3.&lt;/span&gt; Composite systems&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-4-3&quot;&gt;
 &lt;p&gt;
 Lastly, we will often need to consider composite systems, i.e. systems with subparts. Here, quantum mechanics says that the state of a composite quantum system \(\mathcal A - \mathcal B\) is a ray (resp. density matrix) in the tensor product of the Hilbert spaces of each subsystem, i.e. \(\mathcal H_{\mathcal A} \otimes \mathcal H_{\mathcal B}\).
@@ -495,15 +280,15 @@ Lastly, we will often need to consider composite systems, i.e. systems with sub
 This axiom plays a crucial role in quantum information processing:
 &lt;/p&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;It is an essential ingredient for complexity theory as it defines elementary resources that will be counted to assess the complexity / efficiency of a given algorithm or protocol for resolving a task. In particular, it states that although \(n\) 2-dimensional subsystems span a \(2^n\)p-dimensional Hilbert space, they are only corresponding to a linear number of resources used&lt;label id=&quot;fnr.19&quot; for=&quot;fnr-in.19.1745333&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;19&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.19.1745333&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;19&lt;/sup&gt;This is in complete analogy with classical complexity theory, where bits a resources allowing access to exponentially many bit-string values.&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;It is an essential ingredient for complexity theory as it defines elementary resources that will be counted to assess the complexity / efficiency of a given algorithm or protocol for resolving a task. In particular, it states that although \(n\) 2-dimensional subsystems span a \(2^n\)p-dimensional Hilbert space, they are only corresponding to a linear number of resources used&lt;label id=&quot;fnr.19&quot; for=&quot;fnr-in.19.3092161&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;19&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.19.3092161&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;19&lt;/sup&gt;This is in complete analogy with classical complexity theory, where bits a resources allowing access to exponentially many bit-string values.&lt;/span&gt;.&lt;/li&gt;
 &lt;li&gt;It creates a very rich structure if one associates to each subsystem a notion of locality. In such case, one can wonder what are the set of bipartite states that can be accessed through local operations and classical operations, and what kind of states require non-local operations to be created from independent subsystems.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
 
-&lt;section id=&quot;outline-container-org2d5f27d&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org2d5f27d&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;5.&lt;/span&gt; Predicting results from experiments&lt;/h2&gt;
+&lt;section id=&quot;outline-container-org3f9ff95&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org3f9ff95&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;5.&lt;/span&gt; Predicting results from experiments&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-5&quot;&gt;
 &lt;p&gt;
 An experiment is a physical setup that interacts with a quantum system and has several outcomes. The goal of the measurement axiom is to (1) specify mathematically how these physical setups are represented, (2) what can be predicted about these outcomes, and (3) how to do so.
@@ -512,7 +297,7 @@ An experiment is a physical setup that interacts with a quantum system and has s
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;A (projector-valued) measurement (PVM) \(\mathcal M\) is a set of orthogonal projectors summing to \(\one\): \[\mathcal M = \{M_i\}_i, \ M_i M_j = \delta_{i,j} M_i, \ \sum_i M_i = \one.\] The projector \(M_i\) is said to correspond to &lt;i&gt;outcome&lt;/i&gt; \(i\).&lt;/li&gt;
 &lt;li&gt;Given the state of a quantum system defined on the same Hilbert space as \(\mathcal M\), it is possible to compute the probability of getting outcome \(i\).&lt;/li&gt;
-&lt;li&gt;if the state is in state \(\ket \psi\)&lt;label id=&quot;fnr.20&quot; for=&quot;fnr-in.20.8785714&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;20&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.20.8785714&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;20&lt;/sup&gt;Remember the state needs to be normalized.&lt;/span&gt; (resp. \(\rho\)) the probability of getting \(i\) is:&lt;/li&gt;
+&lt;li&gt;if the state is in state \(\ket \psi\)&lt;label id=&quot;fnr.20&quot; for=&quot;fnr-in.20.9843329&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;20&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.20.9843329&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;20&lt;/sup&gt;Remember the state needs to be normalized.&lt;/span&gt; (resp. \(\rho\)) the probability of getting \(i\) is:&lt;/li&gt;
 &lt;/ol&gt;
 \begin{equation}
 \Pr(i|\ket \psi) = \bra \psi M_i \ket \psi, \mbox{ resp. } \Pr(i|\rho) = \tr(\rho M_i).
@@ -525,15 +310,21 @@ The presentation adopted here focuses on PVM instead of observables &amp;#x2014;
 &lt;p&gt;
 Additionally, it emphasizes that there is no such thing as the measurement of the expectation value of an observable. There are only detector clicks that give one of the discrete outcomes \(i\). The measurement of an expectation value is the act of repeating such measurement many times for the same reprepared state and accumulating the statistics for each of the outcomes. In other words, expectation values are averages, while quantum mechanics &amp;#x2014; through this postulate &amp;#x2014; gives us the ability to sample from a probability distribution. This is of course much more information than just the average value of the probability distribution. Such distinction will become crucial when counting resources for performing discrimination or estimation tasks, and of course when evaluating the complexity of an algorithm.
 &lt;/p&gt;
-&lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org7fdd3c2&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org7fdd3c2&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;5.1.&lt;/span&gt; &lt;span class=&quot;todo TDO&quot;&gt;TDO&lt;/span&gt; Post-measurement state (useful for partial trace later)&lt;/h3&gt;
+&lt;p&gt;
+It is customary to introduce thet post-measurement state at this stage. It is in fact not necessary &amp;#x2014; see for instance &lt;a href=&quot;https://cs.uwaterloo.ca/~watrous/TQI/TQI.pdf&quot;&gt;The Theory of Quantum Information, J. Watrous (2018)&lt;/a&gt;. Yet, it is useful to understand what is indeed meant by post-measurement state. Indeed, in the lab, physicists have observed that when measurements are very carefully implemented, they can be non destructive in the sense that once a measurement has been done, not only does the quantum system survive to it, but an immediate subsequent measurement gives the same result. Applying this to PVMs shows that when they are implemented in such non destructive way, the state of the system just after the measurement outcome \(i\) has been observed must be \(M_i \ket \psi / \| M_i \ket \psi\|\) &amp;#x2014; where \(M_i\) is the corresponding projector and \(\ket \psi\) is the state of the system. More generally, for a density matrix \(\rho\), the post-measurement state for a non-destructive PVM \(\{M_i\}_i\) where \(i\) is observed is given by
+&lt;/p&gt;
+\begin{equation}
+\frac{M_i \rho M_i }{\frac \tr (M_i \rho)}.
+\end{equation}
+&lt;p&gt;
+Nonetheless, one needs to remember that this is &lt;i&gt;only&lt;/i&gt; if the measurement is implemented in a non-destructive way. It is a lot of efforts to do it, and most often than not, the quantum system either does not survive or is experiencing additional transformations that yield to further evolutions. 
+&lt;/p&gt;
 &lt;/div&gt;
 &lt;/section&gt;
 
-&lt;section id=&quot;outline-container-org5c15d81&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org5c15d81&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;6.&lt;/span&gt; Evolving states&lt;/h2&gt;
+&lt;section id=&quot;outline-container-orgbadf71b&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgbadf71b&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;6.&lt;/span&gt; Evolving states&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-6&quot;&gt;
 &lt;p&gt;
 The axiom governing the evolution of quantum systems can be summarized as:
@@ -556,12 +347,12 @@ In most aspects of quantum information processing from a computer science perspe
 &lt;/div&gt;
 &lt;/section&gt;
 
-&lt;section id=&quot;outline-container-org17a56f2&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org17a56f2&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;7.&lt;/span&gt; More on state vectors and density matrices&lt;/h2&gt;
+&lt;section id=&quot;outline-container-org0537eb8&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org0537eb8&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;7.&lt;/span&gt; More on state vectors and density matrices&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-7&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgebadafd&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgebadafd&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;7.1.&lt;/span&gt; Decomposing density matrices&lt;/h3&gt;
+&lt;div id=&quot;outline-container-org2e115d1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org2e115d1&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;7.1.&lt;/span&gt; Decomposing density matrices&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-7-1&quot;&gt;
 &lt;p&gt;
 Because density matrices in the \(2^n\)-dimensional setting are positive semi-definite and have trace 1, they can be conveniently expressed using the Pauli matrices. For a 2-dimensional system (qubit) we have:
@@ -570,7 +361,7 @@ Because density matrices in the \(2^n\)-dimensional setting are positive semi-de
 \rho = \frac{1}{2}(I + x X + y Y + z Z)
 \end{equation}
 &lt;p&gt;
-Note that here, the normalization factor&lt;label id=&quot;fnr.21&quot; for=&quot;fnr-in.21.6059103&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;21&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.21.6059103&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;21&lt;/sup&gt;Always pay attention to the definition of Pauli matrices when reading a research paper, as it might not be consistent throughout the whole paper! 3 normalization conventions co-exist: \(\tr I = 1\), \(\tr I = 2\) and \(\tr I = 2/\sqrt 2\).&lt;/span&gt; of the Pauli matrices is implicitely defined to be 1, i.e. \(\tr \rho = 1\). The positivity criterion imposes that \(x^2+y^2+z^2\leq 1\). This is the usual Bloch sphere representation of qubits.
+Note that here, the normalization factor&lt;label id=&quot;fnr.21&quot; for=&quot;fnr-in.21.1693503&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;21&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.21.1693503&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;21&lt;/sup&gt;Always pay attention to the definition of Pauli matrices when reading a research paper, as it might not be consistent throughout the whole paper! 3 normalization conventions co-exist: \(\tr I = 1\), \(\tr I = 2\) and \(\tr I = 2/\sqrt 2\).&lt;/span&gt; of the Pauli matrices is implicitely defined to be 1, i.e. \(\tr \rho = 1\). The positivity criterion imposes that \(x^2+y^2+z^2\leq 1\). This is the usual Bloch sphere representation of qubits.
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -579,8 +370,8 @@ Note that using the generalization of the Pauli matrices to decompose Hermitian 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org74d9c13&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org74d9c13&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;7.2.&lt;/span&gt; State vectors and density matrices&lt;/h3&gt;
+&lt;div id=&quot;outline-container-org144986c&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org144986c&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;7.2.&lt;/span&gt; State vectors and density matrices&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-7-2&quot;&gt;
 &lt;p&gt;
 The correspondence between state vectors and density matrices can be established from an operational point of view. Given a state vector, we seek what density matrix it corresponds to by requiring that they give the same predictions for the same PVMs.
@@ -618,8 +409,8 @@ This identification being done, we can derive the evolution postulate for densit
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgba6b152&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgba6b152&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;7.3.&lt;/span&gt; Density matrices as ensemble preparations&lt;/h3&gt;
+&lt;div id=&quot;outline-container-orge3cd094&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orge3cd094&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;7.3.&lt;/span&gt; Density matrices as ensemble preparations&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-7-3&quot;&gt;
 &lt;p&gt;
 To further understand what are density matrices, we can consider a scenario where a source can prepare one of many pure states \(\ket{\psi_i}\)  with probability \(p_i\). If one state prepared by the source is given to you (without you knowing the index \(i\)), what is your description of the state of the received quantum system?
@@ -649,12 +440,12 @@ Note however, that while \(\rho\) is unique, each \(\rho\) can correspond to man
 &lt;/div&gt;
 &lt;/section&gt;
 
-&lt;section id=&quot;outline-container-org07d9d87&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org07d9d87&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;8.&lt;/span&gt; More on operators&lt;/h2&gt;
+&lt;section id=&quot;outline-container-org7e8cdfc&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7e8cdfc&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;8.&lt;/span&gt; More on operators&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-8&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org22c4a2a&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org22c4a2a&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;8.1.&lt;/span&gt; Schur decomposition&lt;/h3&gt;
+&lt;div id=&quot;outline-container-org66ec768&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org66ec768&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;8.1.&lt;/span&gt; Schur decomposition&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-8-1&quot;&gt;
 &lt;p&gt;
 Let \(A\in End(\mathcal H)\), then
@@ -672,8 +463,8 @@ This decomposition is obtained by picking up an eigenvalue of \(A\) and consider
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgf4b4a35&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgf4b4a35&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;8.2.&lt;/span&gt; Spectral decomposition&lt;/h3&gt;
+&lt;div id=&quot;outline-container-orga8e2dbd&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orga8e2dbd&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;8.2.&lt;/span&gt; Spectral decomposition&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-8-2&quot;&gt;
 &lt;p&gt;
 Let \(A\) be a normal operator in \(End(\mathcal H)\). Then
@@ -691,8 +482,8 @@ The proof follows from Schur&apos;s decomposition, where normality implies that 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org150597d&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org150597d&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;8.3.&lt;/span&gt; Singular value decomposition&lt;/h3&gt;
+&lt;div id=&quot;outline-container-orgd1a759f&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgd1a759f&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;8.3.&lt;/span&gt; Singular value decomposition&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-8-3&quot;&gt;
 &lt;p&gt;
 Let \(A \in Hom(\mathcal H, \mathcal H&apos;)\), then
@@ -710,8 +501,8 @@ The proof is obtained by applying the spectral theorem to \(A^\dagger A\).
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org95644be&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org95644be&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;8.4.&lt;/span&gt; Polar decomposition&lt;/h3&gt;
+&lt;div id=&quot;outline-container-orgafe4009&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgafe4009&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;8.4.&lt;/span&gt; Polar decomposition&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-8-4&quot;&gt;
 &lt;p&gt;
 Let \(A \in End(\mathcal H)\), then
@@ -730,18 +521,18 @@ The proof is obtained by using the SVD for \(A\), and inserting either \(V^{&apo
 &lt;/div&gt;
 &lt;/section&gt;
 
-&lt;section id=&quot;outline-container-orgb95caa7&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgb95caa7&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;9.&lt;/span&gt; More on composite systems&lt;/h2&gt;
+&lt;section id=&quot;outline-container-orge856e80&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orge856e80&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;9.&lt;/span&gt; More on composite systems&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-9&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgc0fb183&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgc0fb183&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;9.1.&lt;/span&gt; Schmidt decomposition&lt;/h3&gt;
+&lt;div id=&quot;outline-container-org5ac39f9&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org5ac39f9&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;9.1.&lt;/span&gt; Schmidt decomposition&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-9-1&quot;&gt;
 &lt;p&gt;
-When we have a pure state for a composite system on \(\mathcal H \otimes \mathcal H&apos;\), we might want to pickup a separable basis&lt;label id=&quot;fnr.22&quot; for=&quot;fnr-in.22.6035023&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;22&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.22.6035023&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;22&lt;/sup&gt;A basis of the form \(\ket {\psi_i} \otimes \ket{\psi&apos;_j}\) to express the state.&lt;/span&gt;. Are all these bases equivalent or is one better than the others? In fact there is a family of bases that stands out and which is defined using Schmidt decomposition
+When we have a pure state for a composite system on \(\mathcal H \otimes \mathcal H&apos;\), we might want to pickup a separable basis&lt;label id=&quot;fnr.22&quot; for=&quot;fnr-in.22.9322620&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;22&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.22.9322620&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;22&lt;/sup&gt;A basis of the form \(\ket {\psi_i} \otimes \ket{\psi&apos;_j}\) to express the state.&lt;/span&gt;. Are all these bases equivalent or is one better than the others? In fact there is a family of bases that stands out and which is defined using Schmidt decomposition
 &lt;/p&gt;
 
-&lt;div text=&quot;Schmidt decomposition&quot; class=&quot;theorem&quot; id=&quot;orgc6a9b9a&quot;&gt;
+&lt;div text=&quot;Schmidt decomposition&quot; class=&quot;theorem&quot; id=&quot;org92f07d2&quot;&gt;
 &lt;p&gt;
 For \(\ket\Psi \in \mathcal H \otimes \mathcal H&apos;\), there exists \(\{\ket {\psi_i}\}_i\) and \(\{\ket {\psi&apos;_i}\}_i\) orthonormal sets of \(\mathcal H\) and \(\mathcal H&apos;\) respectively such that
 &lt;/p&gt;
@@ -754,7 +545,7 @@ For \(\ket\Psi \in \mathcal H \otimes \mathcal H&apos;\), there exists \(\{\ket 
 Note that there is a &lt;i&gt;single&lt;/i&gt; summation index.
 &lt;/p&gt;
 
-&lt;div class=&quot;proof&quot; id=&quot;orgf99fd75&quot;&gt;
+&lt;div class=&quot;proof&quot; id=&quot;org877ef8b&quot;&gt;
 &lt;p&gt;
 Pick two bases of \(\mathcal H\) and \(\mathcal H&apos;\). Then
 &lt;/p&gt;
@@ -762,7 +553,7 @@ Pick two bases of \(\mathcal H\) and \(\mathcal H&apos;\). Then
  \ket \Psi = \sum_{i,j} \gamma_{i,j} \ket{\varphi_i} \otimes \ket{\varphi&apos;_j}.
 \end{equation}
 &lt;p&gt;
-By identifying \(\ket{\varphi_i} \otimes \ket{\varphi&apos;_j}\) and \(\ketbra{\varphi_i}{\varphi&apos;_j}\), \(\ket \Psi\) can be identified with a matrix \(P\)&lt;label id=&quot;fnr.23&quot; for=&quot;fnr-in.23.8600750&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;23&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.23.8600750&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;23&lt;/sup&gt;This same trick will be used to derive the Choi-Jamiolkowski isomorphism representation of Completely Positive Trace Preserving maps.&lt;/span&gt;. This matrix can be decomposed using the SVD, that is:
+By identifying \(\ket{\varphi_i} \otimes \ket{\varphi&apos;_j}\) and \(\ketbra{\varphi_i}{\varphi&apos;_j}\), \(\ket \Psi\) can be identified with a matrix \(P\)&lt;label id=&quot;fnr.23&quot; for=&quot;fnr-in.23.1048760&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;23&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.23.1048760&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;23&lt;/sup&gt;This same trick will be used to derive the Choi-Jamiolkowski isomorphism representation of Completely Positive Trace Preserving maps.&lt;/span&gt;. This matrix can be decomposed using the SVD, that is:
 &lt;/p&gt;
 \begin{equation}
 P = U \Pi V^\dagger,
@@ -787,8 +578,8 @@ As a result, the number of components of the state vector for a composite system
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org4065ab8&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org4065ab8&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;9.2.&lt;/span&gt; Entanglement&lt;/h3&gt;
+&lt;div id=&quot;outline-container-orga835bb6&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orga835bb6&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;9.2.&lt;/span&gt; Entanglement&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-9-2&quot;&gt;
 &lt;p&gt;
 For pure states, an entangled state corresponds to a state with &lt;i&gt;Schmidt number&lt;/i&gt; &amp;#x2014; the number of non-zero coefficient in its Schmidt decomposition &amp;#x2014; strictly greater than 1.
@@ -797,7 +588,7 @@ For pure states, an entangled state corresponds to a state with &lt;i&gt;Schmidt
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Footnotes --&gt;&lt;!-- 
-&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.1&quot; class=&quot;footnum&quot; href=&quot;#fnr.1&quot; role=&quot;doc-backlink&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;div class=&quot;footpara&quot; role=&quot;doc-footnote&quot;&gt;&lt;p class=&quot;footpara&quot;&gt;For digging into higher (discrete finite or infinite) dimensional systems, refer to courses by U. Chabaud and F. Arzani.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.1&quot; class=&quot;footnum&quot; href=&quot;#fnr.1&quot; role=&quot;doc-backlink&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;div class=&quot;footpara&quot; role=&quot;doc-footnote&quot;&gt;&lt;p class=&quot;footpara&quot;&gt;For digging into higher (discrete finite or infinite) dimensional systems, refer to lectures by U. Chabaud and F. Arzani.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.2&quot; class=&quot;footnum&quot; href=&quot;#fnr.2&quot; role=&quot;doc-backlink&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; &lt;div class=&quot;footpara&quot; role=&quot;doc-footnote&quot;&gt;&lt;p class=&quot;footpara&quot;&gt;It will be important to remember this as a guideline towards getting to complex tasks using quantum mechanics, and as a strong limitation for how quantum programs can be checked.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -843,7 +634,7 @@ For pure states, an entangled state corresponds to a state with &lt;i&gt;Schmidt
 
 &lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.23&quot; class=&quot;footnum&quot; href=&quot;#fnr.23&quot; role=&quot;doc-backlink&quot;&gt;23&lt;/a&gt;&lt;/sup&gt; &lt;div class=&quot;footpara&quot; role=&quot;doc-footnote&quot;&gt;&lt;p class=&quot;footpara&quot;&gt;This same trick will be used to derive the Choi-Jamiolkowski isomorphism representation of Completely Positive Trace Preserving maps.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
 
- --&gt;&lt;/article&gt;</content><author><name></name></author><category term="Lecture" /><summary type="html"></summary></entry><entry><title type="html">Introductory lecture on verification of quantum computations</title><link href="https://h-oll.github.io/2023/07/04/verification.html" rel="alternate" type="text/html" title="Introductory lecture on verification of quantum computations" /><published>2023-07-04T00:00:00+02:00</published><updated>2023-07-04T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/07/04/verification</id><content type="html" xml:base="https://h-oll.github.io/2023/07/04/verification.html">&lt;p&gt;This &lt;a href=&quot;/assets/20230704.ucl.pdf&quot;&gt;lecture&lt;/a&gt; was given at UCL Advanced Summer School on Quantum Technologies July 4-5, 2023.&lt;/p&gt;
+ --&gt;&lt;/article&gt;</content><author><name></name></author><category term="Lecture" /><summary type="html">Quantum information processing is using quantum mechanics as a way to encode, process and retrieve information using quantum systems. The amount of quantum theory we need to describe these tasks from a computer science perspective is remarkably shallow. It only amounts to the axioms of closed systems quantum mechanics, and in many cases to 2-dimensional systems 11For digging into higher (discrete finite or infinite) dimensional systems, refer to lectures by U. Chabaud and F. Arzani.. &amp;lt;/p&amp;gt;</summary></entry><entry><title type="html">Introductory lecture on verification of quantum computations</title><link href="https://h-oll.github.io/2023/07/04/verification.html" rel="alternate" type="text/html" title="Introductory lecture on verification of quantum computations" /><published>2023-07-04T00:00:00+02:00</published><updated>2023-07-04T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/07/04/verification</id><content type="html" xml:base="https://h-oll.github.io/2023/07/04/verification.html">&lt;p&gt;This &lt;a href=&quot;/assets/20230704.ucl.pdf&quot;&gt;lecture&lt;/a&gt; was given at UCL Advanced Summer School on Quantum Technologies July 4-5, 2023.&lt;/p&gt;
 
 &lt;p&gt;It introduces the basis ingredients of verified computations. It is framed using measurement based quantum computing as a convenient model to obtain blindness and design verification schemes. Comments and questions welcome. The last slides include a list of references.&lt;/p&gt;</content><author><name></name></author><category term="Talk" /><summary type="html">This lecture was given at UCL Advanced Summer School on Quantum Technologies July 4-5, 2023.</summary></entry><entry><title type="html">Highlights from “Limitations of variational quantum algorithms: a quantum optimal transport approach”</title><link href="https://h-oll.github.io/2023/04/17/concentration.html" rel="alternate" type="text/html" title="Highlights from “Limitations of variational quantum algorithms: a quantum optimal transport approach”" /><published>2023-04-17T00:00:00+02:00</published><updated>2023-04-17T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/04/17/concentration</id><content type="html" xml:base="https://h-oll.github.io/2023/04/17/concentration.html">&lt;style&gt;
   #content { max-width: 60em; margin: auto; }
