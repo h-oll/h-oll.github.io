@@ -7,6 +7,7 @@ keywords:
 ---
 
 <article id="content" class="content">
+<p>
 Quantum information processing is using quantum mechanics as a way to encode, process and retrieve information using quantum systems. The amount of quantum theory we need to describe these tasks from a computer science perspective is remarkably shallow. It only amounts to the axioms of closed systems quantum mechanics, and in many cases to 2-dimensional systems <label id='fnr.1' for='fnr-in.1.4685317' class='margin-toggle sidenote-number'><sup class='numeral'>1</sup></label><input type='checkbox' id='fnr-in.1.4685317' class='margin-toggle'><span class='sidenote'><sup class='numeral'>1</sup>For digging into higher (discrete finite or infinite) dimensional systems, refer to lectures by U. Chabaud and F. Arzani.</span>.
 </p>
 
