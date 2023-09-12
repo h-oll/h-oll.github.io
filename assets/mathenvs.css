@@ -1,3 +1,6 @@
+.wrapper {
+  max-width: calc(1400px - (30px * 2));
+}
 .theorem {
 display: block;
 font-style: italic;
