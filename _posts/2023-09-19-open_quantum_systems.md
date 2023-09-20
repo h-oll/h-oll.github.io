@@ -7,9 +7,6 @@ keywords:
 ---
 
 <article id="content" class="content">
-<header>
-<h1 class="title">Open quantum systems</h1>
-</header>
 <section id="outline-container-org7214cce" class="outline-2">
 <h2 id="org7214cce"><span class="section-number-2">1.</span> The Church of the larger Hilbert space</h2>
 <div class="outline-text-2" id="text-1">
@@ -24,7 +21,7 @@ The axioms of quantum mechanics presented earlier only refer to <i>closed quantu
 <div class="outline-text-2" id="text-2">
 </div>
 <div id="outline-container-orgedc258a" class="outline-3">
-<h3 id="orgedc258a"><span class="section-number-3">2.1.</span> A Toold for obtaining mixed states from pure ones</h3>
+<h3 id="orgedc258a"><span class="section-number-3">2.1.</span> A Tool for obtaining mixed states from pure ones</h3>
 <div class="outline-text-3" id="text-2-1">
 <div text="Partial trace" class="definition" id="org01bde96">
 <p>

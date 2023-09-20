@@ -1,5 +1,5 @@
 .wrapper {
-  max-width: -webkit-calc(1400px - (30px * 2));
+    max-width: 1340px;
 }
 .theorem {
 display: block;
