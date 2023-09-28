@@ -1,4 +1,947 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://h-oll.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://h-oll.github.io/" rel="alternate" type="text/html" /><updated>2023-09-20T09:31:14+02:00</updated><id>https://h-oll.github.io/feed.xml</id><title type="html">Harold Ollivier</title><subtitle>Quantum Algorithms, Architectures, Applications and their Theory Team | QuantumTech@INRIA</subtitle><entry><title type="html">Open Quantum Systems</title><link href="https://h-oll.github.io/2023/09/19/open_quantum_systems.html" rel="alternate" type="text/html" title="Open Quantum Systems" /><published>2023-09-19T00:00:00+02:00</published><updated>2023-09-19T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/09/19/open_quantum_systems</id><content type="html" xml:base="https://h-oll.github.io/2023/09/19/open_quantum_systems.html">&lt;article id=&quot;content&quot; class=&quot;content&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://h-oll.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://h-oll.github.io/" rel="alternate" type="text/html" /><updated>2023-09-28T06:41:40+02:00</updated><id>https://h-oll.github.io/feed.xml</id><title type="html">Harold Ollivier</title><subtitle>Quantum Algorithms, Architectures, Applications and their Theory Team | QuantumTech@INRIA</subtitle><entry><title type="html">Foundation and tools (of quantum information theory)</title><link href="https://h-oll.github.io/2023/09/26/foundations_and_tools.html" rel="alternate" type="text/html" title="Foundation and tools (of quantum information theory)" /><published>2023-09-26T00:00:00+02:00</published><updated>2023-09-26T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/09/26/foundations_and_tools</id><content type="html" xml:base="https://h-oll.github.io/2023/09/26/foundations_and_tools.html">&lt;article id=&quot;content&quot; class=&quot;content&quot;&gt;
+&lt;header&gt;
+&lt;h1 class=&quot;title&quot;&gt;Foundations and tools&lt;/h1&gt;
+&lt;/header&gt;&lt;p&gt;
+In this lecture, we introduce the foundational questions of information theory, both in the classical and quantum setting. This serves to emphasize the fact that quantum information theory is really information theory specialized to information carriers that abide by the axioms of quantum mechanics, and as a motivation to develop a set of tools that are useful to tackle more complex tasks.
+&lt;/p&gt;
+
+&lt;section id=&quot;outline-container-org5fd69c8&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org5fd69c8&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;1.&lt;/span&gt; State discrimination&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;p&gt;
+State discrimination is the task of distinguishing between two known states given a system prepared in one of the two states. More precisely, we consider a setup where there is a sender and a receiver. The sender can prepare one of two states that are also known to the receiver. The receiver gets one such state and decides which of the two states was prepared by the sender.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org51428eb&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org51428eb&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;1.1.&lt;/span&gt; Classical setting&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-1-1&quot;&gt;
+&lt;p&gt;
+In the classical setting, the state can be thought of a one-bit register that is prepared in \(0\) with some probability \(p\) or \(q\) depending whether the sender is preparing one of the two states \(P\) or \(Q\).&lt;label id=&quot;fnr.1&quot; for=&quot;fnr-in.1.1064233&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;1&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.1.1064233&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;1&lt;/sup&gt;The interest of such task should be clear: the receiver is trying to recover the information about which state was prepared &amp;#x2014; that could be one bit of a message for instance &amp;#x2014; from the signal that he receives.&lt;/span&gt; An extreme situation is when \(p = 1\) and \(q = 0\), that is \(P\) is a register with value 0, and \(Q\) is a register with value \(1\). Then it is easy to discriminate between the two upon reading the value of the register itself. Things get a bit more interesting whenever \(p,q \in (0,1)\). What is then the best guess that can be made about the state chosen by the sender?
+&lt;/p&gt;
+
+&lt;p&gt;
+The answer is given by applying Bayes rule after stating our prior on the behavior of the sender. Here, we assume that our initial knowledge about the behavior of the sender is that he can choose to prepare \(P\) or \(Q\) with equal probability, i.e. \(\frac 1 2\). If we denote by \(R\) the random variable that corresponds to the choice of \(P\) or \(Q\), then we have:
+&lt;/p&gt;
+\begin{align}
+\Pr(b = 0, R = P) = p/2, &amp;amp; \ \Pr(b = 1, R = P) = (1-p)/2  \\
+\Pr(b = 0, R = Q) = q/2, &amp;amp; \ \Pr(b = 1, R = Q) = (1-q)/2.
+\end{align}
+&lt;p&gt;
+This in turn gives&lt;label id=&quot;fnr.2&quot; for=&quot;fnr-in.2.3788092&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;2&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.2.3788092&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;2&lt;/sup&gt;Remember that \(b \in \{0,1\}\) so that \(\Pr(b|R=P) = (1-b)p + b(1-p)\).&lt;/span&gt;:
+&lt;/p&gt;
+\begin{align}
+\Pr(R = P | b) &amp;amp; = \frac{\Pr(b, R = P) }{\Pr(b)} = \frac{(1-b)\frac p 2 + b \frac{1-p}{2}}{(1-b)\frac{p+q}{2} + b (1-\frac{p+q}{2})} \\
+\Pr(R = Q | b) &amp;amp; = \frac{\Pr(b, R = Q) }{\Pr(b)} = \frac{(1-b)\frac q 2 + b \frac{1-q}{2}}{(1-b)\frac{p+q}{2} + b (1-\frac{p+q}{2})}.
+\end{align}
+&lt;p&gt;
+Given this, upon observing \(b\), the receiver should decide that \(R = P\) whenever \(\Pr(R = P | b) \geq \Pr(R = Q | b)\), i.e. whenever:
+&lt;/p&gt;
+\begin{align}
+p-q &amp;amp; \geq 0 \mbox{ for } b = 0\\
+ q-p &amp;amp; \geq 0 \mbox{ for } b = 1.
+\end{align}
+&lt;p&gt;
+By denoting \(\hat R\) the random variable that represents the choice of the receiver, we can now assess the success probability \(\Pr(\hat R = R)\). This probability is equal to:
+&lt;/p&gt;
+\begin{align}
+Pr(\hat R = R ) &amp;amp; = \Pr(b=0, R = P) \one_{p\geq q} + \Pr(b=1, R = P) \one_{p\leq q} \nonumber \\
+&amp;amp; \qquad + \Pr(b=0, R = Q) \one_{q\geq p} + \Pr(b=1, R = Q) \one_{q\leq p} \\
+&amp;amp; = \frac{p + 1 - q}{2} \one_{p\geq q} + \frac{1-p + q}{2} \one_{p\leq q}\\
+&amp;amp; = \frac 1 2 + \frac 1 2 |p - q|.
+\end{align}
+
+&lt;div text=&quot;Trace distance for classical probabilities&quot; class=&quot;definition&quot; id=&quot;org28169bf&quot;&gt;
+&lt;p&gt;
+The trace distance&lt;label id=&quot;fnr.3&quot; for=&quot;fnr-in.3.9132099&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;3&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.3.9132099&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;3&lt;/sup&gt;The normalization of the trace distance varies depending on authors. It is often normalized using an additional \(\frac{1}{2}\) factor so that the trace distance is between 0 and 1 for probability distributions.&lt;/span&gt; between two probability distributions \(P\) and \(Q\) over some event space \(\Gamma\) is:
+&lt;/p&gt;
+\begin{equation}
+\| P - Q \|_1 = \sum_{\gamma \in \Gamma} |\Pr(P = \gamma) - \Pr(Q =\gamma)|.
+\end{equation}
+&lt;p&gt;
+For binary variables \(P\) and \(Q\) parametrized by \(p \coloneqq \Pr(P=0)\) and \(q\coloneqq \Pr(Q=0)\) we have \(\|P-Q\|_1 = 2 |p-q|\).
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+Using this definition, the above success probability for the classical state discrimination is \(\frac{1}{2}(1 + \frac{1}{2}\| P - Q\|_1)\). This means that the trace-distance is an operational measure of similarity between probability distributions. It characterizes how well a receiver can perform the discrimination task presented above, and one recovers the usual intuition that when \(p = 1\) and \(q = 0\), \(\|P - Q \|_1 = 2\) so that the probability of success is 1, while for \(p = q\), both probability distributions are identical so that \(\|P - Q\|_1 = 0\), and the receiver needs to randomly guess the value of \(R\). This intuition can be made more formal by noticing that \(\| \cdot \|_1\) defines a metric over the space of probability distributions:
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;it is symmetric \(\| P - Q \|_1 = \| Q - P \|_1\)&lt;/li&gt;
+&lt;li&gt;it is non negative \(\| P-Q \|_1 \geq 0\)&lt;/li&gt;
+&lt;li&gt;it is definite \(\| P - Q \|_1 = 0 \Rightarrow P = Q\)&lt;/li&gt;
+&lt;li&gt;and it satisfies the triangle inequality \(\|P - R\|_1 \leq \|P - Q\|_1 + \|Q - R \|_1\).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org5aac8e0&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org5aac8e0&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;1.2.&lt;/span&gt; Quantum setting&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-1-2&quot;&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org89f9259&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org89f9259&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;1.2.1.&lt;/span&gt; Trace norm and trace distance for operators&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-1-2-1&quot;&gt;
+&lt;div text=&quot;Trace norm for operators&quot; class=&quot;definition&quot; id=&quot;org5b03d51&quot;&gt;
+&lt;p&gt;
+The &lt;i&gt;trace norm&lt;/i&gt; of \(A \in Hom(\mathcal H, \mathcal H&apos;)\) is:
+&lt;/p&gt;
+\begin{equation}
+\|A\|_1 = \tr(|A|),
+\end{equation}
+&lt;p&gt;
+with \(|A| = \sqrt{A^\dagger A}\).
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;property&quot; id=&quot;org0a7362b&quot;&gt;
+&lt;p&gt;
+The trace norm of \(A\) is the sum of its singular values.
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot; id=&quot;org06c8f9a&quot;&gt;
+&lt;p&gt;
+Decompose \(A = U \Delta V\) where \(U\) and \(V\) are unitary matrices and \(\Delta\) is a rectangular diagonal matrix with non-negative (singular) values. Then expanding \(A^\dagger A = V \Delta^\dagger\Delta V\) shows that \(A^\dagger A\) is a Hermitian matrix with singular values equal to the squares of those in \(\Delta\).
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+It is also easy to show that:
+&lt;/p&gt;
+
+&lt;div class=&quot;property&quot; id=&quot;org2d406c2&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;\(\|A\|_1 \geq 0\) and \(\|A\|_1 = 0 \Leftrightarrow A = 0\);&lt;/li&gt;
+&lt;li&gt;\(\| \alpha A \|_1 = |\alpha| \| A \|_1\) for \(\alpha \in \mathbb C\);&lt;/li&gt;
+&lt;li&gt;\(\| U A V^\dagger \|_1 = \| A \|_1\) for \(U\) and \(V\) isometries.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;property&quot; id=&quot;orga84f596&quot;&gt;
+&lt;p&gt;
+For \(A \in End(\mathcal H)\),
+&lt;/p&gt;
+\begin{equation} \|A\|_1 = \max_U |\tr(UA)|,\end{equation}
+&lt;p&gt;
+where \(U\) is a unitary.
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot; id=&quot;org24f91be&quot;&gt;
+&lt;p&gt;
+We use the SVD of \(A = V \Delta W\) and write:
+&lt;/p&gt;
+\begin{align}
+|\tr(UA) |
+&amp;amp; = |\tr(UV\Delta W)| = \tr((\sqrt{\Delta})(\sqrt \Delta W UV)) \\
+&amp;amp; \leq \sqrt{\tr(\sqrt \Delta \sqrt \Delta)} \sqrt{\tr ((\sqrt \Delta W UV)^\dagger (\sqrt \Delta W UV))} \\
+&amp;amp; = \tr(\Delta) \\
+&amp;amp; = \| A \|_1
+\end{align}
+&lt;p&gt;
+where we have used Cauchy-Schwartz inequality&lt;label id=&quot;fnr.4&quot; for=&quot;fnr-in.4.7315089&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;4&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.4.7315089&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;4&lt;/sup&gt;\(|\langle A,B\rangle| \leq \|A\| \|B\|\) and equality if \(A \propto B\).&lt;/span&gt; for the HS inner product. The equality is obtained for \(W U V = \one_{\mathcal H}\).
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+From there we obtain the triangle inequality:
+&lt;/p&gt;
+&lt;div text=&quot;Triangle inequality for the Trace norm&quot; class=&quot;property&quot; id=&quot;orgcb235c5&quot;&gt;
+&lt;p&gt;
+For \(A,B \in End(\mathcal H)\),
+&lt;/p&gt;
+\begin{equation}
+\|A + B \|_1 \leq \|A\|_1 + \|B \|_1.
+\end{equation}
+
+&lt;/div&gt;
+&lt;p&gt;
+Note that this holds indeed for \(A,B \in Hom(\mathcal H, \mathcal H&apos;)\).
+&lt;/p&gt;
+
+&lt;div class=&quot;proof&quot; id=&quot;orga70f8e4&quot;&gt;
+&lt;p&gt;
+We use the variational characterization of the Trace-norm
+&lt;/p&gt;
+\begin{align}
+\|A + B\|_1 &amp;amp; = \max_U |\tr(U(A+B))| \\
+&amp;amp; = |\tr(\hat U (A+B))| \\
+&amp;amp; = |\tr(\hat U A) + \tr(\hat UB)| \\
+&amp;amp; \leq |\tr(\hat U A)| + |\tr(\hat UB)| \\
+&amp;amp; \leq \max_U |\tr(UA)| + \max_U |\tr(UB)| \\
+&amp;amp; = \|A\|_1 + \|B\|_1,
+\end{align}
+&lt;p&gt;
+Where \(\hat U\) is the maximizing \(U\) of the first line.
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+Using the triangle inequality, we then get the convexity of the trace norm:
+&lt;/p&gt;
+&lt;div class=&quot;property&quot; id=&quot;org772c2c4&quot;&gt;
+&lt;p&gt;
+For \(A,B \in End(\mathcal H, \mathcal H&apos;)\) and \(\lambda \in [0,1]\)
+&lt;/p&gt;
+\begin{equation}
+\| \lambda A + (1-\lambda) B \|_1 \leq \lambda \|A\|_1 + (1-\lambda) \|B\|_1.
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;div text=&quot;Trace distance&quot; class=&quot;definition&quot; id=&quot;orgec9f0c2&quot;&gt;
+&lt;p&gt;
+For \(A,B \in Hom(\mathcal H, \mathcal H&apos;)\) the &lt;i&gt;trace-distance&lt;/i&gt; between \(A\) and \(B\) is
+&lt;/p&gt;
+\begin{equation}
+\|A-B\|_1.
+\end{equation}
+&lt;p&gt;
+For \(\rho\) and \(\sigma\) density matrices we have \(0\leq \|\rho-\sigma\|_1 \leq 2\) &amp;#x2014; which often motivates the use of the &lt;i&gt;normalized&lt;/i&gt; trace-distance equal to \(\frac 1 2 \| \rho - \sigma \|_1\).
+&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org7769943&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org7769943&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;1.2.2.&lt;/span&gt; Trace distance as an operational measure of distinguishability&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-1-2-2&quot;&gt;
+&lt;p&gt;
+The interest of the trace distance for density matrices is its operational interpretation as a measure of the ability to discriminate &lt;i&gt;quantum states&lt;/i&gt;.
+&lt;/p&gt;
+
+&lt;div class=&quot;property&quot; id=&quot;org991e4e3&quot;&gt;
+&lt;p&gt;
+For \(\rho, \sigma\) density matrices , we have
+&lt;/p&gt;
+\begin{equation}
+\frac{1}{2} \|\rho -\sigma\|_1 = \max_{0 \leq K \leq \one} \tr(K(\rho-\sigma))
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot; id=&quot;org94b1c41&quot;&gt;
+&lt;p&gt;
+Diagonalize \(\rho-\sigma\) and consider \(\Pi_{&amp;gt;0}\) the projector onto the subspaces with positive eigenvalues and \(\Pi_{&amp;lt;0}\) the projector onto the subspace with negative eigenvalues. Then define \(R\coloneqq \Pi_{&amp;gt;0} (\rho - \sigma) \Pi_{&amp;gt;0}\) and \(S\coloneqq \Pi_{&amp;lt;0} (\sigma - \rho) \Pi_{&amp;lt;0}\) so that \(R,S\) are PSD and \(|\rho-\sigma| = R + S\). Now because the positive and negative eigenvalue subspaces are orthogonal we have
+&lt;/p&gt;
+\begin{equation}
+\| \rho - \sigma\|_1 = \tr(|\rho - \sigma|) = \tr(R) + \tr(S).
+\end{equation}
+&lt;p&gt;
+But we also have \(\tr(\rho - \sigma) = 0 = \tr(R) - \tr(S)\) so that \(\| \rho - \sigma\|_1 = 2 \tr(R)\).
+&lt;/p&gt;
+
+&lt;p&gt;
+Now by construction \(\tr(R) = \tr(\Pi_{&amp;gt;0} (\rho - \sigma) \Pi_{&amp;gt;0}) = \tr(\Pi_{&amp;gt;0} (\rho-\sigma))\). Finally, for any \(0 \leq K \leq \one\), we have
+&lt;/p&gt;
+\begin{align}
+\tr(K(\rho-\sigma)) &amp;amp; = \tr(K(R-S)) \\
+&amp;amp; \leq \tr(K R) \\
+&amp;amp; \leq \tr(R) \\
+&amp;amp; = \frac{1}{2} \| \rho - \sigma\|_1.
+\end{align}
+&lt;p&gt;
+So that \(R\) is the maximizing \(K\).
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;p&gt;
+The above property states that the trace-distance corresponds to the biggest probability difference for obtaining an outcome in a measurement of \(\rho\) and \(\sigma\). In our state discrimination setting the sender now has the possibility of randomly sending \(\rho\) or \(\sigma\) with equal probability to the receiver. The receiver in turn performs a measurement with POVM elements \(K_0,K_1\) such that if it gets \(K_0\), he declares to have received \(\rho\) and if he gets \(K_1\) he declares \(\sigma\). In such case, the success probability is:
+&lt;/p&gt;
+\begin{equation}
+\frac 1 2 \tr(K_0 \rho) + \frac 1 2 \tr(K_1 \sigma).
+\end{equation}
+&lt;p&gt;
+Using \(K_0 + K_1 = \one\), we obtain that the success probability is
+&lt;/p&gt;
+\begin{equation}
+\frac 1 2 (1 + \tr (K_0 (\rho-\sigma)))
+\end{equation}
+&lt;p&gt;
+Optimizing over \(K_0\) can be done using the above property, and the maximizing \(K_0\) is the projection onto the positive eigenvalue subspace of \(\rho - \sigma\). In such case, we then obtain a success probability of
+&lt;/p&gt;
+\begin{equation}
+\frac 1 2 \left( 1 + \frac 1 2 \| \rho - \sigma \|_1\right),
+\end{equation}
+&lt;p&gt;
+which corresponds to the generalization of the previous result for classical probability distributions.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;outline-container-orgee4d209&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgee4d209&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;2.&lt;/span&gt; Channel discrimination&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-2&quot;&gt;
+&lt;p&gt;
+Channel discrimination is another foundational information theoretic task that enlights some of the differences between quantum and classical information. There, we again have two parties, but in a slightly different setting: the first one, say Alice, is preparing a quantum system in state \(\rho\), the second one, say Bob, applies to it a CPTP map at random from a set \(\{\mathcal E, \mathcal F\}\) and gives back the quantum system to Alice, which then measures it. The task of Alice is to discriminate between \(\mathcal E\) and \(\mathcal F\).
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgf38c759&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgf38c759&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;2.1.&lt;/span&gt; Naive approach&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-1&quot;&gt;
+&lt;p&gt;
+Channel discrimination can be cast into state discrimination. After all, Alice could consider that she receives at random either \(\mathcal E(\rho)\) or \(\mathcal F(\rho)\) which she can discriminate using the optimal strategy seen above. The maximum success probability in this case is:
+&lt;/p&gt;
+\begin{equation}
+\frac 1 2 \left ( 1 + \frac 1 2 \| \mathcal E(\rho) - \mathcal F(\rho) \|_1 \right).
+\end{equation}
+&lt;p&gt;
+Because Alice can optimize over \(\rho\), we would naturally be interested in
+&lt;/p&gt;
+\begin{equation}
+\max_{\rho} \frac 1 2 \left ( 1 + \frac 1 2 \| \mathcal E(\rho) - \mathcal F(\rho) \|_1 \right),
+\end{equation}
+&lt;p&gt;
+which points at \(\max_\rho \| \mathcal E(\rho) - \mathcal F(\rho) \|_1\) as a measure of distinguishability between \(\mathcal E\) and \(\mathcal F\).
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org8bf8b55&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org8bf8b55&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;2.2.&lt;/span&gt; Super-dense coding&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-2&quot;&gt;
+&lt;p&gt;
+In fact, there is more that can be done in order to discriminate channels.
+&lt;/p&gt;
+
+&lt;p&gt;
+To get an intuition we will consider the following channels: \(\mathcal E(\cdot) \coloneqq I(\cdot)I\) and \(\mathcal F(\cdot) \coloneqq X(\cdot) X\), One can perform the optimization above very easily and obtain that the optimal state to construct is \(\ket 0\) and the measurement is \(\{\ketbra 0, \ketbra 1\}\). The success probability is 1 as the resulting state is \(\ket 0\) for \(\mathcal E\) and \(ket 1\) for \(\mathcal F\), which are perfectly distinguishabel.
+&lt;/p&gt;
+
+&lt;p&gt;
+In a similar fashion, if \(\mathcal F(\cdot) \coloneqq Z(\cdot)Z\), then the optimal state is \(\ket +\) and the measurement is \(\{\ketbra +, \ketbra - \}\). The second case can actually be seen as the first one rotated by a Hadamard gate&lt;label id=&quot;fnr.5&quot; for=&quot;fnr-in.5.3271361&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;5&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.5.3271361&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;5&lt;/sup&gt;\(H\ket 0 = \ket +\) and \(H\ket 1 = \ket -\).&lt;/span&gt;, and from there it is clear that using the naïve approach there is no single initial state and optimal measurement that can distinguish the 3 channels \(I, X, Z\) &amp;#x2014; and a fortiori \(I, X, Y, Z\) &amp;#x2014; with probability of success equal to 1.
+&lt;/p&gt;
+
+&lt;p&gt;
+Yet, there is a situation where discriminating between \(I,X,Y,Z\) is possible with success probability 1, which can be derived from the existence of the super dense coding protocol.
+&lt;/p&gt;
+
+&lt;div text=&quot;Super dense coding&quot; class=&quot;definition&quot; id=&quot;orgd4ece8e&quot;&gt;
+&lt;p&gt;
+Super dense coding is a protocol allowing a sender (Alice) to send a 2-bit message \(m \in \{0,1,2,3\}\) to a receiver (Bob) by sending half a pre-established EPR-pair through a perfect quantum channel.
+&lt;/p&gt;
+
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;Alice and Bob share an EPR pair \(\frac 1 {\sqrt 2} \left(\ket{00} + \ket{11}\right)\);&lt;/li&gt;
+&lt;li&gt;Alice chooses \(m\) and depending on its value she applies \(I,X,Y,Z\) to her half of the EPR-pair, and sends it to Bob&lt;/li&gt;
+&lt;li&gt;Bob performs a Bell State Measurement on the two qubits (the received half and his own half)&lt;/li&gt;
+&lt;li&gt;He sets the received message \(\hat m\) depending on the observed Bell state:&lt;/li&gt;
+&lt;/ol&gt;
+\begin{align}
+\frac{1}{\sqrt 2}\left(\ket{00} + \ket{11}\right) &amp;amp; \rightarrow \hat m = 0 \\
+\frac{1}{\sqrt 2}\left(\ket{00} - \ket{11}\right) &amp;amp; \rightarrow \hat m = 3 \\
+\frac{1}{\sqrt 2}\left(\ket{10} + \ket{01}\right) &amp;amp; \rightarrow \hat m = 1 \\
+\frac{1}{\sqrt 2}\left(\ket{10} - \ket{10}\right) &amp;amp; \rightarrow \hat m = 2
+\end{align}
+
+&lt;/div&gt;
+
+&lt;p&gt;
+The interest of this protocol for channel discrimination comes from the fact that we can imagine that Alice chooses one of the \(I,X,Y,Z\) channel to apply to half an EPR-pair prepared by Bob, who then performs a measurement that perfectly distinguishes the 4 possibilities. This obviously violates the conclusion we drew from the naïve approach. What is the special ingredient that allows this? The use of EPR-pair, i.e. a maximally entangled state, for which one half acts as a reference. The naïve approach didn&apos;t allow this as the channel was implicitely applied to the whole state, while here it is only applied partially. In fact, this shouldn&apos;t come too much as a surprise as we have seen that a channel is characterized by its Choi state, obtained by applying the channel onto half a maximally entangled state.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org33f350b&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org33f350b&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;2.3.&lt;/span&gt; Diamond norm&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-3&quot;&gt;
+&lt;p&gt;
+Given the intuition built through the previous example, we realize that the optimization over \(\rho\) is not enough. It should be supplemented by an optimization over the size of the Hilbert-space so that the success probability can be written:
+&lt;/p&gt;
+\begin{equation}
+\frac 1 2 \left ( 1 + \frac 1 2 \sup_{\mathcal H_R} \max_{\rho} \| (\mathcal E \otimes \one_{\mathcal H_R})(\rho) - (\mathcal F \otimes \one_{\mathcal H_R})(\rho) \|_1\right ),
+\end{equation}
+&lt;p&gt;
+where \(\mathcal E, \mathcal F\) are CPTP maps from \(\mathcal H\) to \(\mathcal H&apos;\) and \(\rho\) is a density matrix over \(\mathcal H \otimes \mathcal H_R\).
+&lt;/p&gt;
+
+&lt;p&gt;
+This defines an induced&lt;label id=&quot;fnr.6&quot; for=&quot;fnr-in.6.8629263&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;6&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.6.8629263&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;6&lt;/sup&gt;This means a norm over states is used to define a norm over operators using some optimization procedure&lt;/span&gt; norm over channels:
+&lt;/p&gt;
+&lt;div text=&quot;Diamond norm&quot; class=&quot;definition&quot; id=&quot;orged06e9f&quot;&gt;
+&lt;p&gt;
+For \(\mathcal E\) a CPTP map from \(\mathcal H\),
+&lt;/p&gt;
+\begin{equation}
+\| \mathcal E \|_{\diamond} \coloneqq \max_{\ket \psi \in \mathcal H \otimes \mathcal H} \| (\mathcal E \otimes \one_{\mathcal H})(\ketbra \psi) \|_1
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;div class=&quot;remark&quot; id=&quot;org98a0196&quot;&gt;
+&lt;p&gt;
+Note that above it is enough to optimize over pure states &amp;#x2014; using the convexity of the trace distance. Additionally, the optimization over \(\mathcal H_R\) that was expected is omitted in the above definition as it is indeed sufficient to consider \(\mathcal H_R= \mathcal H\) using the fact that the Schmidt rank of a state over \(\mathcal H \otimes \mathcal H_R\) is bounded by \(\dim \mathcal H\).
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+Finally, and similarly to the trace-distance, one can define the &lt;i&gt;diamond distance&lt;/i&gt; between CPTP maps:
+&lt;/p&gt;
+&lt;div text=&quot;Diamond distance&quot; class=&quot;definition&quot; id=&quot;orgb0d0a2b&quot;&gt;
+&lt;p&gt;
+For \(\mathcal E, \mathcal F\) two CPTP maps from \(\mathcal H\) to \(\mathcal H&apos;\), the &lt;i&gt;diamond distance&lt;/i&gt; between them is
+&lt;/p&gt;
+\begin{equation}
+\| \mathcal E - \mathcal F \|_\diamond
+\end{equation}
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;outline-container-org6dd3e6e&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org6dd3e6e&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;3.&lt;/span&gt; Other measures of distance&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-3&quot;&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org1b2788f&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org1b2788f&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;3.1.&lt;/span&gt; Fidelity&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-1&quot;&gt;
+&lt;p&gt;
+We have seen that the trace-distance arises quite naturally from the state discrimination task. One might also argue that another well motivated notion of distance between two pure quantum states \(\ket \psi, \ket \varphi\) is the squared overlap between the states: \(|\braket{\psi}{\varphi}|^2\). It arises from the following protocol. Again a sender prepares either \(\ket \psi\) or \(\ket \varphi\), and the receiver tries to distinguish one from the other. To do that, instead of using the optimal measurement seen earlier, he could decide to perform the measurement \(\{\ketbra \psi, \one - \ketbra \psi\}\). If the first outcome is obtained, it will decide that \(\ket \psi\) was send, and \(\ket \varphi\) otherwise. The probability of error given \(\ket \varphi\) is sent is therefore \(\tr(\ketbra \psi \ketbra \varphi) = |\braket{\psi}{\varphi}|^2\). Hence, the higher the fidelity, the harder to discriminate \(\ket \psi\) from \(\ket \varphi\) in this test.
+&lt;/p&gt;
+
+&lt;div text=&quot;Pure state fidelity&quot; class=&quot;definition&quot; id=&quot;orgf11cecf&quot;&gt;
+&lt;p&gt;
+The &lt;i&gt;pure state fidelity&lt;/i&gt; for \(\ket \psi, \ket \varphi \in \mathcal H\) is defined as:
+&lt;/p&gt;
+\begin{equation}
+F(\ket \psi, \ket \varphi) \coloneqq |\braket{\psi}{\varphi}|^2
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;div class=&quot;property&quot; id=&quot;org0309529&quot;&gt;
+\begin{align}
+&amp;amp; F(\ket\psi, \ket \varphi) = F(\ket \varphi, \ket\psi) \\
+&amp;amp; 0\leq F(\ket\psi,\ket\varphi) \leq 1
+\end{align}
+
+&lt;/div&gt;
+
+&lt;div class=&quot;remark&quot; id=&quot;orgd963aaf&quot;&gt;
+&lt;p&gt;
+There is a notion of classical fidelity for probability distributions \(p(x), q(x)\) called &lt;i&gt;Bhattacharyya overlap&lt;/i&gt;&lt;label id=&quot;fnr.7&quot; for=&quot;fnr-in.7.6606673&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;7&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.7.6606673&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;7&lt;/sup&gt;Show that for classical states expressed using quantum systems, the two correspond&lt;/span&gt;:
+&lt;/p&gt;
+\begin{equation}
+F(p,q) = \left(\sum_x \sqrt{p(x)q(x)}\right)^2.
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;p&gt;
+Using this definition for pure states, it would be useful to extend it to mixed states. As we will see this is not so easy in the general case, so we can build some intuition first. So we start for the pure-mixed case, i.e. the fidelity \(F(\ket\psi,\rho)\). In such case, one way to recover the pure-state fidelity is to consider \(\rho\) as a statistical mixture of the states appearing in its spectral decomposition. More precisely, we define the &lt;i&gt;expected fidelity&lt;/i&gt; of \(\rho\) against \(\ket\psi\) as the expectation value of the pure state fidelity considering that \(\rho\) is prepared from its spectral decomposition:
+&lt;/p&gt;
+\begin{equation}
+F(\ket\psi,\rho) \coloneqq \sum_\lambda p_\lambda |\braket{\psi}{\varphi_\lambda}|^2 = \bra \psi \rho \ket \psi,
+\end{equation}
+&lt;p&gt;
+where \(\rho = \sum_\lambda p_\lambda \ketbra{\varphi_\lambda}\) with \(\{\ket{\varphi_\lambda}\}_\lambda\) an orthonormal set.
+&lt;/p&gt;
+
+&lt;p&gt;
+The crucial ingredient in the above generalization is that the spectral decomposition offers a natural way to recover pure states fidelity only, and a way to recombine each of the individual fidelities. With this in mind, a possibility &amp;#x2014; that is actually correct &amp;#x2014; would be to rely on the purification of mixed states to recover the pure state situation. This defined the (Uhlmann) fidelity, tht works for mixed states and coincide with the pure state and expected fidelity whenever we are in a pure-pure or pure-mixed setting:
+&lt;/p&gt;
+&lt;div text=&quot;Uhlmann Fidelity&quot; class=&quot;definition&quot; id=&quot;org237f3bb&quot;&gt;
+&lt;p&gt;
+For \(\rho, \sigma\) density matrices over \(\mathcal H_A\) and \(\ket \psi, \ket \varphi \in \mathcal H_A \otimes \mathcal H_R\) such that \(\tr_R (\ketbra \psi) = \rho\) and \(\tr_R( \ketbra \varphi) = \sigma\), the Uhlmann fidelity is&lt;label id=&quot;fnr.8&quot; for=&quot;fnr-in.8.7668349&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;8&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.8.7668349&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;8&lt;/sup&gt;Remember that (i) purifications are equivalent up to a unitary on the reference system part &amp;#x2014; hence starting from \(\ket \psi\) and \(\ket \varphi\) one can obtain all of them by applying \(U\) for \(\ket \psi\) and \(V\) for \(\ket \varphi\) &amp;#x2014; and (ii) that maximizing over \(U\) and \(V\) is overkill as they impact the value to optimize through  \(U^\dagger V\) which is a unitary itself.&lt;/span&gt;
+&lt;/p&gt;
+\begin{equation}
+F(\rho,\sigma) = \max_{U}|\bra\psi (\one_A \otimes U) \ket \varphi|^2.
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;p&gt;
+Fortunately, Uhlmann&apos;s theorem allows for a closed-form expression of the fidelity:
+&lt;/p&gt;
+&lt;div text=&quot;Uhlmann&apos;s theorem&quot; class=&quot;theorem&quot; id=&quot;org18db6a3&quot;&gt;
+&lt;p&gt;
+For \(\rho,\sigma\) density matrices over \(\mathcal H_A\),
+&lt;/p&gt;
+\begin{equation}
+F(\rho,\sigma) = \| \sqrt \rho \sqrt \sigma \|_1^2 = \left (\tr(\sqrt{\sqrt\sigma \rho \sqrt \sigma})\right)^2
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot; id=&quot;org329b3d6&quot;&gt;
+&lt;p&gt;
+Given \(\rho\) we can take the purification \(\ket \psi = (\sqrt{\rho} \otimes \one_R) \ket\Gamma\) where \(\ket\Gamma = \sum_i \ket{i}_A\otimes \ket{i}_R\) is a unnormalized maximally entangled state over \(\mathcal H_A \otimes \mathcal H_R\), and similarly for \(\sigma\). Then&lt;label id=&quot;fnr.9&quot; for=&quot;fnr-in.9.8429835&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;9&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.9.8429835&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;9&lt;/sup&gt;It is easy to show that for any \(A\in End(\mathcal H)\), \((A\otimes\one) \ket\Gamma = (\one\otimes A^T)\ket\Gamma\) with \(\ket\Gamma\) the maximally entangled state on \(\mathcal H \otimes \mathcal H\) by directly expressing the matrix elements \(\ketbra{i}{j}\). It is also straightforward using the same appraoch to show that \(\tr(A) = \bra\Gamma (A\otimes \one) \ket \Gamma\).&lt;/span&gt; we have for any \(U\):
+&lt;/p&gt;
+\begin{align}
+|\bra \psi (\one_A \otimes U) \ket \varphi |^2 &amp;amp; = |\bra{\Gamma} (\sqrt{\rho}\sqrt{\sigma} \otimes U) \ket \Gamma|^2 \\
+&amp;amp; |\bra \Gamma (\sqrt{\rho}\sqrt{\sigma}U^T \otimes \one_R \ket \Gamma\|^2 \\
+&amp;amp; = |\tr(\sqrt\rho \sqrt\sigma U^T)|^2.
+\end{align}
+&lt;p&gt;
+Now maximizing \(U\) and using the variational characterization of the trace-distance we get:
+&lt;/p&gt;
+\begin{equation}
+\max_U |\tr(\sqrt\rho \sqrt\sigma U^T)|^2 = \|\sqrt\rho\sqrt\sigma\|_1^2.
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;div class=&quot;property&quot; id=&quot;org2d17c75&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;\(F\) is symmetric&lt;/li&gt;
+&lt;li&gt;\(F\) is multiplicative with respect to tensor products: \(F(\rho_A\otimes \rho_B, \sigma_A\otimes \sigma_B) = F(\rho_A, \sigma_A)F(\rho_B, \sigma_B)\)&lt;/li&gt;
+&lt;li&gt;\(F\) is invariant under isometries&lt;/li&gt;
+&lt;li&gt;\(F\) is non-decreasing over partial trace&lt;label id=&quot;fnr.10&quot; for=&quot;fnr-in.10.9070986&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;10&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.10.9070986&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;10&lt;/sup&gt;The idea is to use the variational characterization of \(F\) and realize that the lhs optimizes over unitaries on the reference system, while the rhs optimizes over unitaries on the reference system and \(B\). This means that forgetting about one part of the system makes it easier to take one state for the other. This is generalized in the next property. There, if you see \(\mathcal E\) as a possibly noisy evolution, it will improve the fidelity between the states. This kind of inequality is also referred to as &lt;i&gt;Data processing inequality&lt;/i&gt;. Such inequality apply to various kind of quantities and are very useful in characterizing the evolution of soem quantities under noisy processes.&lt;/span&gt;: \(F(\rho_{AB}, \sigma_{AB}) \leq F(\rho_A, \sigma_A)\)&lt;/li&gt;
+&lt;li&gt;\(F\) is monotone under CPTP maps: \(F(\rho,\sigma) \leq F(\mathcal E (\rho), \mathcal E(\sigma))\)&lt;/li&gt;
+&lt;li&gt;\(\sqrt F\) is jointly concave with respect to its arguments: \(\sqrt F(\lambda \rho + (1-\lambda) \rho&apos;, \lambda \sigma + (1-\lambda) \sigma&apos;) \geq \lambda\sqrt F(\rho,\sigma) + (1-\lambda) \sqrt F(\rho&apos;,\sigma&apos;)\)&lt;/li&gt;
+&lt;li&gt;\(F\) is concave wrt one of its arguments: \(F(\lambda \rho + (1-\lambda)\rho&apos;,\sigma) \geq \lambda F(\rho, \
+  \sigma) + (1-\lambda) F(\rho&apos;, \sigma)\)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;section id=&quot;outline-container-org50cab28&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org50cab28&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;4.&lt;/span&gt; Classical entropies and information&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-4&quot;&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org8f592e8&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org8f592e8&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;4.1.&lt;/span&gt; Overview of the operational definition of information and entropy&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-4-1&quot;&gt;
+&lt;p&gt;
+Information is a concept that was quantified by Shannon in 1948. As for distance measures, it stems out of a simple foundational task involving sending messages from Alice to Bob. This task is called &lt;i&gt;source coding&lt;/i&gt; and corresponds to Alice sending messages seen as random bit strings picked at random from a given distribution &amp;#x2014; it could be for instance random words from the dictionary, random sentences from a book, or random paragraphs from a corpus of texts &lt;label id=&quot;fnr.11&quot; for=&quot;fnr-in.11.6529356&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;11&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.11.6529356&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;11&lt;/sup&gt;Think about chatGPT like situations where the entire web was scraped to gain knowledge about correlations between sentences.&lt;/span&gt;. The objective of this task is to encode the message in such a way so that Alice sends the minimum number of bits to Bob, while still allowing Bob to decode the message perfectly. That is we want to find the best possible compression for the source emitting the messages.
+&lt;/p&gt;
+
+&lt;p&gt;
+Shannon&apos;s source coding theorem states the following.  Let a source emit words out of an alphabet \(\Sigma\) &amp;#x2014; say \(\{A,B,C,\ldots\}\). Consider \(f\) an encoding of these words into words over an alphabet \(\Pi\) &amp;#x2014; say \(\{0, 1\}\) &amp;#x2014; that is uniquely decodable&lt;label id=&quot;fnr.12&quot; for=&quot;fnr-in.12.9014515&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;12&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.12.9014515&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;12&lt;/sup&gt;This means that any input word is mapped to a single output codeword&lt;/span&gt;. Then we can consider an optimal \(f\) that is such that when \(X\) is drawn at random from the words on \(\Sigma\) according to a known probability distribution, the expected length of the encoding \(|f(X)|\) is minimal &amp;#x2014; i.e. we consider \(f\) such that \(\mathbb E(|f(X)|)\) is miminum. Then
+&lt;/p&gt;
+\begin{equation}
+\frac{H(X)}{\log_2(|\Pi|)} \leq \mathbb{E}[|f(X)|]  &amp;lt; \frac{H(X)}{\log_2(|\Pi|)} + 1,
+\end{equation}
+&lt;p&gt;
+where \(H(X) \coloneqq - \sum_x \Pr(X=x)\log_2(\Pr(X=x))\) is the entropy of \(X\). In other words, this theorem states that the best encoding \(f\) will produce codewords whose expected length is given by \(H(X)/\log_2(|\Pi|)\). If \(\Pi\) is taken to be bits, then \(H(X)\) directly measures the expected length of the codewords. This means that the average information content of \(X\) is \(H(X)\) bits as it is not possible to reduce the length of the codewords any further&lt;label id=&quot;fnr.13&quot; for=&quot;fnr-in.13.9959021&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;13&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.13.9959021&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;13&lt;/sup&gt;Lets beat that bound! Consider meassages made out of the 26 letters and 10 numerals, chosen uniformly at random. Consider the &lt;a href=&quot;https://en.wikipedia.org/wiki/Morse_code#/media/File:International_Morse_Code.svg&quot;&gt;Morse encoding&lt;/a&gt;. We have \(H(X) = - \log_2(1/36) = 5.16\), while we see that all letters are encoded using at most 4 symbols and numerals exactly 5. Hence, we have \(\mathbb{E}(|f(X)|) \leq 4 \times \frac{26}{36} + 5 \times \frac{10}{36} = 4.22\). What&apos;s wrong?&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+A second important task put forth by Shannon is called &lt;i&gt;channel coding&lt;/i&gt;. It corresponds to Alice sending messages to Bob, but this time through a noisy channel. The goal is then to find out how to encode the message, possibly adding some redundancy, so that Bob can perfectly retreive the message of Alice with very high probability.
+The important quantity that is highlighted by this task is the mutual information, which is derived from entropy (see below).
+&lt;/p&gt;
+
+&lt;p&gt;
+Here, instead of going through the proofs of Shannon&apos;s theorems &amp;#x2014; i.e. source and channel coding &amp;#x2014; we will take an axiomatic approach to defining entropy, yet I encourage you to read Shannon&apos;s paper and see the concept of entropy and mutual information emerge from these operational tasks.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgf647f8d&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgf647f8d&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;4.2.&lt;/span&gt; Axiomatic definition&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-4-2&quot;&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org5ab3bfe&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org5ab3bfe&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;4.2.1.&lt;/span&gt; Entropy of events&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-4-2-1&quot;&gt;
+&lt;p&gt;
+We consider  \((\Omega, \mathcal E, P)\) a probability space&lt;label id=&quot;fnr.14&quot; for=&quot;fnr-in.14.1111253&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;14&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.14.1111253&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;14&lt;/sup&gt;\(\Omega\) is the sample space &amp;#x2014; the set of possible outcomes &amp;#x2014; \(\mathcal E\) is the event space &amp;#x2014; each event is a set of outcomes &amp;#x2014; and \(P\) a probability function which assigns a probability to each element in \(\mathcal E\)&lt;/span&gt;. The entropy of an event \(E\) is a function over \(\mathcal E\):
+&lt;/p&gt;
+\begin{align}
+H:\
+&amp;amp;  \mathcal E \rightarrow \mathbb R \cup \{\infty\} \nonumber \\
+&amp;amp; E \mapsto H(E) \nonumber
+\end{align}
+&lt;p&gt;
+that satisfies:
+&lt;/p&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;&lt;i&gt;independence&lt;/i&gt; of representation: \(H(E)\) only depends on \(P(E)\)&lt;/li&gt;
+&lt;li&gt;&lt;i&gt;continuity&lt;/i&gt; (relative to the topology induced by the trace distance)&lt;/li&gt;
+&lt;li&gt;&lt;i&gt;additivity&lt;/i&gt; for two independent events \(E\) and \(E&apos;\): \(H(E \cap E&apos;) = H(E) + H(E&apos;)\)&lt;/li&gt;
+&lt;li&gt;&lt;i&gt;normalization&lt;/i&gt; such that \(H(E) = 1\) for \(P(E) = \frac 1 2\)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;
+With these constraints, the entropy of \(E\) is unique:
+&lt;/p&gt;
+&lt;div class=&quot;theorem&quot; id=&quot;orgf40f74a&quot;&gt;
+&lt;p&gt;
+Any fonction \(H\) satisfying 1-4 above has the form \(H(E) = -\log_2(P(E))\)
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot; id=&quot;org72a8faa&quot;&gt;
+&lt;p&gt;
+Clearly \(-\log_2(P(E))\) satisfies 1-4. Because \(-\log_2\) is bijective from \([0,1]\) to \(\mathbb R^+ \cup \{+\infty\}\), the condition 1 allows to write \(H(E) = f(-\log_2(P(E)))\), where \(f\) is from \(\mathbb R^+ \cup \{+\infty\}\) to \(\mathbb R \cup \{+\infty\}\). 2 implies that \(f\) is continuous and additivity implies that \(f(x) + f(y) = f(x + y)\) by considering two events \(E\) and \(E&apos;\) such that \(-\log_2(P(E)) = x\) and \(-\log_2(P(E&apos;)) = y\). This in turn implies that \(f\) is linear, and the normalization implies the claimed result.
+&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org99e6c41&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org99e6c41&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;4.2.2.&lt;/span&gt; Entropies for random variables&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-4-2-2&quot;&gt;
+&lt;p&gt;
+The most obvious way to go from events to random variables is to consider the expected entropy for each event defining the random variable, i.e.
+&lt;/p&gt;
+&lt;div text=&quot;Shannon Entropy&quot; class=&quot;definition&quot; id=&quot;org794f9c9&quot;&gt;
+&lt;p&gt;
+Shannon entropy of a random variable \(X\) with alphabet \(\Sigma\) is the expected entropy of the events \(\{X = \sigma\}\) for \(\sigma \in \Sigma\):
+&lt;/p&gt;
+\begin{equation}
+H(X) = - \sum_{\sigma\in \Sigma} \Pr(X=\sigma) \log_2(\Pr(X=\sigma)).
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;p&gt;
+But this is not the only possible way of combining the various probabilities of the events \(\{X=\sigma\}\):
+&lt;/p&gt;
+&lt;div text=&quot;Min-Entropy&quot; class=&quot;definition&quot; id=&quot;orgb116a98&quot;&gt;
+&lt;p&gt;
+The Min-entropy of a random variable \(X\) with alphabet \(\Sigma\) is
+&lt;/p&gt;
+\begin{equation}
+H_{\min}(X) = \min_\sigma - \log_2(\Pr(X=\sigma)).
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;p&gt;
+It is also possible to define the Max-entropy, that is related to the number of events with non-zero probability&lt;label id=&quot;fnr.15&quot; for=&quot;fnr-in.15.2045346&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;15&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.15.2045346&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;15&lt;/sup&gt;This measures the maximum entropy a random variable with the same support as \(X\) could have.&lt;/span&gt;:
+&lt;/p&gt;
+
+&lt;div text=&quot;Max-Entropy&quot; class=&quot;definition&quot; id=&quot;org2792c62&quot;&gt;
+&lt;p&gt;
+The Max-entropy of a random variable \(X\) with alphabet \(\Sigma\) is
+&lt;/p&gt;
+\begin{equation}
+H_{\max}(X) = \log_2(|\{X=\sigma \ : \ \Pr(X=\sigma) &amp;gt; 0\}|).
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;div class=&quot;property&quot; id=&quot;org719db20&quot;&gt;
+\begin{equation}
+H_{\min}(X) \leq H(X) \leq H_{\max}(X).
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;div class=&quot;property&quot; id=&quot;orgb19e067&quot;&gt;
+&lt;p&gt;
+For all entropies (min, max, Shannon), we have
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Permutation invariance: \(H(X) = H(\pi(X))\) where \(\pi\) permutes the elements of \(X\);&lt;/li&gt;
+&lt;li&gt;Non negativity;&lt;/li&gt;
+&lt;li&gt;Equality to \(0\) is equivalent to having exactly one element with probability 1;&lt;/li&gt;
+&lt;li&gt;Upper bound equal to \(\log_2|\Sigma|\) where \(\Sigma\) is the alphabet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgf582d6f&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgf582d6f&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;4.2.3.&lt;/span&gt; More entropies&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-4-2-3&quot;&gt;
+&lt;p&gt;
+Whenever there are correlated random variables \(X\) and \(Y\), one can define a conditional random variables when a say specific value of \(Y=y\) is known. We write this random variable as \(X|Y=y\) and its probability distribution is \(\Pr(X|Y=y) = \frac{\Pr(X,Y=y)}{\Pr(Y=y)}\). The associated Shannon entropy is \(H(X|Y=y) = -\sum_{x} \Pr(X=x|Y=y) \log_2(\Pr(X=x|Y=y)\). This represents the entropy of \(X\) when \(Y=y\). The conditional Shannon entropy of \(X\) given \(Y\) is defined as this quantity averaged over the possible values of \(y\) and thus represents the expected remaining uncertainty about \(X\) when \(Y\) is known:
+&lt;/p&gt;
+&lt;div text=&quot;Conditional Shannon Entropy&quot; class=&quot;definition&quot; id=&quot;org6c02028&quot;&gt;
+&lt;p&gt;
+The &lt;i&gt;conditional Shannon entropy&lt;/i&gt; of \(X\) given \(Y\) is
+&lt;/p&gt;
+\begin{equation}
+H(X|Y) = \sum_y \Pr(Y=y) H(X|Y=y).
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;div text=&quot;Chain Rule&quot; class=&quot;property&quot; id=&quot;orgae591c0&quot;&gt;
+&lt;p&gt;
+The Shannon entropy satisfies the &lt;i&gt;chain rule&lt;/i&gt;&lt;label id=&quot;fnr.16&quot; for=&quot;fnr-in.16.5359844&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;16&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.16.5359844&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;16&lt;/sup&gt;This allows to draw Venn diagrams for entropies.&lt;/span&gt;:
+&lt;/p&gt;
+\begin{equation}
+H(X|YZ) = H(XY|Z) - H(Y|Z)
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;p&gt;
+Conditional entropies can be defined for the min and max entropy as well. For the min entropy we simply minimize over all possible realizations of \(Y\), while for the max entropy, we maximize over the possible values of \(Y\):
+&lt;/p&gt;
+&lt;div text=&quot;Conditional Min Entropy&quot; class=&quot;definition&quot; id=&quot;org63bae89&quot;&gt;
+\begin{equation}
+H_{\min}(X|Y) = \min_y H_{\min}(X|Y=y).
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;div text=&quot;Conditional Max Entropy&quot; class=&quot;definition&quot; id=&quot;orge1ed7ab&quot;&gt;
+\begin{equation}
+H_{\max}(X|Y) = \max_y \log_2 |\{x: \Pr(X=x|Y=y) \neq 0\}|.
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;p&gt;
+All three entropies satisfy an important and powerful inequality stating that conditional entropies can only decrease when they are conditioned on an additional random variable:
+&lt;/p&gt;
+&lt;div text=&quot;Strong Subadditivity&quot; class=&quot;property&quot; id=&quot;org2802d63&quot;&gt;
+&lt;p&gt;
+H(X|Y) &amp;ge; H(X|YZ).
+&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;p&gt;
+While such property is expected &amp;#x2014; the entropy of \(X\) decreases when we add more conditioning &amp;#x2014; it is important to mention it here, as the quantum analogue to it  is non-trivial.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgc49e945&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgc49e945&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;4.2.4.&lt;/span&gt; Mutual information&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-4-2-4&quot;&gt;
+&lt;p&gt;
+Mutual information is a concept that closely follows our everyday experience. When we get information, we get it through something about something else: We receive a message telling us that some event happened. It is not directly the event itself, but it is correlated to it in the sense that if the event would have been different so would have been the message.
+&lt;/p&gt;
+
+&lt;p&gt;
+Formally, the Shannon mutual information between \(X\) and \(Y\) is the average amount of uncertainty about \(X\) that \(Y\) removes when it is observed:
+&lt;/p&gt;
+&lt;div text=&quot;Mutual Information&quot; class=&quot;definition&quot; id=&quot;orga8fb369&quot;&gt;
+\begin{equation}
+I(X:Y) = H(X) - H(X|Y) = H(X) + H(Y) - H(XY).
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;div class=&quot;property&quot; id=&quot;orga8f7bb6&quot;&gt;
+&lt;p&gt;
+The mutual information is non-negative.&lt;label id=&quot;fnr.17&quot; for=&quot;fnr-in.17.2863221&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;17&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.17.2863221&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;17&lt;/sup&gt;Use the strong subadditivity.&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;outline-container-org7ad72e6&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7ad72e6&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;5.&lt;/span&gt; Quantum entropies&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-5&quot;&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgdf59019&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgdf59019&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;5.1.&lt;/span&gt; Generalizing classical entropies&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-5-1&quot;&gt;
+&lt;p&gt;
+Surely, it is possible to encode classical information &amp;#x2014; i.e. classical probability distributions &amp;#x2014; inside quantum systems. This holds for single systems as well as for correlated ones. Because we could also perform all classical processing within quantum systens, it is ultimately desirable that the definition of quantum entropy as well as conditional entropy, mutual information and relative entropy match those of random variables whenever the quantum states correspond to random variables.
+&lt;/p&gt;
+
+&lt;p&gt;
+This leads to the following definitions:
+&lt;/p&gt;
+&lt;div text=&quot;Von Neuman Entropy&quot; class=&quot;definition&quot; id=&quot;org0fc33df&quot;&gt;
+&lt;p&gt;
+The von Neuman entropy for a system \(A\) in state \(\rho\) is&lt;label id=&quot;fnr.18&quot; for=&quot;fnr-in.18.1012379&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;18&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.18.1012379&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;18&lt;/sup&gt;Show that is matches the classical definition for classical states.&lt;/span&gt;:
+&lt;/p&gt;
+\begin{equation}
+H(A)_\rho = - \tr(\rho \log_2 \rho).
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;div text=&quot;quantum min Entropy&quot; class=&quot;definition&quot; id=&quot;org6810240&quot;&gt;
+&lt;p&gt;
+The min entropy is defined using the $&amp;infin;$-norm &amp;#x2013; equating the largest eigenvalue of \(\rho\), by:
+&lt;/p&gt;
+\begin{equation}
+H_{\min}(A)_\rho = -\log_2 \|\rho\|_{\infty}
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;div text=&quot;quantum max Entropy&quot; class=&quot;definition&quot; id=&quot;org02002f7&quot;&gt;
+&lt;p&gt;
+The max entropy is defined by
+&lt;/p&gt;
+\begin{equation}
+H_{\max}(A)_\rho = -\log_2 |\mathrm{supp}(\rho)|,
+\end{equation}
+&lt;p&gt;
+where \(\mathrm{supp}(\rho)\) is the orthogonal complement to the \(0\) eigenspace value of \(\rho\).
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+Entropies satisfy useful properties:
+&lt;/p&gt;
+&lt;div class=&quot;property&quot; id=&quot;org83152f7&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Unitary invariance: \(H(A)_\rho = H(A)_{U\rho U^\dagger}\).&lt;/li&gt;
+&lt;li&gt;Positivity: \(H(A)_\rho \geq 0\).&lt;/li&gt;
+&lt;li&gt;Additivity for uncorrelated states: \(H(AB)_{\rho_A\otimes\rho_B} = H(A)_{\rho_A} + H(B)_{\rho_B}\).&lt;/li&gt;
+&lt;li&gt;For \(\rho_{AB}\) a quantum-classical state \(\rho_{AB} = \sum_b \Pr(B=b) \rho_{A,b} \ketbra b\) then \(H(AB)_{\rho_{AB}} = H(\Pr(B=b)) + \sum_b \Pr(B=b) H(A)_{\rho_{A,b}})\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+and specifically for the von Neumann entropy
+&lt;/p&gt;
+&lt;div class=&quot;property&quot; id=&quot;org3a768ef&quot;&gt;
+&lt;p&gt;
+\(H(A)_\rho \leq \log_2 d\), where \(d\) is the dimension of the Hilbert space of \(A\).
+&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgad9cf59&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgad9cf59&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;5.2.&lt;/span&gt; Conditional entropy&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-5-2&quot;&gt;
+&lt;p&gt;
+There could a priori be several ways of defining conditional von Neumann entropy for a density matrix \(\rho_{AB}\) with respect to the \(A\), \(B\) cut. The most tempting would be to define it through a measurement on \(B\) that gives a different reduced density matrix on \(A\) for each of the possible outcomes &amp;#x2014; this would be reminiscent of the computation for quantum-classical states above. The problem is that such conditional entropy would involve some optimization over the possible measurements and would not necessarily satisfy some of the other properties expected from conditional entropy. In fact the right way to define the conditional entropy is through the classical identity \(H(X|Y) = H(X,Y) - H(Y)\).
+&lt;/p&gt;
+
+&lt;div text=&quot;Conditional Entropy&quot; class=&quot;definition&quot; id=&quot;orgfa92034&quot;&gt;
+&lt;p&gt;
+The quantum conditional entropy for a state \(\rho_{AB}\) for subsystems \(A\), \(B\) is
+&lt;/p&gt;
+\begin{equation}
+H(A|B)_{\rho_{AB}} = H(AB)_{\rho_{AB}} - H(B)_{\rho_{AB}},
+\end{equation}
+&lt;p&gt;
+where \(H(B)_{\rho_{AB}} = H(B)_{\rho_B}\) for \(\rho_B = \tr_A \rho_{AB}\).
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div text=&quot;Chain Rule&quot; class=&quot;property&quot; id=&quot;org87bedb0&quot;&gt;
+&lt;p&gt;
+Reversing the definition of \(H(A|B)\) we obtain the chain rule for quantum entropies:
+&lt;/p&gt;
+\begin{equation}
+H(AB)_\rho = H(A|B)_\rho + H(B)_\rho.
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;div class=&quot;remark&quot; id=&quot;org91cd62a&quot;&gt;
+&lt;p&gt;
+Whereas conditional entropy of random variables is positive, it is not necessary the case for quantum conditional entropy. E.g. take a pure bi-partite state \(\rho\) over \(A\) and \(B\), then \(H(AB)_\rho = 0\) and \(H(A)_\rho = H(B)_\rho \geq 0\), which implies \(H(A|B)_\rho = H(B|A)_\rho \leq 0\).
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;property&quot; id=&quot;org7244068&quot;&gt;
+&lt;p&gt;
+For a quantum-classical state \(\rho_{AB} = \sum_b p(b) \rho_{A,b}\otimes \ketbra b\) over \(A\) and \(B\), we have
+&lt;/p&gt;
+\begin{equation}
+H(A|B)_{\rho_{AB}} = \sum_b p(b) H(A)_{\rho_{A,b}},
+\end{equation}
+&lt;p&gt;
+and consequently, \(H(A|B) \geq 0\).
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div text=&quot;Strong subadditivity&quot; class=&quot;property&quot; id=&quot;org9f380d8&quot;&gt;
+&lt;p&gt;
+For \(\rho_{ABC}\) a state for the 3 subsystems \(A\), \(B\) and \(C\), then
+&lt;/p&gt;
+\begin{equation}
+H(A|B)_{\rho_{ABC}} \geq H(A|BC)_{\rho_{ABC}}.
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;p&gt;
+This inequality is fundamental in quantum theory as many other properties derive from it. We will see one consequence in the next paragraph.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org697bdc6&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org697bdc6&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;5.3.&lt;/span&gt; Mutual information&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-5-3&quot;&gt;
+&lt;p&gt;
+Mutual information, once conditional entropy is defined, follows from the same definition as in the classical case:
+&lt;/p&gt;
+&lt;div text=&quot;Quantum mutual information&quot; class=&quot;definition&quot; id=&quot;org25ca7be&quot;&gt;
+&lt;p&gt;
+For a state \(\rho\) over subsystems \(A\) and \(B\), the quantum mutual information is defined as:
+&lt;/p&gt;
+\begin{equation}
+I(A:B)_\rho = H(A)_\rho - H(A|B)_\rho = H(B)_\rho - H(B|A)_\rho = H(A)_\rho + H(B)_\rho - H(AB)_\rho.
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;div class=&quot;property&quot; id=&quot;orgf8d2746&quot;&gt;
+\begin{equation}
+I(A:B)_\rho \geq 0.
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot; id=&quot;org2a90b04&quot;&gt;
+&lt;p&gt;
+Apply the strong subadditivity for \(H(X|Y)_{\rho_{XYZ}}\) with \(\rho_{XYZ} = \rho_{XZ} \otimes \ketbra 0_Y\) taking \(X=A\), \(Y=B\) and \(Z=C\). Note that the general case (not setting up \(Y\) in state \(\ketbra 0\) gives that the conditional mutual information is positive.
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+Another interesting property of quantum mutual information states that quantum post processing subsystem \(B\) does not increase the quantum mutual information with \(A\). More precisely:
+&lt;/p&gt;
+&lt;div class=&quot;property&quot; id=&quot;orgb257d78&quot;&gt;
+&lt;p&gt;
+Let three subsystems \(A\), \(B\), \(C\), \(\rho_{AB}\) a state over \(AB\) and \(\mathcal E\) a CPTP map from \(B\) to \(C\). Then:
+&lt;/p&gt;
+\begin{equation}
+I(A:B)_{\rho_{AB}} \geq I(A:C)_{(\one_A\otimes \mathcal E)(\rho_{AB})}.
+\end{equation}
+
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot; id=&quot;orgb5e54f3&quot;&gt;
+&lt;p&gt;
+We prove that \(H(A|B)_{\rho_{AB}} \leq H(A|C)_{(\one_A\otimes \mathcal E)(\rho_{AB})}\). This is a direct application of the fact that \(\mathcal E\) can be implemented by considering an auxiliary quantum system \(D\) and a joint isometry from \(BD\) to \(CD\), and the strong subadditivity.
+&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;outline-container-org017c8b4&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org017c8b4&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;6.&lt;/span&gt; References&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-6&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://edu.itp.phys.ethz.ch/hs15/QIT/renner_lecture_notes12.pdf&quot;&gt;Quantum Information Theory, R. Renner (2013)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1106.1445.pdf&quot;&gt;From Classical to Quantum Shannon Theory, M. Wilde (2019)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;/article&gt;</content><author><name></name></author><category term="Lecture" /><summary type="html">Foundations and tools In this lecture, we introduce the foundational questions of information theory, both in the classical and quantum setting. This serves to emphasize the fact that quantum information theory is really information theory specialized to information carriers that abide by the axioms of quantum mechanics, and as a motivation to develop a set of tools that are useful to tackle more complex tasks.</summary></entry><entry><title type="html">Open Quantum Systems</title><link href="https://h-oll.github.io/2023/09/19/open_quantum_systems.html" rel="alternate" type="text/html" title="Open Quantum Systems" /><published>2023-09-19T00:00:00+02:00</published><updated>2023-09-19T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/09/19/open_quantum_systems</id><content type="html" xml:base="https://h-oll.github.io/2023/09/19/open_quantum_systems.html">&lt;article id=&quot;content&quot; class=&quot;content&quot;&gt;
 &lt;section id=&quot;outline-container-org0086453&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;org0086453&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;1.&lt;/span&gt; The Church of the larger Hilbert space&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
@@ -561,14 +1504,7 @@ Using the notation defined above, the operators \(E_i\) are called &lt;i&gt;POVM
 
 &lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.8&quot; class=&quot;footnum&quot; href=&quot;#fnr.8&quot; role=&quot;doc-backlink&quot;&gt;8&lt;/a&gt;&lt;/sup&gt; &lt;div class=&quot;footpara&quot; role=&quot;doc-footnote&quot;&gt;&lt;p class=&quot;footpara&quot;&gt;Remember that in fact, \(\Pi_{A,i}\otimes \one_B\) is also a higher-rank projector &amp;#x2013;its rank is \(\rk(\Pi_{A,i})\times\dim(\mathcal H_B)\).&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
 
- --&gt;&lt;/article&gt;
-&lt;footer id=&quot;postamble&quot; class=&quot;status&quot;&gt;
-&lt;p class=&quot;author&quot;&gt;Author: Harold Ollivier&lt;/p&gt;
-&lt;p class=&quot;date&quot;&gt;Created: 2023-09-20 Wed 09:28&lt;/p&gt;
-&lt;p class=&quot;validation&quot;&gt;&lt;a href=&quot;https://validator.w3.org/check?uri=referer&quot;&gt;Validate&lt;/a&gt;&lt;/p&gt;
-&lt;/footer&gt;
-&lt;p&gt;&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;&lt;/p&gt;</content><author><name></name></author><category term="Lecture" /><summary type="html">1. The Church of the larger Hilbert space The axioms of quantum mechanics presented earlier only refer to closed quantum systems. So it is only possible to describe what happens to a system completely isolated from other systems. This seems like a restriction, until you realize that indeed, it is always possible to view an open quantum system as a subsystem of a larger quantum system, which is itself isolated. In case of doubt, you can always throw in the full wave function of the universe! This lecture is about exploiting this ability to better understand states of open quantum systems, their dynamics and the allowed measurements. The term &quot;Church of the larger Hilbert space&quot; refers to this ability to enlarge the Hilbert space by adding more and sometimes fictitious subsystems in order to recover pure states and closed systems dynamics and measurements.</summary></entry><entry><title type="html">Closed Quantum Systems</title><link href="https://h-oll.github.io/2023/09/12/closed_quantum_systems.html" rel="alternate" type="text/html" title="Closed Quantum Systems" /><published>2023-09-12T00:00:00+02:00</published><updated>2023-09-12T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/09/12/closed_quantum_systems</id><content type="html" xml:base="https://h-oll.github.io/2023/09/12/closed_quantum_systems.html">&lt;article id=&quot;content&quot; class=&quot;content&quot;&gt;
+ --&gt;&lt;/article&gt;</content><author><name></name></author><category term="Lecture" /><summary type="html">1. The Church of the larger Hilbert space The axioms of quantum mechanics presented earlier only refer to closed quantum systems. So it is only possible to describe what happens to a system completely isolated from other systems. This seems like a restriction, until you realize that indeed, it is always possible to view an open quantum system as a subsystem of a larger quantum system, which is itself isolated. In case of doubt, you can always throw in the full wave function of the universe! This lecture is about exploiting this ability to better understand states of open quantum systems, their dynamics and the allowed measurements. The term &quot;Church of the larger Hilbert space&quot; refers to this ability to enlarge the Hilbert space by adding more and sometimes fictitious subsystems in order to recover pure states and closed systems dynamics and measurements.</summary></entry><entry><title type="html">Closed Quantum Systems</title><link href="https://h-oll.github.io/2023/09/12/closed_quantum_systems.html" rel="alternate" type="text/html" title="Closed Quantum Systems" /><published>2023-09-12T00:00:00+02:00</published><updated>2023-09-12T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/09/12/closed_quantum_systems</id><content type="html" xml:base="https://h-oll.github.io/2023/09/12/closed_quantum_systems.html">&lt;article id=&quot;content&quot; class=&quot;content&quot;&gt;
 
 Quantum information processing is using quantum mechanics as a way to encode, process and retrieve information using quantum systems. The amount of quantum theory we need to describe these tasks from a computer science perspective is remarkably shallow. It only amounts to the axioms of closed systems quantum mechanics, and in many cases to 2-dimensional systems &lt;label id=&quot;fnr.1&quot; for=&quot;fnr-in.1.4685317&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;1&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fnr-in.1.4685317&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;numeral&quot;&gt;1&lt;/sup&gt;For digging into higher (discrete finite or infinite) dimensional systems, refer to lectures by U. Chabaud and F. Arzani.&lt;/span&gt;.
 
