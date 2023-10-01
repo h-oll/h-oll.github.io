@@ -260,8 +260,8 @@
 
   <div class="post-content e-content" itemprop="articleBody">
     <article id="content" class="content">
-<section id="outline-container-org0086453" class="outline-2">
-<h2 id="org0086453"><span class="section-number-2">1.</span> The Church of the larger Hilbert space</h2>
+<section id="outline-container-org39ca655" class="outline-2">
+<h2 id="org39ca655"><span class="section-number-2">1.</span> The Church of the larger Hilbert space</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 The axioms of quantum mechanics presented earlier only refer to <i>closed quantum systems</i>. So it is only possible to describe what happens to a system completely isolated from other systems. This seems like a restriction, until you realize that indeed, it is always possible to view an <i>open quantum system</i> as a subsystem of a larger quantum system, which is itself isolated. In case of doubt, you can always throw in the full wave function of the universe! This lecture is about exploiting this ability to better understand states of open quantum systems, their dynamics and the allowed measurements. The term "Church of the larger Hilbert space" refers to this ability to enlarge the Hilbert space by adding more and sometimes fictitious subsystems in order to recover pure states and closed systems dynamics and measurements.
@@ -269,14 +269,14 @@ The axioms of quantum mechanics presented earlier only refer to <i>closed quantu
 </div>
 </section>
 
-<section id="outline-container-orge04f67e" class="outline-2">
-<h2 id="orge04f67e"><span class="section-number-2">2.</span> From pure to mixed states and back</h2>
+<section id="outline-container-org2546e71" class="outline-2">
+<h2 id="org2546e71"><span class="section-number-2">2.</span> From pure to mixed states and back</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org9c3ac35" class="outline-3">
-<h3 id="org9c3ac35"><span class="section-number-3">2.1.</span> A Tool for obtaining mixed states from pure ones</h3>
+<div id="outline-container-org282751f" class="outline-3">
+<h3 id="org282751f"><span class="section-number-3">2.1.</span> A Tool for obtaining mixed states from pure ones</h3>
 <div class="outline-text-3" id="text-2-1">
-<div text="Partial trace" class="definition" id="org4e666a1">
+<div text="Partial trace" class="definition" id="org6aba917">
 <p>
 The <i>partial trace</i> is a mapping from \(End(\mathcal H_A \otimes \mathcal H_B)\) to \(End(\mathcal H_B)\). It is defined as the linear extension of the following:
 \[O_A \otimes O_B \rightarrow \tr_A(O_A \otimes O_B) \coloneqq \tr(O_A) O_B.\]
@@ -299,7 +299,7 @@ which is often abreviated by omitting the \(\one_B\) factor:
 \tr_A(O) = \sum_i \bra i_A O \ket i_A.
 \end{equation}
 
-<div text="Marginals and Partial Trace (I)" class="remark" id="orgf4e086d">
+<div text="Marginals and Partial Trace (I)" class="remark" id="org9facce5">
 <p>
 The partial trace for classical composite states corresponds to marginalization of classical joint probability distributions:
 Let \(\rho_{X,Y} = \sum_{x,y} \Pr(X=x, Y=y) \ketbra x_X \otimes \ketbra y_Y\), for \(\{\ket x_X\}\) and \(\{\ket y_Y\}\) two orthonormal bases for respectively a system \(X\) and a system \(Y\), then
@@ -318,9 +318,9 @@ where \(\Pr(Y=y) = \sum_x Pr(X=x, Y=y)\).
 <p>
 A similar understanding can be build for generic quantum states: 
 </p>
-<div text="Marginals and Partial Trace (II)" class="remark" id="org15b6a4b">
+<div text="Marginals and Partial Trace (II)" class="remark" id="org06ea418">
 <p>
-The partial trace corresponds to measuring part of  a composite quantum system using a PVM and being struck by amnesia right after<label id="fnr.1" for="fnr-in.1.494962" class="margin-toggle sidenote-number"><sup class="numeral">1</sup></label><input type="checkbox" id="fnr-in.1.494962" class="margin-toggle" /><span class="sidenote"><sup class="numeral">1</sup>This can be generalized to POVM measurements which will be introduced below.</span>. Let \(\rho\) be a density matrix on \(\mathcal H_A \otimes \mathcal H_B\), then, for \(\{M_i \}\) a PVM on \(A\), we can define the set of quantum vectors  \(\{\ket {e_{i,j}}\}_{i,j}\) such that for a given \(i\), \(\{\ket {e_{i,j}}\}_{j}\) is an orthonormal basis of the subspace stabilized by \(M_i\). Then \(\{\ket {e_{i,j}}\}_{i,j}\) is an orthonormal basis of \(\mathcal H_A\) and \(M_i = \sum_{j} \ketbra{e_i{i,j}}\).<label id="fnr.2" for="fnr-in.2.6141258" class="margin-toggle sidenote-number"><sup class="numeral">2</sup></label><input type="checkbox" id="fnr-in.2.6141258" class="margin-toggle" /><span class="sidenote"><sup class="numeral">2</sup>Note that here \(\ket{e_{i,j}}\) are vectors on \(\mathcal H_A\), but we omit the index \(A\) to lighten the notation.</span> Hence, 
+The partial trace corresponds to measuring part of  a composite quantum system using a PVM and being struck by amnesia right after<label id="fnr.1" for="fnr-in.1.1088902" class="margin-toggle sidenote-number"><sup class="numeral">1</sup></label><input type="checkbox" id="fnr-in.1.1088902" class="margin-toggle" /><span class="sidenote"><sup class="numeral">1</sup>This can be generalized to POVM measurements which will be introduced below.</span>. Let \(\rho\) be a density matrix on \(\mathcal H_A \otimes \mathcal H_B\), then, for \(\{M_i \}\) a PVM on \(A\), we can define the set of quantum vectors  \(\{\ket {e_{i,j}}\}_{i,j}\) such that for a given \(i\), \(\{\ket {e_{i,j}}\}_{j}\) is an orthonormal basis of the subspace stabilized by \(M_i\). Then \(\{\ket {e_{i,j}}\}_{i,j}\) is an orthonormal basis of \(\mathcal H_A\) and \(M_i = \sum_{j} \ketbra{e_i{i,j}}\).<label id="fnr.2" for="fnr-in.2.2562339" class="margin-toggle sidenote-number"><sup class="numeral">2</sup></label><input type="checkbox" id="fnr-in.2.2562339" class="margin-toggle" /><span class="sidenote"><sup class="numeral">2</sup>Note that here \(\ket{e_{i,j}}\) are vectors on \(\mathcal H_A\), but we omit the index \(A\) to lighten the notation.</span> Hence, 
 </p>
 \begin{align}
 \tr_A(\rho) &amp; = \sum_{i,j} (\bra{e_{i,j}} \otimes \one_B) \rho (\ket{e_{i,j}} \otimes \one_B) \\
@@ -346,7 +346,7 @@ Taking the partial trace we obtain:
 </p>
 \begin{align}
 \tr_A \ketbra{\psi} &amp; = \sum_m \bra m_A \left(\sum_{i,j,k,l} \psi_{i,k}\psi^*_{j,l} \ketbra{i}{j}_A\otimes\ketbra{k}{l}_B \right) \ket m_A \\
-&amp; = \sum_i \psi_{i,k}\psi^*_{i,l} \ketbra{k}{l}_B.
+&amp; = \sum_{i,k,l} \psi_{i,k}\psi^*_{i,l} \ketbra{k}{l}_B.
 \end{align}
 <p>
 We see that in general this does not correspond to a pure state \(\ketbra \psi\). One way to produce a mixed state on \(B\) is thus to consider a larger system \(A-B\) and to trace out \(A\). The natural question then is to what extent any mixed state \(\rho_B\) on \(B\) can be produced in this way, and whether there is or not a single way to do this.
@@ -354,8 +354,8 @@ We see that in general this does not correspond to a pure state \(\ketbra \psi\)
 </div>
 </div>
 
-<div id="outline-container-org1236598" class="outline-3">
-<h3 id="org1236598"><span class="section-number-3">2.2.</span> From mixed states to pure ones</h3>
+<div id="outline-container-orgb87ad8a" class="outline-3">
+<h3 id="orgb87ad8a"><span class="section-number-3">2.2.</span> From mixed states to pure ones</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Here we try to answer the question: given a mixted state \(\rho_B\) on \(\mathcal B\), is it always possible to view it as the partial trace of a larger system \(A-B\)? We will answer positively and constructively to this question.
@@ -364,7 +364,7 @@ Here we try to answer the question: given a mixted state \(\rho_B\) on \(\mathca
 <p>
 First, recall that we introduced density matrices through the idea of preparations, i.e. we imagined an experimentalist \(A\) preparing a state \(\ket \psi_i\) with probability \(p_i\) and sending it to \(B\) without telling him the value of \(i\). This resulted in \(\rho_B = \sum p_i \ketbra {\psi_i}\). With the notion of partial trace seen above, it is easy to find a pure state \(\ket \psi\) on \(\mathcal H_A \otimes \mathcal H_B\)  that will produce precisely \(\ket \psi_i\) with probability \(p_i\) under an appropriate measurement on \(A\):
 </p>
-<div text="Purification of a Preparation" class="definition" id="orge5c8bde">
+<div text="Purification of a Preparation" class="definition" id="org7532ec0">
 <p>
 Given a preparation \(\{\ket {\psi_i}_B, p_i \}_i\) of a system \(B\), the puritification of the preparation is the quantum state
 </p>
@@ -385,7 +385,7 @@ Now, starting from a generic \(\rho_B\) positive semi-definite trace 1 matrix, w
 &amp; \ket \psi = \sum_i \sqrt{\lambda_i} \ket i_A \otimes \ket i_B
 \end{align}
 <p>
-where \(\ket i_A\) is an orthonormal basis for an ancillary system \(A\). Note that one can always perform this purification using a system \(A\) with dimension equal to that of \(B\). Such purification is usually called "the" purification of \(\rho_B\) even though it is obviously not unique as one can perform basis changes on \(A\) without affecting the obtained state.<label id="fnr.3" for="fnr-in.3.6365435" class="margin-toggle sidenote-number"><sup class="numeral">3</sup></label><input type="checkbox" id="fnr-in.3.6365435" class="margin-toggle" /><span class="sidenote"><sup class="numeral">3</sup>Note that we cannot say all purifications are unitarily equivalent.</span>
+where \(\ket i_A\) is an orthonormal basis for an ancillary system \(A\). Note that one can always perform this purification using a system \(A\) with dimension equal to that of \(B\). Such purification is usually called "the" purification of \(\rho_B\) even though it is obviously not unique as one can perform basis changes on \(A\) without affecting the obtained state.<label id="fnr.3" for="fnr-in.3.5952836" class="margin-toggle sidenote-number"><sup class="numeral">3</sup></label><input type="checkbox" id="fnr-in.3.5952836" class="margin-toggle" /><span class="sidenote"><sup class="numeral">3</sup>Note that we cannot say all purifications are unitarily equivalent.</span>
 </p>
 
 <p>
@@ -395,18 +395,18 @@ In conclusion, pure states on composite system give density matrices when one pa
 </div>
 </section>
 
-<section id="outline-container-orgf033008" class="outline-2">
-<h2 id="orgf033008"><span class="section-number-2">3.</span> Evolutions</h2>
+<section id="outline-container-org0785af1" class="outline-2">
+<h2 id="org0785af1"><span class="section-number-2">3.</span> Evolutions</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 The topic of this subsection is to understand what are the possible evolutions for a system undergoing an open evolution starting from  \(\mathcal H\) and ending in \(\mathcal H'\). First we will seek to determine the necessary conditions imposed by quantum mechanics on transformations from \(\mathcal H\) to \(\mathcal H'\). Then we will look at sufficiency. Along the way, we will indeed see that going to the Church of the Larger Hilbert space is indeed a very powerful concept.
 </p>
 </div>
 
-<div id="outline-container-orge5a8c0d" class="outline-3">
-<h3 id="orge5a8c0d"><span class="section-number-3">3.1.</span> Choi-Jamiolkowski Isomorphism</h3>
+<div id="outline-container-orgdf771d8" class="outline-3">
+<h3 id="orgdf771d8"><span class="section-number-3">3.1.</span> Choi-Jamiolkowski Isomorphism</h3>
 <div class="outline-text-3" id="text-3-1">
-<div text="Choi-Jamiolkowski Isomorphism" class="definition" id="orgbc35873">
+<div text="Choi-Jamiolkowski Isomorphism" class="definition" id="org042c877">
 <p>
 Let \(\mathcal H_A\) and \(\mathcal H_B\) be two finite dimensional Hilbert-spaces and consider \(\mathcal H_{A'}\)  isomorphic to \(\mathcal H_A\). Consider \(\Gamma \in \mathcal H_{A'}\otimes \mathcal H_{A}\)
 </p>
@@ -414,7 +414,7 @@ Let \(\mathcal H_A\) and \(\mathcal H_B\) be two finite dimensional Hilbert-spac
 \Gamma = \frac{1}{\sqrt d} \sum_{i = 1}^{d} \ket{e_i}_A' \otimes \ket{e_i}_A, 
 \end{equation}
 <p>
-for \(d = \dim(\mathcal H_A)\) and \(\{\ket{e_i}_A\}_i\) a basis of \(\mathcal H_A\) and \(\{\ket{e_i}_{A'}\}_i\) a basis of \(\mathcal H_{A'}\).<label id="fnr.4" for="fnr-in.4.2150112" class="margin-toggle sidenote-number"><sup class="numeral">4</sup></label><input type="checkbox" id="fnr-in.4.2150112" class="margin-toggle" /><span class="sidenote"><sup class="numeral">4</sup>Because \(\mathcal H_A \simeq \mathcal H_{A'}\) the two bases have the same number of vectors.</span> The Choi-Jamiolkowski Isomorphism relative to the bases \(\{\ket{e_i}_A\}_i\) and  \(\{\ket{e_i}_{A'}\}_i\) is the linear map:
+for \(d = \dim(\mathcal H_A)\) and \(\{\ket{e_i}_A\}_i\) a basis of \(\mathcal H_A\) and \(\{\ket{e_i}_{A'}\}_i\) a basis of \(\mathcal H_{A'}\).<label id="fnr.4" for="fnr-in.4.6434766" class="margin-toggle sidenote-number"><sup class="numeral">4</sup></label><input type="checkbox" id="fnr-in.4.6434766" class="margin-toggle" /><span class="sidenote"><sup class="numeral">4</sup>Because \(\mathcal H_A \simeq \mathcal H_{A'}\) the two bases have the same number of vectors.</span> The Choi-Jamiolkowski Isomorphism relative to the bases \(\{\ket{e_i}_A\}_i\) and  \(\{\ket{e_i}_{A'}\}_i\) is the linear map:
 </p>
 \begin{align}
 \mathsf{C}\ : \
@@ -424,14 +424,14 @@ for \(d = \dim(\mathcal H_A)\) and \(\{\ket{e_i}_A\}_i\) a basis of \(\mathcal H
 
 </div>
 
-<div class="lemma" id="orgb1ee605">
+<div class="lemma" id="orgee1bd82">
 <p>
 The Choi-Jamiolkowski Isomorphism is an isomorphism!
 </p>
 
 </div>
 
-<div class="proof" id="org69ce26b">
+<div class="proof" id="orga769bc8">
 <p>
 Because \(\mathsf{C}\) is linear, we simply have to show that a basis of \(Hom(End(\mathcal H_A),End(\mathcal H_B))\) is transformed into a basis of \(End(\mathcal H_{A'} \otimes \mathcal H_B)\).
 </p>
@@ -460,7 +460,7 @@ which generates a basis of  \(End(\mathcal H_{A'} \otimes \mathcal H_B)\) when \
 
 </div>
 
-<div class="remark" id="org64a70c8">
+<div class="remark" id="org9271c19">
 <p>
 Seeing \(End(\mathcal H_A)\) as a vector space with a basis \(\ket{\ket{i}}_A\) and similarly for \(End(\mathcal H_B)\), the Choi-Jamiolkowski isomorphism is the mapping \(\ket{\ket{j}}_B \ket{\ket{i}}_A \mapsto \ket{\ket{i}}_A \otimes \ket{\ket j}_B\) up to the isomorphism between \(\mathcal H_A\) and \(\mathcal H_{A'}\).
 </p>
@@ -469,8 +469,8 @@ Seeing \(End(\mathcal H_A)\) as a vector space with a basis \(\ket{\ket{i}}_A\) 
 </div>
 </div>
 
-<div id="outline-container-org1992892" class="outline-3">
-<h3 id="org1992892"><span class="section-number-3">3.2.</span> Necessary conditions</h3>
+<div id="outline-container-orge9d405e" class="outline-3">
+<h3 id="orge9d405e"><span class="section-number-3">3.2.</span> Necessary conditions</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Equipped with the Choi-Jamiolkowski isomorphism between operators on endomorphisms and endomorphisms on an enlarged Hilbert space, we can now come back to the original motivation of understanding transformations of open quantum systems, i.e. of density matrices viewed as subsets of endomorphisms.
@@ -487,7 +487,7 @@ First, we realize that for any preparation of \(\rho\) as \(\{(\rho_1, p_1), (\r
 This implies that \(\mathcal E\) is linear but also that \(\mathcal E[\rho]\) is a positive semi-definite operator with unit trace.
 </p>
 
-<div text="Positivity of Operators" class="definition" id="org5dc0874">
+<div text="Positivity of Operators" class="definition" id="org22d8f56">
 <p>
 \(\mathcal E \in Hom(End(\mathcal H_A), End(\mathcal H_B)\) is <i>positive</i> if
 </p>
@@ -501,7 +501,7 @@ This implies that \(\mathcal E\) is linear but also that \(\mathcal E[\rho]\) is
 But if \(\mathcal E\) is a physical operator, then so should be \(\mathcal E \otimes \one_C\) for a subsystem \(C\) with Hilbert space \(\mathcal H_C\) that is unaffected by the evolution \(\mathcal E\), but which could exhibit initial correlations with the subsystem \(A\). Hence, not only should we have the positivity of \(\mathcal E\), but we should have the positivity of \(\mathcal E \otimes \one_C\) for any \(C\). 
 </p>
 
-<div text="Complete Positivity of Operators" class="definition" id="orgdd7e0bc">
+<div text="Complete Positivity of Operators" class="definition" id="org51e3234">
 <p>
 \(\mathcal E \in Hom(End(\mathcal H_A), End(\mathcal H_B)\) is <i>completely positive</i> if
 </p>
@@ -514,7 +514,7 @@ But if \(\mathcal E\) is a physical operator, then so should be \(\mathcal E \ot
 <p>
 Finally, we define
 </p>
-<div text="Trace Preserving Operators" class="definition" id="orgd694eb3">
+<div text="Trace Preserving Operators" class="definition" id="org15983a0">
 <p>
 \(\mathcal E \in Hom(End(\mathcal H_A), End(\mathcal H_B)\) is <i>trace preserving</i> if \(\tr(\mathcal E[\rho]) = \tr(\rho)\).
 </p>
@@ -534,10 +534,10 @@ Such maps are called <i>Completely Positive Trace Preserving (CPTP)</i> maps.
 </p>
 </div>
 </div>
-<div id="outline-container-org0bd3840" class="outline-3">
-<h3 id="org0bd3840"><span class="section-number-3">3.3.</span> Quantum evolution as quantum state (Choi state)</h3>
+<div id="outline-container-org9252f34" class="outline-3">
+<h3 id="org9252f34"><span class="section-number-3">3.3.</span> Quantum evolution as quantum state (Choi state)</h3>
 <div class="outline-text-3" id="text-3-3">
-<div text="Choi state" class="definition" id="org9b9c6c5">
+<div text="Choi state" class="definition" id="orge3e5da1">
 <p>
 For \(\mathcal E\) a quantum evolution from system \(A\) to system \(B\), given \(A'\) such that \(\mathcal H_A \simeq \mathcal H_{A'}\),
 </p>
@@ -550,14 +550,14 @@ where \(\ket \Gamma_{A'A} = \frac{1}{\sqrt d} \sum_i \ket i_{A'} \otimes \ket i_
 
 </div>
 
-<div class="remark" id="org0be06c6">
+<div class="remark" id="org7b8c4c4">
 <p>
 The Choi-state of \(\mathcal E\) contains all the information about \(\mathcal E\) as per the Choi-Jamiolkowski isomorphism.
 </p>
 
 </div>
 
-<div class="remark" id="org6ef4d89">
+<div class="remark" id="org23d0f41">
 <p>
 If \(\mathcal E\) is a quantum evolution, then the Choi-state is a regular quantum state. It can be prepared in the lab:
 </p>
@@ -571,7 +571,7 @@ As a consequence, the Choi-state is a positive semi-definite trace 1 matrix. We 
 
 </div>
 
-<div class="remark" id="org3182ad6">
+<div class="remark" id="orge56b36b">
 <p>
 Because of the previous remarks, we note that to compare two channels, one can perform the preparation of Choi-states for both an perform tomography on them. If we are only interested in knowing if the two channels are equal or not, a SWAP-test can be performed instead.
 </p>
@@ -580,16 +580,16 @@ Because of the previous remarks, we note that to compare two channels, one can p
 </div>
 </div>
 
-<div id="outline-container-orge7ef250" class="outline-3">
-<h3 id="orge7ef250"><span class="section-number-3">3.4.</span> Sufficient conditions</h3>
+<div id="outline-container-orge5119f2" class="outline-3">
+<h3 id="orge5119f2"><span class="section-number-3">3.4.</span> Sufficient conditions</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
 Let \(\mathcal E \in Hom(End(\mathcal H_A), End(\mathcal H_B))\) that satisfies the 3 necessary conditions above. We will show that it is always possible to consider such transformation as a unitary transformation on a larger Hilbert space, so that these conditions are indeed sufficient.
 </p>
 </div>
 
-<div id="outline-container-org95c6390" class="outline-4">
-<h4 id="org95c6390"><span class="section-number-4">3.4.1.</span> Operator sum representation</h4>
+<div id="outline-container-orgd12c0a1" class="outline-4">
+<h4 id="orgd12c0a1"><span class="section-number-4">3.4.1.</span> Operator sum representation</h4>
 <div class="outline-text-4" id="text-3-4-1">
 <p>
 To show that the CPTP condition is indeed sufficient, we start by constructing the operator sum representation of quantum evolutions. To this end, consider the Choi state \(\rho_{\mathcal E}\)  associated to a CPTP map \(\mathcal E\). Because \(\mathcal E\) is CPTP, the Choi-state is a positive semi-definite trace 1 matrix, i.e. it is an allowed quantum state. As a consequence, \(\rho_{\mathcal E}\) can be diagonalized:
@@ -631,7 +631,7 @@ Additionally, because \(\mathcal E\) is trace preserving, \(\tr(\mathcal E[{\ket
 so that we have \(\sum_k V^{k\dagger}V^k = \one_A\).
 </p>
 
-<div text="Kraus operators" class="definition" id="orgb0f6ba0">
+<div text="Kraus operators" class="definition" id="orgadd9f1e">
 <p>
 The operators \(V^k\) are called <i>Kraus operators</i>. They satisfy:
 </p>
@@ -645,7 +645,7 @@ The operators \(V^k\) are called <i>Kraus operators</i>. They satisfy:
 <p>
 As consequence of the above remark, we see that:
 </p>
-<div text="Operator Sum Representation" class="definition" id="orga2dc559">
+<div text="Operator Sum Representation" class="definition" id="orgdaaa402">
 <p>
 For any CPTP map \(\mathcal E\), there exists Kraus operators such that:
 </p>
@@ -655,13 +655,13 @@ For any CPTP map \(\mathcal E\), there exists Kraus operators such that:
 
 </div>
 
-<div class="remark" id="org792a03b">
+<div class="remark" id="orge7ba525">
 <p>
 Any set of Kraus operators defines an admissible CPTP map. This is because:
 </p>
 <ol class="org-ol">
 <li>The map defined by \(\sum_k V^k \rho V^{k\dagger}\) is linear;</li>
-<li>Is completely positive<label id="fnr.5" for="fnr-in.5.4230257" class="margin-toggle sidenote-number"><sup class="numeral">5</sup></label><input type="checkbox" id="fnr-in.5.4230257" class="margin-toggle" /><span class="sidenote"><sup class="numeral">5</sup>\(\langle \psi, (\one_{A'} \otimes V^k) \rho_{A'A} (\one_{A'}\otimes V^{k\dagger}) \psi \rangle = \langle \psi (\one_{A'} \otimes V^{k\dagger}),  \rho_{A'A} (\one_{A'}\otimes V^{k\dagger}) \psi \rangle \geq 0\) using \(\psi' = (\one_{A'}\otimes V^{k\dagger}) \psi\) and the positivity of \(\rho\).</span> as \((\one_{A'} \otimes V^k) \rho_{A'A} (\one_{A'}\otimes V^{k\dagger})\) is PSD for any \(k\) and any PSD \(\rho\)</li>
+<li>Is completely positive<label id="fnr.5" for="fnr-in.5.3217473" class="margin-toggle sidenote-number"><sup class="numeral">5</sup></label><input type="checkbox" id="fnr-in.5.3217473" class="margin-toggle" /><span class="sidenote"><sup class="numeral">5</sup>\(\langle \psi, (\one_{A'} \otimes V^k) \rho_{A'A} (\one_{A'}\otimes V^{k\dagger}) \psi \rangle = \langle \psi (\one_{A'} \otimes V^{k\dagger}),  \rho_{A'A} (\one_{A'}\otimes V^{k\dagger}) \psi \rangle \geq 0\) using \(\psi' = (\one_{A'}\otimes V^{k\dagger}) \psi\) and the positivity of \(\rho\).</span> as \((\one_{A'} \otimes V^k) \rho_{A'A} (\one_{A'}\otimes V^{k\dagger})\) is PSD for any \(k\) and any PSD \(\rho\)</li>
 </ol>
 
 </div>
@@ -672,8 +672,8 @@ As a round up remak, we have used Choi-Jamiolkowsi isomorphism in the forward di
 </div>
 </div>
 
-<div id="outline-container-orge6c276d" class="outline-4">
-<h4 id="orge6c276d"><span class="section-number-4">3.4.2.</span> Stinespring dilation</h4>
+<div id="outline-container-org245a479" class="outline-4">
+<h4 id="org245a479"><span class="section-number-4">3.4.2.</span> Stinespring dilation</h4>
 <div class="outline-text-4" id="text-3-4-2">
 <p>
 To conclude on the sufficiency of the CPTP criterion above, we show how such maps can be constructed from a closed system evolution. To this end, consider a set of Kraus operators \(\{V^k\}_k\) implementing a CPTP map \(\mathcal E\). Then construct the map:
@@ -690,7 +690,7 @@ U^\dagger U &amp; = \left( \sum_k V^{k\dagger}\otimes \bra k \right ) \left( \su
 &amp; = \one_A. 
 \end{align}
 <p>
-Hence \(U\) is an isometry and can be seen as a closed quantum system evolution<label id="fnr.6" for="fnr-in.6.7827729" class="margin-toggle sidenote-number"><sup class="numeral">6</sup></label><input type="checkbox" id="fnr-in.6.7827729" class="margin-toggle" /><span class="sidenote"><sup class="numeral">6</sup>To this end, we just need to embed this evolution from \(\mathcal H_A\) to \(\mathcal H_B \otimes \mathcal H_C\) into endomorphisms of \(\mathcal H_A \otimes \mathcal H_B \otimes \mathcal H_C\) and constructing a unitary that coincides with \(U\) when a given fiducial state \(\ket 0_B \ket 0_C\) is used as inputs of \(B\) and \(C\).</span>
+Hence \(U\) is an isometry and can be seen as a closed quantum system evolution<label id="fnr.6" for="fnr-in.6.2637067" class="margin-toggle sidenote-number"><sup class="numeral">6</sup></label><input type="checkbox" id="fnr-in.6.2637067" class="margin-toggle" /><span class="sidenote"><sup class="numeral">6</sup>To this end, we just need to embed this evolution from \(\mathcal H_A\) to \(\mathcal H_B \otimes \mathcal H_C\) into endomorphisms of \(\mathcal H_A \otimes \mathcal H_B \otimes \mathcal H_C\) and constructing a unitary that coincides with \(U\) when a given fiducial state \(\ket 0_B \ket 0_C\) is used as inputs of \(B\) and \(C\).</span>
 </p>
 
 <p>
@@ -711,12 +711,12 @@ Hence, we arrive at the final conclusion: any CPTP map can be seen as unitary ev
 </div>
 </div>
 </section>
-<section id="outline-container-org9cff198" class="outline-2">
-<h2 id="org9cff198"><span class="section-number-2">4.</span> Measurements</h2>
+<section id="outline-container-org303053a" class="outline-2">
+<h2 id="org303053a"><span class="section-number-2">4.</span> Measurements</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-orgd2ca7f7" class="outline-3">
-<h3 id="orgd2ca7f7"><span class="section-number-3">4.1.</span> (Detour) Post measurement state for PVM</h3>
+<div id="outline-container-org4506412" class="outline-3">
+<h3 id="org4506412"><span class="section-number-3">4.1.</span> (Detour) Post measurement state for PVM</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 We intoduced PVM as a collection of rank-1 projectors \(\{\Pi_i\}_i\) on the Hilbert space of the measured system \(\mathcal H\) such that they resolve the identity &#x2014; i.e. \(\sum_i \Pi_i = \one_{\mathcal H}\). For a system in state \(\rho\), the measurement outcome \(i\) associated to \(\Pi_i\) is obtained with probability \(\Pr_{\rho} (i) = \tr(\Pi_i\rho)\).
@@ -725,7 +725,7 @@ We intoduced PVM as a collection of rank-1 projectors \(\{\Pi_i\}_i\) on the Hil
 <p>
 Yet, we haven't said anything about the post-measurement state. In fact, there is a variety of models for the measurements so that I chose <i>not</i> to include it in the main axioms of quantum theory. Yet, the question "what is the post-measurement state of the measured quantum system?" is legitimate. To answer it, we will nonetheless postulate that for what we will call <i>non destructive (and minimally disturbing) measurement</i> if one performs the same measurement twice in a row, without the system being able to evolve between the two rounds of measurements, then the results shoud be the same. That is, if we denote by \(\rho_i\) the post measurement state after outcome \(i\) is obtained, we should have:
 \[\tr(\Pi_j \rho_i) = \delta_{i,j}.\]
-Using the positivity of \(\rho_i\) and the fact that \(\tr(\rho_i)=1\), we can conclude that \(\rho_i = \Pi_i\). Hence, we can summarize this into the following formula<label id="fnr.7" for="fnr-in.7.7236764" class="margin-toggle sidenote-number"><sup class="numeral">7</sup></label><input type="checkbox" id="fnr-in.7.7236764" class="margin-toggle" /><span class="sidenote"><sup class="numeral">7</sup>It is an unnecessarily complicated way of writing the update rule, but we will see that this is the correct way to generalize it to higher rank projectors, and later to generalized measurements.</span>:
+Using the positivity of \(\rho_i\) and the fact that \(\tr(\rho_i)=1\), we can conclude that \(\rho_i = \Pi_i\). Hence, we can summarize this into the following formula<label id="fnr.7" for="fnr-in.7.7392082" class="margin-toggle sidenote-number"><sup class="numeral">7</sup></label><input type="checkbox" id="fnr-in.7.7392082" class="margin-toggle" /><span class="sidenote"><sup class="numeral">7</sup>It is an unnecessarily complicated way of writing the update rule, but we will see that this is the correct way to generalize it to higher rank projectors, and later to generalized measurements.</span>:
 </p>
 \begin{equation}
 \rho_i = \frac{\Pi_i \rho \Pi_i}{\tr(\Pi_i \rho)} \label{eq:update}
@@ -753,12 +753,12 @@ This can be rewriten as
 \end{equation}
 <p>
 If we define \(\rho_i = \frac{(\Pi_i\otimes \one_B) \rho_{AB}(\Pi_i\otimes \one_B)}{\tr_{AB}((\Pi_{A,i}\otimes \one_B)\rho_{AB})}\)
-we have that \(\rho_{A,i} = \tr_B(\rho_i)\) and that \(\tr_A(\sum_i \rho_i) = \tr_A(\rho) = \rho_B\) so that \(\rho_i\) can be viewed as a candidate post-measurement state for the larger state \(\rho\). This can be shown to be the only possible case by extending the situation where \(\rho_{AB} = \rho_A \otimes \rho_B\) which can be deduced entirely from the locality condition. A similar argument can be made for the post-measurement state of single systems under PVM with higher rank projectors, so that we can now appreciate the fact that Eq. (\ref{eq:update}) applies to these more general situations<label id="fnr.8" for="fnr-in.8.1522038" class="margin-toggle sidenote-number"><sup class="numeral">8</sup></label><input type="checkbox" id="fnr-in.8.1522038" class="margin-toggle" /><span class="sidenote"><sup class="numeral">8</sup>Remember that in fact, \(\Pi_{A,i}\otimes \one_B\) is also a higher-rank projector &#x2013;its rank is \(\rk(\Pi_{A,i})\times\dim(\mathcal H_B)\).</span>.
+we have that \(\rho_{A,i} = \tr_B(\rho_i)\) and that \(\tr_A(\sum_i \rho_i) = \tr_A(\rho) = \rho_B\) so that \(\rho_i\) can be viewed as a candidate post-measurement state for the larger state \(\rho\). This can be shown to be the only possible case by extending the situation where \(\rho_{AB} = \rho_A \otimes \rho_B\) which can be deduced entirely from the locality condition. A similar argument can be made for the post-measurement state of single systems under PVM with higher rank projectors, so that we can now appreciate the fact that Eq. (\ref{eq:update}) applies to these more general situations<label id="fnr.8" for="fnr-in.8.2705295" class="margin-toggle sidenote-number"><sup class="numeral">8</sup></label><input type="checkbox" id="fnr-in.8.2705295" class="margin-toggle" /><span class="sidenote"><sup class="numeral">8</sup>Remember that in fact, \(\Pi_{A,i}\otimes \one_B\) is also a higher-rank projector &#x2013;its rank is \(\rk(\Pi_{A,i})\times\dim(\mathcal H_B)\).</span>.
 </p>
 </div>
 </div>
-<div id="outline-container-org8aa8086" class="outline-3">
-<h3 id="org8aa8086"><span class="section-number-3">4.2.</span> Positive Operator-Valued Measurements (POVM)</h3>
+<div id="outline-container-org92d6aec" class="outline-3">
+<h3 id="org92d6aec"><span class="section-number-3">4.2.</span> Positive Operator-Valued Measurements (POVM)</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 Consider a system \(A\) in an initial state \(\rho_A\) that can be coupled through a unitary \(U\) to another system \(B\) initially in a fiducial state \(\ketbra 0\) on which a PVM measurement \(\{\Pi_{B,i}\}_i\) can be made. Now we are interested in the understanding the effect on \(A\) of a measurement on \(B\), while the outcome \(i\) is known to the observer looking at \(A\). Then we have, using the same notation as before:
@@ -786,7 +786,7 @@ where \(E_i = M_i^\dagger M_i\).
 Note that each \(E_i\) is positive and that \(\{E_i\}_i\) is a partition of the identity \(\sum_i E_i = \one_A\), hence the term POVM. Further, we see that the operators \(M_i\) are Kraus operators of the evolution starting with \(\rho_A\) and undergoing the measurement process &#x2014; i.e. interaction with \(\ket 0_B\) and measurement along \(\{\Pi_i\}_i\). Conversely, if one is given the operators \(\{E_i\}_i\), there are several possible ways of implementing the measurement with \(M_i' = U M_i\) as \(M_i^{'\dagger} M_i' = M_i^\dagger M_i = E_i\). This means that the post-measurement state cannot be deduced from the POVM alone. Some further details about the implementation are required. Yet, one can use the same purification techniques as before and prove that any POVN can indeed be realized through a unitary evolution and a measurement on the purifying subsystem.
 </p>
 
-<div class="definition" id="org2e792c8">
+<div class="definition" id="orgc3e17df">
 <p>
 Using the notation defined above, the operators \(E_i\) are called <i>POVM elements</i> and the specific \(M_i\) are called instruments.
 </p>
@@ -796,8 +796,8 @@ Using the notation defined above, the operators \(E_i\) are called <i>POVM eleme
 </div>
 </section>
 
-<section id="outline-container-orga1915ff" class="outline-2">
-<h2 id="orga1915ff"><span class="section-number-2">5.</span> References</h2>
+<section id="outline-container-org6ddf272" class="outline-2">
+<h2 id="org6ddf272"><span class="section-number-2">5.</span> References</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li><a href="https://edu.itp.phys.ethz.ch/hs15/QIT/renner_lecture_notes12.pdf">Quantum Information Theory, R. Renner (2013)</a></li>
@@ -805,24 +805,7 @@ Using the notation defined above, the operators \(E_i\) are called <i>POVM eleme
 </ul>
 </div>
 </section>
-<!-- Footnotes --><!-- 
-<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">This can be generalized to POVM measurements which will be introduced below.</p></div></div>
-
-<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Note that here \(\ket{e_{i,j}}\) are vectors on \(\mathcal H_A\), but we omit the index \(A\) to lighten the notation.</p></div></div>
-
-<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Note that we cannot say all purifications are unitarily equivalent.</p></div></div>
-
-<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4" role="doc-backlink">4</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Because \(\mathcal H_A \simeq \mathcal H_{A'}\) the two bases have the same number of vectors.</p></div></div>
-
-<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5" role="doc-backlink">5</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">\(\langle \psi, (\one_{A'} \otimes V^k) \rho_{A'A} (\one_{A'}\otimes V^{k\dagger}) \psi \rangle = \langle \psi (\one_{A'} \otimes V^{k\dagger}),  \rho_{A'A} (\one_{A'}\otimes V^{k\dagger}) \psi \rangle \geq 0\) using \(\psi' = (\one_{A'}\otimes V^{k\dagger}) \psi\) and the positivity of \(\rho\).</p></div></div>
-
-<div class="footdef"><sup><a id="fn.6" class="footnum" href="#fnr.6" role="doc-backlink">6</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">To this end, we just need to embed this evolution from \(\mathcal H_A\) to \(\mathcal H_B \otimes \mathcal H_C\) into endomorphisms of \(\mathcal H_A \otimes \mathcal H_B \otimes \mathcal H_C\) and constructing a unitary that coincides with \(U\) when a given fiducial state \(\ket 0_B \ket 0_C\) is used as inputs of \(B\) and \(C\).</p></div></div>
-
-<div class="footdef"><sup><a id="fn.7" class="footnum" href="#fnr.7" role="doc-backlink">7</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">It is an unnecessarily complicated way of writing the update rule, but we will see that this is the correct way to generalize it to higher rank projectors, and later to generalized measurements.</p></div></div>
-
-<div class="footdef"><sup><a id="fn.8" class="footnum" href="#fnr.8" role="doc-backlink">8</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Remember that in fact, \(\Pi_{A,i}\otimes \one_B\) is also a higher-rank projector &#x2013;its rank is \(\rk(\Pi_{A,i})\times\dim(\mathcal H_B)\).</p></div></div>
-
- --></article>
+</article>
 
   </div><a class="u-url" href="/2023/09/19/open_quantum_systems.html" hidden></a>
 </article>
