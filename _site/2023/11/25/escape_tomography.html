@@ -7,8 +7,8 @@
 <meta name="generator" content="Jekyll v3.9.3" />
 <meta property="og:title" content="Quantum Programming: Tomography Based Escape Game" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Context A group of scientists (you) is locked in a quantum lab. There is a machin in one corner of the lab. It seems to be alive as the following command seems to trigger a reply curl &quot;https://quantum-26481f83aff0.herokuapp.com/&quot;." />
-<meta property="og:description" content="Context A group of scientists (you) is locked in a quantum lab. There is a machin in one corner of the lab. It seems to be alive as the following command seems to trigger a reply curl &quot;https://quantum-26481f83aff0.herokuapp.com/&quot;." />
+<meta name="description" content="Context A group of scientists (you) is locked in a quantum lab. There is a machine in one corner of the lab. It seems to be alive as the following command seems to trigger a reply curl &quot;https://quantum-26481f83aff0.herokuapp.com/&quot;." />
+<meta property="og:description" content="Context A group of scientists (you) is locked in a quantum lab. There is a machine in one corner of the lab. It seems to be alive as the following command seems to trigger a reply curl &quot;https://quantum-26481f83aff0.herokuapp.com/&quot;." />
 <link rel="canonical" href="https://h-oll.github.io/2023/11/25/escape_tomography.html" />
 <meta property="og:url" content="https://h-oll.github.io/2023/11/25/escape_tomography.html" />
 <meta property="og:site_name" content="Harold Ollivier" />
@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Quantum Programming: Tomography Based Escape Game" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-11-25T00:00:00+01:00","datePublished":"2023-11-25T00:00:00+01:00","description":"Context A group of scientists (you) is locked in a quantum lab. There is a machin in one corner of the lab. It seems to be alive as the following command seems to trigger a reply curl &quot;https://quantum-26481f83aff0.herokuapp.com/&quot;.","headline":"Quantum Programming: Tomography Based Escape Game","mainEntityOfPage":{"@type":"WebPage","@id":"https://h-oll.github.io/2023/11/25/escape_tomography.html"},"url":"https://h-oll.github.io/2023/11/25/escape_tomography.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-11-25T00:00:00+01:00","datePublished":"2023-11-25T00:00:00+01:00","description":"Context A group of scientists (you) is locked in a quantum lab. There is a machine in one corner of the lab. It seems to be alive as the following command seems to trigger a reply curl &quot;https://quantum-26481f83aff0.herokuapp.com/&quot;.","headline":"Quantum Programming: Tomography Based Escape Game","mainEntityOfPage":{"@type":"WebPage","@id":"https://h-oll.github.io/2023/11/25/escape_tomography.html"},"url":"https://h-oll.github.io/2023/11/25/escape_tomography.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://h-oll.github.io/feed.xml" title="Harold Ollivier" />
 
@@ -53,17 +53,27 @@
 
   <div class="post-content e-content" itemprop="articleBody">
     <h1 id="context">Context</h1>
-<p>A group of scientists (you) is locked in a quantum lab. There is a machin in one corner of the lab. It seems to be alive as the following command seems to trigger a reply <code class="language-plaintext highlighter-rouge">curl "https://quantum-26481f83aff0.herokuapp.com/"</code>.</p>
+<p>A group of scientists (you) is locked in a quantum lab. There is a
+machine in one corner of the lab. It seems to be alive as the
+following command seems to trigger a reply <code class="language-plaintext highlighter-rouge">curl
+"https://quantum-26481f83aff0.herokuapp.com/"</code>.</p>
 
-<p>On one desk there is the manual for the machine. You understand it is a configurable measurement device that can perform any qubit POVM once a pure state quantum source is connected to it.</p>
+<p>On one desk there is the manual for the machine. You understand it is
+a configurable measurement device that can perform any qubit POVM once
+a pure state quantum source is connected to it.</p>
 
-<p>One wall is covered with small boxes labelled by a 16-hex number key — <code class="language-plaintext highlighter-rouge">xxxxxxxxxxxxxxxx</code> where <code class="language-plaintext highlighter-rouge">x</code>s takes values in <code class="language-plaintext highlighter-rouge">0,...9,a,b,c,d,e,f</code>. These are the sources than can be connected to the machine. One has a special label <code class="language-plaintext highlighter-rouge">sandbox</code>.</p>
+<p>One wall is covered with small boxes labelled by a 16-hex number key
+— <code class="language-plaintext highlighter-rouge">xxxxxxxxxxxxxxxx</code> where <code class="language-plaintext highlighter-rouge">x</code>s takes values in
+<code class="language-plaintext highlighter-rouge">0,...9,a,b,c,d,e,f</code>. These are the sources than can be connected to
+the machine. One has a special label <code class="language-plaintext highlighter-rouge">sandbox</code>.</p>
 
-<p>For the first hour the machine is fully functional where different modes <code class="language-plaintext highlighter-rouge">p</code>, <code class="language-plaintext highlighter-rouge">m</code>, <code class="language-plaintext highlighter-rouge">n</code>, <code class="language-plaintext highlighter-rouge">u</code> can be selected. You have one hour to familiarize yourself with the functionning of the machine by connecting your source to it and making measurements.</p>
+<p>The machine has 4 modes <code class="language-plaintext highlighter-rouge">p</code>, <code class="language-plaintext highlighter-rouge">m</code>, <code class="language-plaintext highlighter-rouge">n</code>, <code class="language-plaintext highlighter-rouge">u</code> that can be selected. The
+manual says:</p>
 
-<p>The manual says:</p>
-
-<p>The <code class="language-plaintext highlighter-rouge">p</code> mode performs a POVM measurement on source <code class="language-plaintext highlighter-rouge">xxxxxxxxxxxxxxxx</code>. The result is obtained by sending a <code class="language-plaintext highlighter-rouge">POST</code> request to <code class="language-plaintext highlighter-rouge">https://quantum-26481f83aff0.herokuapp.com/p/xxxxxxxxxxxxxxxx</code>, where the payload is a <code class="language-plaintext highlighter-rouge">JSON</code> describing the POVM elements.</p>
+<p>The <code class="language-plaintext highlighter-rouge">p</code> mode performs a POVM measurement on a given source
+<code class="language-plaintext highlighter-rouge">xxxxxxxxxxxxxxxx</code>. The outcome is obtained by sending a <code class="language-plaintext highlighter-rouge">POST</code> request
+to <code class="language-plaintext highlighter-rouge">https://quantum-26481f83aff0.herokuapp.com/p/xxxxxxxxxxxxxxxx</code>,
+where the payload is a <code class="language-plaintext highlighter-rouge">JSON</code> describing the POVM elements.</p>
 
 <p>The following payload defines a POVM with a single element equal to the identity:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ "elements" : 
@@ -75,11 +85,13 @@
 
 <p>The response is a <code class="language-plaintext highlighter-rouge">JSON</code> looking like:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
-'error':    None                | STRING,
+'error':   None                 | STRING,
 'outcome': SINGLE-ELEMENT ARRAY | None  ,
 'trial':   INTEGER              | None  ,
 }
 </code></pre></div></div>
+
+<p>The number in the outcome corresponds to the index of the corresponding POVM element.</p>
 
 <p>Other modes are accessed in the same way.</p>
 
@@ -90,20 +102,19 @@
     <ol>
       <li>it first performs a unitary on the states produced by the source,</li>
       <li>it will add some low strength depolarizing noise</li>
-      <li>it add the same classical noise on the measurement results as when the selector is on <code class="language-plaintext highlighter-rouge">n</code>.</li>
+      <li>it adds the same classical noise on the measurement results as when the selector is on <code class="language-plaintext highlighter-rouge">n</code>.</li>
     </ol>
   </li>
 </ul>
 
 <h1 id="challenge">Challenge</h1>
 
-<p>Your task is to recover the unitary, the strength of the depolarizing noise and the probability <code class="language-plaintext highlighter-rouge">p</code> for the classical noise… knowing that when you use the <code class="language-plaintext highlighter-rouge">u</code> mode, it will destroy the source after 100 trials.</p>
+<p>Your task is to recover the unitary, the strength of the depolarizing noise and the probability <code class="language-plaintext highlighter-rouge">p</code> for the classical noise… knowing that when you use the <code class="language-plaintext highlighter-rouge">u</code> mode, it will destroy the source after 100 trials, making it useless for any further experiment. The scientists with broken sources will remain forever in “salle R”.</p>
 
 <h1 id="additional-information">Additional information</h1>
 
 <ul>
   <li>You might find a way to cheat. Don’t hesitate to use it.</li>
-  <li>All owners of destroyed sources will get stuck.</li>
   <li>You can partner and team up, but choose your firends wisely as they might use your source to make sure you will not escape.</li>
 </ul>
 

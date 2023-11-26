@@ -1,15 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://h-oll.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://h-oll.github.io/" rel="alternate" type="text/html" /><updated>2023-11-26T15:31:42+01:00</updated><id>https://h-oll.github.io/feed.xml</id><title type="html">Harold Ollivier</title><subtitle>Quantum Algorithms, Architectures, Applications and their Theory Team | QuantumTech@INRIA</subtitle><entry><title type="html">Quantum Programming: Tomography Based Escape Game</title><link href="https://h-oll.github.io/2023/11/25/escape_tomography.html" rel="alternate" type="text/html" title="Quantum Programming: Tomography Based Escape Game" /><published>2023-11-25T00:00:00+01:00</published><updated>2023-11-25T00:00:00+01:00</updated><id>https://h-oll.github.io/2023/11/25/escape_tomography</id><content type="html" xml:base="https://h-oll.github.io/2023/11/25/escape_tomography.html">&lt;h1 id=&quot;context&quot;&gt;Context&lt;/h1&gt;
-&lt;p&gt;A group of scientists (you) is locked in a quantum lab. There is a machin in one corner of the lab. It seems to be alive as the following command seems to trigger a reply &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;curl &quot;https://quantum-26481f83aff0.herokuapp.com/&quot;&lt;/code&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://h-oll.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://h-oll.github.io/" rel="alternate" type="text/html" /><updated>2023-11-26T15:40:38+01:00</updated><id>https://h-oll.github.io/feed.xml</id><title type="html">Harold Ollivier</title><subtitle>Quantum Algorithms, Architectures, Applications and their Theory Team | QuantumTech@INRIA</subtitle><entry><title type="html">Quantum Programming: Tomography Based Escape Game</title><link href="https://h-oll.github.io/2023/11/25/escape_tomography.html" rel="alternate" type="text/html" title="Quantum Programming: Tomography Based Escape Game" /><published>2023-11-25T00:00:00+01:00</published><updated>2023-11-25T00:00:00+01:00</updated><id>https://h-oll.github.io/2023/11/25/escape_tomography</id><content type="html" xml:base="https://h-oll.github.io/2023/11/25/escape_tomography.html">&lt;h1 id=&quot;context&quot;&gt;Context&lt;/h1&gt;
+&lt;p&gt;A group of scientists (you) is locked in a quantum lab. There is a
+machine in one corner of the lab. It seems to be alive as the
+following command seems to trigger a reply &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;curl
+&quot;https://quantum-26481f83aff0.herokuapp.com/&quot;&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;On one desk there is the manual for the machine. You understand it is a configurable measurement device that can perform any qubit POVM once a pure state quantum source is connected to it.&lt;/p&gt;
+&lt;p&gt;On one desk there is the manual for the machine. You understand it is
+a configurable measurement device that can perform any qubit POVM once
+a pure state quantum source is connected to it.&lt;/p&gt;
 
-&lt;p&gt;One wall is covered with small boxes labelled by a 16-hex number key — &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xxxxxxxxxxxxxxxx&lt;/code&gt; where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;s takes values in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0,...9,a,b,c,d,e,f&lt;/code&gt;. These are the sources than can be connected to the machine. One has a special label &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sandbox&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;One wall is covered with small boxes labelled by a 16-hex number key
+— &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xxxxxxxxxxxxxxxx&lt;/code&gt; where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;s takes values in
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0,...9,a,b,c,d,e,f&lt;/code&gt;. These are the sources than can be connected to
+the machine. One has a special label &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sandbox&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;For the first hour the machine is fully functional where different modes &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;m&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;u&lt;/code&gt; can be selected. You have one hour to familiarize yourself with the functionning of the machine by connecting your source to it and making measurements.&lt;/p&gt;
+&lt;p&gt;The machine has 4 modes &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;m&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;u&lt;/code&gt; that can be selected. The
+manual says:&lt;/p&gt;
 
-&lt;p&gt;The manual says:&lt;/p&gt;
-
-&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p&lt;/code&gt; mode performs a POVM measurement on source &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xxxxxxxxxxxxxxxx&lt;/code&gt;. The result is obtained by sending a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;POST&lt;/code&gt; request to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://quantum-26481f83aff0.herokuapp.com/p/xxxxxxxxxxxxxxxx&lt;/code&gt;, where the payload is a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JSON&lt;/code&gt; describing the POVM elements.&lt;/p&gt;
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p&lt;/code&gt; mode performs a POVM measurement on a given source
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xxxxxxxxxxxxxxxx&lt;/code&gt;. The outcome is obtained by sending a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;POST&lt;/code&gt; request
+to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://quantum-26481f83aff0.herokuapp.com/p/xxxxxxxxxxxxxxxx&lt;/code&gt;,
+where the payload is a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JSON&lt;/code&gt; describing the POVM elements.&lt;/p&gt;
 
 &lt;p&gt;The following payload defines a POVM with a single element equal to the identity:&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{ &quot;elements&quot; : 
@@ -21,11 +31,13 @@
 
 &lt;p&gt;The response is a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JSON&lt;/code&gt; looking like:&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
-&apos;error&apos;:    None                | STRING,
+&apos;error&apos;:   None                 | STRING,
 &apos;outcome&apos;: SINGLE-ELEMENT ARRAY | None  ,
 &apos;trial&apos;:   INTEGER              | None  ,
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The number in the outcome corresponds to the index of the corresponding POVM element.&lt;/p&gt;
 
 &lt;p&gt;Other modes are accessed in the same way.&lt;/p&gt;
 
@@ -36,20 +48,19 @@
     &lt;ol&gt;
       &lt;li&gt;it first performs a unitary on the states produced by the source,&lt;/li&gt;
       &lt;li&gt;it will add some low strength depolarizing noise&lt;/li&gt;
-      &lt;li&gt;it add the same classical noise on the measurement results as when the selector is on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;it adds the same classical noise on the measurement results as when the selector is on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;.&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;challenge&quot;&gt;Challenge&lt;/h1&gt;
 
-&lt;p&gt;Your task is to recover the unitary, the strength of the depolarizing noise and the probability &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p&lt;/code&gt; for the classical noise… knowing that when you use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;u&lt;/code&gt; mode, it will destroy the source after 100 trials.&lt;/p&gt;
+&lt;p&gt;Your task is to recover the unitary, the strength of the depolarizing noise and the probability &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p&lt;/code&gt; for the classical noise… knowing that when you use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;u&lt;/code&gt; mode, it will destroy the source after 100 trials, making it useless for any further experiment. The scientists with broken sources will remain forever in “salle R”.&lt;/p&gt;
 
 &lt;h1 id=&quot;additional-information&quot;&gt;Additional information&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;You might find a way to cheat. Don’t hesitate to use it.&lt;/li&gt;
-  &lt;li&gt;All owners of destroyed sources will get stuck.&lt;/li&gt;
   &lt;li&gt;You can partner and team up, but choose your firends wisely as they might use your source to make sure you will not escape.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -73,7 +84,7 @@ def get_outcome(url):
     print(outcome)
 
 get_outcome(url)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Lecture" /><summary type="html">Context A group of scientists (you) is locked in a quantum lab. There is a machin in one corner of the lab. It seems to be alive as the following command seems to trigger a reply curl &quot;https://quantum-26481f83aff0.herokuapp.com/&quot;.</summary></entry><entry><title type="html">Foundation and tools (of quantum information theory)</title><link href="https://h-oll.github.io/2023/09/26/foundations_and_tools.html" rel="alternate" type="text/html" title="Foundation and tools (of quantum information theory)" /><published>2023-09-26T00:00:00+02:00</published><updated>2023-09-26T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/09/26/foundations_and_tools</id><content type="html" xml:base="https://h-oll.github.io/2023/09/26/foundations_and_tools.html">&lt;article id=&quot;content&quot; class=&quot;content&quot;&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Lecture" /><summary type="html">Context A group of scientists (you) is locked in a quantum lab. There is a machine in one corner of the lab. It seems to be alive as the following command seems to trigger a reply curl &quot;https://quantum-26481f83aff0.herokuapp.com/&quot;.</summary></entry><entry><title type="html">Foundation and tools (of quantum information theory)</title><link href="https://h-oll.github.io/2023/09/26/foundations_and_tools.html" rel="alternate" type="text/html" title="Foundation and tools (of quantum information theory)" /><published>2023-09-26T00:00:00+02:00</published><updated>2023-09-26T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/09/26/foundations_and_tools</id><content type="html" xml:base="https://h-oll.github.io/2023/09/26/foundations_and_tools.html">&lt;article id=&quot;content&quot; class=&quot;content&quot;&gt;
 &lt;header&gt;
 &lt;h1 class=&quot;title&quot;&gt;Foundations and tools&lt;/h1&gt;
 &lt;/header&gt;&lt;p&gt;
