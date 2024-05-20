@@ -41,7 +41,7 @@ your own.
 | 16:00  | Petros Wallden                 | Quantum solutions to the Shortest Vector Problem                                |
 | 16:30  | Henry Bambury                  | Lattice-based cryptanalysis of post-quantum proposals                           |
 | 17:00  |                                | Discussion                                                                      |
-|--------|--------------------------------|---------------------------------------------------------------------------------|
+
 | MAY 24 |                                |                                                                                 |
 |--------|--------------------------------|---------------------------------------------------------------------------------|
 | 10:00  | Elham Kashefi                  | Why Crypto Community should care about Verification of Quantum Computing        |
@@ -57,6 +57,6 @@ your own.
 | 16:00  | Ivan Supic                     | Compiled XOR games                                                              |
 | 16:30  | Marco Túlio Quintino           | Higher-order quantum operations approach to quantum information and computation |
 | 17:00  | TBA                            |                                                                                 |
-| 17:30  |                                | Discussion about Future Collaborations                                          |
-|--------|--------------------------------|---------------------------------------------------------------------------------|
+| 17:30  |                                | Discussion about future collaborations                                          |
+
 
