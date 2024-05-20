@@ -1,8 +1,161 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://h-oll.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://h-oll.github.io/" rel="alternate" type="text/html" /><updated>2024-05-20T07:54:51+02:00</updated><id>https://h-oll.github.io/feed.xml</id><title type="html">Harold Ollivier</title><subtitle>Quantum Algorithms, Architectures, Applications and their Theory Team | QuantumTech@INRIA</subtitle><entry><title type="html">Cryptography in a Quantum World – Paris Rally, 2024 May 23-24</title><link href="https://h-oll.github.io/2024/01/01/cryptography_in_a_quantum_world.html" rel="alternate" type="text/html" title="Cryptography in a Quantum World – Paris Rally, 2024 May 23-24" /><published>2024-01-01T00:00:00+01:00</published><updated>2024-01-01T00:00:00+01:00</updated><id>https://h-oll.github.io/2024/01/01/cryptography_in_a_quantum_world</id><content type="html" xml:base="https://h-oll.github.io/2024/01/01/cryptography_in_a_quantum_world.html">&lt;h1 id=&quot;hello&quot;&gt;Hello&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://h-oll.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://h-oll.github.io/" rel="alternate" type="text/html" /><updated>2024-05-20T09:09:57+02:00</updated><id>https://h-oll.github.io/feed.xml</id><title type="html">Harold Ollivier</title><subtitle>Quantum Algorithms, Architectures, Applications and their Theory Team | QuantumTech@INRIA</subtitle><entry><title type="html">Cryptography in a Quantum World – Paris Rally, 2024 May 23-24</title><link href="https://h-oll.github.io/2024/05/20/cryptography_in_a_quantum_world.html" rel="alternate" type="text/html" title="Cryptography in a Quantum World – Paris Rally, 2024 May 23-24" /><published>2024-05-20T00:00:00+02:00</published><updated>2024-05-20T00:00:00+02:00</updated><id>https://h-oll.github.io/2024/05/20/cryptography_in_a_quantum_world</id><content type="html" xml:base="https://h-oll.github.io/2024/05/20/cryptography_in_a_quantum_world.html">&lt;p&gt;&lt;img src=&quot;/assets/CIQWPR2024.jpg&quot; alt=&quot;Logo&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/CIQWPR2024.jpg&quot; alt=&quot;Logo&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;This is an informal rally for the Paris crypto x quantum community to
+welcome Claude Crépeau as INRIA’s International Chair Awardee.&lt;/p&gt;
 
-&lt;h1 id=&quot;test&quot;&gt;Test&lt;/h1&gt;</content><author><name></name></author><category term="Event" /><summary type="html">Hello</summary></entry><entry><title type="html">Quantum Programming: Tomography Based Escape Game</title><link href="https://h-oll.github.io/2023/11/25/escape_tomography.html" rel="alternate" type="text/html" title="Quantum Programming: Tomography Based Escape Game" /><published>2023-11-25T00:00:00+01:00</published><updated>2023-11-25T00:00:00+01:00</updated><id>https://h-oll.github.io/2023/11/25/escape_tomography</id><content type="html" xml:base="https://h-oll.github.io/2023/11/25/escape_tomography.html">&lt;h1 id=&quot;context&quot;&gt;Context&lt;/h1&gt;
+&lt;p&gt;The objective of the meeting is to:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;get a sense of what everyone is currently doing&lt;/li&gt;
+  &lt;li&gt;identify and plan possible future collaborations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The format purposefully light and relaxed, with 2 to 3 30’ talks per
+session and at least 30’ to chat freely after the talks.&lt;/p&gt;
+
+&lt;h1 id=&quot;location&quot;&gt;Location&lt;/h1&gt;
+&lt;p&gt;The rally will take place in &lt;a href=&quot;https://what3words.com/streaks.begun.outdoor&quot;&gt;amphi 55B at
+Jussieu&lt;/a&gt;. For speakers:
+It has large blackboards and a video projection system.&lt;/p&gt;
+
+&lt;h1 id=&quot;food&quot;&gt;Food&lt;/h1&gt;
+&lt;p&gt;There will be coffee breaks outside the amphitheatrer. Lunch is on
+your own.&lt;/p&gt;
+
+&lt;h1 id=&quot;program-tentative&quot;&gt;Program (tentative)&lt;/h1&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;MAY 23&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;10:30&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Welcome&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;11:00&lt;/td&gt;
+      &lt;td&gt;Claude Crépeau&lt;/td&gt;
+      &lt;td&gt;TBA&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;14:00&lt;/td&gt;
+      &lt;td&gt;Lucas Hanouz&lt;/td&gt;
+      &lt;td&gt;Quantum-Assisted Secret Sharing on the Qline Architecture&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;14:30&lt;/td&gt;
+      &lt;td&gt;Maxime Garnier&lt;/td&gt;
+      &lt;td&gt;Weak Coherent Pulse Secure Delegated Quantum Computation&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;15:00&lt;/td&gt;
+      &lt;td&gt;TBA&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;15:30&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Discussion&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;16:00&lt;/td&gt;
+      &lt;td&gt;Petros Wallden&lt;/td&gt;
+      &lt;td&gt;Quantum solutions to the Shortest Vector Problem&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;16:30&lt;/td&gt;
+      &lt;td&gt;Henry Bambury&lt;/td&gt;
+      &lt;td&gt;Lattice-based cryptanalysis of post-quantum proposals&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;17:00&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Discussion&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;MAY 24&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;10:00&lt;/td&gt;
+      &lt;td&gt;Elham Kashefi&lt;/td&gt;
+      &lt;td&gt;Why Crypto Community should care about Verification of Quantum Computing&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;10:30&lt;/td&gt;
+      &lt;td&gt;Luka Music&lt;/td&gt;
+      &lt;td&gt;TBA&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;11:00&lt;/td&gt;
+      &lt;td&gt;Harold Ollivier&lt;/td&gt;
+      &lt;td&gt;Fault-Tolerant Verification of Quantum Computations&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;11:30&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Discussion&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;14:00&lt;/td&gt;
+      &lt;td&gt;Michael Oliveira&lt;/td&gt;
+      &lt;td&gt;Heuristic-free Verification-inspired Quantum Benchmarking&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;14:30&lt;/td&gt;
+      &lt;td&gt;Frederic Grosshans / Uta Meyer&lt;/td&gt;
+      &lt;td&gt;TBA&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;15:00&lt;/td&gt;
+      &lt;td&gt;Leo Colisson&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;15:30&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Discussion&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;16:00&lt;/td&gt;
+      &lt;td&gt;Ivan Supic&lt;/td&gt;
+      &lt;td&gt;Compiled XOR games&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;16:30&lt;/td&gt;
+      &lt;td&gt;Marco Túlio Quintino&lt;/td&gt;
+      &lt;td&gt;Higher-order quantum operations approach to quantum information and computation&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;17:00&lt;/td&gt;
+      &lt;td&gt;TBA&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;17:30&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Discussion about Future Collaborations&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name></name></author><category term="Event" /><summary type="html"></summary></entry><entry><title type="html">Quantum Programming: Tomography Based Escape Game</title><link href="https://h-oll.github.io/2023/11/25/escape_tomography.html" rel="alternate" type="text/html" title="Quantum Programming: Tomography Based Escape Game" /><published>2023-11-25T00:00:00+01:00</published><updated>2023-11-25T00:00:00+01:00</updated><id>https://h-oll.github.io/2023/11/25/escape_tomography</id><content type="html" xml:base="https://h-oll.github.io/2023/11/25/escape_tomography.html">&lt;h1 id=&quot;context&quot;&gt;Context&lt;/h1&gt;
 &lt;p&gt;A group of scientists (you) is locked in a quantum lab. There is a
 machine in one corner of the lab. It seems to be alive as the
 following command seems to trigger a reply &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;curl
