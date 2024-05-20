@@ -59,4 +59,5 @@ your own.
 | 17:00  | TBA                            |                                                                                 |
 | 17:30  |                                | Discussion about future collaborations                                          |
 
-
+# Support
+This event is supported by [PCQT](https://pcqt.fr) and the ANR project SecNISQ.
