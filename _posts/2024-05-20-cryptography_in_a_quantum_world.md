@@ -51,7 +51,7 @@ your own.
 |--------|--------------------------------|---------------------------------------------------------------------------------|
 | 14:00  | Michael Oliveira               | Heuristic-free Verification-inspired Quantum Benchmarking                       |
 | 14:30  | Frederic Grosshans / Uta Meyer | TBA                                                                             |
-| 15:00  | Leo Colisson                   |                                                                                 |
+| 15:00  | Leo Colisson                   | TBA                                                                                |
 | 15:30  |                                | Discussion                                                                      |
 |--------|--------------------------------|---------------------------------------------------------------------------------|
 | 16:00  | Ivan Supic                     | Compiled XOR games                                                              |
