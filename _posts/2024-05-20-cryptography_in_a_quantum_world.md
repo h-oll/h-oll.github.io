@@ -52,7 +52,7 @@ your own.
 |--------|--------------------------------|------------------------------------------------------------------------------|
 | 14:00  | Michael Oliveira               | Heuristic-free Verification-inspired Quantum Benchmarking                    |
 | 14:30  | Frederic Grosshans / Uta Meyer | TBA                                                                          |
-| 15:00  | TBA                            | Unclonable Cryptography in the Plain Model                                   |
+| 15:00  | Paul Hermouet                  | Unclonable Cryptography in the Plain Model                                   |
 | 15:30  |                                | Discussion                                                                   |
 |--------|--------------------------------|------------------------------------------------------------------------------|
 | 16:00  | Ivan Supic                     | Compiled XOR games                                                           |
