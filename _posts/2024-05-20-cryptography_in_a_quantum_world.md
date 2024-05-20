@@ -28,36 +28,37 @@ your own.
 
 # Program (tentative)
 
-| MAY 23 |                                |                                                                                 |
-|--------|--------------------------------|---------------------------------------------------------------------------------|
-| 10:30  |                                | Welcome                                                                         |
-| 11:00  | Claude Crépeau                 | TBA                                                                             |
-|--------|--------------------------------|---------------------------------------------------------------------------------|
-| 14:00  | Lucas Hanouz                   | Quantum-Assisted Secret Sharing on the Qline Architecture                       |
-| 14:30  | Maxime Garnier                 | Weak Coherent Pulse Secure Delegated Quantum Computation                        |
-| 15:00  | TBA                            |                                                                                 |
-| 15:30  |                                | Discussion                                                                      |
-|--------|--------------------------------|---------------------------------------------------------------------------------|
-| 16:00  | Petros Wallden                 | Quantum solutions to the Shortest Vector Problem                                |
-| 16:30  | Henry Bambury                  | Lattice-based cryptanalysis of post-quantum proposals                           |
-| 17:00  |                                | Discussion                                                                      |
+| MAY 23 |                |                                                           |
+|--------|----------------|-----------------------------------------------------------|
+| 10:30  |                | Welcome                                                   |
+| 11:00  | Claude Crépeau | TBA                                                       |
+|--------|----------------|-----------------------------------------------------------|
+| 14:00  | Lucas Hanouz   | Quantum-Assisted Secret Sharing on the Qline Architecture |
+| 14:30  | Maxime Garnier | Weak Coherent Pulse Secure Delegated Quantum Computation  |
+| 15:00  | Paul Hilaire   | TBA                                                          |
+| 15:30  |                | Discussion                                                |
+|--------|----------------|-----------------------------------------------------------|
+| 16:00  | Petros Wallden | Quantum solutions to the Shortest Vector Problem          |
+| 16:30  | Henry Bambury  | Lattice-based cryptanalysis of post-quantum proposals     |
+| 17:00  | Leo Colisson   | Round-optimal oblivious transfer without structure        |
+| 17:30  |                | Discussion                                                |
 
-| MAY 24 |                                |                                                                                 |
-|--------|--------------------------------|---------------------------------------------------------------------------------|
-| 10:00  | Elham Kashefi                  | Why Crypto Community should care about Verification of Quantum Computing        |
-| 10:30  | Luka Music                     | TBA                                                                             |
-| 11:00  | Harold Ollivier                | Fault-Tolerant Verification of Quantum Computations                             |
-| 11:30  |                                | Discussion                                                                      |
-|--------|--------------------------------|---------------------------------------------------------------------------------|
-| 14:00  | Michael Oliveira               | Heuristic-free Verification-inspired Quantum Benchmarking                       |
-| 14:30  | Frederic Grosshans / Uta Meyer | TBA                                                                             |
-| 15:00  | Leo Colisson                   | TBA                                                                                |
-| 15:30  |                                | Discussion                                                                      |
-|--------|--------------------------------|---------------------------------------------------------------------------------|
-| 16:00  | Ivan Supic                     | Compiled XOR games                                                              |
-| 16:30  | Marco Túlio Quintino           | Higher-order quantum operations approach to quantum information and computation |
-| 17:00  | TBA                            |                                                                                 |
-| 17:30  |                                | Discussion about future collaborations                                          |
+| MAY 24 |                                |                                                                              |
+|--------|--------------------------------|------------------------------------------------------------------------------|
+| 10:00  | Elham Kashefi                  | Why Crypto Community should care about Verification of Quantum Computing     |
+| 10:30  | Luka Music                     | On the necessity to integrate verification early into hardware architectures |
+| 11:00  | Harold Ollivier                | Fault-Tolerant Verification of Quantum Computations                          |
+| 11:30  |                                | Discussion                                                                   |
+|--------|--------------------------------|------------------------------------------------------------------------------|
+| 14:00  | Michael Oliveira               | Heuristic-free Verification-inspired Quantum Benchmarking                    |
+| 14:30  | Frederic Grosshans / Uta Meyer | TBA                                                                          |
+| 15:00  | TBA                            | Unclonable Cryptography in the Plain Model                                   |
+| 15:30  |                                | Discussion                                                                   |
+|--------|--------------------------------|------------------------------------------------------------------------------|
+| 16:00  | Ivan Supic                     | Compiled XOR games                                                           |
+| 16:30  | Jessica Bavaresco              | Higher-order operations approach to channel discrimination                   |
+| 17:00  | Marco Túlio Quintino           | How to store quantum operations on quantum states                            |
+| 18:00  |                                | Discussion about future collaborations                                       |
 
 # Support
 This event is supported by [PCQT](https://pcqt.fr) and the ANR project SecNISQ.
