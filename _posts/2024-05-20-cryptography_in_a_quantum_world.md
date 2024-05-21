@@ -61,7 +61,7 @@ your own.
 | 18:00  |                                | Discussion about future collaborations                                       |
 
 # Support
-This event is supported by [PCQT](https://pcqt.fr) and the ANR project SecNISQ.
+This event is supported by ANR project SecNISQ and
 
 ![PCQT](/assets/PCQT-full-txt-bleu.jpg)
 
