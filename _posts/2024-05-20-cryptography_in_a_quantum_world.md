@@ -62,3 +62,7 @@ your own.
 
 # Support
 This event is supported by [PCQT](https://pcqt.fr) and the ANR project SecNISQ.
+
+![PCQT](/assets/PCQT-full-txt-bleu.jpg)
+
+
