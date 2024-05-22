@@ -26,7 +26,7 @@ There will be coffee breaks outside the amphitheatrer. Lunch is on
 your own.
 
 
-# Program (tentative)
+# Program (final until next revision)
 
 | MAY 23 |                                |                                                           |
 |--------|--------------------------------|-----------------------------------------------------------|
