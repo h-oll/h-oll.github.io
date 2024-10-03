@@ -31,7 +31,7 @@ The following payload defines a POVM with a single element equal to the identity
 ```
 { "elements" : 
     [
-      [[1,0],[0,1]]
+      [[[1,0],[0,0]],[[0,0],[1,0]]]
     ]
 }
 ```
@@ -71,19 +71,28 @@ For accessing the machine with your source:
 
 ```
 import json
-import requests # needs to be installed
+import requests
 
 key = 'sandbox'
-endpoint = 'p' # 'm', 'n', 'u'
-url = 'https://quantum-26481f83aff0.herokuapp.com/' + endpoint +'/' + key
+endpoint = 'p' # 'p', 'm', 'n', 'u'
+url = 'http://127.0.0.1:8000/' + endpoint +'/' + key
 
 def get_outcome(url):
-    response = requests.post(url, json={"elements":[[[1,0],[0,1]]]})
-    print(response)
+    response = requests.post(url, json={
+        "elements":[
+            # element 1: (real, imaginary),
+            # element 2: (real, imaginary),
+            # ...
+            ([[1,0],[0,0]], [[1,-1],[0,0]]),     # This corresponds to [[1+1j, 0-1j],[0+0j, 0+0j]]
+            ([[0,0],[0,1]], [[-1,1],[0,0]])      # This corresponds to [[0-1j, 0+1j],[0+0j, 1+0j]]
+            ]
+        })
     error = response.json()["error"]
     trial = response.json()["trial"]
-    outcome = response.json()["outcome"][0]
-    print(outcome)
+    outcome = response.json()["outcome"]
+    print("Error: ", error)
+    print("Trial: ", trial)
+    print("Outcome: ", outcome)
 
 get_outcome(url)
 ```
