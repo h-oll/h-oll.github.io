@@ -10,7 +10,7 @@
 :ID:       d80fdfe4-d96f-4712-930b-3210dddf6609
 :END:
 - Date :: March 11, 2026
-- Location :: INRIA Paris, 48 rue Barrault, 75013 Paris
+- Location :: Salle Erdös, INRIA Paris, 48 rue Barrault, 75013 Paris
 - Registration :: [[https://cryptpad.fr/form/#/2/form/view/13mHzGzX3h4FBwZ+LeM3+xO5HzhI9Rs3EVkWKeqeqDo/][form]]
 - Tentative Program ::
   
@@ -33,8 +33,6 @@
 | 16:35 - 17:00 | [[id:7ce01402-eb05-4ea4-b792-b528911eee3f][Self-concordant Schrödinger operators...]]         | Alex Grilo (SU-CNRS)                 |
 | 17:05 - 17:30 | [[id:1c78abd0-0d8a-461e-828e-60142cefcbdd][Observing the weak breaking of...]]                | Alice Marché (UPSaclay-CNRS)         |
 
-
-
 * Talks
 
 ** Learning and certification of local time-dependent quantum dynamics and noise (Tim Möbus)
@@ -52,9 +50,34 @@ Coherent control, aka quantum control, is a central concept in quantum computing
 ** Stripe phases in strongly correlated electron systems: A slave-spin-1 approach toward spin-based quantum simulation (Olivier Simard)
 :PROPERTIES:
 :ID:       8cbf050e-0413-4ad7-b7cb-6e58a9306e82
+:BACKLINKS: [[id:d80fdfe4-d96f-4712-930b-3210dddf6609][Logistics]]
 :END:
 Richard Feynman famously emphasized the inherently quantum mechanical nature of the world, arguing that quantum systems are best simulated using synthetic quantum devices. In this spirit, quantum many-body systems composed of strongly correlated fermions on a lattice have long been central to condensed-matter physics. These systems are notoriously challenging to solve, even with state-of-the-art numerical techniques, particularly in parameter regimes where competing or cooperating degrees of freedom operate at comparable energy and length scales. In this work, we introduce a spin-1 slave-particle approach to approximately treat interacting fermionic models at arbitrary electron doping in an efficient and economical way. Within this framework, the original charge and spin degrees of freedom are mapped onto effective pseudo-spin and pseudo-fermion sectors, respectively. These sectors are then handled using a self-consistent cluster mean-field method. We explore the resulting phase diagram under various conditions and observe the emergence of charge and spin stripe phases within this formalism. Notably, these stripe patterns arise as a consequence of the cluster mean-field treatment of the pseudo-particle sectors and were not identified in earlier slave-particle studies. Our results show qualitative agreement with more reliable numerical approaches and provide a concrete theoretical example of a complex fermionic many-body state that could be realistically implemented and investigated using spin-based quantum simulators, such as Rydberg-atom platforms.
-** Composable Verification in the Circuit-Model via Magic-Blindness (Sami Abdul Sater)
+** Quantum error mitigation by hierarchy-informed sampling: chiral dynamics in the Schwinger model
+:PROPERTIES:
+:ID:       eaca9bf3-1de8-4d96-b062-63575d39e42b
+:BACKLINKS: [[id:d80fdfe4-d96f-4712-930b-3210dddf6609][Logistics]]
+:END:
+The phase diagram of QCD at finite densities remains numerically inaccessible by classical computations. Quantum computers, with their potential for exponential speedup, could overcome this challenge. However, their current physical implementations are affected by quantum noise. In this talk, I will introduce a novel quantum error mitigation technique based on an extended qubits BBGKY-like hierarchy. This mitigation scheme is applicable to any spin-chain quantum simulation, that is, whose Hamiltonian can be time-dependent and can encode arbitrary interactions among spins. The core idea of our method is to draw connected BBGKY equations from the hierarchy and use them to constrain a random sampling of possible mitigations. Our results indicate that the mitigation scheme, applied to simulations of the chiral magnetic effect in the (1+1)-Schwinger model, systematically and progressively improves the quality of the noisy measurements, as a larger selected portion of the BBGKY hierarchy constraints the mitigation.
+** Self-concordant Schrödinger operators: spectral gaps and optimization without condition numbers (Alex Grilo)
+:PROPERTIES:
+:ID:       7ce01402-eb05-4ea4-b792-b528911eee3f
+:BACKLINKS: [[id:d80fdfe4-d96f-4712-930b-3210dddf6609][Logistics]]
+:END:
+Spectral gaps play a fundamental role in many areas of mathematics, computer science, and physics. In quantum mechanics, the spectral gap of Schrödinger operators has a long history of study due to its physical relevance, while in quantum computing spectral gaps are an important proxy for efficiency, such as in the quantum adiabatic algorithm. Motivated by convex optimization, we study Schrödinger operators associated with self-concordant barriers over convex domains and prove non-asymptotic lower bounds on the spectral gap for this class of operators. Significantly, we find that the spectral gap does not display any condition-number dependence when the usual Laplacian is replaced by the Laplace--Beltrami operator, which uses second-order information of the barrier and hence can take the curvature of the barrier into account. As an algorithmic application, we construct a novel quantum interior point method that applies to arbitrary self-concordant barriers and shows no condition-number dependence. To achieve this we combine techniques from semiclassical analysis, convex optimization, and quantum annealing. 
+** Composable privacy of networked quantum sensing (Naomi Solomons)
+:PROPERTIES:
+:ID:       931cfedd-792c-4cfa-b2fd-179018874e9e
+:BACKLINKS: [[id:d80fdfe4-d96f-4712-930b-3210dddf6609][Logistics]]
+:END:
+Networks of sensors are a promising scheme to deliver the benefits of quantum technologies in coming years, offering enhanced precision and accuracy for distributed metrology through the use of large entangled states. Recent work has additionally explored the privacy of these schemes, meaning that local parameters can be kept secret while a joint function of these is estimated by the network. The abstract cryptography model, which represents protocols in terms of resources, can be used to show that the two proposed definitions of quasi-privacy are composable, which enables the protocol to be securely included as a sub-routine to other schemes. We will illustrate this using the example of estimating the mean of a set of parameters using GHZ states.
+** Observing the weak breaking of conservation laws in a dipolar quantum spin chain (Alice Marché)
+:PROPERTIES:
+:ID:       1c78abd0-0d8a-461e-828e-60142cefcbdd
+:BACKLINKS: [[id:d80fdfe4-d96f-4712-930b-3210dddf6609][Logistics]]
+:END:
+Integrability, one of the main technical theoretical tools for the analysis of models of physical setups, is not just a mathematical property: it has deep physical consequences. Integrable and non-integrable setups display qualitative different physical behaviours, related to the presence (or absence) of families of extensive conservation laws. In the presence of weak perturbations, a well-known dilemma takes place: is the system akin to a thoroughly non-integrable setup, or does it carry memory that integrability has been only weakly broken? In this theoretical and experimental collaboration we show that the weak breaking of conservation laws leaves a clear experimental fingerprint in a one-dimensional quantum spin chain of as few as 14 Rydberg atoms. Weak integrability breaking from interatomic dipolar couplings is directly detectable within experimentally accessible times in the dynamics of non-local observables. In particular, magnetization fluctuations are highly sensitive to the breaking of fragile conservation laws and exhibit anomalous growth, which we observe experimentally; similar signatures appear in a semilocal string observable. We establish Rydberg-atom arrays as a platform to test perturbative descriptions of quantum many-body dynamics with weak integrability breaking. Based on: https://arxiv.org/abs/2602.02251
+** COMMENT Composable Verification in the Circuit-Model via Magic-Blindness (Sami Abdul Sater)
 :PROPERTIES:
 :ID:       b7aa124a-8b0a-4b23-9224-486185279b59
 :END:
@@ -63,23 +86,3 @@ As quantum computing machines move towards the utility regime, it is essential t
 This paper introduces a family of noise robust, composable and efficient verification protocols for Clifford + MSI circuits that are secure against arbitrary malicious behavior. This family contains the verification protocol of Broadbent (ToC, 2018), extends its security guarantees while also bridging the modularity gap between MBQC and circuit-based protocols, and reducing quantum communication costs. As a result, it opens the prospect of rapid implementation for near-term quantum devices.
 
 Our technique is based on a refined notion of blindness, called magic-blindness, which hides only the injected magic states -- the sole source of non-Clifford computational power. This enables verification by randomly interleaving computation rounds with classically simulable, magic-free test rounds, leading to a trap-based framework for verification. As a result, circuit-based quantum verification attains the same level of security and robustness previously known only in MBQC. It also optimizes the quantum communication cost as transmitted qubits are required only at the locations of state injection. 
-** Quantum error mitigation by hierarchy-informed sampling: chiral dynamics in the Schwinger model
-:PROPERTIES:
-:ID:       eaca9bf3-1de8-4d96-b062-63575d39e42b
-:END:
-The phase diagram of QCD at finite densities remains numerically inaccessible by classical computations. Quantum computers, with their potential for exponential speedup, could overcome this challenge. However, their current physical implementations are affected by quantum noise. In this talk, I will introduce a novel quantum error mitigation technique based on an extended qubits BBGKY-like hierarchy. This mitigation scheme is applicable to any spin-chain quantum simulation, that is, whose Hamiltonian can be time-dependent and can encode arbitrary interactions among spins. The core idea of our method is to draw connected BBGKY equations from the hierarchy and use them to constrain a random sampling of possible mitigations. Our results indicate that the mitigation scheme, applied to simulations of the chiral magnetic effect in the (1+1)-Schwinger model, systematically and progressively improves the quality of the noisy measurements, as a larger selected portion of the BBGKY hierarchy constraints the mitigation.
-** Self-concordant Schrödinger operators: spectral gaps and optimization without condition numbers (Alex Grilo)
-:PROPERTIES:
-:ID:       7ce01402-eb05-4ea4-b792-b528911eee3f
-:END:
-Spectral gaps play a fundamental role in many areas of mathematics, computer science, and physics. In quantum mechanics, the spectral gap of Schrödinger operators has a long history of study due to its physical relevance, while in quantum computing spectral gaps are an important proxy for efficiency, such as in the quantum adiabatic algorithm. Motivated by convex optimization, we study Schrödinger operators associated with self-concordant barriers over convex domains and prove non-asymptotic lower bounds on the spectral gap for this class of operators. Significantly, we find that the spectral gap does not display any condition-number dependence when the usual Laplacian is replaced by the Laplace--Beltrami operator, which uses second-order information of the barrier and hence can take the curvature of the barrier into account. As an algorithmic application, we construct a novel quantum interior point method that applies to arbitrary self-concordant barriers and shows no condition-number dependence. To achieve this we combine techniques from semiclassical analysis, convex optimization, and quantum annealing. 
-** Composable privacy of networked quantum sensing (Naomi Solomons)
-:PROPERTIES:
-:ID:       931cfedd-792c-4cfa-b2fd-179018874e9e
-:END:
-Networks of sensors are a promising scheme to deliver the benefits of quantum technologies in coming years, offering enhanced precision and accuracy for distributed metrology through the use of large entangled states. Recent work has additionally explored the privacy of these schemes, meaning that local parameters can be kept secret while a joint function of these is estimated by the network. The abstract cryptography model, which represents protocols in terms of resources, can be used to show that the two proposed definitions of quasi-privacy are composable, which enables the protocol to be securely included as a sub-routine to other schemes. We will illustrate this using the example of estimating the mean of a set of parameters using GHZ states.
-** Observing the weak breaking of conservation laws in a dipolar quantum spin chain (Alice Marché)
-:PROPERTIES:
-:ID:       1c78abd0-0d8a-461e-828e-60142cefcbdd
-:END:
-Integrability, one of the main technical theoretical tools for the analysis of models of physical setups, is not just a mathematical property: it has deep physical consequences. Integrable and non-integrable setups display qualitative different physical behaviours, related to the presence (or absence) of families of extensive conservation laws. In the presence of weak perturbations, a well-known dilemma takes place: is the system akin to a thoroughly non-integrable setup, or does it carry memory that integrability has been only weakly broken? In this theoretical and experimental collaboration we show that the weak breaking of conservation laws leaves a clear experimental fingerprint in a one-dimensional quantum spin chain of as few as 14 Rydberg atoms. Weak integrability breaking from interatomic dipolar couplings is directly detectable within experimentally accessible times in the dynamics of non-local observables. In particular, magnetization fluctuations are highly sensitive to the breaking of fragile conservation laws and exhibit anomalous growth, which we observe experimentally; similar signatures appear in a semilocal string observable. We establish Rydberg-atom arrays as a platform to test perturbative descriptions of quantum many-body dynamics with weak integrability breaking. Based on: https://arxiv.org/abs/2602.02251
