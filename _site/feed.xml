@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://h-oll.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://h-oll.github.io/" rel="alternate" type="text/html" /><updated>2025-06-09T23:01:46+02:00</updated><id>https://h-oll.github.io/feed.xml</id><title type="html">Harold Ollivier</title><subtitle>Quantum Information Processing Researcher in the QAT team -- Computer Science Department, Ecole Normale Supérieure</subtitle><entry><title type="html">Comments on the Quantum Software Manifesto</title><link href="https://h-oll.github.io/2025/06/09/quantum_software_manifesto.html" rel="alternate" type="text/html" title="Comments on the Quantum Software Manifesto" /><published>2025-06-09T00:00:00+02:00</published><updated>2025-06-09T00:00:00+02:00</updated><id>https://h-oll.github.io/2025/06/09/quantum_software_manifesto</id><content type="html" xml:base="https://h-oll.github.io/2025/06/09/quantum_software_manifesto.html"><![CDATA[<p>EQSI has published the <a href="https://www.eqsi.org/about/quantum-software-manifesto/">Quantum Software
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://h-oll.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://h-oll.github.io/" rel="alternate" type="text/html" /><updated>2025-10-18T10:14:23+02:00</updated><id>https://h-oll.github.io/feed.xml</id><title type="html">Harold Ollivier</title><subtitle>Quantum Information Processing Researcher in the QAT team -- Computer Science Department, Ecole Normale Supérieure</subtitle><entry><title type="html">Comments on the Quantum Software Manifesto</title><link href="https://h-oll.github.io/2025/06/09/quantum_software_manifesto.html" rel="alternate" type="text/html" title="Comments on the Quantum Software Manifesto" /><published>2025-06-09T00:00:00+02:00</published><updated>2025-06-09T00:00:00+02:00</updated><id>https://h-oll.github.io/2025/06/09/quantum_software_manifesto</id><content type="html" xml:base="https://h-oll.github.io/2025/06/09/quantum_software_manifesto.html"><![CDATA[<p>EQSI has published the <a href="https://www.eqsi.org/about/quantum-software-manifesto/">Quantum Software
 Manifesto</a>. It
 aims to reach out to policy makers and the wider public to emphasize
 the role of software in the development of quantum information
@@ -360,7 +360,7 @@ def get_outcome(url):
     print("Outcome: ", outcome)
 
 get_outcome(url)
-</code></pre></div></div>]]></content><author><name></name></author><category term="Lecture" /><summary type="html"><![CDATA[Context A group of scientists (you) is locked in a quantum lab. There is a machine in one corner of the lab. It seems to be alive as the following command seems to trigger a reply curl "https://quantum-26481f83aff0.herokuapp.com/".]]></summary></entry><entry><title type="html">Foundation and tools (of quantum information theory)</title><link href="https://h-oll.github.io/2023/09/26/foundations_and_tools.html" rel="alternate" type="text/html" title="Foundation and tools (of quantum information theory)" /><published>2023-09-26T00:00:00+02:00</published><updated>2023-09-26T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/09/26/foundations_and_tools</id><content type="html" xml:base="https://h-oll.github.io/2023/09/26/foundations_and_tools.html"><![CDATA[<article id="content" class="content">
+</code></pre></div></div>]]></content><author><name></name></author><category term="Lecture" /><summary type="html"><![CDATA[Context A group of scientists (you) is locked in a quantum lab. There is a machine in one corner of the lab. It seems to be alive as the following command seems to trigger a reply curl "https://quantum-26481f83aff0.herokuapp.com/".]]></summary></entry><entry><title type="html">Foundation and tools (of quantum information theory)</title><link href="https://h-oll.github.io/2023/09/26/foundations_and_tools.md.hidden" rel="alternate" type="text/html" title="Foundation and tools (of quantum information theory)" /><published>2023-09-26T00:00:00+02:00</published><updated>2023-09-26T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/09/26/foundations_and_tools.md</id><content type="html" xml:base="https://h-oll.github.io/2023/09/26/foundations_and_tools.md.hidden"><![CDATA[<article id="content" class="content">
 <header>
 <h1 class="title">Foundations and tools</h1>
 </header><p>
@@ -378,43 +378,43 @@ State discrimination is the task of distinguishing between two known states give
 <h3 id="org51428eb"><span class="section-number-3">1.1.</span> Classical setting</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
-In the classical setting, the state can be thought of a one-bit register that is prepared in \(0\) with some probability \(p\) or \(q\) depending whether the sender is preparing one of the two states \(P\) or \(Q\).<label id="fnr.1" for="fnr-in.1.1064233" class="margin-toggle sidenote-number"><sup class="numeral">1</sup></label><input type="checkbox" id="fnr-in.1.1064233" class="margin-toggle" /><span class="sidenote"><sup class="numeral">1</sup>The interest of such task should be clear: the receiver is trying to recover the information about which state was prepared &#x2014; that could be one bit of a message for instance &#x2014; from the signal that he receives.</span> An extreme situation is when \(p = 1\) and \(q = 0\), that is \(P\) is a register with value 0, and \(Q\) is a register with value \(1\). Then it is easy to discriminate between the two upon reading the value of the register itself. Things get a bit more interesting whenever \(p,q \in (0,1)\). What is then the best guess that can be made about the state chosen by the sender?
+In the classical setting, the state can be thought of a one-bit register that is prepared in \(0\) with some probability \(p\) or \(q\) depending whether the sender is preparing one of the two states \(P\) or \(Q\).<label id='fnr.1' for='fnr-in.1.1064233' class='margin-toggle sidenote-number'><sup class='numeral'>1</sup></label><input type='checkbox' id='fnr-in.1.1064233' class='margin-toggle'><span class='sidenote'><sup class='numeral'>1</sup>The interest of such task should be clear: the receiver is trying to recover the information about which state was prepared &#x2014; that could be one bit of a message for instance &#x2014; from the signal that he receives.</span> An extreme situation is when \(p = 1\) and \(q = 0\), that is \(P\) is a register with value 0, and \(Q\) is a register with value \(1\). Then it is easy to discriminate between the two upon reading the value of the register itself. Things get a bit more interesting whenever \(p,q \in (0,1)\). What is then the best guess that can be made about the state chosen by the sender?
 </p>
 
 <p>
 The answer is given by applying Bayes rule after stating our prior on the behavior of the sender. Here, we assume that our initial knowledge about the behavior of the sender is that he can choose to prepare \(P\) or \(Q\) with equal probability, i.e. \(\frac 1 2\). If we denote by \(R\) the random variable that corresponds to the choice of \(P\) or \(Q\), then we have:
 </p>
 \begin{align}
-\Pr(b = 0, R = P) = p/2, &amp; \ \Pr(b = 1, R = P) = (1-p)/2  \\
-\Pr(b = 0, R = Q) = q/2, &amp; \ \Pr(b = 1, R = Q) = (1-q)/2.
+\Pr(b = 0, R = P) = p/2, & \ \Pr(b = 1, R = P) = (1-p)/2  \\
+\Pr(b = 0, R = Q) = q/2, & \ \Pr(b = 1, R = Q) = (1-q)/2.
 \end{align}
 <p>
-This in turn gives<label id="fnr.2" for="fnr-in.2.3788092" class="margin-toggle sidenote-number"><sup class="numeral">2</sup></label><input type="checkbox" id="fnr-in.2.3788092" class="margin-toggle" /><span class="sidenote"><sup class="numeral">2</sup>Remember that \(b \in \{0,1\}\) so that \(\Pr(b|R=P) = (1-b)p + b(1-p)\).</span>:
+This in turn gives<label id='fnr.2' for='fnr-in.2.3788092' class='margin-toggle sidenote-number'><sup class='numeral'>2</sup></label><input type='checkbox' id='fnr-in.2.3788092' class='margin-toggle'><span class='sidenote'><sup class='numeral'>2</sup>Remember that \(b \in \{0,1\}\) so that \(\Pr(b|R=P) = (1-b)p + b(1-p)\).</span>:
 </p>
 \begin{align}
-\Pr(R = P | b) &amp; = \frac{\Pr(b, R = P) }{\Pr(b)} = \frac{(1-b)\frac p 2 + b \frac{1-p}{2}}{(1-b)\frac{p+q}{2} + b (1-\frac{p+q}{2})} \\
-\Pr(R = Q | b) &amp; = \frac{\Pr(b, R = Q) }{\Pr(b)} = \frac{(1-b)\frac q 2 + b \frac{1-q}{2}}{(1-b)\frac{p+q}{2} + b (1-\frac{p+q}{2})}.
+\Pr(R = P | b) & = \frac{\Pr(b, R = P) }{\Pr(b)} = \frac{(1-b)\frac p 2 + b \frac{1-p}{2}}{(1-b)\frac{p+q}{2} + b (1-\frac{p+q}{2})} \\
+\Pr(R = Q | b) & = \frac{\Pr(b, R = Q) }{\Pr(b)} = \frac{(1-b)\frac q 2 + b \frac{1-q}{2}}{(1-b)\frac{p+q}{2} + b (1-\frac{p+q}{2})}.
 \end{align}
 <p>
 Given this, upon observing \(b\), the receiver should decide that \(R = P\) whenever \(\Pr(R = P | b) \geq \Pr(R = Q | b)\), i.e. whenever:
 </p>
 \begin{align}
-p-q &amp; \geq 0 \mbox{ for } b = 0\\
- q-p &amp; \geq 0 \mbox{ for } b = 1.
+p-q & \geq 0 \mbox{ for } b = 0\\
+ q-p & \geq 0 \mbox{ for } b = 1.
 \end{align}
 <p>
 By denoting \(\hat R\) the random variable that represents the choice of the receiver, we can now assess the success probability \(\Pr(\hat R = R)\). This probability is equal to:
 </p>
 \begin{align}
-Pr(\hat R = R ) &amp; = \Pr(b=0, R = P) \one_{p\geq q} + \Pr(b=1, R = P) \one_{p\leq q} \nonumber \\
-&amp; \qquad + \Pr(b=0, R = Q) \one_{q\geq p} + \Pr(b=1, R = Q) \one_{q\leq p} \\
-&amp; = \frac{p + 1 - q}{2} \one_{p\geq q} + \frac{1-p + q}{2} \one_{p\leq q}\\
-&amp; = \frac 1 2 + \frac 1 2 |p - q|.
+Pr(\hat R = R ) & = \Pr(b=0, R = P) \one_{p\geq q} + \Pr(b=1, R = P) \one_{p\leq q} \nonumber \\
+& \qquad + \Pr(b=0, R = Q) \one_{q\geq p} + \Pr(b=1, R = Q) \one_{q\leq p} \\
+& = \frac{p + 1 - q}{2} \one_{p\geq q} + \frac{1-p + q}{2} \one_{p\leq q}\\
+& = \frac 1 2 + \frac 1 2 |p - q|.
 \end{align}
 
 <div text="Trace distance for classical probabilities" class="definition" id="org28169bf">
 <p>
-The trace distance<label id="fnr.3" for="fnr-in.3.9132099" class="margin-toggle sidenote-number"><sup class="numeral">3</sup></label><input type="checkbox" id="fnr-in.3.9132099" class="margin-toggle" /><span class="sidenote"><sup class="numeral">3</sup>The normalization of the trace distance varies depending on authors. It is often normalized using an additional \(\frac{1}{2}\) factor so that the trace distance is between 0 and 1 for probability distributions.</span> between two probability distributions \(P\) and \(Q\) over some event space \(\Gamma\) is:
+The trace distance<label id='fnr.3' for='fnr-in.3.9132099' class='margin-toggle sidenote-number'><sup class='numeral'>3</sup></label><input type='checkbox' id='fnr-in.3.9132099' class='margin-toggle'><span class='sidenote'><sup class='numeral'>3</sup>The normalization of the trace distance varies depending on authors. It is often normalized using an additional \(\frac{1}{2}\) factor so that the trace distance is between 0 and 1 for probability distributions.</span> between two probability distributions \(P\) and \(Q\) over some event space \(\Gamma\) is:
 </p>
 \begin{equation}
 \| P - Q \|_1 = \sum_{\gamma \in \Gamma} |\Pr(P = \gamma) - \Pr(Q =\gamma)|.
@@ -501,13 +501,13 @@ We use the SVD of \(A = V \Delta W\) and write:
 </p>
 \begin{align}
 |\tr(UA) |
-&amp; = |\tr(UV\Delta W)| = \tr((\sqrt{\Delta})(\sqrt \Delta W UV)) \\
-&amp; \leq \sqrt{\tr(\sqrt \Delta \sqrt \Delta)} \sqrt{\tr ((\sqrt \Delta W UV)^\dagger (\sqrt \Delta W UV))} \\
-&amp; = \tr(\Delta) \\
-&amp; = \| A \|_1
+& = |\tr(UV\Delta W)| = \tr((\sqrt{\Delta})(\sqrt \Delta W UV)) \\
+& \leq \sqrt{\tr(\sqrt \Delta \sqrt \Delta)} \sqrt{\tr ((\sqrt \Delta W UV)^\dagger (\sqrt \Delta W UV))} \\
+& = \tr(\Delta) \\
+& = \| A \|_1
 \end{align}
 <p>
-where we have used Cauchy-Schwartz inequality<label id="fnr.4" for="fnr-in.4.7315089" class="margin-toggle sidenote-number"><sup class="numeral">4</sup></label><input type="checkbox" id="fnr-in.4.7315089" class="margin-toggle" /><span class="sidenote"><sup class="numeral">4</sup>\(|\langle A,B\rangle| \leq \|A\| \|B\|\) and equality if \(A \propto B\).</span> for the HS inner product. The equality is obtained for \(W U V = \one_{\mathcal H}\).
+where we have used Cauchy-Schwartz inequality<label id='fnr.4' for='fnr-in.4.7315089' class='margin-toggle sidenote-number'><sup class='numeral'>4</sup></label><input type='checkbox' id='fnr-in.4.7315089' class='margin-toggle'><span class='sidenote'><sup class='numeral'>4</sup>\(|\langle A,B\rangle| \leq \|A\| \|B\|\) and equality if \(A \propto B\).</span> for the HS inner product. The equality is obtained for \(W U V = \one_{\mathcal H}\).
 </p>
 
 </div>
@@ -533,12 +533,12 @@ Note that this holds indeed for \(A,B \in Hom(\mathcal H, \mathcal H')\).
 We use the variational characterization of the Trace-norm
 </p>
 \begin{align}
-\|A + B\|_1 &amp; = \max_U |\tr(U(A+B))| \\
-&amp; = |\tr(\hat U (A+B))| \\
-&amp; = |\tr(\hat U A) + \tr(\hat UB)| \\
-&amp; \leq |\tr(\hat U A)| + |\tr(\hat UB)| \\
-&amp; \leq \max_U |\tr(UA)| + \max_U |\tr(UB)| \\
-&amp; = \|A\|_1 + \|B\|_1,
+\|A + B\|_1 & = \max_U |\tr(U(A+B))| \\
+& = |\tr(\hat U (A+B))| \\
+& = |\tr(\hat U A) + \tr(\hat UB)| \\
+& \leq |\tr(\hat U A)| + |\tr(\hat UB)| \\
+& \leq \max_U |\tr(UA)| + \max_U |\tr(UB)| \\
+& = \|A\|_1 + \|B\|_1,
 \end{align}
 <p>
 Where \(\hat U\) is the maximizing \(U\) of the first line.
@@ -593,7 +593,7 @@ For \(\rho, \sigma\) density matrices , we have
 
 <div class="proof" id="org94b1c41">
 <p>
-Diagonalize \(\rho-\sigma\) and consider \(\Pi_{&gt;0}\) the projector onto the subspaces with positive eigenvalues and \(\Pi_{&lt;0}\) the projector onto the subspace with negative eigenvalues. Then define \(R\coloneqq \Pi_{&gt;0} (\rho - \sigma) \Pi_{&gt;0}\) and \(S\coloneqq \Pi_{&lt;0} (\sigma - \rho) \Pi_{&lt;0}\) so that \(R,S\) are PSD and \(|\rho-\sigma| = R + S\). Now because the positive and negative eigenvalue subspaces are orthogonal we have
+Diagonalize \(\rho-\sigma\) and consider \(\Pi_{>0}\) the projector onto the subspaces with positive eigenvalues and \(\Pi_{<0}\) the projector onto the subspace with negative eigenvalues. Then define \(R\coloneqq \Pi_{>0} (\rho - \sigma) \Pi_{>0}\) and \(S\coloneqq \Pi_{<0} (\sigma - \rho) \Pi_{<0}\) so that \(R,S\) are PSD and \(|\rho-\sigma| = R + S\). Now because the positive and negative eigenvalue subspaces are orthogonal we have
 </p>
 \begin{equation}
 \| \rho - \sigma\|_1 = \tr(|\rho - \sigma|) = \tr(R) + \tr(S).
@@ -603,13 +603,13 @@ But we also have \(\tr(\rho - \sigma) = 0 = \tr(R) - \tr(S)\) so that \(\| \rho 
 </p>
 
 <p>
-Now by construction \(\tr(R) = \tr(\Pi_{&gt;0} (\rho - \sigma) \Pi_{&gt;0}) = \tr(\Pi_{&gt;0} (\rho-\sigma))\). Finally, for any \(0 \leq K \leq \one\), we have
+Now by construction \(\tr(R) = \tr(\Pi_{>0} (\rho - \sigma) \Pi_{>0}) = \tr(\Pi_{>0} (\rho-\sigma))\). Finally, for any \(0 \leq K \leq \one\), we have
 </p>
 \begin{align}
-\tr(K(\rho-\sigma)) &amp; = \tr(K(R-S)) \\
-&amp; \leq \tr(K R) \\
-&amp; \leq \tr(R) \\
-&amp; = \frac{1}{2} \| \rho - \sigma\|_1.
+\tr(K(\rho-\sigma)) & = \tr(K(R-S)) \\
+& \leq \tr(K R) \\
+& \leq \tr(R) \\
+& = \frac{1}{2} \| \rho - \sigma\|_1.
 \end{align}
 <p>
 So that \(R\) is the maximizing \(K\).
@@ -685,7 +685,7 @@ To get an intuition we will consider the following channels: \(\mathcal E(\cdot)
 </p>
 
 <p>
-In a similar fashion, if \(\mathcal F(\cdot) \coloneqq Z(\cdot)Z\), then the optimal state is \(\ket +\) and the measurement is \(\{\ketbra +, \ketbra - \}\). The second case can actually be seen as the first one rotated by a Hadamard gate<label id="fnr.5" for="fnr-in.5.3271361" class="margin-toggle sidenote-number"><sup class="numeral">5</sup></label><input type="checkbox" id="fnr-in.5.3271361" class="margin-toggle" /><span class="sidenote"><sup class="numeral">5</sup>\(H\ket 0 = \ket +\) and \(H\ket 1 = \ket -\).</span>, and from there it is clear that using the naïve approach there is no single initial state and optimal measurement that can distinguish the 3 channels \(I, X, Z\) &#x2014; and a fortiori \(I, X, Y, Z\) &#x2014; with probability of success equal to 1.
+In a similar fashion, if \(\mathcal F(\cdot) \coloneqq Z(\cdot)Z\), then the optimal state is \(\ket +\) and the measurement is \(\{\ketbra +, \ketbra - \}\). The second case can actually be seen as the first one rotated by a Hadamard gate<label id='fnr.5' for='fnr-in.5.3271361' class='margin-toggle sidenote-number'><sup class='numeral'>5</sup></label><input type='checkbox' id='fnr-in.5.3271361' class='margin-toggle'><span class='sidenote'><sup class='numeral'>5</sup>\(H\ket 0 = \ket +\) and \(H\ket 1 = \ket -\).</span>, and from there it is clear that using the naïve approach there is no single initial state and optimal measurement that can distinguish the 3 channels \(I, X, Z\) &#x2014; and a fortiori \(I, X, Y, Z\) &#x2014; with probability of success equal to 1.
 </p>
 
 <p>
@@ -704,10 +704,10 @@ Super dense coding is a protocol allowing a sender (Alice) to send a 2-bit messa
 <li>He sets the received message \(\hat m\) depending on the observed Bell state:</li>
 </ol>
 \begin{align}
-\frac{1}{\sqrt 2}\left(\ket{00} + \ket{11}\right) &amp; \rightarrow \hat m = 0 \\
-\frac{1}{\sqrt 2}\left(\ket{00} - \ket{11}\right) &amp; \rightarrow \hat m = 3 \\
-\frac{1}{\sqrt 2}\left(\ket{10} + \ket{01}\right) &amp; \rightarrow \hat m = 1 \\
-\frac{1}{\sqrt 2}\left(\ket{10} - \ket{10}\right) &amp; \rightarrow \hat m = 2
+\frac{1}{\sqrt 2}\left(\ket{00} + \ket{11}\right) & \rightarrow \hat m = 0 \\
+\frac{1}{\sqrt 2}\left(\ket{00} - \ket{11}\right) & \rightarrow \hat m = 3 \\
+\frac{1}{\sqrt 2}\left(\ket{10} + \ket{01}\right) & \rightarrow \hat m = 1 \\
+\frac{1}{\sqrt 2}\left(\ket{10} - \ket{10}\right) & \rightarrow \hat m = 2
 \end{align}
 
 </div>
@@ -732,7 +732,7 @@ where \(\mathcal E, \mathcal F\) are CPTP maps from \(\mathcal H\) to \(\mathcal
 </p>
 
 <p>
-This defines an induced<label id="fnr.6" for="fnr-in.6.8629263" class="margin-toggle sidenote-number"><sup class="numeral">6</sup></label><input type="checkbox" id="fnr-in.6.8629263" class="margin-toggle" /><span class="sidenote"><sup class="numeral">6</sup>This means a norm over states is used to define a norm over operators using some optimization procedure</span> norm over channels:
+This defines an induced<label id='fnr.6' for='fnr-in.6.8629263' class='margin-toggle sidenote-number'><sup class='numeral'>6</sup></label><input type='checkbox' id='fnr-in.6.8629263' class='margin-toggle'><span class='sidenote'><sup class='numeral'>6</sup>This means a norm over states is used to define a norm over operators using some optimization procedure</span> norm over channels:
 </p>
 <div text="Diamond norm" class="definition" id="orged06e9f">
 <p>
@@ -790,15 +790,15 @@ F(\ket \psi, \ket \varphi) \coloneqq |\braket{\psi}{\varphi}|^2
 
 <div class="property" id="org0309529">
 \begin{align}
-&amp; F(\ket\psi, \ket \varphi) = F(\ket \varphi, \ket\psi) \\
-&amp; 0\leq F(\ket\psi,\ket\varphi) \leq 1
+& F(\ket\psi, \ket \varphi) = F(\ket \varphi, \ket\psi) \\
+& 0\leq F(\ket\psi,\ket\varphi) \leq 1
 \end{align}
 
 </div>
 
 <div class="remark" id="orgd963aaf">
 <p>
-There is a notion of classical fidelity for probability distributions \(p(x), q(x)\) called <i>Bhattacharyya overlap</i><label id="fnr.7" for="fnr-in.7.6606673" class="margin-toggle sidenote-number"><sup class="numeral">7</sup></label><input type="checkbox" id="fnr-in.7.6606673" class="margin-toggle" /><span class="sidenote"><sup class="numeral">7</sup>Show that for classical states expressed using quantum systems, the two correspond</span>:
+There is a notion of classical fidelity for probability distributions \(p(x), q(x)\) called <i>Bhattacharyya overlap</i><label id='fnr.7' for='fnr-in.7.6606673' class='margin-toggle sidenote-number'><sup class='numeral'>7</sup></label><input type='checkbox' id='fnr-in.7.6606673' class='margin-toggle'><span class='sidenote'><sup class='numeral'>7</sup>Show that for classical states expressed using quantum systems, the two correspond</span>:
 </p>
 \begin{equation}
 F(p,q) = \left(\sum_x \sqrt{p(x)q(x)}\right)^2.
@@ -821,7 +821,7 @@ The crucial ingredient in the above generalization is that the spectral decompos
 </p>
 <div text="Uhlmann Fidelity" class="definition" id="org237f3bb">
 <p>
-For \(\rho, \sigma\) density matrices over \(\mathcal H_A\) and \(\ket \psi, \ket \varphi \in \mathcal H_A \otimes \mathcal H_R\) such that \(\tr_R (\ketbra \psi) = \rho\) and \(\tr_R( \ketbra \varphi) = \sigma\), the Uhlmann fidelity is<label id="fnr.8" for="fnr-in.8.7668349" class="margin-toggle sidenote-number"><sup class="numeral">8</sup></label><input type="checkbox" id="fnr-in.8.7668349" class="margin-toggle" /><span class="sidenote"><sup class="numeral">8</sup>Remember that (i) purifications are equivalent up to a unitary on the reference system part &#x2014; hence starting from \(\ket \psi\) and \(\ket \varphi\) one can obtain all of them by applying \(U\) for \(\ket \psi\) and \(V\) for \(\ket \varphi\) &#x2014; and (ii) that maximizing over \(U\) and \(V\) is overkill as they impact the value to optimize through  \(U^\dagger V\) which is a unitary itself.</span>
+For \(\rho, \sigma\) density matrices over \(\mathcal H_A\) and \(\ket \psi, \ket \varphi \in \mathcal H_A \otimes \mathcal H_R\) such that \(\tr_R (\ketbra \psi) = \rho\) and \(\tr_R( \ketbra \varphi) = \sigma\), the Uhlmann fidelity is<label id='fnr.8' for='fnr-in.8.7668349' class='margin-toggle sidenote-number'><sup class='numeral'>8</sup></label><input type='checkbox' id='fnr-in.8.7668349' class='margin-toggle'><span class='sidenote'><sup class='numeral'>8</sup>Remember that (i) purifications are equivalent up to a unitary on the reference system part &#x2014; hence starting from \(\ket \psi\) and \(\ket \varphi\) one can obtain all of them by applying \(U\) for \(\ket \psi\) and \(V\) for \(\ket \varphi\) &#x2014; and (ii) that maximizing over \(U\) and \(V\) is overkill as they impact the value to optimize through  \(U^\dagger V\) which is a unitary itself.</span>
 </p>
 \begin{equation}
 F(\rho,\sigma) = \max_{U}|\bra\psi (\one_A \otimes U) \ket \varphi|^2.
@@ -844,12 +844,12 @@ F(\rho,\sigma) = \| \sqrt \rho \sqrt \sigma \|_1^2 = \left (\tr(\sqrt{\sqrt\sigm
 
 <div class="proof" id="org329b3d6">
 <p>
-Given \(\rho\) we can take the purification \(\ket \psi = (\sqrt{\rho} \otimes \one_R) \ket\Gamma\) where \(\ket\Gamma = \sum_i \ket{i}_A\otimes \ket{i}_R\) is a unnormalized maximally entangled state over \(\mathcal H_A \otimes \mathcal H_R\), and similarly for \(\sigma\). Then<label id="fnr.9" for="fnr-in.9.8429835" class="margin-toggle sidenote-number"><sup class="numeral">9</sup></label><input type="checkbox" id="fnr-in.9.8429835" class="margin-toggle" /><span class="sidenote"><sup class="numeral">9</sup>It is easy to show that for any \(A\in End(\mathcal H)\), \((A\otimes\one) \ket\Gamma = (\one\otimes A^T)\ket\Gamma\) with \(\ket\Gamma\) the maximally entangled state on \(\mathcal H \otimes \mathcal H\) by directly expressing the matrix elements \(\ketbra{i}{j}\). It is also straightforward using the same appraoch to show that \(\tr(A) = \bra\Gamma (A\otimes \one) \ket \Gamma\).</span> we have for any \(U\):
+Given \(\rho\) we can take the purification \(\ket \psi = (\sqrt{\rho} \otimes \one_R) \ket\Gamma\) where \(\ket\Gamma = \sum_i \ket{i}_A\otimes \ket{i}_R\) is a unnormalized maximally entangled state over \(\mathcal H_A \otimes \mathcal H_R\), and similarly for \(\sigma\). Then<label id='fnr.9' for='fnr-in.9.8429835' class='margin-toggle sidenote-number'><sup class='numeral'>9</sup></label><input type='checkbox' id='fnr-in.9.8429835' class='margin-toggle'><span class='sidenote'><sup class='numeral'>9</sup>It is easy to show that for any \(A\in End(\mathcal H)\), \((A\otimes\one) \ket\Gamma = (\one\otimes A^T)\ket\Gamma\) with \(\ket\Gamma\) the maximally entangled state on \(\mathcal H \otimes \mathcal H\) by directly expressing the matrix elements \(\ketbra{i}{j}\). It is also straightforward using the same appraoch to show that \(\tr(A) = \bra\Gamma (A\otimes \one) \ket \Gamma\).</span> we have for any \(U\):
 </p>
 \begin{align}
-|\bra \psi (\one_A \otimes U) \ket \varphi |^2 &amp; = |\bra{\Gamma} (\sqrt{\rho}\sqrt{\sigma} \otimes U) \ket \Gamma|^2 \\
-&amp; |\bra \Gamma (\sqrt{\rho}\sqrt{\sigma}U^T \otimes \one_R \ket \Gamma\|^2 \\
-&amp; = |\tr(\sqrt\rho \sqrt\sigma U^T)|^2.
+|\bra \psi (\one_A \otimes U) \ket \varphi |^2 & = |\bra{\Gamma} (\sqrt{\rho}\sqrt{\sigma} \otimes U) \ket \Gamma|^2 \\
+& |\bra \Gamma (\sqrt{\rho}\sqrt{\sigma}U^T \otimes \one_R \ket \Gamma\|^2 \\
+& = |\tr(\sqrt\rho \sqrt\sigma U^T)|^2.
 \end{align}
 <p>
 Now maximizing \(U\) and using the variational characterization of the trace-distance we get:
@@ -865,7 +865,7 @@ Now maximizing \(U\) and using the variational characterization of the trace-dis
 <li>\(F\) is symmetric</li>
 <li>\(F\) is multiplicative with respect to tensor products: \(F(\rho_A\otimes \rho_B, \sigma_A\otimes \sigma_B) = F(\rho_A, \sigma_A)F(\rho_B, \sigma_B)\)</li>
 <li>\(F\) is invariant under isometries</li>
-<li>\(F\) is non-decreasing over partial trace<label id="fnr.10" for="fnr-in.10.9070986" class="margin-toggle sidenote-number"><sup class="numeral">10</sup></label><input type="checkbox" id="fnr-in.10.9070986" class="margin-toggle" /><span class="sidenote"><sup class="numeral">10</sup>The idea is to use the variational characterization of \(F\) and realize that the lhs optimizes over unitaries on the reference system, while the rhs optimizes over unitaries on the reference system and \(B\). This means that forgetting about one part of the system makes it easier to take one state for the other. This is generalized in the next property. There, if you see \(\mathcal E\) as a possibly noisy evolution, it will improve the fidelity between the states. This kind of inequality is also referred to as <i>Data processing inequality</i>. Such inequality apply to various kind of quantities and are very useful in characterizing the evolution of soem quantities under noisy processes.</span>: \(F(\rho_{AB}, \sigma_{AB}) \leq F(\rho_A, \sigma_A)\)</li>
+<li>\(F\) is non-decreasing over partial trace<label id='fnr.10' for='fnr-in.10.9070986' class='margin-toggle sidenote-number'><sup class='numeral'>10</sup></label><input type='checkbox' id='fnr-in.10.9070986' class='margin-toggle'><span class='sidenote'><sup class='numeral'>10</sup>The idea is to use the variational characterization of \(F\) and realize that the lhs optimizes over unitaries on the reference system, while the rhs optimizes over unitaries on the reference system and \(B\). This means that forgetting about one part of the system makes it easier to take one state for the other. This is generalized in the next property. There, if you see \(\mathcal E\) as a possibly noisy evolution, it will improve the fidelity between the states. This kind of inequality is also referred to as <i>Data processing inequality</i>. Such inequality apply to various kind of quantities and are very useful in characterizing the evolution of soem quantities under noisy processes.</span>: \(F(\rho_{AB}, \sigma_{AB}) \leq F(\rho_A, \sigma_A)\)</li>
 <li>\(F\) is monotone under CPTP maps: \(F(\rho,\sigma) \leq F(\mathcal E (\rho), \mathcal E(\sigma))\)</li>
 <li>\(\sqrt F\) is jointly concave with respect to its arguments: \(\sqrt F(\lambda \rho + (1-\lambda) \rho', \lambda \sigma + (1-\lambda) \sigma') \geq \lambda\sqrt F(\rho,\sigma) + (1-\lambda) \sqrt F(\rho',\sigma')\)</li>
 <li>\(F\) is concave wrt one of its arguments: \(F(\lambda \rho + (1-\lambda)\rho',\sigma) \geq \lambda F(\rho, \
@@ -884,17 +884,17 @@ Now maximizing \(U\) and using the variational characterization of the trace-dis
 <h3 id="org8f592e8"><span class="section-number-3">4.1.</span> Overview of the operational definition of information and entropy</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
-Information is a concept that was quantified by Shannon in 1948. As for distance measures, it stems out of a simple foundational task involving sending messages from Alice to Bob. This task is called <i>source coding</i> and corresponds to Alice sending messages seen as random bit strings picked at random from a given distribution &#x2014; it could be for instance random words from the dictionary, random sentences from a book, or random paragraphs from a corpus of texts <label id="fnr.11" for="fnr-in.11.6529356" class="margin-toggle sidenote-number"><sup class="numeral">11</sup></label><input type="checkbox" id="fnr-in.11.6529356" class="margin-toggle" /><span class="sidenote"><sup class="numeral">11</sup>Think about chatGPT like situations where the entire web was scraped to gain knowledge about correlations between sentences.</span>. The objective of this task is to encode the message in such a way so that Alice sends the minimum number of bits to Bob, while still allowing Bob to decode the message perfectly. That is we want to find the best possible compression for the source emitting the messages.
+Information is a concept that was quantified by Shannon in 1948. As for distance measures, it stems out of a simple foundational task involving sending messages from Alice to Bob. This task is called <i>source coding</i> and corresponds to Alice sending messages seen as random bit strings picked at random from a given distribution &#x2014; it could be for instance random words from the dictionary, random sentences from a book, or random paragraphs from a corpus of texts <label id='fnr.11' for='fnr-in.11.6529356' class='margin-toggle sidenote-number'><sup class='numeral'>11</sup></label><input type='checkbox' id='fnr-in.11.6529356' class='margin-toggle'><span class='sidenote'><sup class='numeral'>11</sup>Think about chatGPT like situations where the entire web was scraped to gain knowledge about correlations between sentences.</span>. The objective of this task is to encode the message in such a way so that Alice sends the minimum number of bits to Bob, while still allowing Bob to decode the message perfectly. That is we want to find the best possible compression for the source emitting the messages.
 </p>
 
 <p>
-Shannon's source coding theorem states the following.  Let a source emit words out of an alphabet \(\Sigma\) &#x2014; say \(\{A,B,C,\ldots\}\). Consider \(f\) an encoding of these words into words over an alphabet \(\Pi\) &#x2014; say \(\{0, 1\}\) &#x2014; that is uniquely decodable<label id="fnr.12" for="fnr-in.12.9014515" class="margin-toggle sidenote-number"><sup class="numeral">12</sup></label><input type="checkbox" id="fnr-in.12.9014515" class="margin-toggle" /><span class="sidenote"><sup class="numeral">12</sup>This means that any input word is mapped to a single output codeword</span>. Then we can consider an optimal \(f\) that is such that when \(X\) is drawn at random from the words on \(\Sigma\) according to a known probability distribution, the expected length of the encoding \(|f(X)|\) is minimal &#x2014; i.e. we consider \(f\) such that \(\mathbb E(|f(X)|)\) is miminum. Then
+Shannon's source coding theorem states the following.  Let a source emit words out of an alphabet \(\Sigma\) &#x2014; say \(\{A,B,C,\ldots\}\). Consider \(f\) an encoding of these words into words over an alphabet \(\Pi\) &#x2014; say \(\{0, 1\}\) &#x2014; that is uniquely decodable<label id='fnr.12' for='fnr-in.12.9014515' class='margin-toggle sidenote-number'><sup class='numeral'>12</sup></label><input type='checkbox' id='fnr-in.12.9014515' class='margin-toggle'><span class='sidenote'><sup class='numeral'>12</sup>This means that any input word is mapped to a single output codeword</span>. Then we can consider an optimal \(f\) that is such that when \(X\) is drawn at random from the words on \(\Sigma\) according to a known probability distribution, the expected length of the encoding \(|f(X)|\) is minimal &#x2014; i.e. we consider \(f\) such that \(\mathbb E(|f(X)|)\) is miminum. Then
 </p>
 \begin{equation}
-\frac{H(X)}{\log_2(|\Pi|)} \leq \mathbb{E}[|f(X)|]  &lt; \frac{H(X)}{\log_2(|\Pi|)} + 1,
+\frac{H(X)}{\log_2(|\Pi|)} \leq \mathbb{E}[|f(X)|]  < \frac{H(X)}{\log_2(|\Pi|)} + 1,
 \end{equation}
 <p>
-where \(H(X) \coloneqq - \sum_x \Pr(X=x)\log_2(\Pr(X=x))\) is the entropy of \(X\). In other words, this theorem states that the best encoding \(f\) will produce codewords whose expected length is given by \(H(X)/\log_2(|\Pi|)\). If \(\Pi\) is taken to be bits, then \(H(X)\) directly measures the expected length of the codewords. This means that the average information content of \(X\) is \(H(X)\) bits as it is not possible to reduce the length of the codewords any further<label id="fnr.13" for="fnr-in.13.9959021" class="margin-toggle sidenote-number"><sup class="numeral">13</sup></label><input type="checkbox" id="fnr-in.13.9959021" class="margin-toggle" /><span class="sidenote"><sup class="numeral">13</sup>Lets beat that bound! Consider meassages made out of the 26 letters and 10 numerals, chosen uniformly at random. Consider the <a href="https://en.wikipedia.org/wiki/Morse_code#/media/File:International_Morse_Code.svg">Morse encoding</a>. We have \(H(X) = - \log_2(1/36) = 5.16\), while we see that all letters are encoded using at most 4 symbols and numerals exactly 5. Hence, we have \(\mathbb{E}(|f(X)|) \leq 4 \times \frac{26}{36} + 5 \times \frac{10}{36} = 4.22\). What's wrong?</span>
+where \(H(X) \coloneqq - \sum_x \Pr(X=x)\log_2(\Pr(X=x))\) is the entropy of \(X\). In other words, this theorem states that the best encoding \(f\) will produce codewords whose expected length is given by \(H(X)/\log_2(|\Pi|)\). If \(\Pi\) is taken to be bits, then \(H(X)\) directly measures the expected length of the codewords. This means that the average information content of \(X\) is \(H(X)\) bits as it is not possible to reduce the length of the codewords any further<label id='fnr.13' for='fnr-in.13.9959021' class='margin-toggle sidenote-number'><sup class='numeral'>13</sup></label><input type='checkbox' id='fnr-in.13.9959021' class='margin-toggle'><span class='sidenote'><sup class='numeral'>13</sup>Lets beat that bound! Consider meassages made out of the 26 letters and 10 numerals, chosen uniformly at random. Consider the <a href="https://en.wikipedia.org/wiki/Morse_code#/media/File:International_Morse_Code.svg">Morse encoding</a>. We have \(H(X) = - \log_2(1/36) = 5.16\), while we see that all letters are encoded using at most 4 symbols and numerals exactly 5. Hence, we have \(\mathbb{E}(|f(X)|) \leq 4 \times \frac{26}{36} + 5 \times \frac{10}{36} = 4.22\). What's wrong?</span>
 </p>
 
 <p>
@@ -916,12 +916,12 @@ Here, instead of going through the proofs of Shannon's theorems &#x2014; i.e. so
 <h4 id="org5ab3bfe"><span class="section-number-4">4.2.1.</span> Entropy of events</h4>
 <div class="outline-text-4" id="text-4-2-1">
 <p>
-We consider  \((\Omega, \mathcal E, P)\) a probability space<label id="fnr.14" for="fnr-in.14.1111253" class="margin-toggle sidenote-number"><sup class="numeral">14</sup></label><input type="checkbox" id="fnr-in.14.1111253" class="margin-toggle" /><span class="sidenote"><sup class="numeral">14</sup>\(\Omega\) is the sample space &#x2014; the set of possible outcomes &#x2014; \(\mathcal E\) is the event space &#x2014; each event is a set of outcomes &#x2014; and \(P\) a probability function which assigns a probability to each element in \(\mathcal E\)</span>. The entropy of an event \(E\) is a function over \(\mathcal E\):
+We consider  \((\Omega, \mathcal E, P)\) a probability space<label id='fnr.14' for='fnr-in.14.1111253' class='margin-toggle sidenote-number'><sup class='numeral'>14</sup></label><input type='checkbox' id='fnr-in.14.1111253' class='margin-toggle'><span class='sidenote'><sup class='numeral'>14</sup>\(\Omega\) is the sample space &#x2014; the set of possible outcomes &#x2014; \(\mathcal E\) is the event space &#x2014; each event is a set of outcomes &#x2014; and \(P\) a probability function which assigns a probability to each element in \(\mathcal E\)</span>. The entropy of an event \(E\) is a function over \(\mathcal E\):
 </p>
 \begin{align}
 H:\
-&amp;  \mathcal E \rightarrow \mathbb R \cup \{\infty\} \nonumber \\
-&amp; E \mapsto H(E) \nonumber
+&  \mathcal E \rightarrow \mathbb R \cup \{\infty\} \nonumber \\
+& E \mapsto H(E) \nonumber
 \end{align}
 <p>
 that satisfies:
@@ -982,7 +982,7 @@ H_{\min}(X) = \min_\sigma - \log_2(\Pr(X=\sigma)).
 </div>
 
 <p>
-It is also possible to define the Max-entropy, that is related to the number of events with non-zero probability<label id="fnr.15" for="fnr-in.15.2045346" class="margin-toggle sidenote-number"><sup class="numeral">15</sup></label><input type="checkbox" id="fnr-in.15.2045346" class="margin-toggle" /><span class="sidenote"><sup class="numeral">15</sup>This measures the maximum entropy a random variable with the same support as \(X\) could have.</span>:
+It is also possible to define the Max-entropy, that is related to the number of events with non-zero probability<label id='fnr.15' for='fnr-in.15.2045346' class='margin-toggle sidenote-number'><sup class='numeral'>15</sup></label><input type='checkbox' id='fnr-in.15.2045346' class='margin-toggle'><span class='sidenote'><sup class='numeral'>15</sup>This measures the maximum entropy a random variable with the same support as \(X\) could have.</span>:
 </p>
 
 <div text="Max-Entropy" class="definition" id="org2792c62">
@@ -990,7 +990,7 @@ It is also possible to define the Max-entropy, that is related to the number of 
 The Max-entropy of a random variable \(X\) with alphabet \(\Sigma\) is
 </p>
 \begin{equation}
-H_{\max}(X) = \log_2(|\{X=\sigma \ : \ \Pr(X=\sigma) &gt; 0\}|).
+H_{\max}(X) = \log_2(|\{X=\sigma \ : \ \Pr(X=\sigma) > 0\}|).
 \end{equation}
 
 </div>
@@ -1035,7 +1035,7 @@ H(X|Y) = \sum_y \Pr(Y=y) H(X|Y=y).
 
 <div text="Chain Rule" class="property" id="orgae591c0">
 <p>
-The Shannon entropy satisfies the <i>chain rule</i><label id="fnr.16" for="fnr-in.16.5359844" class="margin-toggle sidenote-number"><sup class="numeral">16</sup></label><input type="checkbox" id="fnr-in.16.5359844" class="margin-toggle" /><span class="sidenote"><sup class="numeral">16</sup>This allows to draw Venn diagrams for entropies.</span>:
+The Shannon entropy satisfies the <i>chain rule</i><label id='fnr.16' for='fnr-in.16.5359844' class='margin-toggle sidenote-number'><sup class='numeral'>16</sup></label><input type='checkbox' id='fnr-in.16.5359844' class='margin-toggle'><span class='sidenote'><sup class='numeral'>16</sup>This allows to draw Venn diagrams for entropies.</span>:
 </p>
 \begin{equation}
 H(X|YZ) = H(XY|Z) - H(Y|Z)
@@ -1094,7 +1094,7 @@ I(X:Y) = H(X) - H(X|Y) = H(X) + H(Y) - H(XY).
 
 <div class="property" id="orga8f7bb6">
 <p>
-The mutual information is non-negative.<label id="fnr.17" for="fnr-in.17.2863221" class="margin-toggle sidenote-number"><sup class="numeral">17</sup></label><input type="checkbox" id="fnr-in.17.2863221" class="margin-toggle" /><span class="sidenote"><sup class="numeral">17</sup>Use the strong subadditivity.</span>
+The mutual information is non-negative.<label id='fnr.17' for='fnr-in.17.2863221' class='margin-toggle sidenote-number'><sup class='numeral'>17</sup></label><input type='checkbox' id='fnr-in.17.2863221' class='margin-toggle'><span class='sidenote'><sup class='numeral'>17</sup>Use the strong subadditivity.</span>
 </p>
 
 </div>
@@ -1119,7 +1119,7 @@ This leads to the following definitions:
 </p>
 <div text="Von Neuman Entropy" class="definition" id="org0fc33df">
 <p>
-The von Neuman entropy for a system \(A\) in state \(\rho\) is<label id="fnr.18" for="fnr-in.18.1012379" class="margin-toggle sidenote-number"><sup class="numeral">18</sup></label><input type="checkbox" id="fnr-in.18.1012379" class="margin-toggle" /><span class="sidenote"><sup class="numeral">18</sup>Show that is matches the classical definition for classical states.</span>:
+The von Neuman entropy for a system \(A\) in state \(\rho\) is<label id='fnr.18' for='fnr-in.18.1012379' class='margin-toggle sidenote-number'><sup class='numeral'>18</sup></label><input type='checkbox' id='fnr-in.18.1012379' class='margin-toggle'><span class='sidenote'><sup class='numeral'>18</sup>Show that is matches the classical definition for classical states.</span>:
 </p>
 \begin{equation}
 H(A)_\rho = - \tr(\rho \log_2 \rho).
@@ -1303,7 +1303,7 @@ We prove that \(H(A|B)_{\rho_{AB}} \leq H(A|C)_{(\one_A\otimes \mathcal E)(\rho_
 </ul>
 </div>
 </section>
-</article>]]></content><author><name></name></author><category term="Lecture" /><summary type="html"><![CDATA[Foundations and tools In this lecture, we introduce the foundational questions of information theory, both in the classical and quantum setting. This serves to emphasize the fact that quantum information theory is really information theory specialized to information carriers that abide by the axioms of quantum mechanics, and as a motivation to develop a set of tools that are useful to tackle more complex tasks.]]></summary></entry><entry><title type="html">Open Quantum Systems</title><link href="https://h-oll.github.io/2023/09/19/open_quantum_systems.html" rel="alternate" type="text/html" title="Open Quantum Systems" /><published>2023-09-19T00:00:00+02:00</published><updated>2023-09-19T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/09/19/open_quantum_systems</id><content type="html" xml:base="https://h-oll.github.io/2023/09/19/open_quantum_systems.html"><![CDATA[<article id="content" class="content">
+</article>]]></content><author><name></name></author><category term="Lecture" /><summary type="html"><![CDATA[Foundations and tools In this lecture, we introduce the foundational questions of information theory, both in the classical and quantum setting. This serves to emphasize the fact that quantum information theory is really information theory specialized to information carriers that abide by the axioms of quantum mechanics, and as a motivation to develop a set of tools that are useful to tackle more complex tasks.]]></summary></entry><entry><title type="html">Open Quantum Systems</title><link href="https://h-oll.github.io/2023/09/19/open_quantum_systems.md.hidden" rel="alternate" type="text/html" title="Open Quantum Systems" /><published>2023-09-19T00:00:00+02:00</published><updated>2023-09-19T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/09/19/open_quantum_systems.md</id><content type="html" xml:base="https://h-oll.github.io/2023/09/19/open_quantum_systems.md.hidden"><![CDATA[<article id="content" class="content">
 <section id="outline-container-org39ca655" class="outline-2">
 <h2 id="org39ca655"><span class="section-number-2">1.</span> The Church of the larger Hilbert space</h2>
 <div class="outline-text-2" id="text-1">
@@ -1332,9 +1332,9 @@ The <i>partial trace</i> is a mapping from \(End(\mathcal H_A \otimes \mathcal H
 Using that for an operator in \(End(\mathcal H_A)\otimes End{\mathcal H_B}\) , \(O = \sum_{i,j,k,l} O_{ij,kl}\ketbra{i}{j}_A\otimes \ketbra{k}{l}_B\), for \(\{\ket i_A\}_i\) and \(\{\ket{k}_B\}_B\) bases of \(\mathcal H_A\) and \(\mathcal H_B\), we obtain:
 </p>
 \begin{align}
-\tr_A(O) &amp; = \sum_{i,k,l} O_{ii,kl}\ketbra{k}{l}_B \\
-&amp; = \sum_{i,k,l} (\bra i_A \otimes \bra k_B) O (\ket i_A \otimes \ket l_B) \ketbra{k}{l}_B\\
-&amp; = \sum_{i} (\bra i \otimes \one_B) O (\ket i \otimes \one_B),
+\tr_A(O) & = \sum_{i,k,l} O_{ii,kl}\ketbra{k}{l}_B \\
+& = \sum_{i,k,l} (\bra i_A \otimes \bra k_B) O (\ket i_A \otimes \ket l_B) \ketbra{k}{l}_B\\
+& = \sum_{i} (\bra i \otimes \one_B) O (\ket i \otimes \one_B),
 \end{align}
 <p>
 which is often abreviated by omitting the \(\one_B\) factor:
@@ -1350,8 +1350,8 @@ Let \(\rho_{X,Y} = \sum_{x,y} \Pr(X=x, Y=y) \ketbra x_X \otimes \ketbra y_Y\), f
 </p>
 \begin{align}
 \tr_X (\rho_{X,Y})
-&amp; = \sum_{x'} \sum_{x,y} \Pr(X=x, Y=y) \bra {x'}( \ketbra x) \ket{x'} \ketbra y \\
-&amp; = \sum_y \Pr(Y = y) \ketbra y,
+& = \sum_{x'} \sum_{x,y} \Pr(X=x, Y=y) \bra {x'}( \ketbra x) \ket{x'} \ketbra y \\
+& = \sum_y \Pr(Y = y) \ketbra y,
 \end{align}
 <p>
 where \(\Pr(Y=y) = \sum_x Pr(X=x, Y=y)\).
@@ -1364,14 +1364,14 @@ A similar understanding can be build for generic quantum states:
 </p>
 <div text="Marginals and Partial Trace (II)" class="remark" id="org06ea418">
 <p>
-The partial trace corresponds to measuring part of  a composite quantum system using a PVM and being struck by amnesia right after<label id="fnr.1" for="fnr-in.1.1088902" class="margin-toggle sidenote-number"><sup class="numeral">1</sup></label><input type="checkbox" id="fnr-in.1.1088902" class="margin-toggle" /><span class="sidenote"><sup class="numeral">1</sup>This can be generalized to POVM measurements which will be introduced below.</span>. Let \(\rho\) be a density matrix on \(\mathcal H_A \otimes \mathcal H_B\), then, for \(\{M_i \}\) a PVM on \(A\), we can define the set of quantum vectors  \(\{\ket {e_{i,j}}\}_{i,j}\) such that for a given \(i\), \(\{\ket {e_{i,j}}\}_{j}\) is an orthonormal basis of the subspace stabilized by \(M_i\). Then \(\{\ket {e_{i,j}}\}_{i,j}\) is an orthonormal basis of \(\mathcal H_A\) and \(M_i = \sum_{j} \ketbra{e_i{i,j}}\).<label id="fnr.2" for="fnr-in.2.2562339" class="margin-toggle sidenote-number"><sup class="numeral">2</sup></label><input type="checkbox" id="fnr-in.2.2562339" class="margin-toggle" /><span class="sidenote"><sup class="numeral">2</sup>Note that here \(\ket{e_{i,j}}\) are vectors on \(\mathcal H_A\), but we omit the index \(A\) to lighten the notation.</span> Hence, 
+The partial trace corresponds to measuring part of  a composite quantum system using a PVM and being struck by amnesia right after<label id='fnr.1' for='fnr-in.1.1088902' class='margin-toggle sidenote-number'><sup class='numeral'>1</sup></label><input type='checkbox' id='fnr-in.1.1088902' class='margin-toggle'><span class='sidenote'><sup class='numeral'>1</sup>This can be generalized to POVM measurements which will be introduced below.</span>. Let \(\rho\) be a density matrix on \(\mathcal H_A \otimes \mathcal H_B\), then, for \(\{M_i \}\) a PVM on \(A\), we can define the set of quantum vectors  \(\{\ket {e_{i,j}}\}_{i,j}\) such that for a given \(i\), \(\{\ket {e_{i,j}}\}_{j}\) is an orthonormal basis of the subspace stabilized by \(M_i\). Then \(\{\ket {e_{i,j}}\}_{i,j}\) is an orthonormal basis of \(\mathcal H_A\) and \(M_i = \sum_{j} \ketbra{e_i{i,j}}\).<label id='fnr.2' for='fnr-in.2.2562339' class='margin-toggle sidenote-number'><sup class='numeral'>2</sup></label><input type='checkbox' id='fnr-in.2.2562339' class='margin-toggle'><span class='sidenote'><sup class='numeral'>2</sup>Note that here \(\ket{e_{i,j}}\) are vectors on \(\mathcal H_A\), but we omit the index \(A\) to lighten the notation.</span> Hence, 
 </p>
 \begin{align}
-\tr_A(\rho) &amp; = \sum_{i,j} (\bra{e_{i,j}} \otimes \one_B) \rho (\ket{e_{i,j}} \otimes \one_B) \\
-&amp; = \sum_{i} \sum_{j} \bra{e_{i,j}} (M_i \otimes \one_B) \rho (M_i \otimes \one_B)\ket{e_{i,j}} \\
-&amp; = \sum_{i} \sum_{j} \bra{e_{i,j}} (M_i \otimes \one_B) \rho (M_i \otimes \one_B)\ket{e_{i,j}} \\
-&amp; = \sum_{i} \tr_A \left((M_i \otimes \one_B) \rho  (M_i \otimes \one_B) \right)\\
-&amp; = \sum_{i} p_i \frac{\tr_A \left((M_i \otimes \one_B) \rho  (M_i \otimes \one_B)\right)}{\tr \left((M_i \otimes \one_B) \rho  (M_i \otimes \one_B)\right)} \\
+\tr_A(\rho) & = \sum_{i,j} (\bra{e_{i,j}} \otimes \one_B) \rho (\ket{e_{i,j}} \otimes \one_B) \\
+& = \sum_{i} \sum_{j} \bra{e_{i,j}} (M_i \otimes \one_B) \rho (M_i \otimes \one_B)\ket{e_{i,j}} \\
+& = \sum_{i} \sum_{j} \bra{e_{i,j}} (M_i \otimes \one_B) \rho (M_i \otimes \one_B)\ket{e_{i,j}} \\
+& = \sum_{i} \tr_A \left((M_i \otimes \one_B) \rho  (M_i \otimes \one_B) \right)\\
+& = \sum_{i} p_i \frac{\tr_A \left((M_i \otimes \one_B) \rho  (M_i \otimes \one_B)\right)}{\tr \left((M_i \otimes \one_B) \rho  (M_i \otimes \one_B)\right)} \\
 \end{align}
 <p>
 with \(p_i = \tr \left((M_i \otimes \one_B) \rho  (M_i \otimes \one_B)\right)\) is the probability of obtaining outcome \(i\) when performing the PVM \(\{M_i\}\). Hence the partial trace corresponds to the average resulting state of subsystem \(B\) after the measurement, i.e. \(A\) is measured and the outcome is forgotten. Note that the invariance of the partial trace under unitary transformations implied that the resulting state does not depend on which measurement has been chosen. That is any measurement does the job equally well, even the measurement that consist of returning always the same outcome.
@@ -1389,8 +1389,8 @@ In particular, if we look at a composite system \(A-B\) in a global pure state, 
 Taking the partial trace we obtain:
 </p>
 \begin{align}
-\tr_A \ketbra{\psi} &amp; = \sum_m \bra m_A \left(\sum_{i,j,k,l} \psi_{i,k}\psi^*_{j,l} \ketbra{i}{j}_A\otimes\ketbra{k}{l}_B \right) \ket m_A \\
-&amp; = \sum_{i,k,l} \psi_{i,k}\psi^*_{i,l} \ketbra{k}{l}_B.
+\tr_A \ketbra{\psi} & = \sum_m \bra m_A \left(\sum_{i,j,k,l} \psi_{i,k}\psi^*_{j,l} \ketbra{i}{j}_A\otimes\ketbra{k}{l}_B \right) \ket m_A \\
+& = \sum_{i,k,l} \psi_{i,k}\psi^*_{i,l} \ketbra{k}{l}_B.
 \end{align}
 <p>
 We see that in general this does not correspond to a pure state \(\ketbra \psi\). One way to produce a mixed state on \(B\) is thus to consider a larger system \(A-B\) and to trace out \(A\). The natural question then is to what extent any mixed state \(\rho_B\) on \(B\) can be produced in this way, and whether there is or not a single way to do this.
@@ -1425,11 +1425,11 @@ Where \(\{\ket i_A\}\) is an orthonormal basis of \(\mathcal H_A\) a sufficientl
 Now, starting from a generic \(\rho_B\) positive semi-definite trace 1 matrix, we can use that fact that there is a canonical preparation of \(\rho_B\). Indeed, \(\rho_B\) is hermitian and can thus be diagonalized: \(\rho_B = \sum \lambda_i \ketbra{i}_B\). Hence, we can purify this preparation and obtain:
 </p>
 \begin{align}
-&amp; \rho_B = \tr_A \ketbra \psi, \mbox{ with} \\
-&amp; \ket \psi = \sum_i \sqrt{\lambda_i} \ket i_A \otimes \ket i_B
+& \rho_B = \tr_A \ketbra \psi, \mbox{ with} \\
+& \ket \psi = \sum_i \sqrt{\lambda_i} \ket i_A \otimes \ket i_B
 \end{align}
 <p>
-where \(\ket i_A\) is an orthonormal basis for an ancillary system \(A\). Note that one can always perform this purification using a system \(A\) with dimension equal to that of \(B\). Such purification is usually called "the" purification of \(\rho_B\) even though it is obviously not unique as one can perform basis changes on \(A\) without affecting the obtained state.<label id="fnr.3" for="fnr-in.3.5952836" class="margin-toggle sidenote-number"><sup class="numeral">3</sup></label><input type="checkbox" id="fnr-in.3.5952836" class="margin-toggle" /><span class="sidenote"><sup class="numeral">3</sup>Note that we cannot say all purifications are unitarily equivalent.</span>
+where \(\ket i_A\) is an orthonormal basis for an ancillary system \(A\). Note that one can always perform this purification using a system \(A\) with dimension equal to that of \(B\). Such purification is usually called "the" purification of \(\rho_B\) even though it is obviously not unique as one can perform basis changes on \(A\) without affecting the obtained state.<label id='fnr.3' for='fnr-in.3.5952836' class='margin-toggle sidenote-number'><sup class='numeral'>3</sup></label><input type='checkbox' id='fnr-in.3.5952836' class='margin-toggle'><span class='sidenote'><sup class='numeral'>3</sup>Note that we cannot say all purifications are unitarily equivalent.</span>
 </p>
 
 <p>
@@ -1458,12 +1458,12 @@ Let \(\mathcal H_A\) and \(\mathcal H_B\) be two finite dimensional Hilbert-spac
 \Gamma = \frac{1}{\sqrt d} \sum_{i = 1}^{d} \ket{e_i}_A' \otimes \ket{e_i}_A, 
 \end{equation}
 <p>
-for \(d = \dim(\mathcal H_A)\) and \(\{\ket{e_i}_A\}_i\) a basis of \(\mathcal H_A\) and \(\{\ket{e_i}_{A'}\}_i\) a basis of \(\mathcal H_{A'}\).<label id="fnr.4" for="fnr-in.4.6434766" class="margin-toggle sidenote-number"><sup class="numeral">4</sup></label><input type="checkbox" id="fnr-in.4.6434766" class="margin-toggle" /><span class="sidenote"><sup class="numeral">4</sup>Because \(\mathcal H_A \simeq \mathcal H_{A'}\) the two bases have the same number of vectors.</span> The Choi-Jamiolkowski Isomorphism relative to the bases \(\{\ket{e_i}_A\}_i\) and  \(\{\ket{e_i}_{A'}\}_i\) is the linear map:
+for \(d = \dim(\mathcal H_A)\) and \(\{\ket{e_i}_A\}_i\) a basis of \(\mathcal H_A\) and \(\{\ket{e_i}_{A'}\}_i\) a basis of \(\mathcal H_{A'}\).<label id='fnr.4' for='fnr-in.4.6434766' class='margin-toggle sidenote-number'><sup class='numeral'>4</sup></label><input type='checkbox' id='fnr-in.4.6434766' class='margin-toggle'><span class='sidenote'><sup class='numeral'>4</sup>Because \(\mathcal H_A \simeq \mathcal H_{A'}\) the two bases have the same number of vectors.</span> The Choi-Jamiolkowski Isomorphism relative to the bases \(\{\ket{e_i}_A\}_i\) and  \(\{\ket{e_i}_{A'}\}_i\) is the linear map:
 </p>
 \begin{align}
 \mathsf{C}\ : \
-&amp;  Hom(End(\mathcal H_A),End(\mathcal H_B)) \rightarrow End(\mathcal H_{A'} \otimes \mathcal H_B) \\
-&amp; \mathcal E \mapsto (\one_{A'} \otimes \mathcal E) [\ketbra{\Gamma}] 
+&  Hom(End(\mathcal H_A),End(\mathcal H_B)) \rightarrow End(\mathcal H_{A'} \otimes \mathcal H_B) \\
+& \mathcal E \mapsto (\one_{A'} \otimes \mathcal E) [\ketbra{\Gamma}] 
 \end{align}
 
 </div>
@@ -1495,8 +1495,8 @@ We then need to compute \((\one_{A'} \otimes \mathcal E_{ij,kl})[\ketbra\Gamma]\
 </p>
 \begin{align}
 (\one_{A'} \otimes \mathcal E_{ij,kl})[\ketbra{\Gamma}]
-&amp; = (\one_{A'} \otimes \mathcal E_{ij,kl})[\frac{1}{d}\sum_{mn}\ketbra{e_m}{e_n}_{A'}\otimes \ketbra{e_m}{e_n}_A] \\
-&amp; = \frac{1}{d}\ketbra{e_i}{e_j}_{A'}\otimes \ketbra{f_k}{f_l}_B
+& = (\one_{A'} \otimes \mathcal E_{ij,kl})[\frac{1}{d}\sum_{mn}\ketbra{e_m}{e_n}_{A'}\otimes \ketbra{e_m}{e_n}_A] \\
+& = \frac{1}{d}\ketbra{e_i}{e_j}_{A'}\otimes \ketbra{f_k}{f_l}_B
 \end{align}
 <p>
 which generates a basis of  \(End(\mathcal H_{A'} \otimes \mathcal H_B)\) when \(i,j,k,l\) are varied. So we just prooved that \(\mathsf C\) is sendind a basis to a (non normalized) basis so it is an isomorphism.
@@ -1524,8 +1524,8 @@ Equipped with the Choi-Jamiolkowski isomorphism between operators on endomorphis
 First, we realize that for any preparation of \(\rho\) as \(\{(\rho_1, p_1), (\rho_2, p_2)\}\) then we should have
 </p>
 \begin{align}
-\mathcal E[\rho] &amp; = \mathcal E[p_1 \rho_1 + p_2 \rho_2] \\
-&amp; = p_1 \mathcal E[\rho_1] + p_2 \mathcal E[\rho_2].
+\mathcal E[\rho] & = \mathcal E[p_1 \rho_1 + p_2 \rho_2] \\
+& = p_1 \mathcal E[\rho_1] + p_2 \mathcal E[\rho_2].
 \end{align}
 <p>
 This implies that \(\mathcal E\) is linear but also that \(\mathcal E[\rho]\) is a positive semi-definite operator with unit trace.
@@ -1668,8 +1668,8 @@ which gives \(\mathcal E[\rho_A] = \sum_k V^k \rho_A V^{k\dagger}\) using \(\mat
 Additionally, because \(\mathcal E\) is trace preserving, \(\tr(\mathcal E[{\ketbra{i}{j}}_A]) = \delta_{i,j}\). But
 </p>
 \begin{align}
-\tr(\mathcal E[{\ketbra{i}{j}}_A]) &amp; = \tr\left (\sum_k V^k{\ketbra{i}{j}}_A V^{k\dagger} \right) \\
-    &amp; = \bra j_A \left(\sum_k{V^{k\dagger} V^k}\right) \ket i_A,
+\tr(\mathcal E[{\ketbra{i}{j}}_A]) & = \tr\left (\sum_k V^k{\ketbra{i}{j}}_A V^{k\dagger} \right) \\
+    & = \bra j_A \left(\sum_k{V^{k\dagger} V^k}\right) \ket i_A,
 \end{align}
 <p>
 so that we have \(\sum_k V^{k\dagger}V^k = \one_A\).
@@ -1705,7 +1705,7 @@ Any set of Kraus operators defines an admissible CPTP map. This is because:
 </p>
 <ol class="org-ol">
 <li>The map defined by \(\sum_k V^k \rho V^{k\dagger}\) is linear;</li>
-<li>Is completely positive<label id="fnr.5" for="fnr-in.5.3217473" class="margin-toggle sidenote-number"><sup class="numeral">5</sup></label><input type="checkbox" id="fnr-in.5.3217473" class="margin-toggle" /><span class="sidenote"><sup class="numeral">5</sup>\(\langle \psi, (\one_{A'} \otimes V^k) \rho_{A'A} (\one_{A'}\otimes V^{k\dagger}) \psi \rangle = \langle \psi (\one_{A'} \otimes V^{k\dagger}),  \rho_{A'A} (\one_{A'}\otimes V^{k\dagger}) \psi \rangle \geq 0\) using \(\psi' = (\one_{A'}\otimes V^{k\dagger}) \psi\) and the positivity of \(\rho\).</span> as \((\one_{A'} \otimes V^k) \rho_{A'A} (\one_{A'}\otimes V^{k\dagger})\) is PSD for any \(k\) and any PSD \(\rho\)</li>
+<li>Is completely positive<label id='fnr.5' for='fnr-in.5.3217473' class='margin-toggle sidenote-number'><sup class='numeral'>5</sup></label><input type='checkbox' id='fnr-in.5.3217473' class='margin-toggle'><span class='sidenote'><sup class='numeral'>5</sup>\(\langle \psi, (\one_{A'} \otimes V^k) \rho_{A'A} (\one_{A'}\otimes V^{k\dagger}) \psi \rangle = \langle \psi (\one_{A'} \otimes V^{k\dagger}),  \rho_{A'A} (\one_{A'}\otimes V^{k\dagger}) \psi \rangle \geq 0\) using \(\psi' = (\one_{A'}\otimes V^{k\dagger}) \psi\) and the positivity of \(\rho\).</span> as \((\one_{A'} \otimes V^k) \rho_{A'A} (\one_{A'}\otimes V^{k\dagger})\) is PSD for any \(k\) and any PSD \(\rho\)</li>
 </ol>
 
 </div>
@@ -1729,20 +1729,20 @@ U = \sum_k V^k \otimes \ket k_C
 where \(C\) is a fiducial quantum system with sufficiently many dimensions to be able to pair each \(V^k\) with a different basis vector \(\ket k\). \(U\) is a map from \(\mathcal H_A\) to \(\mathcal B \otimes \mathcal C\) that satisfies
 </p>
 \begin{align}
-U^\dagger U &amp; = \left( \sum_k V^{k\dagger}\otimes \bra k \right ) \left( \sum_l V^l \otimes \ket l\right ) \\
-&amp; = sum_{kl} V^{k\dagger} V^l \braket{k,l} \\
-&amp; = \one_A. 
+U^\dagger U & = \left( \sum_k V^{k\dagger}\otimes \bra k \right ) \left( \sum_l V^l \otimes \ket l\right ) \\
+& = sum_{kl} V^{k\dagger} V^l \braket{k,l} \\
+& = \one_A. 
 \end{align}
 <p>
-Hence \(U\) is an isometry and can be seen as a closed quantum system evolution<label id="fnr.6" for="fnr-in.6.2637067" class="margin-toggle sidenote-number"><sup class="numeral">6</sup></label><input type="checkbox" id="fnr-in.6.2637067" class="margin-toggle" /><span class="sidenote"><sup class="numeral">6</sup>To this end, we just need to embed this evolution from \(\mathcal H_A\) to \(\mathcal H_B \otimes \mathcal H_C\) into endomorphisms of \(\mathcal H_A \otimes \mathcal H_B \otimes \mathcal H_C\) and constructing a unitary that coincides with \(U\) when a given fiducial state \(\ket 0_B \ket 0_C\) is used as inputs of \(B\) and \(C\).</span>
+Hence \(U\) is an isometry and can be seen as a closed quantum system evolution<label id='fnr.6' for='fnr-in.6.2637067' class='margin-toggle sidenote-number'><sup class='numeral'>6</sup></label><input type='checkbox' id='fnr-in.6.2637067' class='margin-toggle'><span class='sidenote'><sup class='numeral'>6</sup>To this end, we just need to embed this evolution from \(\mathcal H_A\) to \(\mathcal H_B \otimes \mathcal H_C\) into endomorphisms of \(\mathcal H_A \otimes \mathcal H_B \otimes \mathcal H_C\) and constructing a unitary that coincides with \(U\) when a given fiducial state \(\ket 0_B \ket 0_C\) is used as inputs of \(B\) and \(C\).</span>
 </p>
 
 <p>
 Now, to conclude, we simply realize that
 </p>
 \begin{align}
-U \rho_A U^\dagger &amp; = \sum_{kl} (V^k\otimes \ket k_C) \rho_A(V^{l\dagger}\otimes l_C) \\
-&amp; = \sum_{kl} (V^k \rho_A V^{l\dagger}) \otimes \ketbra{k}{l}_C,
+U \rho_A U^\dagger & = \sum_{kl} (V^k\otimes \ket k_C) \rho_A(V^{l\dagger}\otimes l_C) \\
+& = \sum_{kl} (V^k \rho_A V^{l\dagger}) \otimes \ketbra{k}{l}_C,
 \end{align}
 <p>
 so that \(\tr_C(U\rho U^\dagger) = \mathcal E[\rho]\).
@@ -1769,7 +1769,7 @@ We intoduced PVM as a collection of rank-1 projectors \(\{\Pi_i\}_i\) on the Hil
 <p>
 Yet, we haven't said anything about the post-measurement state. In fact, there is a variety of models for the measurements so that I chose <i>not</i> to include it in the main axioms of quantum theory. Yet, the question "what is the post-measurement state of the measured quantum system?" is legitimate. To answer it, we will nonetheless postulate that for what we will call <i>non destructive (and minimally disturbing) measurement</i> if one performs the same measurement twice in a row, without the system being able to evolve between the two rounds of measurements, then the results shoud be the same. That is, if we denote by \(\rho_i\) the post measurement state after outcome \(i\) is obtained, we should have:
 \[\tr(\Pi_j \rho_i) = \delta_{i,j}.\]
-Using the positivity of \(\rho_i\) and the fact that \(\tr(\rho_i)=1\), we can conclude that \(\rho_i = \Pi_i\). Hence, we can summarize this into the following formula<label id="fnr.7" for="fnr-in.7.7392082" class="margin-toggle sidenote-number"><sup class="numeral">7</sup></label><input type="checkbox" id="fnr-in.7.7392082" class="margin-toggle" /><span class="sidenote"><sup class="numeral">7</sup>It is an unnecessarily complicated way of writing the update rule, but we will see that this is the correct way to generalize it to higher rank projectors, and later to generalized measurements.</span>:
+Using the positivity of \(\rho_i\) and the fact that \(\tr(\rho_i)=1\), we can conclude that \(\rho_i = \Pi_i\). Hence, we can summarize this into the following formula<label id='fnr.7' for='fnr-in.7.7392082' class='margin-toggle sidenote-number'><sup class='numeral'>7</sup></label><input type='checkbox' id='fnr-in.7.7392082' class='margin-toggle'><span class='sidenote'><sup class='numeral'>7</sup>It is an unnecessarily complicated way of writing the update rule, but we will see that this is the correct way to generalize it to higher rank projectors, and later to generalized measurements.</span>:
 </p>
 \begin{equation}
 \rho_i = \frac{\Pi_i \rho \Pi_i}{\tr(\Pi_i \rho)} \label{eq:update}
@@ -1797,7 +1797,7 @@ This can be rewriten as
 \end{equation}
 <p>
 If we define \(\rho_i = \frac{(\Pi_i\otimes \one_B) \rho_{AB}(\Pi_i\otimes \one_B)}{\tr_{AB}((\Pi_{A,i}\otimes \one_B)\rho_{AB})}\)
-we have that \(\rho_{A,i} = \tr_B(\rho_i)\) and that \(\tr_A(\sum_i \rho_i) = \tr_A(\rho) = \rho_B\) so that \(\rho_i\) can be viewed as a candidate post-measurement state for the larger state \(\rho\). This can be shown to be the only possible case by extending the situation where \(\rho_{AB} = \rho_A \otimes \rho_B\) which can be deduced entirely from the locality condition. A similar argument can be made for the post-measurement state of single systems under PVM with higher rank projectors, so that we can now appreciate the fact that Eq. (\ref{eq:update}) applies to these more general situations<label id="fnr.8" for="fnr-in.8.2705295" class="margin-toggle sidenote-number"><sup class="numeral">8</sup></label><input type="checkbox" id="fnr-in.8.2705295" class="margin-toggle" /><span class="sidenote"><sup class="numeral">8</sup>Remember that in fact, \(\Pi_{A,i}\otimes \one_B\) is also a higher-rank projector &#x2013;its rank is \(\rk(\Pi_{A,i})\times\dim(\mathcal H_B)\).</span>.
+we have that \(\rho_{A,i} = \tr_B(\rho_i)\) and that \(\tr_A(\sum_i \rho_i) = \tr_A(\rho) = \rho_B\) so that \(\rho_i\) can be viewed as a candidate post-measurement state for the larger state \(\rho\). This can be shown to be the only possible case by extending the situation where \(\rho_{AB} = \rho_A \otimes \rho_B\) which can be deduced entirely from the locality condition. A similar argument can be made for the post-measurement state of single systems under PVM with higher rank projectors, so that we can now appreciate the fact that Eq. (\ref{eq:update}) applies to these more general situations<label id='fnr.8' for='fnr-in.8.2705295' class='margin-toggle sidenote-number'><sup class='numeral'>8</sup></label><input type='checkbox' id='fnr-in.8.2705295' class='margin-toggle'><span class='sidenote'><sup class='numeral'>8</sup>Remember that in fact, \(\Pi_{A,i}\otimes \one_B\) is also a higher-rank projector &#x2013;its rank is \(\rk(\Pi_{A,i})\times\dim(\mathcal H_B)\).</span>.
 </p>
 </div>
 </div>
@@ -1849,9 +1849,9 @@ Using the notation defined above, the operators \(E_i\) are called <i>POVM eleme
 </ul>
 </div>
 </section>
-</article>]]></content><author><name></name></author><category term="Lecture" /><summary type="html"><![CDATA[1. The Church of the larger Hilbert space The axioms of quantum mechanics presented earlier only refer to closed quantum systems. So it is only possible to describe what happens to a system completely isolated from other systems. This seems like a restriction, until you realize that indeed, it is always possible to view an open quantum system as a subsystem of a larger quantum system, which is itself isolated. In case of doubt, you can always throw in the full wave function of the universe! This lecture is about exploiting this ability to better understand states of open quantum systems, their dynamics and the allowed measurements. The term "Church of the larger Hilbert space" refers to this ability to enlarge the Hilbert space by adding more and sometimes fictitious subsystems in order to recover pure states and closed systems dynamics and measurements.]]></summary></entry><entry><title type="html">Closed Quantum Systems</title><link href="https://h-oll.github.io/2023/09/12/closed_quantum_systems.html" rel="alternate" type="text/html" title="Closed Quantum Systems" /><published>2023-09-12T00:00:00+02:00</published><updated>2023-09-12T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/09/12/closed_quantum_systems</id><content type="html" xml:base="https://h-oll.github.io/2023/09/12/closed_quantum_systems.html"><![CDATA[<article id="content" class="content">
+</article>]]></content><author><name></name></author><category term="Lecture" /><summary type="html"><![CDATA[1. The Church of the larger Hilbert space The axioms of quantum mechanics presented earlier only refer to closed quantum systems. So it is only possible to describe what happens to a system completely isolated from other systems. This seems like a restriction, until you realize that indeed, it is always possible to view an open quantum system as a subsystem of a larger quantum system, which is itself isolated. In case of doubt, you can always throw in the full wave function of the universe! This lecture is about exploiting this ability to better understand states of open quantum systems, their dynamics and the allowed measurements. The term "Church of the larger Hilbert space" refers to this ability to enlarge the Hilbert space by adding more and sometimes fictitious subsystems in order to recover pure states and closed systems dynamics and measurements.]]></summary></entry><entry><title type="html">Closed Quantum Systems</title><link href="https://h-oll.github.io/2023/09/12/closed_quantum_systems.md.hidden" rel="alternate" type="text/html" title="Closed Quantum Systems" /><published>2023-09-12T00:00:00+02:00</published><updated>2023-09-12T00:00:00+02:00</updated><id>https://h-oll.github.io/2023/09/12/closed_quantum_systems.md</id><content type="html" xml:base="https://h-oll.github.io/2023/09/12/closed_quantum_systems.md.hidden"><![CDATA[<article id="content" class="content">
 
-Quantum information processing is using quantum mechanics as a way to encode, process and retrieve information using quantum systems. The amount of quantum theory we need to describe these tasks from a computer science perspective is remarkably shallow. It only amounts to the axioms of closed systems quantum mechanics, and in many cases to 2-dimensional systems <label id="fnr.1" for="fnr-in.1.4685317" class="margin-toggle sidenote-number"><sup class="numeral">1</sup></label><input type="checkbox" id="fnr-in.1.4685317" class="margin-toggle" /><span class="sidenote"><sup class="numeral">1</sup>For digging into higher (discrete finite or infinite) dimensional systems, refer to lectures by U. Chabaud and F. Arzani.</span>.
+Quantum information processing is using quantum mechanics as a way to encode, process and retrieve information using quantum systems. The amount of quantum theory we need to describe these tasks from a computer science perspective is remarkably shallow. It only amounts to the axioms of closed systems quantum mechanics, and in many cases to 2-dimensional systems <label id='fnr.1' for='fnr-in.1.4685317' class='margin-toggle sidenote-number'><sup class='numeral'>1</sup></label><input type='checkbox' id='fnr-in.1.4685317' class='margin-toggle'><span class='sidenote'><sup class='numeral'>1</sup>For digging into higher (discrete finite or infinite) dimensional systems, refer to lectures by U. Chabaud and F. Arzani.</span>.
 
 <p>
 The aim of this lecture is to:
@@ -1876,11 +1876,11 @@ The aim of this lecture is to:
 <h2 id="org6b80d9e"><span class="section-number-2">2.</span> Axioms</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-From an operational point of view, a physical theory is a set of mathematical statements that can be combined to predict results of experiments. The crucial ingredient in this definition is the term "physical", as it makes the difference between a mathematical theory and a physical one. The connexion with experiments enforces how it can be disproven. It is unfortunately the only reality check &#x2014; or debugging tool &#x2014; available with what Nature is, and what the theory should describe<label id="fnr.2" for="fnr-in.2.2185609" class="margin-toggle sidenote-number"><sup class="numeral">2</sup></label><input type="checkbox" id="fnr-in.2.2185609" class="margin-toggle" /><span class="sidenote"><sup class="numeral">2</sup>It will be important to remember this as a guideline towards getting to complex tasks using quantum mechanics, and as a strong limitation for how quantum programs can be checked.</span>. In contrast, most mathematical statements have the advantage of being provable from simpler ones. This is a much more desirable situation as we can check the correctness of a statement instead of holding it true until Nature shows that it does not apply for some experiment. 
+From an operational point of view, a physical theory is a set of mathematical statements that can be combined to predict results of experiments. The crucial ingredient in this definition is the term "physical", as it makes the difference between a mathematical theory and a physical one. The connexion with experiments enforces how it can be disproven. It is unfortunately the only reality check &#x2014; or debugging tool &#x2014; available with what Nature is, and what the theory should describe<label id='fnr.2' for='fnr-in.2.2185609' class='margin-toggle sidenote-number'><sup class='numeral'>2</sup></label><input type='checkbox' id='fnr-in.2.2185609' class='margin-toggle'><span class='sidenote'><sup class='numeral'>2</sup>It will be important to remember this as a guideline towards getting to complex tasks using quantum mechanics, and as a strong limitation for how quantum programs can be checked.</span>. In contrast, most mathematical statements have the advantage of being provable from simpler ones. This is a much more desirable situation as we can check the correctness of a statement instead of holding it true until Nature shows that it does not apply for some experiment. 
 </p>
 
 <p>
-The role of axioms of quantum mechanics is precisely to provide a set of mathematical rules that can be combined <i>ad infinitum</i><label id="fnr.3" for="fnr-in.3.4646706" class="margin-toggle sidenote-number"><sup class="numeral">3</sup></label><input type="checkbox" id="fnr-in.3.4646706" class="margin-toggle" /><span class="sidenote"><sup class="numeral">3</sup>The important point is the claim that the axioms can be combined with one another and still give something meaningful physically. It is an extremely strong statement.</span> to design new experiments for which the predictions will correspond to physical reality &#x2014; unless one of the axioms is wrong. In a sense, it is trying to reduce as much as possible the gap between mathematical and physical theories by allowing to prove instead of just disprove <label id="fnr.4" for="fnr-in.4.7647783" class="margin-toggle sidenote-number"><sup class="numeral">4</sup></label><input type="checkbox" id="fnr-in.4.7647783" class="margin-toggle" /><span class="sidenote"><sup class="numeral">4</sup>Note that this is only partially true, as doing so assumes that axioms are correct. Yet, there is an advantage of doing so as axioms are meant to be easier to check. Reversing this argument, you can see quantum information processing as a way to test these axioms and their composability with one another in an incomparably complex way.</span>.
+The role of axioms of quantum mechanics is precisely to provide a set of mathematical rules that can be combined <i>ad infinitum</i><label id='fnr.3' for='fnr-in.3.4646706' class='margin-toggle sidenote-number'><sup class='numeral'>3</sup></label><input type='checkbox' id='fnr-in.3.4646706' class='margin-toggle'><span class='sidenote'><sup class='numeral'>3</sup>The important point is the claim that the axioms can be combined with one another and still give something meaningful physically. It is an extremely strong statement.</span> to design new experiments for which the predictions will correspond to physical reality &#x2014; unless one of the axioms is wrong. In a sense, it is trying to reduce as much as possible the gap between mathematical and physical theories by allowing to prove instead of just disprove <label id='fnr.4' for='fnr-in.4.7647783' class='margin-toggle sidenote-number'><sup class='numeral'>4</sup></label><input type='checkbox' id='fnr-in.4.7647783' class='margin-toggle'><span class='sidenote'><sup class='numeral'>4</sup>Note that this is only partially true, as doing so assumes that axioms are correct. Yet, there is an advantage of doing so as axioms are meant to be easier to check. Reversing this argument, you can see quantum information processing as a way to test these axioms and their composability with one another in an incomparably complex way.</span>.
 </p>
 
 <p>
@@ -1892,7 +1892,7 @@ Axioms span 3 physical concepts:
 <li>Evolutions</li>
 </ol>
 <p>
-The order chosen here is non-standard<label id="fnr.5" for="fnr-in.5.6095030" class="margin-toggle sidenote-number"><sup class="numeral">5</sup></label><input type="checkbox" id="fnr-in.5.6095030" class="margin-toggle" /><span class="sidenote"><sup class="numeral">5</sup>Usually, states are introduced first, followed by evolutions and measurement</span> but intended to emphasize the power and limitations that this axiom introduces for quantum information processing<label id="fnr.6" for="fnr-in.6.558217" class="margin-toggle sidenote-number"><sup class="numeral">6</sup></label><input type="checkbox" id="fnr-in.6.558217" class="margin-toggle" /><span class="sidenote"><sup class="numeral">6</sup>Trying to reduce the number of or simplify axioms is an important task that interests researchers on foundations of quantum mechanics. The reason is that fewer and simpler axioms should be easier to disprove, and provide a better intuition into what can be achieved with quantum mechanics. Examples include: measurement update rule can be derived from measurement + Manzanes paper on replacing the measurement axiom with composability.</span><sup>, </sup><label id="fnr.7" for="fnr-in.7.6902627" class="margin-toggle sidenote-number"><sup class="numeral">7</sup></label><input type="checkbox" id="fnr-in.7.6902627" class="margin-toggle" /><span class="sidenote"><sup class="numeral">7</sup>Alternate theories need to contain classical probability theory.</span><sup>, </sup><label id="fnr.8" for="fnr-in.8.6338781" class="margin-toggle sidenote-number"><sup class="numeral">8</sup></label><input type="checkbox" id="fnr-in.8.6338781" class="margin-toggle" /><span class="sidenote"><sup class="numeral">8</sup>When we imagine disproving a theory we need to pay attention to implicit assumptions. For instance, you could imagine trying to disprove the axioms, by testing them and accumulating statistics. But as such you already use the fact that this is meaningful (i.e. the axioms do not vary in time so that statistics can be accumulated and tell you something about the future). You also imply that axioms can be combined. Mathematically they do, but do they also physically? In a sense there is a 4th axiom that says the other 3 can be combined. One approach to trying to get rid of these implicit asumptions is to use cryptography, considering that only mathematics and locality are trusted, and that Nature is malicious.</span>.
+The order chosen here is non-standard<label id='fnr.5' for='fnr-in.5.6095030' class='margin-toggle sidenote-number'><sup class='numeral'>5</sup></label><input type='checkbox' id='fnr-in.5.6095030' class='margin-toggle'><span class='sidenote'><sup class='numeral'>5</sup>Usually, states are introduced first, followed by evolutions and measurement</span> but intended to emphasize the power and limitations that this axiom introduces for quantum information processing<label id='fnr.6' for='fnr-in.6.558217' class='margin-toggle sidenote-number'><sup class='numeral'>6</sup></label><input type='checkbox' id='fnr-in.6.558217' class='margin-toggle'><span class='sidenote'><sup class='numeral'>6</sup>Trying to reduce the number of or simplify axioms is an important task that interests researchers on foundations of quantum mechanics. The reason is that fewer and simpler axioms should be easier to disprove, and provide a better intuition into what can be achieved with quantum mechanics. Examples include: measurement update rule can be derived from measurement + Manzanes paper on replacing the measurement axiom with composability.</span><sup>, </sup><label id='fnr.7' for='fnr-in.7.6902627' class='margin-toggle sidenote-number'><sup class='numeral'>7</sup></label><input type='checkbox' id='fnr-in.7.6902627' class='margin-toggle'><span class='sidenote'><sup class='numeral'>7</sup>Alternate theories need to contain classical probability theory.</span><sup>, </sup><label id='fnr.8' for='fnr-in.8.6338781' class='margin-toggle sidenote-number'><sup class='numeral'>8</sup></label><input type='checkbox' id='fnr-in.8.6338781' class='margin-toggle'><span class='sidenote'><sup class='numeral'>8</sup>When we imagine disproving a theory we need to pay attention to implicit assumptions. For instance, you could imagine trying to disprove the axioms, by testing them and accumulating statistics. But as such you already use the fact that this is meaningful (i.e. the axioms do not vary in time so that statistics can be accumulated and tell you something about the future). You also imply that axioms can be combined. Mathematically they do, but do they also physically? In a sense there is a 4th axiom that says the other 3 can be combined. One approach to trying to get rid of these implicit asumptions is to use cryptography, considering that only mathematics and locality are trusted, and that Nature is malicious.</span>.
 </p>
 </div>
 </section>
@@ -1913,9 +1913,9 @@ The order chosen here is non-standard<label id="fnr.5" for="fnr-in.5.6095030" cl
 \(\langle \ , \ \rangle\) is an <i>inner-product</i> if:
 </p>
 \begin{align}
-&amp; \langle \psi, \psi \rangle &gt; 0, \mbox{ for } \psi \neq 0 \\
-&amp; \langle \psi, \alpha_1 \varphi_1 + \alpha_2 \varphi_2 \rangle = \alpha_1\langle \psi,  \varphi_1 \rangle + \alpha_2 \langle \psi, \varphi_2 \rangle \\
-&amp; \langle \psi, \varphi \rangle = \langle \varphi, \psi \rangle^*
+& \langle \psi, \psi \rangle > 0, \mbox{ for } \psi \neq 0 \\
+& \langle \psi, \alpha_1 \varphi_1 + \alpha_2 \varphi_2 \rangle = \alpha_1\langle \psi,  \varphi_1 \rangle + \alpha_2 \langle \psi, \varphi_2 \rangle \\
+& \langle \psi, \varphi \rangle = \langle \varphi, \psi \rangle^*
 \end{align}
 
 </div>
@@ -1942,8 +1942,8 @@ With \(\mathcal H\) and \(\mathcal H'\) being Hilbert spaces,
 <li>For \(O \in End(\mathcal H)\), \(O\) is <i>normal</i> if \(OO^\dagger = O^\dagger O\);</li>
 <li>For \(O \in End(\mathcal H)\), \(O\) is <i>unitary</i> if \(OO^\dagger = O^\dagger O = \one\);</li>
 <li>For \(O \in End(\mathcal H)\), \(O\) is <i>Hermitian</i> if \(O = O^\dagger\);</li>
-<li>For \(O \in End(\mathcal H)\), \(O\) is positive if \(\forall \psi, \ \langle \psi , O \psi\rangle \geq 0\),<label id="fnr.9" for="fnr-in.9.6063940" class="margin-toggle sidenote-number"><sup class="numeral">9</sup></label><input type="checkbox" id="fnr-in.9.6063940" class="margin-toggle" /><span class="sidenote"><sup class="numeral">9</sup>Positive operators are Hermitian. It's usually denoted \(O \geq 0\), and for \(O\) and \(O'\), \(O \geq O' \Leftrightarrow O-O' \geq 0\).</span> and <i>positive semi-definite</i> when \(\langle \psi , O \psi\rangle &gt; 0, \ \psi \neq 0\);</li>
-<li>For \(O \in End(\mathcal H)\), \(O\) is a projector<label id="fnr.10" for="fnr-in.10.3764816" class="margin-toggle sidenote-number"><sup class="numeral">10</sup></label><input type="checkbox" id="fnr-in.10.3764816" class="margin-toggle" /><span class="sidenote"><sup class="numeral">10</sup>Projectors are positive operators.</span> if \(O^2 = O\).</li>
+<li>For \(O \in End(\mathcal H)\), \(O\) is positive if \(\forall \psi, \ \langle \psi , O \psi\rangle \geq 0\),<label id='fnr.9' for='fnr-in.9.6063940' class='margin-toggle sidenote-number'><sup class='numeral'>9</sup></label><input type='checkbox' id='fnr-in.9.6063940' class='margin-toggle'><span class='sidenote'><sup class='numeral'>9</sup>Positive operators are Hermitian. It's usually denoted \(O \geq 0\), and for \(O\) and \(O'\), \(O \geq O' \Leftrightarrow O-O' \geq 0\).</span> and <i>positive semi-definite</i> when \(\langle \psi , O \psi\rangle > 0, \ \psi \neq 0\);</li>
+<li>For \(O \in End(\mathcal H)\), \(O\) is a projector<label id='fnr.10' for='fnr-in.10.3764816' class='margin-toggle sidenote-number'><sup class='numeral'>10</sup></label><input type='checkbox' id='fnr-in.10.3764816' class='margin-toggle'><span class='sidenote'><sup class='numeral'>10</sup>Projectors are positive operators.</span> if \(O^2 = O\).</li>
 </ul>
 
 </div>
@@ -1957,7 +1957,7 @@ A basis \(\{\psi_i\}_i\) of \(\mathcal H\) is <i>orthonormal</i> if \(\langle \p
 
 <div text="Matrix representation" class="remark" id="org2814ad4">
 <p>
-Given an orthonormal basis \(\{\psi_i\}_i\), the matrix representation of \(O \in End(\mathcal H)\) is \(O_{i,j} = \langle \psi_i, O \psi_j\rangle\). \(O\) is <i>diagonal wrt \(\{\psi_i\}_i\)</i> if the matrix \(O_{i,j}\) is diagonal<label id="fnr.11" for="fnr-in.11.1493979" class="margin-toggle sidenote-number"><sup class="numeral">11</sup></label><input type="checkbox" id="fnr-in.11.1493979" class="margin-toggle" /><span class="sidenote"><sup class="numeral">11</sup>Always keep in mind that \(O_{i,j}\) is <i>not</i> \(O\), e.g. \(O_{i,j}\) depends on the chosen basis!</span>. 
+Given an orthonormal basis \(\{\psi_i\}_i\), the matrix representation of \(O \in End(\mathcal H)\) is \(O_{i,j} = \langle \psi_i, O \psi_j\rangle\). \(O\) is <i>diagonal wrt \(\{\psi_i\}_i\)</i> if the matrix \(O_{i,j}\) is diagonal<label id='fnr.11' for='fnr-in.11.1493979' class='margin-toggle sidenote-number'><sup class='numeral'>11</sup></label><input type='checkbox' id='fnr-in.11.1493979' class='margin-toggle'><span class='sidenote'><sup class='numeral'>11</sup>Always keep in mind that \(O_{i,j}\) is <i>not</i> \(O\), e.g. \(O_{i,j}\) depends on the chosen basis!</span>. 
 </p>
 
 </div>
@@ -1995,7 +1995,7 @@ It naturally defines a norm over matrices, the Froebenius norm:
 
 </div>
 <p>
-\(\| A \|_F\) is also denoted \(\| A \|_2\) as it is the 2-norm of the spectral decomposition<label id="fnr.12" for="fnr-in.12.5175853" class="margin-toggle sidenote-number"><sup class="numeral">12</sup></label><input type="checkbox" id="fnr-in.12.5175853" class="margin-toggle" /><span class="sidenote"><sup class="numeral">12</sup>See below</span> of \(A\) when the operator is normal.
+\(\| A \|_F\) is also denoted \(\| A \|_2\) as it is the 2-norm of the spectral decomposition<label id='fnr.12' for='fnr-in.12.5175853' class='margin-toggle sidenote-number'><sup class='numeral'>12</sup></label><input type='checkbox' id='fnr-in.12.5175853' class='margin-toggle'><span class='sidenote'><sup class='numeral'>12</sup>See below</span> of \(A\) when the operator is normal.
 </p>
 
 
@@ -2004,13 +2004,13 @@ Note that these definitions can be extended to the infinite-dimensional case and
 </p>
 
 <p>
-Hermitian matrices form a subspace of all possible matrices. With the Hilbert-Schmidt inner product, the Hermitian matrices form a real Hilbert space. A convenient basis of such space for the \(2^n\) dimensional case are tensor products of the Pauli matrices<label id="fnr.13" for="fnr-in.13.8355323" class="margin-toggle sidenote-number"><sup class="numeral">13</sup></label><input type="checkbox" id="fnr-in.13.8355323" class="margin-toggle" /><span class="sidenote"><sup class="numeral">13</sup>Generalization to arbitrary dimensions are in section 4.1.7 of [Ren]</span>:
+Hermitian matrices form a subspace of all possible matrices. With the Hilbert-Schmidt inner product, the Hermitian matrices form a real Hilbert space. A convenient basis of such space for the \(2^n\) dimensional case are tensor products of the Pauli matrices<label id='fnr.13' for='fnr-in.13.8355323' class='margin-toggle sidenote-number'><sup class='numeral'>13</sup></label><input type='checkbox' id='fnr-in.13.8355323' class='margin-toggle'><span class='sidenote'><sup class='numeral'>13</sup>Generalization to arbitrary dimensions are in section 4.1.7 of [Ren]</span>:
 </p>
 \begin{align}
-I &amp; =  \begin{bmatrix} 1 &amp;  0 \\ 0 &amp; 1 \end{bmatrix} \\
-X &amp; =  \begin{bmatrix} 0 &amp;  1 \\ 1 &amp; 0 \end{bmatrix} \\
-Y &amp; = i\begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 0 \end{bmatrix} \\
-Z &amp; =  \begin{bmatrix} 1 &amp;  0 \\ 0 &amp; -1 \end{bmatrix}
+I & =  \begin{bmatrix} 1 &  0 \\ 0 & 1 \end{bmatrix} \\
+X & =  \begin{bmatrix} 0 &  1 \\ 1 & 0 \end{bmatrix} \\
+Y & = i\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix} \\
+Z & =  \begin{bmatrix} 1 &  0 \\ 0 & -1 \end{bmatrix}
 \end{align}
 <p>
 Note that these are not normalized. For the Hilbert-Schmidt norm, they need to be multiplied by \(\frac{1}{\sqrt 2}\). Additionally, all of them have vanishing trace, except the identity. 
@@ -2029,7 +2029,7 @@ where  \(|A| = \sqrt{A^\dagger A}\).
 
 </div>
 <p>
-For \(A\) normal, \(\|A\|_1\) is the trace norm of the spectral decomposition<label id="fnr.14" for="fnr-in.14.2733231" class="margin-toggle sidenote-number"><sup class="numeral">14</sup></label><input type="checkbox" id="fnr-in.14.2733231" class="margin-toggle" /><span class="sidenote"><sup class="numeral">14</sup>See below</span> of \(A\).
+For \(A\) normal, \(\|A\|_1\) is the trace norm of the spectral decomposition<label id='fnr.14' for='fnr-in.14.2733231' class='margin-toggle sidenote-number'><sup class='numeral'>14</sup></label><input type='checkbox' id='fnr-in.14.2733231' class='margin-toggle'><span class='sidenote'><sup class='numeral'>14</sup>See below</span> of \(A\).
 </p>
 
 <div class="property" id="orgbe5d1aa">
@@ -2058,7 +2058,7 @@ A vector \(\vec \psi \in \mathcal H\) can be seen as an homomorphism \(\ket \psi
 \alpha \in \mathbb C \xrightarrow{\ket \psi} \alpha \vec \psi \in \mathcal H
 \end{equation}
 <p>
-The adjoint \(\ket \psi^\dagger\) is denoted \(\bra \psi\) and is defined as<label id="fnr.15" for="fnr-in.15.7896120" class="margin-toggle sidenote-number"><sup class="numeral">15</sup></label><input type="checkbox" id="fnr-in.15.7896120" class="margin-toggle" /><span class="sidenote"><sup class="numeral">15</sup>\(\ket\psi: \mathbb C \rightarrow \mathcal H\), \(\ket\psi^\dagger: \mathcal H \rightarrow \mathbb C\), \(\langle \vec\psi \alpha, \vec \varphi\rangle = \alpha^* \langle \vec \psi, \vec \varphi \rangle  = \alpha^*.\braket{\psi}{\varphi}\). Simplifying by \(\alpha^*\) gives the result.</span>:
+The adjoint \(\ket \psi^\dagger\) is denoted \(\bra \psi\) and is defined as<label id='fnr.15' for='fnr-in.15.7896120' class='margin-toggle sidenote-number'><sup class='numeral'>15</sup></label><input type='checkbox' id='fnr-in.15.7896120' class='margin-toggle'><span class='sidenote'><sup class='numeral'>15</sup>\(\ket\psi: \mathbb C \rightarrow \mathcal H\), \(\ket\psi^\dagger: \mathcal H \rightarrow \mathbb C\), \(\langle \vec\psi \alpha, \vec \varphi\rangle = \alpha^* \langle \vec \psi, \vec \varphi \rangle  = \alpha^*.\braket{\psi}{\varphi}\). Simplifying by \(\alpha^*\) gives the result.</span>:
 \[\bra \psi: \ \vec \varphi \rightarrow  \langle \vec \psi, \vec \varphi\rangle.\]
 </p>
 
@@ -2078,8 +2078,8 @@ The adjoint \(\ket \psi^\dagger\) is denoted \(\bra \psi\) and is defined as<lab
 The state of a system is its complete description. Concretely, if you can write the state of a system on a piece of paper, you can predict, through mathematical calculations, the result of any physical experiments that you could perform on the system. Here, the notion of complete description means that there is no uncertainty or no ignorance in the system that could be reduced. In such case, the state \(\ket \psi\) of a system is a ray in a Hilbert space \(\mathcal H\). That is:
 </p>
 \begin{align}
-&amp; \|\ket \psi \| = \sqrt{\braket{\psi}{\psi}} = 1 \\
-&amp; \ket \varphi \in \overline{\ket \psi} \Leftrightarrow \, \exists \alpha \neq 0, \ \ket \varphi = \alpha \ket \psi.
+& \|\ket \psi \| = \sqrt{\braket{\psi}{\psi}} = 1 \\
+& \ket \varphi \in \overline{\ket \psi} \Leftrightarrow \, \exists \alpha \neq 0, \ \ket \varphi = \alpha \ket \psi.
 \end{align}
 <p>
 Note that usually we simply identify the equivalence class \(\overline{\ket \psi}\) with one of its representative normalized vector, here \(\ket \psi\). The reason why global phases can be ignored and why there is a strong motivation for taking the norm of the vector equal to one will become apparent when considering the prediction of experimental results.
@@ -2091,12 +2091,12 @@ Note that usually we simply identify the equivalence class \(\overline{\ket \psi
 <h3 id="org42ffd88"><span class="section-number-3">4.2.</span> Mixed states</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
-Although the presentation above is standard in many textbooks, in practice, it is often replaced by a subtly different one. The state of a system is then defined as the mathematical representation of what knowledge an observer has about it. In this definition, states become relative to each observer<label id="fnr.16" for="fnr-in.16.9454099" class="margin-toggle sidenote-number"><sup class="numeral">16</sup></label><input type="checkbox" id="fnr-in.16.9454099" class="margin-toggle" /><span class="sidenote"><sup class="numeral">16</sup>One might question here what kind of status the observer has from within quantum mechanics. Very rapidly, this should lead to questionning how systems are defined. You might end up being forced to consider the whole universe as the only physical system that makes sense. But then, what do you do with special relativity? What do you mean by the state of the universe when it is not accessible to you? These foundational questions will not be addressed here. Quantum mechanics will be taken from a purely operational view. Yet, it does not mean that Quantum Information Processing cannot be used to address them. One of the most celebrated example is the result \(MIP^* = RE\) from complexity theory that has implications into the structure of Hilbert spaces for infinite-dimensional composite systems.</span><sup>, </sup><label id="fnr.17" for="fnr-in.17.2442226" class="margin-toggle sidenote-number"><sup class="numeral">17</sup></label><input type="checkbox" id="fnr-in.17.2442226" class="margin-toggle" /><span class="sidenote"><sup class="numeral">17</sup>The additional reason for preferring a definition where states are explicitely observer-dependent is that it emphasizes the nature of states: they are the consequence of the observer's relation to a system, rather than representing a pre-existing property of the system itself without reference to an observer. This epistemic vs ontic view of quantum mechanics has been a heated debate since the early days of quantum mechanics. See for instance <a href="https://doi.org/10.1016/j.shpsb.2006.10.007">https://doi.org/10.1016/j.shpsb.2006.10.007</a>.</span>. Yet, they retain their operational property of allowing the observer to predict the results of any experiment it could perfom. The interest of such definition is that it naturally incorporates the lack of knowledge an observer might have about the system. Its predictions will be worse than for a well-informed one. This interpretation of quantum states will be convenient to represent the views two parties with different knowledge about the same system. In such case, a state \(\rho\) is best represented by a density matrix acting on a Hilbert space \(\mathcal H\) &#x2014; the same as the one used before. That is:
+Although the presentation above is standard in many textbooks, in practice, it is often replaced by a subtly different one. The state of a system is then defined as the mathematical representation of what knowledge an observer has about it. In this definition, states become relative to each observer<label id='fnr.16' for='fnr-in.16.9454099' class='margin-toggle sidenote-number'><sup class='numeral'>16</sup></label><input type='checkbox' id='fnr-in.16.9454099' class='margin-toggle'><span class='sidenote'><sup class='numeral'>16</sup>One might question here what kind of status the observer has from within quantum mechanics. Very rapidly, this should lead to questionning how systems are defined. You might end up being forced to consider the whole universe as the only physical system that makes sense. But then, what do you do with special relativity? What do you mean by the state of the universe when it is not accessible to you? These foundational questions will not be addressed here. Quantum mechanics will be taken from a purely operational view. Yet, it does not mean that Quantum Information Processing cannot be used to address them. One of the most celebrated example is the result \(MIP^* = RE\) from complexity theory that has implications into the structure of Hilbert spaces for infinite-dimensional composite systems.</span><sup>, </sup><label id='fnr.17' for='fnr-in.17.2442226' class='margin-toggle sidenote-number'><sup class='numeral'>17</sup></label><input type='checkbox' id='fnr-in.17.2442226' class='margin-toggle'><span class='sidenote'><sup class='numeral'>17</sup>The additional reason for preferring a definition where states are explicitely observer-dependent is that it emphasizes the nature of states: they are the consequence of the observer's relation to a system, rather than representing a pre-existing property of the system itself without reference to an observer. This epistemic vs ontic view of quantum mechanics has been a heated debate since the early days of quantum mechanics. See for instance <a href="https://doi.org/10.1016/j.shpsb.2006.10.007">https://doi.org/10.1016/j.shpsb.2006.10.007</a>.</span>. Yet, they retain their operational property of allowing the observer to predict the results of any experiment it could perfom. The interest of such definition is that it naturally incorporates the lack of knowledge an observer might have about the system. Its predictions will be worse than for a well-informed one. This interpretation of quantum states will be convenient to represent the views two parties with different knowledge about the same system. In such case, a state \(\rho\) is best represented by a density matrix acting on a Hilbert space \(\mathcal H\) &#x2014; the same as the one used before. That is:
 </p>
 \begin{align}
-\rho &amp; = \rho^\dagger \\
-\rho &amp; \geq 0 \\
-\tr \rho &amp; = 1.
+\rho & = \rho^\dagger \\
+\rho & \geq 0 \\
+\tr \rho & = 1.
 \end{align}
 
 <p>
@@ -2115,7 +2115,7 @@ where \(p_i\) is a probability distribution.
 
 </div>
 <p>
-The reason why these states are called classical will be justified by what can be predicted about them.<label id="fnr.18" for="fnr-in.18.1005898" class="margin-toggle sidenote-number"><sup class="numeral">18</sup></label><input type="checkbox" id="fnr-in.18.1005898" class="margin-toggle" /><span class="sidenote"><sup class="numeral">18</sup>Spoiler: they are perfectly distinguishable as it would be expected for classical random variables. As a consequence, it is easy to embed a discrete classical probability distribution within a quantum state.</span>
+The reason why these states are called classical will be justified by what can be predicted about them.<label id='fnr.18' for='fnr-in.18.1005898' class='margin-toggle sidenote-number'><sup class='numeral'>18</sup></label><input type='checkbox' id='fnr-in.18.1005898' class='margin-toggle'><span class='sidenote'><sup class='numeral'>18</sup>Spoiler: they are perfectly distinguishable as it would be expected for classical random variables. As a consequence, it is easy to embed a discrete classical probability distribution within a quantum state.</span>
 </p>
 </div>
 </div>
@@ -2131,7 +2131,7 @@ Lastly, we will often need to consider composite systems, i.e. systems with sub
 This axiom plays a crucial role in quantum information processing:
 </p>
 <ul class="org-ul">
-<li>It is an essential ingredient for complexity theory as it defines elementary resources that will be counted to assess the complexity / efficiency of a given algorithm or protocol for resolving a task. In particular, it states that although \(n\) 2-dimensional subsystems span a \(2^n\)p-dimensional Hilbert space, they are only corresponding to a linear number of resources used<label id="fnr.19" for="fnr-in.19.3092161" class="margin-toggle sidenote-number"><sup class="numeral">19</sup></label><input type="checkbox" id="fnr-in.19.3092161" class="margin-toggle" /><span class="sidenote"><sup class="numeral">19</sup>This is in complete analogy with classical complexity theory, where bits a resources allowing access to exponentially many bit-string values.</span>.</li>
+<li>It is an essential ingredient for complexity theory as it defines elementary resources that will be counted to assess the complexity / efficiency of a given algorithm or protocol for resolving a task. In particular, it states that although \(n\) 2-dimensional subsystems span a \(2^n\)p-dimensional Hilbert space, they are only corresponding to a linear number of resources used<label id='fnr.19' for='fnr-in.19.3092161' class='margin-toggle sidenote-number'><sup class='numeral'>19</sup></label><input type='checkbox' id='fnr-in.19.3092161' class='margin-toggle'><span class='sidenote'><sup class='numeral'>19</sup>This is in complete analogy with classical complexity theory, where bits a resources allowing access to exponentially many bit-string values.</span>.</li>
 <li>It creates a very rich structure if one associates to each subsystem a notion of locality. In such case, one can wonder what are the set of bipartite states that can be accessed through local operations and classical operations, and what kind of states require non-local operations to be created from independent subsystems.</li>
 </ul>
 </div>
@@ -2148,7 +2148,7 @@ An experiment is a physical setup that interacts with a quantum system and has s
 <ol class="org-ol">
 <li>A (projector-valued) measurement (PVM) \(\mathcal M\) is a set of orthogonal projectors summing to \(\one\): \[\mathcal M = \{M_i\}_i, \ M_i M_j = \delta_{i,j} M_i, \ \sum_i M_i = \one.\] The projector \(M_i\) is said to correspond to <i>outcome</i> \(i\).</li>
 <li>Given the state of a quantum system defined on the same Hilbert space as \(\mathcal M\), it is possible to compute the probability of getting outcome \(i\).</li>
-<li>if the state is in state \(\ket \psi\)<label id="fnr.20" for="fnr-in.20.9843329" class="margin-toggle sidenote-number"><sup class="numeral">20</sup></label><input type="checkbox" id="fnr-in.20.9843329" class="margin-toggle" /><span class="sidenote"><sup class="numeral">20</sup>Remember the state needs to be normalized.</span> (resp. \(\rho\)) the probability of getting \(i\) is:</li>
+<li>if the state is in state \(\ket \psi\)<label id='fnr.20' for='fnr-in.20.9843329' class='margin-toggle sidenote-number'><sup class='numeral'>20</sup></label><input type='checkbox' id='fnr-in.20.9843329' class='margin-toggle'><span class='sidenote'><sup class='numeral'>20</sup>Remember the state needs to be normalized.</span> (resp. \(\rho\)) the probability of getting \(i\) is:</li>
 </ol>
 \begin{equation}
 \Pr(i|\ket \psi) = \bra \psi M_i \ket \psi, \mbox{ resp. } \Pr(i|\rho) = \tr(\rho M_i).
@@ -2185,8 +2185,8 @@ The axiom governing the evolution of quantum systems can be summarized as:
 <li>allowed evolutions should map states to states, i.e. a normalized representative of a ray should map to another normalized representative of a ray:</li>
 </ul>
 \begin{align}
-&amp; \forall \ket \psi, \ket \varphi, \ \exists \mathcal U, \ \mathcal U[\ket \psi] = \ket \varphi \\
-&amp; \forall \mbox{ allowed } \mathcal U, \forall \ket \psi, \ \langle \mathcal U[\ket\psi], \mathcal U[\ket\psi]\rangle = 1
+& \forall \ket \psi, \ket \varphi, \ \exists \mathcal U, \ \mathcal U[\ket \psi] = \ket \varphi \\
+& \forall \mbox{ allowed } \mathcal U, \forall \ket \psi, \ \langle \mathcal U[\ket\psi], \mathcal U[\ket\psi]\rangle = 1
 \end{align}
 <p>
 This means that the allowed evolutions are the whole unitary group acting on \(\mathcal H\).
@@ -2212,7 +2212,7 @@ Because density matrices in the \(2^n\)-dimensional setting are positive semi-de
 \rho = \frac{1}{2}(I + x X + y Y + z Z)
 \end{equation}
 <p>
-Note that here, the normalization factor<label id="fnr.21" for="fnr-in.21.1693503" class="margin-toggle sidenote-number"><sup class="numeral">21</sup></label><input type="checkbox" id="fnr-in.21.1693503" class="margin-toggle" /><span class="sidenote"><sup class="numeral">21</sup>Always pay attention to the definition of Pauli matrices when reading a research paper, as it might not be consistent throughout the whole paper! 3 normalization conventions co-exist: \(\tr I = 1\), \(\tr I = 2\) and \(\tr I = 2/\sqrt 2\).</span> of the Pauli matrices is implicitely defined to be 1, i.e. \(\tr \rho = 1\). The positivity criterion imposes that \(x^2+y^2+z^2\leq 1\). This is the usual Bloch sphere representation of qubits.
+Note that here, the normalization factor<label id='fnr.21' for='fnr-in.21.1693503' class='margin-toggle sidenote-number'><sup class='numeral'>21</sup></label><input type='checkbox' id='fnr-in.21.1693503' class='margin-toggle'><span class='sidenote'><sup class='numeral'>21</sup>Always pay attention to the definition of Pauli matrices when reading a research paper, as it might not be consistent throughout the whole paper! 3 normalization conventions co-exist: \(\tr I = 1\), \(\tr I = 2\) and \(\tr I = 2/\sqrt 2\).</span> of the Pauli matrices is implicitely defined to be 1, i.e. \(\tr \rho = 1\). The positivity criterion imposes that \(x^2+y^2+z^2\leq 1\). This is the usual Bloch sphere representation of qubits.
 </p>
 
 <p>
@@ -2232,15 +2232,15 @@ The correspondence between state vectors and density matrices can be established
 Let \(\ket \psi\) be a state vector. Consider the binary PVM \(\mathcal M = \{M_0, M_1\} \coloneqq  \{\Pi_{\ket \psi}, \one - \Pi_{\ket \psi}\}\). Then, the measurement postulate gives that the distribution of outcomes will be:
 </p>
 \begin{align}
-\Pr_{\ket \psi}(0) &amp; = 1 \\
-\Pr_{\ket \psi}(1) &amp; = 0.
+\Pr_{\ket \psi}(0) & = 1 \\
+\Pr_{\ket \psi}(1) & = 0.
 \end{align}
 <p>
 Now, taking the density matrix approach, we should have
 </p>
 \begin{align}
-\tr(\rho M_0) &amp; = 1 \\
-\tr(\rho M_1) &amp; = 0.
+\tr(\rho M_0) & = 1 \\
+\tr(\rho M_1) & = 0.
 \end{align}
 <p>
 Using the fact that \(\rho = \rho^\dagger\) we recognize that \(\tr(\rho M_0) = \langle \rho, M_0 \rangle_F\), which imposes together with the trace 1 condition that \(\rho = M_0 = \ketbra \psi\).
@@ -2277,8 +2277,8 @@ One way to approach the question is to ask yourself what can we predict about th
 But as we have seen this is the same as \(\sum_i p_i \tr(M_j \ketbra{\psi_i}{\psi_i})\). Using the linearity of the trace we have:
 </p>
 \begin{align}
-\Pr(\mbox{outcome }j) &amp; = \tr (M_j \rho) \\
-\rho &amp; = \sum_i p_i \ketbra{\psi_i}{\psi_i}.
+\Pr(\mbox{outcome }j) & = \tr (M_j \rho) \\
+\rho & = \sum_i p_i \ketbra{\psi_i}{\psi_i}.
 \end{align}
 <p>
 Because this holds for \(\mathcal M\) an arbitrary PVM, it is possible to choose several of them so that this \(\rho\) is unique.
@@ -2380,7 +2380,7 @@ The proof is obtained by using the SVD for \(A\), and inserting either \(V^{'\da
 <h3 id="org5ac39f9"><span class="section-number-3">9.1.</span> Schmidt decomposition</h3>
 <div class="outline-text-3" id="text-9-1">
 <p>
-When we have a pure state for a composite system on \(\mathcal H \otimes \mathcal H'\), we might want to pickup a separable basis<label id="fnr.22" for="fnr-in.22.9322620" class="margin-toggle sidenote-number"><sup class="numeral">22</sup></label><input type="checkbox" id="fnr-in.22.9322620" class="margin-toggle" /><span class="sidenote"><sup class="numeral">22</sup>A basis of the form \(\ket {\psi_i} \otimes \ket{\psi'_j}\) to express the state.</span>. Are all these bases equivalent or is one better than the others? In fact there is a family of bases that stands out and which is defined using Schmidt decomposition
+When we have a pure state for a composite system on \(\mathcal H \otimes \mathcal H'\), we might want to pickup a separable basis<label id='fnr.22' for='fnr-in.22.9322620' class='margin-toggle sidenote-number'><sup class='numeral'>22</sup></label><input type='checkbox' id='fnr-in.22.9322620' class='margin-toggle'><span class='sidenote'><sup class='numeral'>22</sup>A basis of the form \(\ket {\psi_i} \otimes \ket{\psi'_j}\) to express the state.</span>. Are all these bases equivalent or is one better than the others? In fact there is a family of bases that stands out and which is defined using Schmidt decomposition
 </p>
 
 <div text="Schmidt decomposition" class="theorem" id="org92f07d2">
@@ -2404,7 +2404,7 @@ Pick two bases of \(\mathcal H\) and \(\mathcal H'\). Then
  \ket \Psi = \sum_{i,j} \gamma_{i,j} \ket{\varphi_i} \otimes \ket{\varphi'_j}.
 \end{equation}
 <p>
-By identifying \(\ket{\varphi_i} \otimes \ket{\varphi'_j}\) and \(\ketbra{\varphi_i}{\varphi'_j}\), \(\ket \Psi\) can be identified with a matrix \(P\)<label id="fnr.23" for="fnr-in.23.1048760" class="margin-toggle sidenote-number"><sup class="numeral">23</sup></label><input type="checkbox" id="fnr-in.23.1048760" class="margin-toggle" /><span class="sidenote"><sup class="numeral">23</sup>This same trick will be used to derive the Choi-Jamiolkowski isomorphism representation of Completely Positive Trace Preserving maps.</span>. This matrix can be decomposed using the SVD, that is:
+By identifying \(\ket{\varphi_i} \otimes \ket{\varphi'_j}\) and \(\ketbra{\varphi_i}{\varphi'_j}\), \(\ket \Psi\) can be identified with a matrix \(P\)<label id='fnr.23' for='fnr-in.23.1048760' class='margin-toggle sidenote-number'><sup class='numeral'>23</sup></label><input type='checkbox' id='fnr-in.23.1048760' class='margin-toggle'><span class='sidenote'><sup class='numeral'>23</sup>This same trick will be used to derive the Choi-Jamiolkowski isomorphism representation of Completely Positive Trace Preserving maps.</span>. This matrix can be decomposed using the SVD, that is:
 </p>
 \begin{equation}
 P = U \Pi V^\dagger,

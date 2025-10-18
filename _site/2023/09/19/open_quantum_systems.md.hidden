@@ -9,15 +9,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="1. The Church of the larger Hilbert space The axioms of quantum mechanics presented earlier only refer to closed quantum systems. So it is only possible to describe what happens to a system completely isolated from other systems. This seems like a restriction, until you realize that indeed, it is always possible to view an open quantum system as a subsystem of a larger quantum system, which is itself isolated. In case of doubt, you can always throw in the full wave function of the universe! This lecture is about exploiting this ability to better understand states of open quantum systems, their dynamics and the allowed measurements. The term &quot;Church of the larger Hilbert space&quot; refers to this ability to enlarge the Hilbert space by adding more and sometimes fictitious subsystems in order to recover pure states and closed systems dynamics and measurements." />
 <meta property="og:description" content="1. The Church of the larger Hilbert space The axioms of quantum mechanics presented earlier only refer to closed quantum systems. So it is only possible to describe what happens to a system completely isolated from other systems. This seems like a restriction, until you realize that indeed, it is always possible to view an open quantum system as a subsystem of a larger quantum system, which is itself isolated. In case of doubt, you can always throw in the full wave function of the universe! This lecture is about exploiting this ability to better understand states of open quantum systems, their dynamics and the allowed measurements. The term &quot;Church of the larger Hilbert space&quot; refers to this ability to enlarge the Hilbert space by adding more and sometimes fictitious subsystems in order to recover pure states and closed systems dynamics and measurements." />
-<link rel="canonical" href="https://h-oll.github.io/2023/09/19/open_quantum_systems.html" />
-<meta property="og:url" content="https://h-oll.github.io/2023/09/19/open_quantum_systems.html" />
+<link rel="canonical" href="https://h-oll.github.io/2023/09/19/open_quantum_systems.md.hidden" />
+<meta property="og:url" content="https://h-oll.github.io/2023/09/19/open_quantum_systems.md.hidden" />
 <meta property="og:site_name" content="Harold Ollivier" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-09-19T00:00:00+02:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Open Quantum Systems" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-09-19T00:00:00+02:00","datePublished":"2023-09-19T00:00:00+02:00","description":"1. The Church of the larger Hilbert space The axioms of quantum mechanics presented earlier only refer to closed quantum systems. So it is only possible to describe what happens to a system completely isolated from other systems. This seems like a restriction, until you realize that indeed, it is always possible to view an open quantum system as a subsystem of a larger quantum system, which is itself isolated. In case of doubt, you can always throw in the full wave function of the universe! This lecture is about exploiting this ability to better understand states of open quantum systems, their dynamics and the allowed measurements. The term &quot;Church of the larger Hilbert space&quot; refers to this ability to enlarge the Hilbert space by adding more and sometimes fictitious subsystems in order to recover pure states and closed systems dynamics and measurements.","headline":"Open Quantum Systems","mainEntityOfPage":{"@type":"WebPage","@id":"https://h-oll.github.io/2023/09/19/open_quantum_systems.html"},"url":"https://h-oll.github.io/2023/09/19/open_quantum_systems.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-09-19T00:00:00+02:00","datePublished":"2023-09-19T00:00:00+02:00","description":"1. The Church of the larger Hilbert space The axioms of quantum mechanics presented earlier only refer to closed quantum systems. So it is only possible to describe what happens to a system completely isolated from other systems. This seems like a restriction, until you realize that indeed, it is always possible to view an open quantum system as a subsystem of a larger quantum system, which is itself isolated. In case of doubt, you can always throw in the full wave function of the universe! This lecture is about exploiting this ability to better understand states of open quantum systems, their dynamics and the allowed measurements. The term &quot;Church of the larger Hilbert space&quot; refers to this ability to enlarge the Hilbert space by adding more and sometimes fictitious subsystems in order to recover pure states and closed systems dynamics and measurements.","headline":"Open Quantum Systems","mainEntityOfPage":{"@type":"WebPage","@id":"https://h-oll.github.io/2023/09/19/open_quantum_systems.md.hidden"},"url":"https://h-oll.github.io/2023/09/19/open_quantum_systems.md.hidden"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://h-oll.github.io/feed.xml" title="Harold Ollivier" /></head>
 <body><header class="site-header" role="banner">
@@ -76,9 +76,9 @@ The <i>partial trace</i> is a mapping from \(End(\mathcal H_A \otimes \mathcal H
 Using that for an operator in \(End(\mathcal H_A)\otimes End{\mathcal H_B}\) , \(O = \sum_{i,j,k,l} O_{ij,kl}\ketbra{i}{j}_A\otimes \ketbra{k}{l}_B\), for \(\{\ket i_A\}_i\) and \(\{\ket{k}_B\}_B\) bases of \(\mathcal H_A\) and \(\mathcal H_B\), we obtain:
 </p>
 \begin{align}
-\tr_A(O) &amp; = \sum_{i,k,l} O_{ii,kl}\ketbra{k}{l}_B \\
-&amp; = \sum_{i,k,l} (\bra i_A \otimes \bra k_B) O (\ket i_A \otimes \ket l_B) \ketbra{k}{l}_B\\
-&amp; = \sum_{i} (\bra i \otimes \one_B) O (\ket i \otimes \one_B),
+\tr_A(O) & = \sum_{i,k,l} O_{ii,kl}\ketbra{k}{l}_B \\
+& = \sum_{i,k,l} (\bra i_A \otimes \bra k_B) O (\ket i_A \otimes \ket l_B) \ketbra{k}{l}_B\\
+& = \sum_{i} (\bra i \otimes \one_B) O (\ket i \otimes \one_B),
 \end{align}
 <p>
 which is often abreviated by omitting the \(\one_B\) factor:
@@ -94,8 +94,8 @@ Let \(\rho_{X,Y} = \sum_{x,y} \Pr(X=x, Y=y) \ketbra x_X \otimes \ketbra y_Y\), f
 </p>
 \begin{align}
 \tr_X (\rho_{X,Y})
-&amp; = \sum_{x'} \sum_{x,y} \Pr(X=x, Y=y) \bra {x'}( \ketbra x) \ket{x'} \ketbra y \\
-&amp; = \sum_y \Pr(Y = y) \ketbra y,
+& = \sum_{x'} \sum_{x,y} \Pr(X=x, Y=y) \bra {x'}( \ketbra x) \ket{x'} \ketbra y \\
+& = \sum_y \Pr(Y = y) \ketbra y,
 \end{align}
 <p>
 where \(\Pr(Y=y) = \sum_x Pr(X=x, Y=y)\).
@@ -108,14 +108,14 @@ A similar understanding can be build for generic quantum states:
 </p>
 <div text="Marginals and Partial Trace (II)" class="remark" id="org06ea418">
 <p>
-The partial trace corresponds to measuring part of  a composite quantum system using a PVM and being struck by amnesia right after<label id="fnr.1" for="fnr-in.1.1088902" class="margin-toggle sidenote-number"><sup class="numeral">1</sup></label><input type="checkbox" id="fnr-in.1.1088902" class="margin-toggle" /><span class="sidenote"><sup class="numeral">1</sup>This can be generalized to POVM measurements which will be introduced below.</span>. Let \(\rho\) be a density matrix on \(\mathcal H_A \otimes \mathcal H_B\), then, for \(\{M_i \}\) a PVM on \(A\), we can define the set of quantum vectors  \(\{\ket {e_{i,j}}\}_{i,j}\) such that for a given \(i\), \(\{\ket {e_{i,j}}\}_{j}\) is an orthonormal basis of the subspace stabilized by \(M_i\). Then \(\{\ket {e_{i,j}}\}_{i,j}\) is an orthonormal basis of \(\mathcal H_A\) and \(M_i = \sum_{j} \ketbra{e_i{i,j}}\).<label id="fnr.2" for="fnr-in.2.2562339" class="margin-toggle sidenote-number"><sup class="numeral">2</sup></label><input type="checkbox" id="fnr-in.2.2562339" class="margin-toggle" /><span class="sidenote"><sup class="numeral">2</sup>Note that here \(\ket{e_{i,j}}\) are vectors on \(\mathcal H_A\), but we omit the index \(A\) to lighten the notation.</span> Hence, 
+The partial trace corresponds to measuring part of  a composite quantum system using a PVM and being struck by amnesia right after<label id='fnr.1' for='fnr-in.1.1088902' class='margin-toggle sidenote-number'><sup class='numeral'>1</sup></label><input type='checkbox' id='fnr-in.1.1088902' class='margin-toggle'><span class='sidenote'><sup class='numeral'>1</sup>This can be generalized to POVM measurements which will be introduced below.</span>. Let \(\rho\) be a density matrix on \(\mathcal H_A \otimes \mathcal H_B\), then, for \(\{M_i \}\) a PVM on \(A\), we can define the set of quantum vectors  \(\{\ket {e_{i,j}}\}_{i,j}\) such that for a given \(i\), \(\{\ket {e_{i,j}}\}_{j}\) is an orthonormal basis of the subspace stabilized by \(M_i\). Then \(\{\ket {e_{i,j}}\}_{i,j}\) is an orthonormal basis of \(\mathcal H_A\) and \(M_i = \sum_{j} \ketbra{e_i{i,j}}\).<label id='fnr.2' for='fnr-in.2.2562339' class='margin-toggle sidenote-number'><sup class='numeral'>2</sup></label><input type='checkbox' id='fnr-in.2.2562339' class='margin-toggle'><span class='sidenote'><sup class='numeral'>2</sup>Note that here \(\ket{e_{i,j}}\) are vectors on \(\mathcal H_A\), but we omit the index \(A\) to lighten the notation.</span> Hence, 
 </p>
 \begin{align}
-\tr_A(\rho) &amp; = \sum_{i,j} (\bra{e_{i,j}} \otimes \one_B) \rho (\ket{e_{i,j}} \otimes \one_B) \\
-&amp; = \sum_{i} \sum_{j} \bra{e_{i,j}} (M_i \otimes \one_B) \rho (M_i \otimes \one_B)\ket{e_{i,j}} \\
-&amp; = \sum_{i} \sum_{j} \bra{e_{i,j}} (M_i \otimes \one_B) \rho (M_i \otimes \one_B)\ket{e_{i,j}} \\
-&amp; = \sum_{i} \tr_A \left((M_i \otimes \one_B) \rho  (M_i \otimes \one_B) \right)\\
-&amp; = \sum_{i} p_i \frac{\tr_A \left((M_i \otimes \one_B) \rho  (M_i \otimes \one_B)\right)}{\tr \left((M_i \otimes \one_B) \rho  (M_i \otimes \one_B)\right)} \\
+\tr_A(\rho) & = \sum_{i,j} (\bra{e_{i,j}} \otimes \one_B) \rho (\ket{e_{i,j}} \otimes \one_B) \\
+& = \sum_{i} \sum_{j} \bra{e_{i,j}} (M_i \otimes \one_B) \rho (M_i \otimes \one_B)\ket{e_{i,j}} \\
+& = \sum_{i} \sum_{j} \bra{e_{i,j}} (M_i \otimes \one_B) \rho (M_i \otimes \one_B)\ket{e_{i,j}} \\
+& = \sum_{i} \tr_A \left((M_i \otimes \one_B) \rho  (M_i \otimes \one_B) \right)\\
+& = \sum_{i} p_i \frac{\tr_A \left((M_i \otimes \one_B) \rho  (M_i \otimes \one_B)\right)}{\tr \left((M_i \otimes \one_B) \rho  (M_i \otimes \one_B)\right)} \\
 \end{align}
 <p>
 with \(p_i = \tr \left((M_i \otimes \one_B) \rho  (M_i \otimes \one_B)\right)\) is the probability of obtaining outcome \(i\) when performing the PVM \(\{M_i\}\). Hence the partial trace corresponds to the average resulting state of subsystem \(B\) after the measurement, i.e. \(A\) is measured and the outcome is forgotten. Note that the invariance of the partial trace under unitary transformations implied that the resulting state does not depend on which measurement has been chosen. That is any measurement does the job equally well, even the measurement that consist of returning always the same outcome.
@@ -133,8 +133,8 @@ In particular, if we look at a composite system \(A-B\) in a global pure state, 
 Taking the partial trace we obtain:
 </p>
 \begin{align}
-\tr_A \ketbra{\psi} &amp; = \sum_m \bra m_A \left(\sum_{i,j,k,l} \psi_{i,k}\psi^*_{j,l} \ketbra{i}{j}_A\otimes\ketbra{k}{l}_B \right) \ket m_A \\
-&amp; = \sum_{i,k,l} \psi_{i,k}\psi^*_{i,l} \ketbra{k}{l}_B.
+\tr_A \ketbra{\psi} & = \sum_m \bra m_A \left(\sum_{i,j,k,l} \psi_{i,k}\psi^*_{j,l} \ketbra{i}{j}_A\otimes\ketbra{k}{l}_B \right) \ket m_A \\
+& = \sum_{i,k,l} \psi_{i,k}\psi^*_{i,l} \ketbra{k}{l}_B.
 \end{align}
 <p>
 We see that in general this does not correspond to a pure state \(\ketbra \psi\). One way to produce a mixed state on \(B\) is thus to consider a larger system \(A-B\) and to trace out \(A\). The natural question then is to what extent any mixed state \(\rho_B\) on \(B\) can be produced in this way, and whether there is or not a single way to do this.
@@ -169,11 +169,11 @@ Where \(\{\ket i_A\}\) is an orthonormal basis of \(\mathcal H_A\) a sufficientl
 Now, starting from a generic \(\rho_B\) positive semi-definite trace 1 matrix, we can use that fact that there is a canonical preparation of \(\rho_B\). Indeed, \(\rho_B\) is hermitian and can thus be diagonalized: \(\rho_B = \sum \lambda_i \ketbra{i}_B\). Hence, we can purify this preparation and obtain:
 </p>
 \begin{align}
-&amp; \rho_B = \tr_A \ketbra \psi, \mbox{ with} \\
-&amp; \ket \psi = \sum_i \sqrt{\lambda_i} \ket i_A \otimes \ket i_B
+& \rho_B = \tr_A \ketbra \psi, \mbox{ with} \\
+& \ket \psi = \sum_i \sqrt{\lambda_i} \ket i_A \otimes \ket i_B
 \end{align}
 <p>
-where \(\ket i_A\) is an orthonormal basis for an ancillary system \(A\). Note that one can always perform this purification using a system \(A\) with dimension equal to that of \(B\). Such purification is usually called "the" purification of \(\rho_B\) even though it is obviously not unique as one can perform basis changes on \(A\) without affecting the obtained state.<label id="fnr.3" for="fnr-in.3.5952836" class="margin-toggle sidenote-number"><sup class="numeral">3</sup></label><input type="checkbox" id="fnr-in.3.5952836" class="margin-toggle" /><span class="sidenote"><sup class="numeral">3</sup>Note that we cannot say all purifications are unitarily equivalent.</span>
+where \(\ket i_A\) is an orthonormal basis for an ancillary system \(A\). Note that one can always perform this purification using a system \(A\) with dimension equal to that of \(B\). Such purification is usually called "the" purification of \(\rho_B\) even though it is obviously not unique as one can perform basis changes on \(A\) without affecting the obtained state.<label id='fnr.3' for='fnr-in.3.5952836' class='margin-toggle sidenote-number'><sup class='numeral'>3</sup></label><input type='checkbox' id='fnr-in.3.5952836' class='margin-toggle'><span class='sidenote'><sup class='numeral'>3</sup>Note that we cannot say all purifications are unitarily equivalent.</span>
 </p>
 
 <p>
@@ -202,12 +202,12 @@ Let \(\mathcal H_A\) and \(\mathcal H_B\) be two finite dimensional Hilbert-spac
 \Gamma = \frac{1}{\sqrt d} \sum_{i = 1}^{d} \ket{e_i}_A' \otimes \ket{e_i}_A, 
 \end{equation}
 <p>
-for \(d = \dim(\mathcal H_A)\) and \(\{\ket{e_i}_A\}_i\) a basis of \(\mathcal H_A\) and \(\{\ket{e_i}_{A'}\}_i\) a basis of \(\mathcal H_{A'}\).<label id="fnr.4" for="fnr-in.4.6434766" class="margin-toggle sidenote-number"><sup class="numeral">4</sup></label><input type="checkbox" id="fnr-in.4.6434766" class="margin-toggle" /><span class="sidenote"><sup class="numeral">4</sup>Because \(\mathcal H_A \simeq \mathcal H_{A'}\) the two bases have the same number of vectors.</span> The Choi-Jamiolkowski Isomorphism relative to the bases \(\{\ket{e_i}_A\}_i\) and  \(\{\ket{e_i}_{A'}\}_i\) is the linear map:
+for \(d = \dim(\mathcal H_A)\) and \(\{\ket{e_i}_A\}_i\) a basis of \(\mathcal H_A\) and \(\{\ket{e_i}_{A'}\}_i\) a basis of \(\mathcal H_{A'}\).<label id='fnr.4' for='fnr-in.4.6434766' class='margin-toggle sidenote-number'><sup class='numeral'>4</sup></label><input type='checkbox' id='fnr-in.4.6434766' class='margin-toggle'><span class='sidenote'><sup class='numeral'>4</sup>Because \(\mathcal H_A \simeq \mathcal H_{A'}\) the two bases have the same number of vectors.</span> The Choi-Jamiolkowski Isomorphism relative to the bases \(\{\ket{e_i}_A\}_i\) and  \(\{\ket{e_i}_{A'}\}_i\) is the linear map:
 </p>
 \begin{align}
 \mathsf{C}\ : \
-&amp;  Hom(End(\mathcal H_A),End(\mathcal H_B)) \rightarrow End(\mathcal H_{A'} \otimes \mathcal H_B) \\
-&amp; \mathcal E \mapsto (\one_{A'} \otimes \mathcal E) [\ketbra{\Gamma}] 
+&  Hom(End(\mathcal H_A),End(\mathcal H_B)) \rightarrow End(\mathcal H_{A'} \otimes \mathcal H_B) \\
+& \mathcal E \mapsto (\one_{A'} \otimes \mathcal E) [\ketbra{\Gamma}] 
 \end{align}
 
 </div>
@@ -239,8 +239,8 @@ We then need to compute \((\one_{A'} \otimes \mathcal E_{ij,kl})[\ketbra\Gamma]\
 </p>
 \begin{align}
 (\one_{A'} \otimes \mathcal E_{ij,kl})[\ketbra{\Gamma}]
-&amp; = (\one_{A'} \otimes \mathcal E_{ij,kl})[\frac{1}{d}\sum_{mn}\ketbra{e_m}{e_n}_{A'}\otimes \ketbra{e_m}{e_n}_A] \\
-&amp; = \frac{1}{d}\ketbra{e_i}{e_j}_{A'}\otimes \ketbra{f_k}{f_l}_B
+& = (\one_{A'} \otimes \mathcal E_{ij,kl})[\frac{1}{d}\sum_{mn}\ketbra{e_m}{e_n}_{A'}\otimes \ketbra{e_m}{e_n}_A] \\
+& = \frac{1}{d}\ketbra{e_i}{e_j}_{A'}\otimes \ketbra{f_k}{f_l}_B
 \end{align}
 <p>
 which generates a basis of  \(End(\mathcal H_{A'} \otimes \mathcal H_B)\) when \(i,j,k,l\) are varied. So we just prooved that \(\mathsf C\) is sendind a basis to a (non normalized) basis so it is an isomorphism.
@@ -268,8 +268,8 @@ Equipped with the Choi-Jamiolkowski isomorphism between operators on endomorphis
 First, we realize that for any preparation of \(\rho\) as \(\{(\rho_1, p_1), (\rho_2, p_2)\}\) then we should have
 </p>
 \begin{align}
-\mathcal E[\rho] &amp; = \mathcal E[p_1 \rho_1 + p_2 \rho_2] \\
-&amp; = p_1 \mathcal E[\rho_1] + p_2 \mathcal E[\rho_2].
+\mathcal E[\rho] & = \mathcal E[p_1 \rho_1 + p_2 \rho_2] \\
+& = p_1 \mathcal E[\rho_1] + p_2 \mathcal E[\rho_2].
 \end{align}
 <p>
 This implies that \(\mathcal E\) is linear but also that \(\mathcal E[\rho]\) is a positive semi-definite operator with unit trace.
@@ -412,8 +412,8 @@ which gives \(\mathcal E[\rho_A] = \sum_k V^k \rho_A V^{k\dagger}\) using \(\mat
 Additionally, because \(\mathcal E\) is trace preserving, \(\tr(\mathcal E[{\ketbra{i}{j}}_A]) = \delta_{i,j}\). But
 </p>
 \begin{align}
-\tr(\mathcal E[{\ketbra{i}{j}}_A]) &amp; = \tr\left (\sum_k V^k{\ketbra{i}{j}}_A V^{k\dagger} \right) \\
-    &amp; = \bra j_A \left(\sum_k{V^{k\dagger} V^k}\right) \ket i_A,
+\tr(\mathcal E[{\ketbra{i}{j}}_A]) & = \tr\left (\sum_k V^k{\ketbra{i}{j}}_A V^{k\dagger} \right) \\
+    & = \bra j_A \left(\sum_k{V^{k\dagger} V^k}\right) \ket i_A,
 \end{align}
 <p>
 so that we have \(\sum_k V^{k\dagger}V^k = \one_A\).
@@ -449,7 +449,7 @@ Any set of Kraus operators defines an admissible CPTP map. This is because:
 </p>
 <ol class="org-ol">
 <li>The map defined by \(\sum_k V^k \rho V^{k\dagger}\) is linear;</li>
-<li>Is completely positive<label id="fnr.5" for="fnr-in.5.3217473" class="margin-toggle sidenote-number"><sup class="numeral">5</sup></label><input type="checkbox" id="fnr-in.5.3217473" class="margin-toggle" /><span class="sidenote"><sup class="numeral">5</sup>\(\langle \psi, (\one_{A'} \otimes V^k) \rho_{A'A} (\one_{A'}\otimes V^{k\dagger}) \psi \rangle = \langle \psi (\one_{A'} \otimes V^{k\dagger}),  \rho_{A'A} (\one_{A'}\otimes V^{k\dagger}) \psi \rangle \geq 0\) using \(\psi' = (\one_{A'}\otimes V^{k\dagger}) \psi\) and the positivity of \(\rho\).</span> as \((\one_{A'} \otimes V^k) \rho_{A'A} (\one_{A'}\otimes V^{k\dagger})\) is PSD for any \(k\) and any PSD \(\rho\)</li>
+<li>Is completely positive<label id='fnr.5' for='fnr-in.5.3217473' class='margin-toggle sidenote-number'><sup class='numeral'>5</sup></label><input type='checkbox' id='fnr-in.5.3217473' class='margin-toggle'><span class='sidenote'><sup class='numeral'>5</sup>\(\langle \psi, (\one_{A'} \otimes V^k) \rho_{A'A} (\one_{A'}\otimes V^{k\dagger}) \psi \rangle = \langle \psi (\one_{A'} \otimes V^{k\dagger}),  \rho_{A'A} (\one_{A'}\otimes V^{k\dagger}) \psi \rangle \geq 0\) using \(\psi' = (\one_{A'}\otimes V^{k\dagger}) \psi\) and the positivity of \(\rho\).</span> as \((\one_{A'} \otimes V^k) \rho_{A'A} (\one_{A'}\otimes V^{k\dagger})\) is PSD for any \(k\) and any PSD \(\rho\)</li>
 </ol>
 
 </div>
@@ -473,20 +473,20 @@ U = \sum_k V^k \otimes \ket k_C
 where \(C\) is a fiducial quantum system with sufficiently many dimensions to be able to pair each \(V^k\) with a different basis vector \(\ket k\). \(U\) is a map from \(\mathcal H_A\) to \(\mathcal B \otimes \mathcal C\) that satisfies
 </p>
 \begin{align}
-U^\dagger U &amp; = \left( \sum_k V^{k\dagger}\otimes \bra k \right ) \left( \sum_l V^l \otimes \ket l\right ) \\
-&amp; = sum_{kl} V^{k\dagger} V^l \braket{k,l} \\
-&amp; = \one_A. 
+U^\dagger U & = \left( \sum_k V^{k\dagger}\otimes \bra k \right ) \left( \sum_l V^l \otimes \ket l\right ) \\
+& = sum_{kl} V^{k\dagger} V^l \braket{k,l} \\
+& = \one_A. 
 \end{align}
 <p>
-Hence \(U\) is an isometry and can be seen as a closed quantum system evolution<label id="fnr.6" for="fnr-in.6.2637067" class="margin-toggle sidenote-number"><sup class="numeral">6</sup></label><input type="checkbox" id="fnr-in.6.2637067" class="margin-toggle" /><span class="sidenote"><sup class="numeral">6</sup>To this end, we just need to embed this evolution from \(\mathcal H_A\) to \(\mathcal H_B \otimes \mathcal H_C\) into endomorphisms of \(\mathcal H_A \otimes \mathcal H_B \otimes \mathcal H_C\) and constructing a unitary that coincides with \(U\) when a given fiducial state \(\ket 0_B \ket 0_C\) is used as inputs of \(B\) and \(C\).</span>
+Hence \(U\) is an isometry and can be seen as a closed quantum system evolution<label id='fnr.6' for='fnr-in.6.2637067' class='margin-toggle sidenote-number'><sup class='numeral'>6</sup></label><input type='checkbox' id='fnr-in.6.2637067' class='margin-toggle'><span class='sidenote'><sup class='numeral'>6</sup>To this end, we just need to embed this evolution from \(\mathcal H_A\) to \(\mathcal H_B \otimes \mathcal H_C\) into endomorphisms of \(\mathcal H_A \otimes \mathcal H_B \otimes \mathcal H_C\) and constructing a unitary that coincides with \(U\) when a given fiducial state \(\ket 0_B \ket 0_C\) is used as inputs of \(B\) and \(C\).</span>
 </p>
 
 <p>
 Now, to conclude, we simply realize that
 </p>
 \begin{align}
-U \rho_A U^\dagger &amp; = \sum_{kl} (V^k\otimes \ket k_C) \rho_A(V^{l\dagger}\otimes l_C) \\
-&amp; = \sum_{kl} (V^k \rho_A V^{l\dagger}) \otimes \ketbra{k}{l}_C,
+U \rho_A U^\dagger & = \sum_{kl} (V^k\otimes \ket k_C) \rho_A(V^{l\dagger}\otimes l_C) \\
+& = \sum_{kl} (V^k \rho_A V^{l\dagger}) \otimes \ketbra{k}{l}_C,
 \end{align}
 <p>
 so that \(\tr_C(U\rho U^\dagger) = \mathcal E[\rho]\).
@@ -513,7 +513,7 @@ We intoduced PVM as a collection of rank-1 projectors \(\{\Pi_i\}_i\) on the Hil
 <p>
 Yet, we haven't said anything about the post-measurement state. In fact, there is a variety of models for the measurements so that I chose <i>not</i> to include it in the main axioms of quantum theory. Yet, the question "what is the post-measurement state of the measured quantum system?" is legitimate. To answer it, we will nonetheless postulate that for what we will call <i>non destructive (and minimally disturbing) measurement</i> if one performs the same measurement twice in a row, without the system being able to evolve between the two rounds of measurements, then the results shoud be the same. That is, if we denote by \(\rho_i\) the post measurement state after outcome \(i\) is obtained, we should have:
 \[\tr(\Pi_j \rho_i) = \delta_{i,j}.\]
-Using the positivity of \(\rho_i\) and the fact that \(\tr(\rho_i)=1\), we can conclude that \(\rho_i = \Pi_i\). Hence, we can summarize this into the following formula<label id="fnr.7" for="fnr-in.7.7392082" class="margin-toggle sidenote-number"><sup class="numeral">7</sup></label><input type="checkbox" id="fnr-in.7.7392082" class="margin-toggle" /><span class="sidenote"><sup class="numeral">7</sup>It is an unnecessarily complicated way of writing the update rule, but we will see that this is the correct way to generalize it to higher rank projectors, and later to generalized measurements.</span>:
+Using the positivity of \(\rho_i\) and the fact that \(\tr(\rho_i)=1\), we can conclude that \(\rho_i = \Pi_i\). Hence, we can summarize this into the following formula<label id='fnr.7' for='fnr-in.7.7392082' class='margin-toggle sidenote-number'><sup class='numeral'>7</sup></label><input type='checkbox' id='fnr-in.7.7392082' class='margin-toggle'><span class='sidenote'><sup class='numeral'>7</sup>It is an unnecessarily complicated way of writing the update rule, but we will see that this is the correct way to generalize it to higher rank projectors, and later to generalized measurements.</span>:
 </p>
 \begin{equation}
 \rho_i = \frac{\Pi_i \rho \Pi_i}{\tr(\Pi_i \rho)} \label{eq:update}
@@ -541,7 +541,7 @@ This can be rewriten as
 \end{equation}
 <p>
 If we define \(\rho_i = \frac{(\Pi_i\otimes \one_B) \rho_{AB}(\Pi_i\otimes \one_B)}{\tr_{AB}((\Pi_{A,i}\otimes \one_B)\rho_{AB})}\)
-we have that \(\rho_{A,i} = \tr_B(\rho_i)\) and that \(\tr_A(\sum_i \rho_i) = \tr_A(\rho) = \rho_B\) so that \(\rho_i\) can be viewed as a candidate post-measurement state for the larger state \(\rho\). This can be shown to be the only possible case by extending the situation where \(\rho_{AB} = \rho_A \otimes \rho_B\) which can be deduced entirely from the locality condition. A similar argument can be made for the post-measurement state of single systems under PVM with higher rank projectors, so that we can now appreciate the fact that Eq. (\ref{eq:update}) applies to these more general situations<label id="fnr.8" for="fnr-in.8.2705295" class="margin-toggle sidenote-number"><sup class="numeral">8</sup></label><input type="checkbox" id="fnr-in.8.2705295" class="margin-toggle" /><span class="sidenote"><sup class="numeral">8</sup>Remember that in fact, \(\Pi_{A,i}\otimes \one_B\) is also a higher-rank projector &#x2013;its rank is \(\rk(\Pi_{A,i})\times\dim(\mathcal H_B)\).</span>.
+we have that \(\rho_{A,i} = \tr_B(\rho_i)\) and that \(\tr_A(\sum_i \rho_i) = \tr_A(\rho) = \rho_B\) so that \(\rho_i\) can be viewed as a candidate post-measurement state for the larger state \(\rho\). This can be shown to be the only possible case by extending the situation where \(\rho_{AB} = \rho_A \otimes \rho_B\) which can be deduced entirely from the locality condition. A similar argument can be made for the post-measurement state of single systems under PVM with higher rank projectors, so that we can now appreciate the fact that Eq. (\ref{eq:update}) applies to these more general situations<label id='fnr.8' for='fnr-in.8.2705295' class='margin-toggle sidenote-number'><sup class='numeral'>8</sup></label><input type='checkbox' id='fnr-in.8.2705295' class='margin-toggle'><span class='sidenote'><sup class='numeral'>8</sup>Remember that in fact, \(\Pi_{A,i}\otimes \one_B\) is also a higher-rank projector &#x2013;its rank is \(\rk(\Pi_{A,i})\times\dim(\mathcal H_B)\).</span>.
 </p>
 </div>
 </div>
@@ -595,7 +595,7 @@ Using the notation defined above, the operators \(E_i\) are called <i>POVM eleme
 </section>
 </article>
 
-  </div><a class="u-url" href="/2023/09/19/open_quantum_systems.html" hidden></a>
+  </div><a class="u-url" href="/2023/09/19/open_quantum_systems.md.hidden" hidden></a>
 </article>
 
       </div>
