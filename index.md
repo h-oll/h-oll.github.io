@@ -3,22 +3,22 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: 
+title: News
 list_title: Latest news
 ---
 
-# Postdoctoral Position (24 months): Quantum Cryptography and Verification of Quantum Computation
+## Postdoctoral Position (24 months): Quantum Cryptography and Verification of Quantum Computation
 
-## Context
+### Context
 
 The position is part of an ongoing research program on the verification of quantum computation and the development of advanced cryptographic primitives for both near-term and long-term quantum architectures. The group’s recent contributions include novel protocols for delegated quantum computation, refined verification techniques, and secure computation frameworks exploiting both information-theoretic and computational assumptions. The postdoctoral researcher expected to contribute to extending these results and exploring new lines of inquiry at the interface of quantum cryptography, complexity theory, and practical implementations.
 
 
-## Scientific Objectives
+### Scientific Objectives
 
 The selected candidate will work on one or several of the following axes:
 
-### Reducing overhead in verification protocols
+#### Reducing overhead in verification protocols
 
 A central goal is to refine known verification schemes—both interactive and non-interactive—to reach practical overheads compatible with proof-of-concept demonstrations on current noisy quantum devices. This includes:
 
@@ -27,7 +27,7 @@ A central goal is to refine known verification schemes—both interactive and no
 -   Investigating compilation and optimization strategies for verification circuits, including hybrid classical–quantum approaches.
 
 
-### Extending the toolbox of secure quantum functionalities
+#### Extending the toolbox of secure quantum functionalities
 
 The project aims to develop new cryptographic primitives or enhance existing ones to broaden the landscape of secure quantum protocols. Potential directions include:
 
@@ -37,7 +37,7 @@ The project aims to develop new cryptographic primitives or enhance existing one
 -   Robustness of protocols to noise either in the NISQ or FTQC regimes.
 
 
-### Exploring new research questions in quantum cryptography
+#### Exploring new research questions in quantum cryptography
 
 The postdoc will have the opportunity to pursue innovative topics at the frontier of quantum cryptography, such as:
 
@@ -46,7 +46,7 @@ The postdoc will have the opportunity to pursue innovative topics at the frontie
 -   Connections between these primitives and the verification of quantum computations, leading to unified frameworks or cross-applicable tools.
 
 
-## Candidate Profile
+### Candidate Profile
 
 A strong background is expected in at least one of the following areas:
 
@@ -58,12 +58,12 @@ A strong background is expected in at least one of the following areas:
 Experience with practical implementations on NISQ devices is a plus but not required. A demonstrated capacity for independent, rigorous and mathematically oriented research is essential.
 
 
-## Working Environment
+### Working Environment
 
 The postdoctoral researcher will join the QAT team, hosted at the Département d’Informatique of the École Normale Supérieure (DI-ENS) in Paris. The group offers an active and intellectually vibrant environment at the intersection of quantum information, cryptography, and complexity theory. The team maintains strong collaborations with national and international partners and participates in broader initiatives in quantum technologies. The position is for 24 months, with competitive salary and support for travel and dissemination.
 
 
-## How to Apply
+### How to Apply
 
 Applicants should send to [qat-hiring@inria.fr](mailto:qat-hiring@inria.fr):
 
