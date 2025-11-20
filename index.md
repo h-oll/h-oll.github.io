@@ -7,7 +7,9 @@ title: News
 list_title: Latest news
 ---
 
-# Postdoctoral Position (24 months): Quantum Cryptography and Verification of Quantum Computation
+# Opening of a Postdoctoral Position (24 months)
+
+## Quantum Cryptography and Verification of Quantum Computation
 
 ## Context
 
