@@ -1,6 +1,6 @@
 #+title:      Postdoctoral Position: Quantum Cryptography and Verification of Quantum Computation
-#+date:       [2025-02-01 Sat 00:00]
-#+identifier: 20250201T000000
+#+date:       [2026-02-02 Mon 08:00]
+#+identifier: 20260202T080000
 /Opening of a Postdoctoral Position (24 months)/
 * Context
 :PROPERTIES:

@@ -1,3 +1,16 @@
 #+title:      Harold Ollivier - Quantum computation and cryptography
 #+date:       [2021-01-01 Fri 00:00]
 #+identifier: 20210101T000000
+* In short
+My research is centered on cryptographic verification of quantum computations, benchamrking quantum machines, as well as quantum machine learning.
+
+I also lead the [[https://qat.inria.fr][QAT]] team at [[https:www.di.ens.fr][DI-ENS]], a joint team between [[https://www.ens.psl.eu][Ecole Normale Supérieure]], [[https://www.cnrs.fr][CNRS]] and [[https://www.inria.fr][INRIA]].  I serve as deputy scientific director for quantum information science at INRIA, and I co-lead the [[https://www.pepr-quantique.fr][PEPR-Quantique]] and the [[https://quantique.france2030.gouv.fr/recherche-innovation/programme-hqi/][Hybrid HPCxQuantum Initiative]] R&D program.
+
+* News
+- [[file:20260202T080000--postdoctoral-position-quantum-cryptography-and-verification-of-quantum-computation.org][2026-02-01]]: Opening of a 24 month postdoctoral position on Quantum Cryptography and Verification of Quantum Computation
+
+* Biography
+I joined INRIA april 2021 after 2 years at LIP6 (Sorbonne Université - CNRS). I started research on quantum information in 2000 at [[https:www.lanl.gov][Los Alamos National Lab]] with W.H. Zurek working on decoherence---introducing Quantum Discord and the first characterizations of Quantum Darwinism. I joined [[https://www.perimeterinstitute.ca][Perimeter Institute for Theoretical Physics]] as a Postdoctoral fellow in 2004, working mainly on quantum error correction and quantum algorithms.
+
+I paused research in 2007, switching to corporate finance at the Ministry of Finance, then rapidly joining a private equity fund and finally launching a successful M&A boutique that soon reached more than 25 professionals and 5 offices across France. At the end of 2017, I founded an AI-based startup for reconstructing hidden professional network in the corporate finance space.
+
