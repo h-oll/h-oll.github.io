@@ -1,0 +1,19 @@
+html {
+    font-size: 12px;
+}
+
+body {
+    background-color: #ffffff;
+    color: #111;
+}
+
+h4 {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-top: 1.8rem;
+    margin-bottom: 1.4rem;
+    line-height: 1;
+}
+
+
