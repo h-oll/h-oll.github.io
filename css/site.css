@@ -5,7 +5,7 @@ html {
 body {
     background-color: #ffffff;
     color: #111;
-    padding-left: 0%;
+    padding-left: 5em;
 }
 
 h4 {
@@ -17,4 +17,42 @@ h4 {
     line-height: 1;
 }
 
+h2::before {
+  content:'';
+  float: left;
+  width: 1em;
+  height: 1em;
+  z-index: -1;
+  background-color:  #db143b;
+}
 
+h3::before {
+  content:'';
+  float: left;
+  width: .5em;
+  height: 1em;
+  z-index: -1;
+  background-color:  #db143b;
+}
+
+h4::before {
+  content:'';
+  float: left;
+  width: .25em;
+  height: 1em;
+  z-index: -1;
+  background-color:  #db143b;
+}
+
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 5px;
+}

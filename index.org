@@ -1,6 +1,4 @@
 #+title:      Harold Ollivier - Quantum computation and cryptography
-#+date:       [2021-01-01 Fri 00:00]
-#+identifier: 20210101T000000
 * In short
 My research is centered on cryptographic verification of quantum computations, benchamrking quantum machines, as well as quantum machine learning.
 
