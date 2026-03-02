@@ -11,6 +11,7 @@
 :END:
 - Date :: March 11, 2026
 - Location :: INRIA Paris, 48 rue Barrault, 75013 Paris
+- Registration :: [[https://cryptpad.fr/form/#/2/form/view/13mHzGzX3h4FBwZ+LeM3+xO5HzhI9Rs3EVkWKeqeqDo/][form]]
 - Tentative Program ::
   
 | 08:30 - 08:55 | /Registration/                                    |                          |
