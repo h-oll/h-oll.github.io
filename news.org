@@ -1,3 +1,6 @@
 #+title:      News
+
+* [2026-03-11 Wed] [[id:58e5f7a4-15aa-4a1d-99ed-0f28843a00d6][Spring 2026 HQI Synergy Day]]
+
 * [2026-02-01 Sun] [[id:cedc82cd-d6cc-454c-9247-ea8385561e42][Postdoctoral Position: Quantum Cryptography and Verification of Quantum Computation]]
 * [2025-11-02 Sun] [[id:9a74a2c3-082d-4a08-aa30-1d976311d26f][Comment on Google's "Verifiable Advantage"]]

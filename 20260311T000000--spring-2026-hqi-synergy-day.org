@@ -1,0 +1,53 @@
+:PROPERTIES:
+:ID:       58e5f7a4-15aa-4a1d-99ed-0f28843a00d6
+:END:
+#+title:      Spring 2026 HQI Synergy Day
+#+date:       [2026-03-11 Wed 00:00]
+#+identifier: 20260311T000000
+
+* Logistics
+:PROPERTIES:
+:ID:       d80fdfe4-d96f-4712-930b-3210dddf6609
+:END:
+- Date :: March 11, 2026
+- Location :: INRIA Paris, 48 rue Barrault, 75013 Paris
+- Tentative Program ::
+  
+| 08:30 - 08:55 | /Registration/                                    |                          |
+| 08:55 - 09:00 | /Welcome/                                         | Harold Ollivier (INRIA)  |
+| 09:00 - 09:25 | WP1                                               | Cyril Allouche (Bull)    |
+| 09:30 - 09:55 | WP2                                               | Mathieu Nguyen (CEA)     |
+| 10:00 - 10:25 | WP3                                               | TBA                      |
+| 10:30 - 11:00 | /Coffee Break/                                    |                          |
+| 11:00 - 11:25 | WP4                                               | TBA                      |
+| 11:30 - 11:55 | WP5                                               | Cambyse Rouzé (INRIA)    |
+| 12:00 - 12:25 | WP6                                               | TBA                      |
+| 12:30 - 14:00 | /Lunch on your own/                               |                          |
+| 14:00 - 14:25 | TBA                                               |                          |
+| 14:30 - 14:55 | [[id:4569a398-9336-4df5-9da7-b5c00d783623][Quantum Control and General...]]                    | Kathleen Barsse (INRIA)  |
+| 15:00 - 15:25 | TBA                                               |                          |
+| 15:30 - 16:00 | /Coffee Break/                                    |                          |
+| 16:00 - 16:25 | TBA                                               |                          |
+| 16:30 - 16:55 | [[id:05ab1db4-a94d-4b42-bc93-22c9a3ff6e2f][Learning and certification of local...]]            | Tim Möbus (U. Cambridge) |
+| 17:00 - 17:25 | [[id:eaca9bf3-1de8-4d96-b062-63575d39e42b][Quantum error mitigation by hierarchy-informed...]] | TBA                      |
+
+
+* Talks
+
+** Quantum Control and General Recursion beyond the Unitary Case (Kathleen Barsse)
+:PROPERTIES:
+:ID:       4569a398-9336-4df5-9da7-b5c00d783623
+:END:
+Coherent control, aka quantum control, is a central concept in quantum computing that is attracting increasing attention from both the quantum foundations and quantum software communities. Defining coherent control in the presence of recursion and measurement has long been known to be a major challenge. In particular, no-go results have been established for standard semantical domains like completely positive maps. We address this problem by introducing the first quantum programming language with recursion that allows for the coherent control of arbitrary quantum operations. We equip this language with both an operational and a denotational semantics that we prove to be adequate. To design these semantics, we show that combining coherent control, recursion, and measurement crucially requires describing the evolution of subprograms in the absence of input. To address this, the operational semantics takes into account a default evolution branch, while the denotational semantics uses the concept of coherent quantum operation, based on vacuum extensions. We strengthen the validity of our approach by developing an observational equivalence: two programs are equivalent if their probability of termination is the same in any context. The denotational semantics is shown to be fully abstract with respect to this observational equivalence.
+
+** Learning and certification of local time-dependent quantum dynamics and noise (Tim Möbus)
+:PROPERTIES:
+:ID:       05ab1db4-a94d-4b42-bc93-22c9a3ff6e2f
+:BACKLINKS: [[id:d80fdfe4-d96f-4712-930b-3210dddf6609][Logistics]]
+:END:
+Hamiltonian learning protocols are quickly establishing themselves as valuable tools to benchmark and verify quantum computers and simulators. However, virtually no rigorous protocols exist to learn time-dependent Hamiltonians and Lindbladians, despite their widespread applications. In this work, we address this gap and show how to learn the time-dependent evolution of a locally interacting $n$-qubit system arranged on a graph $\mathsf{G}$ of effective dimension $D$ by resorting only to the preparation of product Pauli eigenstates, evolution by the time-dependent generator for given times and measurements in product Pauli bases. We assume that the time-dependent parameters are well-approximated by functions in a known space of dimension $m$ and for which we can efficiently perform stable interpolation, say by polynomial functions. Our protocol outputs an expansion in that basis that approximates the parameters up to $\epsilon$ in an interval and only requires $\widetilde{\mathcal O} \big(\epsilon^{-2}\,\mathrm{poly}({m})\,\log(n\delta^{-1})\big)$ samples and $\mathrm{poly}({n,m})$ preprocessing and postprocessing to learn the parameters with probability of success $1-\delta$, making it highly scalable. Importantly, the scaling in the dimension $m$ is polynomial, whereas naive extensions of previous methods yield a dependency that is exponential in $m$. Like previous protocols for the time-independent case, ours is mostly based on estimating time derivatives of expectation values of various observables through interpolation techniques. We then obtain well-conditioned linear equations that allow us to evaluate the value of the time-dependent function for a local generator. However, whereas in the time-independent case it sufficed to only consider derivatives at time $t=0$, here we need to evaluate them at finite times while still being able to relate the derivatives to parameters of the evolution. Thus, besides dealing with technical intricacies related to the time-dependent case, our main innovation is to show how to combine Lieb-Robinson bounds, process shadows and semidefinite programs to estimate the parameters of the evolution efficiently at constant times. Along the way, we extend state-of-the-art Lieb-Robinson bounds on general graphs to the time-dependent, dissipative setting, a result of independent interest. As such, our protocol is a valuable tool to verify various state preparation procedures on quantum computers and simulators, such as adiabatic preparation, or to characterize time-dependent Markovian noise.
+
+** Quantum error mitigation by hierarchy-informed sampling: chiral dynamics in the Schwinger model
+:PROPERTIES:
+:ID:       eaca9bf3-1de8-4d96-b062-63575d39e42b
+:END:
