@@ -14,23 +14,23 @@
 - Registration :: [[https://cryptpad.fr/form/#/2/form/view/13mHzGzX3h4FBwZ+LeM3+xO5HzhI9Rs3EVkWKeqeqDo/][form]]
 - Tentative Program ::
   
-| 08:30 - 08:55 | /Registration/                                    |                                       |
-| 08:55 - 09:00 | /Welcome/                                         | Harold Ollivier (INRIA)               |
-| 09:00 - 09:25 | WP1                                               | Cyril Allouche (Bull)                 |
-| 09:30 - 09:55 | WP2                                               | Mathieu Nguyen (CEA)                  |
-| 10:00 - 10:25 | WP3                                               | TBA                                   |
-| 10:30 - 11:00 | /Coffee Break/                                    |                                       |
-| 11:00 - 11:25 | WP4                                               | TBA                                   |
-| 11:30 - 11:55 | WP5                                               | Cambyse Rouzé (INRIA)                 |
-| 12:00 - 12:25 | WP6                                               | TBA                                   |
-| 12:30 - 14:00 | /Lunch on your own/                               |                                       |
-| 14:00 - 14:25 | TBA                                               |                                       |
-| 14:30 - 14:55 | [[id:4569a398-9336-4df5-9da7-b5c00d783623][Quantum Control and General...]]                    | Kathleen Barsse (INRIA)               |
-| 15:00 - 15:25 | [[id:8cbf050e-0413-4ad7-b7cb-6e58a9306e82][Stripe phases in strongly correlated electron...]]  | Olivier Simard (X, Collège de Framce) |
-| 15:30 - 16:00 | /Coffee Break/                                    |                                       |
-| 16:00 - 16:25 | TBA                                               |                                       |
-| 16:30 - 16:55 | [[id:05ab1db4-a94d-4b42-bc93-22c9a3ff6e2f][Learning and certification of local...]]            | Tim Möbus (U. Cambridge)              |
-| 17:00 - 17:25 | [[id:eaca9bf3-1de8-4d96-b062-63575d39e42b][Quantum error mitigation by hierarchy-informed...]] | TBA                                   |
+| 08:30 - 08:55 | /Registration/                                   |                                       |
+| 08:55 - 09:00 | /Welcome/                                        | Harold Ollivier (INRIA)               |
+| 09:00 - 09:25 | WP1                                              | Cyril Allouche (Bull)                 |
+| 09:30 - 09:55 | WP2                                              | Mathieu Nguyen (CEA)                  |
+| 10:00 - 10:25 | WP3                                              | TBA                                   |
+| 10:30 - 11:00 | /Coffee Break/                                   |                                       |
+| 11:00 - 11:25 | WP4                                              | TBA                                   |
+| 11:30 - 11:55 | WP5                                              | Cambyse Rouzé (INRIA)                 |
+| 12:00 - 12:25 | WP6                                              | Damian Markham (SU - CNRS)            |
+| 12:30 - 14:00 | /Lunch on your own/                              |                                       |
+| 14:00 - 14:25 | TBA                                              |                                       |
+| 14:30 - 14:55 | [[id:4569a398-9336-4df5-9da7-b5c00d783623][Quantum Control and General...]]                   | Kathleen Barsse (INRIA)               |
+| 15:00 - 15:25 | [[id:8cbf050e-0413-4ad7-b7cb-6e58a9306e82][Stripe phases in strongly correlated electron...]] | Olivier Simard (X, Collège de Framce) |
+| 15:30 - 16:00 | /Coffee Break/                                   |                                       |
+| 16:00 - 16:25 | TBA                                              |                                       |
+| 16:30 - 16:55 | [[id:05ab1db4-a94d-4b42-bc93-22c9a3ff6e2f][Learning and certification of local...]]           | Tim Möbus (U. Cambridge)              |
+| 17:00 - 17:25 | [[id:eaca9bf3-1de8-4d96-b062-63575d39e42b][Quantum error mitigation by...]]                   | TBA                                   |
 
 
 * Talks
