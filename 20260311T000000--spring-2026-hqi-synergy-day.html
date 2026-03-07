@@ -226,9 +226,9 @@
 <article id="content" class="content">
 <header>
 <h1 class="title">Spring 2026 HQI Synergy Day</h1>
-</header><section id="outline-container-orgee35afe" class="outline-2">
-<h2 id="orgee35afe">Logistics</h2>
-<div class="outline-text-2" id="text-orgee35afe">
+</header><section id="outline-container-org0ce0959" class="outline-2">
+<h2 id="org0ce0959">Logistics</h2>
+<div class="outline-text-2" id="text-org0ce0959">
 <dl class="org-dl">
 <dt>Date</dt><dd>March 11, 2026</dd>
 <dt>Location</dt><dd>INRIA Paris, 48 rue Barrault, 75013 Paris</dd>
@@ -333,28 +333,28 @@
 
 <tr>
 <td class="org-left">16:00 - 16:25</td>
-<td class="org-left">TBA</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="#orgd98eb26">Composable Verification in the Circuit-Model</a>&#x2026;</td>
+<td class="org-left">Sami Abdul Sater (ENS-CNRS-INRIA)</td>
 </tr>
 
 <tr>
 <td class="org-left">16:30 - 16:55</td>
-<td class="org-left"><a href="#orgd98eb26">Learning and certification of local&#x2026;</a></td>
+<td class="org-left"><a href="#org7925b9e">Learning and certification of local&#x2026;</a></td>
 <td class="org-left">Tim Möbus (U. Cambridge)</td>
 </tr>
 
 <tr>
 <td class="org-left">17:00 - 17:25</td>
-<td class="org-left"><a href="#org7925b9e">Quantum error mitigation by&#x2026;</a></td>
+<td class="org-left"><a href="#orgee35afe">Quantum error mitigation by&#x2026;</a></td>
 <td class="org-left">TBA</td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
-<section id="outline-container-org0ce0959" class="outline-2">
-<h2 id="org0ce0959">Talks</h2>
-<div class="outline-text-2" id="text-org0ce0959">
+<section id="outline-container-org9639605" class="outline-2">
+<h2 id="org9639605">Talks</h2>
+<div class="outline-text-2" id="text-org9639605">
 </div>
 <div id="outline-container-org7f16d57" class="outline-3">
 <h3 id="org7f16d57">Quantum Control and General Recursion beyond the Unitary Case (Kathleen Barsse)</h3>
@@ -364,17 +364,20 @@ Coherent control, aka quantum control, is a central concept in quantum computing
 </p>
 </div>
 </div>
-<div id="outline-container-orgd98eb26" class="outline-3">
-<h3 id="orgd98eb26">Learning and certification of local time-dependent quantum dynamics and noise (Tim Möbus)</h3>
-<div class="outline-text-3" id="text-orgd98eb26">
+<div id="outline-container-org7925b9e" class="outline-3">
+<h3 id="org7925b9e">Learning and certification of local time-dependent quantum dynamics and noise (Tim Möbus)</h3>
+<div class="outline-text-3" id="text-org7925b9e">
 <p>
 Hamiltonian learning protocols are quickly establishing themselves as valuable tools to benchmark and verify quantum computers and simulators. However, virtually no rigorous protocols exist to learn time-dependent Hamiltonians and Lindbladians, despite their widespread applications. In this work, we address this gap and show how to learn the time-dependent evolution of a locally interacting $n$-qubit system arranged on a graph \(\mathsf{G}\) of effective dimension \(D\) by resorting only to the preparation of product Pauli eigenstates, evolution by the time-dependent generator for given times and measurements in product Pauli bases. We assume that the time-dependent parameters are well-approximated by functions in a known space of dimension \(m\) and for which we can efficiently perform stable interpolation, say by polynomial functions. Our protocol outputs an expansion in that basis that approximates the parameters up to \(\epsilon\) in an interval and only requires \(\widetilde{\mathcal O} \big(\epsilon^{-2}\,\mathrm{poly}({m})\,\log(n\delta^{-1})\big)\) samples and \(\mathrm{poly}({n,m})\) preprocessing and postprocessing to learn the parameters with probability of success \(1-\delta\), making it highly scalable. Importantly, the scaling in the dimension \(m\) is polynomial, whereas naive extensions of previous methods yield a dependency that is exponential in \(m\). Like previous protocols for the time-independent case, ours is mostly based on estimating time derivatives of expectation values of various observables through interpolation techniques. We then obtain well-conditioned linear equations that allow us to evaluate the value of the time-dependent function for a local generator. However, whereas in the time-independent case it sufficed to only consider derivatives at time \(t=0\), here we need to evaluate them at finite times while still being able to relate the derivatives to parameters of the evolution. Thus, besides dealing with technical intricacies related to the time-dependent case, our main innovation is to show how to combine Lieb-Robinson bounds, process shadows and semidefinite programs to estimate the parameters of the evolution efficiently at constant times. Along the way, we extend state-of-the-art Lieb-Robinson bounds on general graphs to the time-dependent, dissipative setting, a result of independent interest. As such, our protocol is a valuable tool to verify various state preparation procedures on quantum computers and simulators, such as adiabatic preparation, or to characterize time-dependent Markovian noise.
 </p>
 </div>
 </div>
-<div id="outline-container-org7925b9e" class="outline-3">
-<h3 id="org7925b9e">Quantum error mitigation by hierarchy-informed sampling: chiral dynamics in the Schwinger model</h3>
-<div class="outline-text-3" id="text-org7925b9e">
+<div id="outline-container-orgee35afe" class="outline-3">
+<h3 id="orgee35afe">Quantum error mitigation by hierarchy-informed sampling: chiral dynamics in the Schwinger model</h3>
+<div class="outline-text-3" id="text-orgee35afe">
+<p>
+The phase diagram of QCD at finite densities remains numerically inaccessible by classical computations. Quantum computers, with their potential for exponential speedup, could overcome this challenge. However, their current physical implementations are affected by quantum noise. In this talk, I will introduce a novel quantum error mitigation technique based on an extended qubits BBGKY-like hierarchy. This mitigation scheme is applicable to any spin-chain quantum simulation, that is, whose Hamiltonian can be time-dependent and can encode arbitrary interactions among spins. The core idea of our method is to draw connected BBGKY equations from the hierarchy and use them to constrain a random sampling of possible mitigations. Our results indicate that the mitigation scheme, applied to simulations of the chiral magnetic effect in the (1+1)-Schwinger model, systematically and progressively improves the quality of the noisy measurements, as a larger selected portion of the BBGKY hierarchy constraints the mitigation.
+</p>
 </div>
 </div>
 <div id="outline-container-org99c01cb" class="outline-3">
@@ -382,6 +385,22 @@ Hamiltonian learning protocols are quickly establishing themselves as valuable t
 <div class="outline-text-3" id="text-org99c01cb">
 <p>
 Richard Feynman famously emphasized the inherently quantum mechanical nature of the world, arguing that quantum systems are best simulated using synthetic quantum devices. In this spirit, quantum many-body systems composed of strongly correlated fermions on a lattice have long been central to condensed-matter physics. These systems are notoriously challenging to solve, even with state-of-the-art numerical techniques, particularly in parameter regimes where competing or cooperating degrees of freedom operate at comparable energy and length scales. In this work, we introduce a spin-1 slave-particle approach to approximately treat interacting fermionic models at arbitrary electron doping in an efficient and economical way. Within this framework, the original charge and spin degrees of freedom are mapped onto effective pseudo-spin and pseudo-fermion sectors, respectively. These sectors are then handled using a self-consistent cluster mean-field method. We explore the resulting phase diagram under various conditions and observe the emergence of charge and spin stripe phases within this formalism. Notably, these stripe patterns arise as a consequence of the cluster mean-field treatment of the pseudo-particle sectors and were not identified in earlier slave-particle studies. Our results show qualitative agreement with more reliable numerical approaches and provide a concrete theoretical example of a complex fermionic many-body state that could be realistically implemented and investigated using spin-based quantum simulators, such as Rydberg-atom platforms.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd98eb26" class="outline-3">
+<h3 id="orgd98eb26">Composable Verification in the Circuit-Model via Magic-Blindness (Sami Abdul Sater)</h3>
+<div class="outline-text-3" id="text-orgd98eb26">
+<p>
+As quantum computing machines move towards the utility regime, it is essential that users are able to verify their delegated quantum computations with security guarantees that are (i) robust to noise, (ii) composable with other secure protocols, and (iii) exponentially stronger as the number of resources dedicated to security increases. Previous works that achieve these guarantees and provide modularity necessary to optimization of protocols to real-world hardware are most often expressed in the Measurement-Based Quantum Computation (MBQC) model. This leaves architectures based on the circuit model &#x2013; in particular those using the Magic State Injection (MSI) &#x2013; with fewer options to verify their computations or with the need to compile their circuits in MBQC leading to overheads.
+</p>
+
+<p>
+This paper introduces a family of noise robust, composable and efficient verification protocols for Clifford + MSI circuits that are secure against arbitrary malicious behavior. This family contains the verification protocol of Broadbent (ToC, 2018), extends its security guarantees while also bridging the modularity gap between MBQC and circuit-based protocols, and reducing quantum communication costs. As a result, it opens the prospect of rapid implementation for near-term quantum devices.
+</p>
+
+<p>
+Our technique is based on a refined notion of blindness, called magic-blindness, which hides only the injected magic states &#x2013; the sole source of non-Clifford computational power. This enables verification by randomly interleaving computation rounds with classically simulable, magic-free test rounds, leading to a trap-based framework for verification. As a result, circuit-based quantum verification attains the same level of security and robustness previously known only in MBQC. It also optimizes the quantum communication cost as transmitted qubits are required only at the locations of state injection. 
 </p>
 </div>
 </div>

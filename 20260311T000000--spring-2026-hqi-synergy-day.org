@@ -28,7 +28,7 @@
 | 14:30 - 14:55 | [[id:4569a398-9336-4df5-9da7-b5c00d783623][Quantum Control and General...]]                   | Kathleen Barsse (INRIA)               |
 | 15:00 - 15:25 | [[id:8cbf050e-0413-4ad7-b7cb-6e58a9306e82][Stripe phases in strongly correlated electron...]] | Olivier Simard (X, Collège de Framce) |
 | 15:30 - 16:00 | /Coffee Break/                                   |                                       |
-| 16:00 - 16:25 | TBA                                              |                                       |
+| 16:00 - 16:25 | [[id:b7aa124a-8b0a-4b23-9224-486185279b59][Composable Verification in the Circuit-Model]]...  | Sami Abdul Sater (ENS-CNRS-INRIA)     |
 | 16:30 - 16:55 | [[id:05ab1db4-a94d-4b42-bc93-22c9a3ff6e2f][Learning and certification of local...]]           | Tim Möbus (U. Cambridge)              |
 | 17:00 - 17:25 | [[id:eaca9bf3-1de8-4d96-b062-63575d39e42b][Quantum error mitigation by...]]                   | TBA                                   |
 
@@ -51,10 +51,21 @@ Hamiltonian learning protocols are quickly establishing themselves as valuable t
 ** Quantum error mitigation by hierarchy-informed sampling: chiral dynamics in the Schwinger model
 :PROPERTIES:
 :ID:       eaca9bf3-1de8-4d96-b062-63575d39e42b
+:BACKLINKS: [[id:d80fdfe4-d96f-4712-930b-3210dddf6609][Logistics]]
 :END:
-
+The phase diagram of QCD at finite densities remains numerically inaccessible by classical computations. Quantum computers, with their potential for exponential speedup, could overcome this challenge. However, their current physical implementations are affected by quantum noise. In this talk, I will introduce a novel quantum error mitigation technique based on an extended qubits BBGKY-like hierarchy. This mitigation scheme is applicable to any spin-chain quantum simulation, that is, whose Hamiltonian can be time-dependent and can encode arbitrary interactions among spins. The core idea of our method is to draw connected BBGKY equations from the hierarchy and use them to constrain a random sampling of possible mitigations. Our results indicate that the mitigation scheme, applied to simulations of the chiral magnetic effect in the (1+1)-Schwinger model, systematically and progressively improves the quality of the noisy measurements, as a larger selected portion of the BBGKY hierarchy constraints the mitigation.
 ** Stripe phases in strongly correlated electron systems: A slave-spin-1 approach toward spin-based quantum simulation (Olivier Simard)
 :PROPERTIES:
 :ID:       8cbf050e-0413-4ad7-b7cb-6e58a9306e82
+:BACKLINKS: [[id:d80fdfe4-d96f-4712-930b-3210dddf6609][Logistics]]
 :END:
 Richard Feynman famously emphasized the inherently quantum mechanical nature of the world, arguing that quantum systems are best simulated using synthetic quantum devices. In this spirit, quantum many-body systems composed of strongly correlated fermions on a lattice have long been central to condensed-matter physics. These systems are notoriously challenging to solve, even with state-of-the-art numerical techniques, particularly in parameter regimes where competing or cooperating degrees of freedom operate at comparable energy and length scales. In this work, we introduce a spin-1 slave-particle approach to approximately treat interacting fermionic models at arbitrary electron doping in an efficient and economical way. Within this framework, the original charge and spin degrees of freedom are mapped onto effective pseudo-spin and pseudo-fermion sectors, respectively. These sectors are then handled using a self-consistent cluster mean-field method. We explore the resulting phase diagram under various conditions and observe the emergence of charge and spin stripe phases within this formalism. Notably, these stripe patterns arise as a consequence of the cluster mean-field treatment of the pseudo-particle sectors and were not identified in earlier slave-particle studies. Our results show qualitative agreement with more reliable numerical approaches and provide a concrete theoretical example of a complex fermionic many-body state that could be realistically implemented and investigated using spin-based quantum simulators, such as Rydberg-atom platforms.
+** Composable Verification in the Circuit-Model via Magic-Blindness (Sami Abdul Sater)
+:PROPERTIES:
+:ID:       b7aa124a-8b0a-4b23-9224-486185279b59
+:END:
+As quantum computing machines move towards the utility regime, it is essential that users are able to verify their delegated quantum computations with security guarantees that are (i) robust to noise, (ii) composable with other secure protocols, and (iii) exponentially stronger as the number of resources dedicated to security increases. Previous works that achieve these guarantees and provide modularity necessary to optimization of protocols to real-world hardware are most often expressed in the Measurement-Based Quantum Computation (MBQC) model. This leaves architectures based on the circuit model -- in particular those using the Magic State Injection (MSI) -- with fewer options to verify their computations or with the need to compile their circuits in MBQC leading to overheads.
+
+This paper introduces a family of noise robust, composable and efficient verification protocols for Clifford + MSI circuits that are secure against arbitrary malicious behavior. This family contains the verification protocol of Broadbent (ToC, 2018), extends its security guarantees while also bridging the modularity gap between MBQC and circuit-based protocols, and reducing quantum communication costs. As a result, it opens the prospect of rapid implementation for near-term quantum devices.
+
+Our technique is based on a refined notion of blindness, called magic-blindness, which hides only the injected magic states -- the sole source of non-Clifford computational power. This enables verification by randomly interleaving computation rounds with classically simulable, magic-free test rounds, leading to a trap-based framework for verification. As a result, circuit-based quantum verification attains the same level of security and robustness previously known only in MBQC. It also optimizes the quantum communication cost as transmitted qubits are required only at the locations of state injection. 
