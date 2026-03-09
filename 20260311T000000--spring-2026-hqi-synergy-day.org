@@ -18,11 +18,11 @@
 | 08:55 - 09:00 | /Welcome/                                        | Harold Ollivier (ENS-CNRS-INRIA)     |
 | 09:00 - 09:25 | WP1                                              | Cyril Allouche (Bull)                |
 | 09:30 - 09:55 | WP2                                              | Mathieu Nguyen (CEA)                 |
-| 10:00 - 10:25 | WP3                                              | TBA                                  |
+| 10:00 - 10:25 | WP3                                              | Alex Grilo (SU-CNRS)                 |
 | 10:30 - 11:00 | /Coffee Break/                                   |                                      |
 | 11:00 - 11:25 | WP4                                              | TBA                                  |
 | 11:30 - 11:55 | WP5                                              | Cambyse Rouzé (INRIA)                |
-| 12:00 - 12:25 | WP6                                              | Damian Markham (SU - CNRS)           |
+| 12:00 - 12:25 | WP6                                              | Damian Markham (SU-CNRS)             |
 | 12:30 - 14:00 | /Lunch on your own/                              |                                      |
 | 14:00 - 14:25 | [[id:05ab1db4-a94d-4b42-bc93-22c9a3ff6e2f][Learning and certification of local...]]           | Tim Möbus (U. Cambridge)             |
 | 14:30 - 14:55 | [[id:4569a398-9336-4df5-9da7-b5c00d783623][Quantum Control and General...]]                   | Kathleen Barsse (INRIA)              |
@@ -30,7 +30,7 @@
 | 15:30 - 16:00 | /Coffee Break/                                   |                                      |
 | 16:00 - 16:25 | [[id:b7aa124a-8b0a-4b23-9224-486185279b59][Composable Verification in the Circuit-Model]]...  | Sami Abdul Sater (ENS-CNRS-INRIA)    |
 | 16:30 - 16:55 | [[id:eaca9bf3-1de8-4d96-b062-63575d39e42b][Quantum error mitigation by...]]                   | TBA                                  |
-| 17:00 - 17:25 |                                                  |                                      |
+| 17:00 - 17:25 | [[id:7ce01402-eb05-4ea4-b792-b528911eee3f][Self-concordant Schrödinger operators...]]         | Alex Grilo (SU-CNRS)                 |
 
 
 
@@ -67,3 +67,8 @@ Our technique is based on a refined notion of blindness, called magic-blindness,
 :ID:       eaca9bf3-1de8-4d96-b062-63575d39e42b
 :END:
 The phase diagram of QCD at finite densities remains numerically inaccessible by classical computations. Quantum computers, with their potential for exponential speedup, could overcome this challenge. However, their current physical implementations are affected by quantum noise. In this talk, I will introduce a novel quantum error mitigation technique based on an extended qubits BBGKY-like hierarchy. This mitigation scheme is applicable to any spin-chain quantum simulation, that is, whose Hamiltonian can be time-dependent and can encode arbitrary interactions among spins. The core idea of our method is to draw connected BBGKY equations from the hierarchy and use them to constrain a random sampling of possible mitigations. Our results indicate that the mitigation scheme, applied to simulations of the chiral magnetic effect in the (1+1)-Schwinger model, systematically and progressively improves the quality of the noisy measurements, as a larger selected portion of the BBGKY hierarchy constraints the mitigation.
+** Self-concordant Schrödinger operators: spectral gaps and optimization without condition numbers (Alex Grilo)
+:PROPERTIES:
+:ID:       7ce01402-eb05-4ea4-b792-b528911eee3f
+:END:
+Spectral gaps play a fundamental role in many areas of mathematics, computer science, and physics. In quantum mechanics, the spectral gap of Schrödinger operators has a long history of study due to its physical relevance, while in quantum computing spectral gaps are an important proxy for efficiency, such as in the quantum adiabatic algorithm. Motivated by convex optimization, we study Schrödinger operators associated with self-concordant barriers over convex domains and prove non-asymptotic lower bounds on the spectral gap for this class of operators. Significantly, we find that the spectral gap does not display any condition-number dependence when the usual Laplacian is replaced by the Laplace--Beltrami operator, which uses second-order information of the barrier and hence can take the curvature of the barrier into account. As an algorithmic application, we construct a novel quantum interior point method that applies to arbitrary self-concordant barriers and shows no condition-number dependence. To achieve this we combine techniques from semiclassical analysis, convex optimization, and quantum annealing. 
