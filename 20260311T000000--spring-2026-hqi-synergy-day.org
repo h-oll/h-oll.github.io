@@ -19,18 +19,19 @@
 | 09:00 - 09:25 | WP1                                              | Cyril Allouche (Bull)                |
 | 09:30 - 09:55 | WP2                                              | Mathieu Nguyen (CEA)                 |
 | 10:00 - 10:25 | WP3                                              | Alex Grilo (SU-CNRS)                 |
-| 10:30 - 11:00 | /Coffee Break/                                   |                                      |
-| 11:00 - 11:25 | WP4                                              | TBA                                  |
-| 11:30 - 11:55 | WP5                                              | Cambyse Rouzé (INRIA)                |
-| 12:00 - 12:25 | WP6                                              | Damian Markham (SU-CNRS)             |
-| 12:30 - 14:00 | /Lunch on your own/                              |                                      |
-| 14:00 - 14:25 | [[id:05ab1db4-a94d-4b42-bc93-22c9a3ff6e2f][Learning and certification of local...]]           | Tim Möbus (U. Cambridge)             |
-| 14:30 - 14:55 | [[id:4569a398-9336-4df5-9da7-b5c00d783623][Quantum Control and General...]]                   | Kathleen Barsse (INRIA)              |
-| 15:00 - 15:25 | [[id:8cbf050e-0413-4ad7-b7cb-6e58a9306e82][Stripe phases in strongly correlated electron...]] | Olivier Simard (X-Collège de Framce) |
-| 15:30 - 16:00 | /Coffee Break/                                   |                                      |
-| 16:00 - 16:25 | [[id:b7aa124a-8b0a-4b23-9224-486185279b59][Composable Verification in the Circuit-Model]]...  | Sami Abdul Sater (ENS-CNRS-INRIA)    |
-| 16:30 - 16:55 | [[id:eaca9bf3-1de8-4d96-b062-63575d39e42b][Quantum error mitigation by...]]                   | TBA                                  |
-| 17:00 - 17:25 | [[id:7ce01402-eb05-4ea4-b792-b528911eee3f][Self-concordant Schrödinger operators...]]         | Alex Grilo (SU-CNRS)                 |
+| 10:30 - 10:50 | /Coffee Break/                                   |                                      |
+| 10:50 - 11:15 | WP4                                              | TBA                                  |
+| 11:20 - 11:45 | WP5                                              | Cambyse Rouzé (INRIA)                |
+| 11:50 - 12:15 | WP6                                              | Damian Markham (SU-CNRS)             |
+| 12:15 - 13:45 | /Lunch on your own/                              |                                      |
+| 13:45 - 14:10 | [[id:05ab1db4-a94d-4b42-bc93-22c9a3ff6e2f][Learning and certification of local...]]           | Tim Möbus (U. Cambridge)             |
+| 14:15 - 14:40 | [[id:4569a398-9336-4df5-9da7-b5c00d783623][Quantum Control and General...]]                   | Kathleen Barsse (INRIA)              |
+| 14:45 - 15:10 | [[id:931cfedd-792c-4cfa-b2fd-179018874e9e][Composable privacy of networked...]]               | Naomi Solomons (SU-CNRS)             |
+| 15:15 - 15:40 | [[id:8cbf050e-0413-4ad7-b7cb-6e58a9306e82][Stripe phases in strongly correlated electron...]] | Olivier Simard (X-Collège de Framce) |
+| 15:45 - 16:05 | /Coffee Break/                                   |                                      |
+| 16:05 - 16:30 | [[id:b7aa124a-8b0a-4b23-9224-486185279b59][Composable Verification in the Circuit-Model]]...  | Sami Abdul Sater (ENS-CNRS-INRIA)    |
+| 16:35 - 17:00 | [[id:eaca9bf3-1de8-4d96-b062-63575d39e42b][Quantum error mitigation by...]]                   | TBA                                  |
+| 17:05 - 17:30 | [[id:7ce01402-eb05-4ea4-b792-b528911eee3f][Self-concordant Schrödinger operators...]]         | Alex Grilo (SU-CNRS)                 |
 
 
 
@@ -72,3 +73,8 @@ The phase diagram of QCD at finite densities remains numerically inaccessible by
 :ID:       7ce01402-eb05-4ea4-b792-b528911eee3f
 :END:
 Spectral gaps play a fundamental role in many areas of mathematics, computer science, and physics. In quantum mechanics, the spectral gap of Schrödinger operators has a long history of study due to its physical relevance, while in quantum computing spectral gaps are an important proxy for efficiency, such as in the quantum adiabatic algorithm. Motivated by convex optimization, we study Schrödinger operators associated with self-concordant barriers over convex domains and prove non-asymptotic lower bounds on the spectral gap for this class of operators. Significantly, we find that the spectral gap does not display any condition-number dependence when the usual Laplacian is replaced by the Laplace--Beltrami operator, which uses second-order information of the barrier and hence can take the curvature of the barrier into account. As an algorithmic application, we construct a novel quantum interior point method that applies to arbitrary self-concordant barriers and shows no condition-number dependence. To achieve this we combine techniques from semiclassical analysis, convex optimization, and quantum annealing. 
+** Composable privacy of networked quantum sensing (Naomi Solomons)
+:PROPERTIES:
+:ID:       931cfedd-792c-4cfa-b2fd-179018874e9e
+:END:
+Networks of sensors are a promising scheme to deliver the benefits of quantum technologies in coming years, offering enhanced precision and accuracy for distributed metrology through the use of large entangled states. Recent work has additionally explored the privacy of these schemes, meaning that local parameters can be kept secret while a joint function of these is estimated by the network. The abstract cryptography model, which represents protocols in terms of resources, can be used to show that the two proposed definitions of quasi-privacy are composable, which enables the protocol to be securely included as a sub-routine to other schemes. We will illustrate this using the example of estimating the mean of a set of parameters using GHZ states.
