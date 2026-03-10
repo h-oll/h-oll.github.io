@@ -20,7 +20,7 @@
 | 09:30 - 09:55 | WP2                                              | Mathieu Nguyen (CEA)                 |
 | 10:00 - 10:25 | WP3                                              | Alex Grilo (SU-CNRS)                 |
 | 10:30 - 10:50 | /Coffee Break/                                   |                                      |
-| 10:50 - 11:15 | WP4                                              | TBA                                  |
+| 10:50 - 11:15 | WP4                                              | Pascal Tremblin (CEA)                |
 | 11:20 - 11:45 | WP5                                              | Cambyse Rouzé (INRIA)                |
 | 11:50 - 12:15 | WP6                                              | Damian Markham (SU-CNRS)             |
 | 12:15 - 13:45 | /Lunch on your own/                              |                                      |
@@ -30,7 +30,7 @@
 | 15:15 - 15:40 | [[id:8cbf050e-0413-4ad7-b7cb-6e58a9306e82][Stripe phases in strongly correlated electron...]] | Olivier Simard (X-Collège de Framce) |
 | 15:45 - 16:05 | /Coffee Break/                                   |                                      |
 | 16:05 - 16:30 | [[id:b7aa124a-8b0a-4b23-9224-486185279b59][Composable Verification in the Circuit-Model]]...  | Sami Abdul Sater (ENS-CNRS-INRIA)    |
-| 16:35 - 17:00 | [[id:eaca9bf3-1de8-4d96-b062-63575d39e42b][Quantum error mitigation by...]]                   | TBA                                  |
+| 16:35 - 17:00 | [[id:eaca9bf3-1de8-4d96-b062-63575d39e42b][Quantum error mitigation by...]]                   | Theo Saporiti                        |
 | 17:05 - 17:30 | [[id:7ce01402-eb05-4ea4-b792-b528911eee3f][Self-concordant Schrödinger operators...]]         | Alex Grilo (SU-CNRS)                 |
 | 17:35 - 18:00 | [[id:1c78abd0-0d8a-461e-828e-60142cefcbdd][Observing the weak breaking of...]]                | Alice Marché (UPSaclay-CNRS)         |
 
