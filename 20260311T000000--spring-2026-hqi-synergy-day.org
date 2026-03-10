@@ -32,7 +32,7 @@
 | 16:05 - 16:30 | [[id:b7aa124a-8b0a-4b23-9224-486185279b59][Composable Verification in the Circuit-Model]]...  | Sami Abdul Sater (ENS-CNRS-INRIA)    |
 | 16:35 - 17:00 | [[id:eaca9bf3-1de8-4d96-b062-63575d39e42b][Quantum error mitigation by...]]                   | TBA                                  |
 | 17:05 - 17:30 | [[id:7ce01402-eb05-4ea4-b792-b528911eee3f][Self-concordant Schrödinger operators...]]         | Alex Grilo (SU-CNRS)                 |
-
+| 17:35 - 18:00 | [[id:1c78abd0-0d8a-461e-828e-60142cefcbdd][Observing the weak breaking of...]]                | Alice Marché (UPSaclay-CNRS)         |
 
 
 * Talks
@@ -78,3 +78,8 @@ Spectral gaps play a fundamental role in many areas of mathematics, computer sci
 :ID:       931cfedd-792c-4cfa-b2fd-179018874e9e
 :END:
 Networks of sensors are a promising scheme to deliver the benefits of quantum technologies in coming years, offering enhanced precision and accuracy for distributed metrology through the use of large entangled states. Recent work has additionally explored the privacy of these schemes, meaning that local parameters can be kept secret while a joint function of these is estimated by the network. The abstract cryptography model, which represents protocols in terms of resources, can be used to show that the two proposed definitions of quasi-privacy are composable, which enables the protocol to be securely included as a sub-routine to other schemes. We will illustrate this using the example of estimating the mean of a set of parameters using GHZ states.
+** Observing the weak breaking of conservation laws in a dipolar quantum spin chain (Alice Marché)
+:PROPERTIES:
+:ID:       1c78abd0-0d8a-461e-828e-60142cefcbdd
+:END:
+Integrability, one of the main technical theoretical tools for the analysis of models of physical setups, is not just a mathematical property: it has deep physical consequences. Integrable and non-integrable setups display qualitative different physical behaviours, related to the presence (or absence) of families of extensive conservation laws. In the presence of weak perturbations, a well-known dilemma takes place: is the system akin to a thoroughly non-integrable setup, or does it carry memory that integrability has been only weakly broken? In this theoretical and experimental collaboration we show that the weak breaking of conservation laws leaves a clear experimental fingerprint in a one-dimensional quantum spin chain of as few as 14 Rydberg atoms. Weak integrability breaking from interatomic dipolar couplings is directly detectable within experimentally accessible times in the dynamics of non-local observables. In particular, magnetization fluctuations are highly sensitive to the breaking of fragile conservation laws and exhibit anomalous growth, which we observe experimentally; similar signatures appear in a semilocal string observable. We establish Rydberg-atom arrays as a platform to test perturbative descriptions of quantum many-body dynamics with weak integrability breaking. Based on: https://arxiv.org/abs/2602.02251
