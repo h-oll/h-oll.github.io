@@ -1,10 +1,10 @@
 :PROPERTIES:
 :ID:       cedc82cd-d6cc-454c-9247-ea8385561e42
 :END:
-#+title:      Postdoctoral Position: Quantum Cryptography and Verification of Quantum Computation
+#+title:      Postdoctoral Position: Quantum Cryptography and Verification of Quantum Computation 
 #+date:       [2026-02-02 Mon 08:00]
 #+identifier: 20260202T080000
-/Opening of a Postdoctoral Position (24 months)/
+/Applications closed/
 * Context
 :PROPERTIES:
 :CUSTOM_ID: context
