@@ -17,33 +17,45 @@ h4 {
     line-height: 1;
 }
 
+h2 {
+  position: relative; /* needed for pseudo-element positioning */
+}
+
+h3 {
+  position: relative; /* needed for pseudo-element positioning */
+}
+
+h4 {
+  position: relative; /* needed for pseudo-element positioning */
+}
+
+
 h2::before {
-  content:'';
-  float: left;
-  width: 1em;
-  height: 1em;
-  z-index: -1;
-  background-color:  #db143b;
+    content: "";                 /* empty content for the square */
+    position: absolute;          /* position relative to h2 */
+    left: -1.2em;                 /* move it into the margin */
+    width: 1em;
+    height: 1em;
+    background-color: #db143b;       /* color of the square */
 }
 
 h3::before {
-  content:'';
-  float: left;
-  width: .5em;
-  height: 1em;
-  z-index: -1;
-  background-color:  #db143b;
+    content: "";                 /* empty content for the square */
+    position: absolute;          /* position relative to h2 */
+    left: -.95em;                 /* move it into the margin */
+    width: .75em;
+    height: 1em;
+    background-color: #db143b;       /* color of the square */
 }
 
 h4::before {
-  content:'';
-  float: left;
-  width: .25em;
-  height: 1em;
-  z-index: -1;
-  background-color:  #db143b;
+    content: "";                 /* empty content for the square */
+    position: absolute;          /* position relative to h2 */
+    left: -.7em;                 /* move it into the margin */
+    width: .5em;
+    height: 1em;
+    background-color: #db143b;       /* color of the square */
 }
-
 
 .navbar ul {
     display: flex;
