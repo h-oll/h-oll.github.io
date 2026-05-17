@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       845651d5-a5d6-4df5-9660-cf5259f9bec7
+:END:
+#+title:      Verification of Quantum Computations without Trusted Preparations or Measurements
+#+date:       [2026-05-17 Sun 22:50]
+#+filetags:   
+#+identifier: 20260517T225015
+
+How do you verify the results of a remote quantum computer if you don’t have advanced quantum hardware yourself and can't simulate it classically? This is a central challenge for developing a healthy and trusted ecosystem providing quantum as a service.
+
+Our recent paper --- with Elham Kashefi, Dominik Leichtle, Luka Music --- offers a practical step forward in addressing this bottleneck.  We describe how to perform "Verification of Quantum Computations without Trusted Preparations or Measurements" (Advanced Quantum Technologies, 2026 9(5) 01018).
+
+Instead of requiring a mini-physics lab on the client side, we propose a more resource-efficient approach to verification. Here are the main takeaways:
+
+- Reduced Client Resources :: The protocol demonstrates that universal quantum computations can be verified without requiring the client to perform trusted state preparations or measurements.
+
+- Simpler Operations :: The hardware requirements on the client side are stripped down to just two basic operations: single-qubit Z-axis rotations and simple bit flips.
+
+-  Lighter, Cheaper Systems :: By removing the need to generate or measure qubits from scratch, the entry barrier for secure client hardware drops significantly, making deployment much more cost-effective.
+
+- Communication Bus Architecture :: Crucially, this opens up the perspective for a streamlined communication bus architecture. Rather than hosting heavy infrastructure, a client can simply intercept and modify qubits "in-flight" along a quantum channel. This can be used directly in the Q-Line architecture.
+
+By lowering the hardware demands on the user, this research helps close the gap between theoretical quantum cryptography and practical, scalable cloud architecture.
+
+For those interested in the underlying protocols and security proofs, the full paper is available here:
+
+https://arxiv.org/abs/2403.10464 https://doi.org/10.1002/qute.202501018
+
+#QuantumComputing #QuantumSecurity #QuantumCryptography 
