@@ -1,0 +1,39 @@
+#+title:      Verification of quantum computations: Hardware-efficient proofs (HDR Defense)
+#+date:       [2026-06-17 Wed 23:01]
+#+filetags:   
+#+identifier: 20260617T230156
+
+/Amphi Galois, ENS - 45 rue d'Ulm/
+
+https://visio.numerique.gouv.fr/jjr-npcs-zny
+
+I will present an overview of recent results on the verification of
+quantum computations, focusing in particular on the role of
+composability. I will discuss how composability helps modularize
+security proofs, enable the development of new functionalities, and
+reduce hardware requirements and trust assumptions.
+
+I will then turn to what has been the most challenging aspect of my
+research over the past few years: ensuring that verification protocols
+remain secure even when the verifier's devices are affected by noise. I
+will show that achieving security in this setting imposes more
+constraints than fault tolerance alone, but that at least one
+construction---known as a compromission-tolerant scheme---meets these
+requirements.
+
+More broadly, these results suggest that multiparty quantum
+cryptographic protocols in which one party performs secret operations on
+logically encoded quantum states are generally insecure unless they are
+implemented using compromission-tolerant gadgets.
+
+This presentation will serve as the defense of my HDR. Given the heat
+wave and the ongoing competitive examinations (concours), we will
+collectively decide on an alternative to the usual reception.
+
+I would be delighted to see you there.
+
+Best.
+
+
+
+
