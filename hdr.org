@@ -1,12 +1,18 @@
+:PROPERTIES:
+:ID:       655abac6-fcb8-407a-9e2b-a47c74c6bbf6
+:END:
 #+title:      Verification of quantum computations: Hardware-efficient proofs (HDR Defense)
 #+date:       [2026-06-17 Wed 23:01]
 #+filetags:   
 #+identifier: 20260617T230156
 
-/Amphi Galois, ENS - 45 rue d'Ulm/
-
-https://visio.numerique.gouv.fr/jjr-npcs-zny
-
+- Location ::
+  - ENS - 45 rue d'Ulm (entrance of the campus https://what3words.com/escaping.assume.showed)
+  - Amphi Galois (stairs leading to basement https://what3words.com/prompts.pram.lied)
+- Online link :: https://visio.numerique.gouv.fr/jjr-npcs-zny
+- Time :: 14:00
+- Manuscript :: [[file:v-saga.pdf][draft]]
+  
 I will present an overview of recent results on the verification of
 quantum computations, focusing in particular on the role of
 composability. I will discuss how composability helps modularize
