@@ -2,16 +2,16 @@
 :ID:       655abac6-fcb8-407a-9e2b-a47c74c6bbf6
 :END:
 #+title:      Verification of quantum computations: Hardware-efficient proofs (HDR Defense)
-#+date:       [2026-06-17 Wed 23:01]
+#+date:       [2026-06-23 Tue 14:00]
 #+filetags:   
-#+identifier: 20260617T230156
+#+identifier: 20260623T140000
 
 - Location ::
   - ENS - 45 rue d'Ulm (entrance of the campus https://what3words.com/escaping.assume.showed)
   - Amphi Galois (stairs leading to basement https://what3words.com/prompts.pram.lied)
 - Online link :: https://visio.numerique.gouv.fr/jjr-npcs-zny
-- Time :: 14:00
-- Manuscript :: [[file:v-saga.pdf][draft]]
+- Date :: June 23, 2026 at 14:00
+- Manuscript :: [[https://arxiv.org/abs/2607.03983][2607.03983]]
   
 I will present an overview of recent results on the verification of
 quantum computations, focusing in particular on the role of

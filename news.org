@@ -1,5 +1,6 @@
 #+title:      News
 
+* [2026-06-23 Tue] [[id:655abac6-fcb8-407a-9e2b-a47c74c6bbf6][Verification of quantum computations: Hardware-efficient security proofs]] (HDR Defense)
 * [2026-05-18 Mon] [[id:845651d5-a5d6-4df5-9660-cf5259f9bec7][Verification of Quantum Computations without Trusted Preparations or Measurements]] 
 * [2026-03-11 Wed] [[id:58e5f7a4-15aa-4a1d-99ed-0f28843a00d6][Spring 2026 HQI Synergy Day]]
 
