@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Verification of Quantum Computations without Trusted Preparations or Measurements</title>
+<title>Software</title>
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
   #content { max-width: 60em; margin: auto; }
@@ -208,44 +208,26 @@
 </header>
 <article id="content" class="content">
 <header>
-<h1 class="title">Verification of Quantum Computations without Trusted Preparations or Measurements</h1>
-</header><p>
-How do you verify the results of a remote quantum computer if you don’t have advanced quantum hardware yourself and can't simulate it classically? This is a central challenge for developing a healthy and trusted ecosystem providing quantum as a service.
-</p>
-
+<h1 class="title">Software</h1>
+</header><section id="outline-container-org7f16d57" class="outline-2">
+<h2 id="org7f16d57">Guix</h2>
+<div class="outline-text-2" id="text-org7f16d57">
 <p>
-Our recent paper &mdash; with Elham Kashefi, Dominik Leichtle, Luka Music &mdash; offers a practical step forward in addressing this bottleneck.  We describe how to perform "Verification of Quantum Computations without Trusted Preparations or Measurements" (Advanced Quantum Technologies, 2026 9(5) 01018).
+Guix lacks or doesn't update fast enough some packages I use for
+professional and personal projects, eg.:
 </p>
-
+<ul class="org-ul">
+<li>Codex and Codex-acp</li>
+<li>Basic Pitch</li>
+<li>Muscriptor</li>
+<li>Colmap</li>
+<li>Tailscale</li>
+</ul>
 <p>
-Instead of requiring a mini-physics lab on the client side, we propose a more resource-efficient approach to verification. Here are the main takeaways:
+So I've been doing the packaging and it is available as the <a href="https://codeberg.org/holl/hollix.git">hollix channel</a> for Guix.
 </p>
-
-<dl class="org-dl">
-<dt>Reduced Client Resources</dt><dd>The protocol demonstrates that universal quantum computations can be verified without requiring the client to perform trusted state preparations or measurements.</dd>
-
-<dt>Simpler Operations</dt><dd>The hardware requirements on the client side are stripped down to just two basic operations: single-qubit Z-axis rotations and simple bit flips.</dd>
-
-<dt>Lighter, Cheaper Systems</dt><dd>By removing the need to generate or measure qubits from scratch, the entry barrier for secure client hardware drops significantly, making deployment much more cost-effective.</dd>
-
-<dt>Communication Bus Architecture</dt><dd>Crucially, this opens up the perspective for a streamlined communication bus architecture. Rather than hosting heavy infrastructure, a client can simply intercept and modify qubits "in-flight" along a quantum channel. This can be used directly in the Q-Line architecture.</dd>
-</dl>
-
-<p>
-By lowering the hardware demands on the user, this research helps close the gap between theoretical quantum cryptography and practical, scalable cloud architecture.
-</p>
-
-<p>
-For those interested in the underlying protocols and security proofs, the full paper is available here:
-</p>
-
-<p>
-<a href="https://arxiv.org/abs/2403.10464">https://arxiv.org/abs/2403.10464</a> <a href="https://doi.org/10.1002/qute.202501018">https://doi.org/10.1002/qute.202501018</a>
-</p>
-
-<p>
-#QuantumComputing #QuantumSecurity #QuantumCryptography 
-</p>
+</div>
+</section>
 </article>
 </body>
 </html>

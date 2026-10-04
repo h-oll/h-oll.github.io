@@ -22,6 +22,7 @@
   <ul>
     <li><a href=\"./index.html\">Home</a></li>
     <li><a href=\"./news.html\">News</a></li>
+    <li><a href=\"./software.html\">Software</a></li>
     <!--<li><a href=\"./publications.html\">Publications</a></li>-->
   </ul>
 </nav>

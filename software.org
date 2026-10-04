@@ -1,0 +1,11 @@
+#+title:      Software
+
+* Guix
+Guix lacks or doesn't update fast enough some packages I use for
+professional and personal projects, eg.:
+- Codex and Codex-acp
+- Basic Pitch
+- Muscriptor
+- Colmap
+- Tailscale
+So I've been doing the packaging and it is available as the [[https://codeberg.org/holl/hollix.git][hollix channel]] for Guix.
